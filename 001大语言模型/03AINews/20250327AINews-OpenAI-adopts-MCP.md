@@ -11,6 +11,7 @@ We attempted to articulate Why MCP Won in a recent Latent Space article.
 Special Shoutout: Swyx will be curating the Data Council AI Engineering Track in Oakland on Apr 22. You can use LATENTSPACE20 for a little discount.
 
 ### AI Twitter Recap
+
 Language Models and Benchmarks
 
 * Gemini 2.5 Pro's performance and capabilities: @ArtificialAnlys reported that Google’s new Gemini 2.5 Pro Experimental takes the #1 position across a range of their evaluations. The Gemini 2.5 Pro is a reasoning model with industry-leading efficiency. It achieved all-time high scores in MMLU-Pro and GPQA Diamond of 86% and 83% respectively, and in Humanity’s Last Exam, scoring 17.7%. It also achieved an all time high score in AIME 2024 of 88%. The speed is 195 output tokens/s, much faster than Gemini 1.5 Pro’s 92 tokens/s and nearly as fast as Gemini 2.0 Flash’s 253 tokens/s. The Gemini 2.5 Pro has a 1 million token context window, and multimodal inputs: image, video and audio (text output only). @zacharynado exclaimed that Gemini 2.5 Pro is the most skilled model in the world. @OriolVinyalsML highlights a 16 point jump on Fiction.LiveBench.

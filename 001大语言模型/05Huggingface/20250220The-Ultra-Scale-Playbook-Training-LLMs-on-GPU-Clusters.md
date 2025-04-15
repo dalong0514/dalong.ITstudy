@@ -1,6 +1,4 @@
-
-
-### 01. First Steps: Training on one GPU
+## 0101. First Steps: Training on one GPU
 
 If you fancy adding a podcast feeling to your reading experience, feel free to listen to the NotebookLM hosts discussing the first sections of this book as you're reading along.
 
@@ -10,31 +8,41 @@ Let’s start by quickly reviewing the very basics of model training before we s
 
 在开始扩展到多个 GPU 之前，让我们先快速回顾一下模型训练的基础知识。当模型使用单张 GPU 训练时，训练过程通常包含以下三个步骤：
 
-a forward pass which passes inputs through the model to yield its outputs,
-a backward pass to compute the gradients, and
-an optimization step using the gradients to update the parameters
-As we’ll see later, these steps may be repeated or intertwined but for now we’ll start simple.
-It looks generally like this:
+1 a forward pass which passes inputs through the model to yield its outputs,
+2 a backward pass to compute the gradients, and
+3 an optimization step using the gradients to update the parameters
 
 包括一次前向传播，将输入数据送入模型，得到输出结果；
 一次反向传播，计算梯度；
 以及一个优化步骤，利用梯度来更新模型参数。
+
+As we’ll see later, these steps may be repeated or intertwined but for now we’ll start simple.
+
 后续我们会看到，这些步骤可能会重复或穿插进行，但现在我们先从最简单的流程开始。
+
+It looks generally like this:
+
 整个过程大致如下：
 
 Hover over the network elements to see their details
+
+悬停在网络元素上可以查看其详细信息
+
 In this figure, the boxes on the top line can be seen as successive layers inside a model (same for the last line). The red boxes are the associated gradients for each of these layers, computed during the backward pass.
 
-悬停在网络元素上可以查看其详细信息如图所示，顶行上的框可以视为模型内部的连续层（与底行相同）。红色框代表每个层的相关梯度，这些梯度是在反向传播期间计算的。
+如图所示，顶行上的框可以视为模型内部的连续层（与底行相同）。红色框代表每个层的相关梯度，这些梯度是在反向传播期间计算的。
 
 The batch size (bs) is one of the important hyper-parameters for model training and affects both model convergence and throughput.
 
-A small batch size can be useful early in training to quickly move along the training landscape reaching an optimal learning point. However, further along the model training, small batch sizes will keep gradients noisy and the model may not be able to converge to the most optimal final performances. At the other extreme, a large batch size while giving very accurate gradient estimations will tend to make less use of each training token rendering convergence slower and potentially wasting compute. You can find a nice early discussion of this topic in OpenAI’s paper on large batch training
-[1] or Section 4.2 of MiniMax-01 technical report.
-
 批量大小（bs）是模型训练过程中一个重要的超参数，它直接影响着模型的收敛速度和训练吞吐量。
 
+A small batch size can be useful early in training to quickly move along the training landscape reaching an optimal learning point. However, further along the model training, small batch sizes will keep gradients noisy and the model may not be able to converge to the most optimal final performances. At the other extreme, a large batch size while giving very accurate gradient estimations will tend to make less use of each training token rendering convergence slower and potentially wasting compute. You can find a nice early discussion of this topic in OpenAI’s paper on large batch training [1] or Section 4.2 of MiniMax-01 technical report.
+
 在训练初期，较小的批量大小可能更有帮助，因为它可以使模型快速地在训练过程中找到一个较好的学习状态。我们可以把模型训练的过程想象成在一个地形图上寻找最优解，较小的批量可以帮助模型快速地移动。然而，在模型训练的后期，如果批量大小过小，会导致梯度估计出现较多的噪声，模型可能难以收敛到最佳的最终性能。另一方面，较大的批量大小虽然可以提供更准确的梯度估计，但会降低每个训练 Token 的利用率， 也就是说，模型需要看到更多的数据才能学到相同的知识，这会导致收敛速度变慢，并可能浪费计算资源。关于这个主题，您可以在 OpenAI 关于大批量训练的论文 [1] 或者 MiniMax-01 技术报告的 4.2 节中找到更详细的讨论。
+
+[[1812.06162] An Empirical Model of Large-Batch Training](https://arxiv.org/abs/1812.06162)
+
+[[2501.08313] MiniMax-01: Scaling Foundation Models with Lightning Attention](https://arxiv.org/abs/2501.08313)
 
 For instance, during DeepSeek-V3/R1 training “the batch size is gradually increased from 3072 input sequences to 15360 in the training of the first 469B tokens, and then keeps at 15360 input samples in the remaining training”.
 
@@ -50,12 +58,11 @@ In the LLM pretraining community, batch sizes are commonly reported in terms of 
 
 In the simplest case, training on a single machine, the bs (in samples) and bst can be computed from the model input sequence length (seq) as follows:
 
-bst=bs∗seq
-From here onward we’ll show the formulas for the batch size in terms of samples but you can always get its token-unit counterpart by multiplying it with the sequence length.
-
 在最简单的情况下，即在单台机器上训练时，批量大小 bs（以样本数衡量）和 bst 可以通过模型输入序列长度 seq 计算得出：
 
 bst=bs∗seq
+
+From here onward we’ll show the formulas for the batch size in terms of samples but you can always get its token-unit counterpart by multiplying it with the sequence length.
 
 从现在开始，我们将展示以样本数为单位的批量大小计算公式。您始终可以通过将样本数乘以序列长度，得到对应的以 Token 为单位的批量大小。
 
@@ -71,28 +78,42 @@ Let’s start by quickly understanding what led to our out-of-memory issue in th
 
 让我们首先快速了解最初导致我们出现内存溢出问题的根本原因。这将帮助我们更好地理解训练模型所需的内存。
 
-Memory usage in Transformers
+### Memory usage in Transformers
+
+Transformer 中的内存使用
+
 When training a neural network model, one store several items in memory:
+
+在训练神经网络模型时，有几个关键项目需要存储在内存中：
 
 Model weights
 Model gradients
 Optimizer states
 Activations needed to compute the gradients
+
+模型权重
+模型梯度
+优化器状态
+计算梯度所需的激活值（Activations)
+
 📝 Note
-
-Transformer 中的内存使用在训练神经网络模型时，有几个关键项目需要存储在内存中：
-
-模型权重模型梯度优化器状态计算梯度所需的激活值（Activations)
-📝 注意
 
 You would think for a model you could compute the memory requirements exactly but there are a few additional memory occupants that makes it hard to be exact:
 
+一般认为，模型的内存需求是可以精确计算的。然而，由于一些额外的内存占用因素，使得精确计算变得比较困难：
+
 CUDA Kernels typically require 1-2 GB of GPU memory, which you can quickly verify by running import torch; torch.ones((1, 1)).to("cuda") and then checking the GPU memory with nvidia-smi.
+
+
+
+
+
+
 Some rest memory usage from buffers, intermediate results and some memory that can’t be used due to fragmentation
 We’ll neglect these last two contributors as they are typically small and constant factors.
 These items are stored as tensors which come in different shapes and precisions. The shapes are determined by hyper-parameters such as batch size, sequence length, model hidden dimensions, attention heads, vocabulary size, and potential model sharding as we’ll see later. Precision refers to formats like FP32, BF16, or FP8, which respectively require 4, 2, or 1 byte to store each single value in the tensor. We will have a full discussion of the different precisions and their trade-offs in the Mixed Precision Training section, for now let's just keep in mind that the memory requirements for these various format will be different and that will impact the memory usage of the items we need to store.
 
-一般认为，模型的内存需求是可以精确计算的。然而，由于一些额外的内存占用因素，使得精确计算变得比较困难：
+
 
 CUDA 内核通常会占用 1-2 GB 的 GPU 内存。你可以通过运行 `import torch; torch.ones（(1，1)).to（"cuda")`，然后使用 `nvidia-smi` 命令检查 GPU 内存使用情况来快速验证这一点。
 此外，还有一些剩余内存来自于缓冲区、中间计算结果，以及由于内存碎片化而导致的无法使用的部分。
@@ -452,7 +473,7 @@ Now let’s get a larger workstation 🖥️ with a couple of GPUs and start inv
 
 
 
-### Data Parallelism
+### 0201. Data Parallelism
 
 To add a podcast feeling to your reading experience, feel free to listen to the NotebookLM hosts discussing the following sections of this book as you're reading along.
 
