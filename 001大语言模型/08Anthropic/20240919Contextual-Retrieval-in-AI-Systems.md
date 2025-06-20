@@ -128,21 +128,24 @@ A relevant chunk might contain the text："The company's revenue grew by 3% over
 
 ### 02. Introducing Contextual Retrieval
 
+上下文检索简介
+
 Contextual Retrieval solves this problem by prepending chunk-specific explanatory context to each chunk before embedding（「Contextual Embeddings」）and creating the BM25 index（「Contextual BM25」).
 
-上下文检索简介上下文检索（Contextual Retrieval）通过以下方式解决了这个问题：在对每个信息块进行嵌入（embedding）(也就是 「上下文嵌入（Contextual Embeddings）」）和创建 BM25 索引（也就是 「上下文 BM25（Contextual BM25）」）之前，先为每个信息块添加一段该信息块专属的解释性上下文。
+上下文检索（Contextual Retrieval）通过以下方式解决了这个问题：在对每个信息块进行嵌入（embedding）(也就是 「上下文嵌入（Contextual Embeddings）」）和创建 BM25 索引（也就是 「上下文 BM25（Contextual BM25）」）之前，先为每个信息块添加一段该信息块专属的解释性上下文。
 
 Let's return to our SEC filings collection example. Here's an example of how a chunk might be transformed:
 
-```
-original_chunk = "The company's revenue grew by 3% over the previous quarter."
-contextualized_chunk =「This chunk is from an SEC filing on ACME corp's performance in Q2 2023; the previous quarter's revenue was $314 million. The company's revenue grew by 3% over the previous quarter."
-
 我们再来看看之前讨论过的 SEC（美国证券交易委员会）文件集的例子。下面通过一个例子，看看文本块（chunk）是如何被转换的：
 
-```original_chunk =」该公司收入较上一季度增长了 3%。"contextualized_chunk =「此文本块（chunk）摘自 ACME corp 关于其 2023 年第二季度业绩的 SEC（美国证券交易委员会）文件；上一季度的收入为 3.14 亿美元。该公司收入较上一季度增长了 3%。"
+```
+original_chunk = "The company's revenue grew by 3% over the previous quarter."
+contextualized_chunk = "This chunk is from an SEC filing on ACME corp's performance in Q2 2023; the previous quarter's revenue was $314 million. The company's revenue grew by 3% over the previous quarter."
 ```
 
+```
+original_chunk = 该公司收入较上一季度增长了 3%。"
+contextualized_chunk = "此文本块（chunk）摘自 ACME corp 关于其 2023 年第二季度业绩的 SEC（美国证券交易委员会）文件；上一季度的收入为 3.14 亿美元。该公司收入较上一季度增长了 3%。"
 ```
 
 It is worth noting that other approaches to using context to improve retrieval have been proposed in the past. Other proposals include：adding generic document summaries to chunks（we experimented and saw very limited gains），hypothetical document embedding，and summary-based indexing（we evaluated and saw low performance). These methods differ from what is proposed in this post.
@@ -153,7 +156,7 @@ It is worth noting that other approaches to using context to improve retrieval h
 
 Of course，it would be far too much work to manually annotate the thousands or even millions of chunks in a knowledge base. To implement Contextual Retrieval，we turn to Claude. We've written a prompt that instructs the model to provide concise，chunk-specific context that explains the chunk using the context of the overall document. We used the following Claude 3 Haiku prompt to generate context for each chunk:
 
-实现上下文检索想象一下，一个知识库里可能有成千上万甚至数百万个信息片段（chunks），要人工给它们一一添加注释，那工作量可就太大了。为了实现上下文检索（Contextual Retrieval）功能，我们找到了一个得力助手 ——Claude。我们编写了一段特殊的指令，也就是提示（prompt），来引导这个模型。通过这个提示，Claude 能够针对每一个信息片段，参考整个文档的背景信息，生成一段简洁明了、专门解释这个信息片段的上下文描述。具体来说，我们使用了下面这段 Claude 3 Haiku 的提示，来为每一个信息片段生成相应的上下文描述：
+实现上下文检索想象一下，一个知识库里可能有成千上万甚至数百万个信息片段（chunks），要人工给它们一一添加注释，那工作量可就太大了。为了实现上下文检索（Contextual Retrieval）功能，我们找到了一个得力助手 —— Claude。我们编写了一段特殊的指令，也就是提示（prompt），来引导这个模型。通过这个提示，Claude 能够针对每一个信息片段，参考整个文档的背景信息，生成一段简洁明了、专门解释这个信息片段的上下文描述。具体来说，我们使用了下面这段 Claude 3 Haiku 的提示，来为每一个信息片段生成相应的上下文描述：
 
 ```
 <document> 
@@ -179,19 +182,21 @@ Please give a short succinct context to situate this chunk within the overall do
 
 The resulting contextual text，usually 50-100 tokens，is prepended to the chunk before embedding it and before creating the BM25 index.
 
-Here's what the preprocessing flow looks like in practice:
-
 由此生成的上下文文本（通常为 50-100 个 Token），会被添加到数据块（chunk）的最前面。这步操作先于对该数据块进行嵌入（embedding）处理以及为它创建 BM25 索引。
+
+Here's what the preprocessing flow looks like in practice:
 
 在实际应用中，预处理流程（preprocessing flow）如下所示：
 
 *Contextual Retrieval is a preprocessing technique that improves retrieval accuracy.*
 
+*上下文检索（Contextual Retrieval）是一种预处理技术（preprocessing technique），它可以提升信息检索的准确度。*
+
 If you're interested in using Contextual Retrieval，you can get started with our cookbook.
 
-* 上下文检索（Contextual Retrieval）是一种预处理技术（preprocessing technique），它可以提升信息检索的准确度。*
-
 如果你有兴趣使用上下文检索（Contextual Retrieval），不妨从我们的实践指南（cookbook）开始入手。
+
+[anthropic-cookbook/skills/contextual-embeddings at main · anthropics/anthropic-cookbook](https://github.com/anthropics/anthropic-cookbook/tree/main/skills/contextual-embeddings)
 
 #### Using Prompt Caching to reduce the costs of Contextual Retrieval
 
@@ -201,9 +206,11 @@ Contextual Retrieval is uniquely possible at low cost with Claude，thanks to th
 
 ##### Methodology
 
+研究方法
+
 We experimented across various knowledge domains（codebases，fiction，ArXiv papers，Science Papers），embedding models，retrieval strategies，and evaluation metrics. We've included a few examples of the questions and answers we used for each domain in Appendix II.
 
-研究方法我们的实验覆盖了多个知识领域（例如代码库（codebases）、小说（fiction）、ArXiv 论文（ArXiv papers）和科学论文（Science Papers)），并探索了不同的嵌入模型（embedding models）、检索策略（retrieval strategies）以及评估指标（evaluation metrics）。附录 II 中包含了一些我们在各个领域中所使用的问答示例。
+我们的实验覆盖了多个知识领域（例如代码库（codebases）、小说（fiction）、ArXiv 论文（ArXiv papers）和科学论文（Science Papers)），并探索了不同的嵌入模型（embedding models）、检索策略（retrieval strategies）以及评估指标（evaluation metrics）。附录 II 中包含了一些我们在各个领域中所使用的问答示例。
 
 The graphs below show the average performance across all knowledge domains with the top-performing embedding configuration（Gemini Text 004）and retrieving the top-20-chunks. We use 1 minus recall@20 as our evaluation metric，which measures the percentage of relevant documents that fail to be retrieved within the top 20 chunks. You can see the full results in the appendix - contextualizing improves performance in every embedding-source combination we evaluated.
 
@@ -211,45 +218,53 @@ The graphs below show the average performance across all knowledge domains with 
 
 ##### Performance improvements
 
+性能提升
+
 Our experiments showed that:
 
-性能提升我们的实验表明：
+我们的实验表明：
 
-* Contextual Embeddings reduced the top-20-chunk retrieval failure rate by 35%（5.7% → 3.7%).
+1 Contextual Embeddings reduced the top-20-chunk retrieval failure rate by 35%（5.7% → 3.7%).
 
-* Combining Contextual Embeddings and Contextual BM25 reduced the top-20-chunk retrieval failure rate by 49%（5.7% → 2.9%).
+上下文嵌入（Contextual Embeddings）技术让排名前 20 的文本片段的检索失败率降低了 35%（从 5.7% 降至 3.7%）。
 
-* 上下文嵌入（Contextual Embeddings）技术让排名前 20 的文本片段的检索失败率降低了 35%（从 5.7% 降至 3.7%）。
+2 Combining Contextual Embeddings and Contextual BM25 reduced the top-20-chunk retrieval failure rate by 49%（5.7% → 2.9%).
 
-* 而将上下文嵌入和上下文 BM25（Contextual BM25）两者相结合，更是让排名前 20 的文本片段的检索失败率大幅降低了 49%（从 5.7% 锐减到 2.9%）。
+而将上下文嵌入和上下文 BM25（Contextual BM25）两者相结合，更是让排名前 20 的文本片段的检索失败率大幅降低了 49%（从 5.7% 锐减到 2.9%）。
 
-*Combining Contextual Embedding and Contextual BM25 reduce the top-20-chunk retrieval failure rate by 49%.*#### Implementation considerations
+*Combining Contextual Embedding and Contextual BM25 reduce the top-20-chunk retrieval failure rate by 49%.*
+
+*将上下文嵌入（Contextual Embedding）和上下文 BM25（Contextual BM25）结合起来，能够将排名前 20 的文本片段的检索失败率降低 49%。*
+
+##### Implementation considerations
+
+实现时的注意事项
 
 When implementing Contextual Retrieval，there are a few considerations to keep in mind:
 
-* 将上下文嵌入（Contextual Embedding）和上下文 BM25（Contextual BM25）结合起来，能够将排名前 20 的文本片段的检索失败率降低 49%。*#### 实现时的注意事项在实现上下文检索（Contextual Retrieval）时，有几点需要牢记在心：
+在实现上下文检索（Contextual Retrieval）时，有几点需要牢记在心：
 
-1. Chunk boundaries：Consider how you split your documents into chunks. The choice of chunk size，chunk boundary，and chunk overlap can affect retrieval performance1.
+1 Chunk boundaries：Consider how you split your documents into chunks. The choice of chunk size，chunk boundary，and chunk overlap can affect retrieval performance1.
 
-1. 数据块（Chunk）边界的考量：你需要仔细思考如何将你的文档分割成一个个的数据块。这是因为，数据块的大小、数据块边界的设定，以及数据块之间的重叠部分，这些因素的选择都会影响到最终的检索性能 1。
+数据块（Chunk）边界的考量：你需要仔细思考如何将你的文档分割成一个个的数据块。这是因为，数据块的大小、数据块边界的设定，以及数据块之间的重叠部分，这些因素的选择都会影响到最终的检索性能 1。
 
-2. Embedding model：Whereas Contextual Retrieval improves performance across all embedding models we tested，some models may benefit more than others. We found Gemini and Voyage embeddings to be particularly effective.
+2 Embedding model：Whereas Contextual Retrieval improves performance across all embedding models we tested，some models may benefit more than others. We found Gemini and Voyage embeddings to be particularly effective.
 
-2. 嵌入模型（Embedding model）：虽然上下文检索（Contextual Retrieval）的方法能够提升我们测试的所有嵌入模型的表现，不过，不同模型从中获得的助益程度可能并不相同。我们发现，Gemini 和 Voyage 这两种嵌入模型的效果尤为突出。
+嵌入模型（Embedding model）：虽然上下文检索（Contextual Retrieval）的方法能够提升我们测试的所有嵌入模型的表现，不过，不同模型从中获得的助益程度可能并不相同。我们发现，Gemini 和 Voyage 这两种嵌入模型的效果尤为突出。
 
-3. Custom contextualizer prompts：While the generic prompt we provided works well，you may be able to achieve even better results with prompts tailored to your specific domain or use case（for example，including a glossary of key terms that might only be defined in other documents in the knowledge base).
+3 Custom contextualizer prompts：While the generic prompt we provided works well，you may be able to achieve even better results with prompts tailored to your specific domain or use case（for example，including a glossary of key terms that might only be defined in other documents in the knowledge base).
 
-3. 自定义情境化提示（Custom contextualizer prompts)：虽然我们提供的通用提示效果已经不错，但如果你能根据自己的特定领域或应用场景来量身定制提示，就可能会取得更好的效果（例如，可以加入一份关键术语的词汇表，这些术语的定义可能只存在于知识库（knowledge base）中的其他文档里 ）。
+自定义情境化提示（Custom contextualizer prompts）：虽然我们提供的通用提示效果已经不错，但如果你能根据自己的特定领域或应用场景来量身定制提示，就可能会取得更好的效果（例如，可以加入一份关键术语的词汇表，这些术语的定义可能只存在于知识库（knowledge base）中的其他文档里）。
 
-4. Number of chunks：Adding more chunks into the context window increases the chances that you include the relevant information. However，more information can be distracting for models so there's a limit to this. We tried delivering 5，10，and 20 chunks，and found using 20 to be the most performant of these options（see appendix for comparisons）but it's worth experimenting on your use case.
+4 Number of chunks：Adding more chunks into the context window increases the chances that you include the relevant information. However，more information can be distracting for models so there's a limit to this. We tried delivering 5，10，and 20 chunks，and found using 20 to be the most performant of these options（see appendix for comparisons）but it's worth experimenting on your use case.
 
-4. 文本块（chunks）的数量：在上下文窗口（context window）中增加更多的文本块，确实能提高模型捕获到相关信息的几率。然而，过多的信息有时反而会分散模型的注意力，甚至造成干扰，因此文本块的数量也不是越多越好。我们分别尝试了提供 5 个、10 个和 20 个文本块进行测试，结果发现，在这几种方案中，使用 20 个文本块时模型的表现最佳（详细对比请参见附录）。不过，具体哪种方案最适合，还需要您在自己的应用场景中进行实验验证。
+文本块（chunks）的数量：在上下文窗口（context window）中增加更多的文本块，确实能提高模型捕获到相关信息的几率。然而，过多的信息有时反而会分散模型的注意力，甚至造成干扰，因此文本块的数量也不是越多越好。我们分别尝试了提供 5 个、10 个和 20 个文本块进行测试，结果发现，在这几种方案中，使用 20 个文本块时模型的表现最佳（详细对比请参见附录）。不过，具体哪种方案最适合，还需要您在自己的应用场景中进行实验验证。
 
 Always run evals：Response generation may be improved by passing it the contextualized chunk and distinguishing between what is context and what is the chunk.
 
-### 03. Further boosting performance with Reranking
-
 始终进行评估：通过将整合了上下文信息的文本片段（contextualized chunk）传递给模型，并让模型区分什么是上下文（context）、什么是当前要处理的文本片段（chunk），这样或许能改进响应生成的效果。
+
+### 03. Further boosting performance with Reranking
 
 通过重新排序（Reranking）进一步提升性能
 
@@ -261,36 +276,45 @@ Reranking is a commonly used filtering technique to ensure that only the most re
 
 重排序（Reranking）是一种常用的过滤技术，它能确保只有最相关的信息区块被送入模型进行处理。这样做的好处是，模型不仅能给出更优质的回答，还能有效降低运行成本和响应延迟，因为它需要处理的信息量大大减少了。其关键步骤如下：
 
-1. Perform initial retrieval to get the top potentially relevant chunks（we used the top 150);
+1 Perform initial retrieval to get the top potentially relevant chunks（we used the top 150);
 
-2. Pass the top-N chunks，along with the user's query，through the reranking model;
+首先，执行初始检索（initial retrieval），以获取那些排名最靠前且可能相关的区块（chunks）(我们选用了最靠前的 150 个)；
 
-1. 首先，执行初始检索（initial retrieval），以获取那些排名最靠前且可能相关的区块（chunks）(我们选用了最靠前的 150 个)；
-2. 然后，将排名最靠前的 N 个区块（chunks），连同用户的查询一起，交由重排序模型（reranking model）进行处理；
+2 Pass the top-N chunks，along with the user's query，through the reranking model;
 
-3. Using a reranking model，give each chunk a score based on its relevance and importance to the prompt，then select the top-K chunks（we used the top 20);
+然后，将排名最靠前的 N 个区块（chunks），连同用户的查询一起，交由重排序模型（reranking model）进行处理；
 
-4. Pass the top-K chunks into the model as context to generate the final result.
+3 Using a reranking model，give each chunk a score based on its relevance and importance to the prompt，then select the top-K chunks（we used the top 20);
 
-3. 使用一个重排序模型（reranking model），根据每个文本块与提示（prompt）的相关性和重要性给它们打分，然后选出得分最高的 K 个文本块（我们选用了前 20 个)；
+使用一个重排序模型（reranking model），根据每个文本块与提示（prompt）的相关性和重要性给它们打分，然后选出得分最高的 K 个文本块（我们选用了前 20 个)；
 
-4. 把这些得分最高的 K 个文本块作为上下文（context）信息传递给模型，用它们来生成最终结果。
+4 Pass the top-K chunks into the model as context to generate the final result.
 
-*Combine Contextual Retrieva and Reranking to maximize retrieval accuracy.*### Performance improvements
+把这些得分最高的 K 个文本块作为上下文（context）信息传递给模型，用它们来生成最终结果。
+
+*Combine Contextual Retrieva and Reranking to maximize retrieval accuracy.*
+
+*结合上下文检索（Contextual Retrieval）和重排序（Reranking）来最大程度地提高检索准确率。*
+
+#### Performance improvements
+
+性能改进
 
 There are several reranking models on the market. We ran our tests with the Cohere reranker. Voyage also offers a reranker，though we did not have time to test it. Our experiments showed that，across various domains，adding a reranking step further optimizes retrieval.
 
-* 结合上下文检索（Contextual Retrieval）和重排序（Reranking）来最大程度地提高检索准确率。*
-
-性能改进市面上有好几种重排序模型（reranking models）。我们使用 Cohere 重排序器进行了测试。Voyage 公司也提供了一款重排序器，不过我们还没来得及对其进行测试。我们的实验表明，在各种不同的应用领域，增加一个重排序步骤能够进一步优化检索效果。
+市面上有好几种重排序模型（reranking models）。我们使用 Cohere 重排序器进行了测试。Voyage 公司也提供了一款重排序器，不过我们还没来得及对其进行测试。我们的实验表明，在各种不同的应用领域，增加一个重排序步骤能够进一步优化检索效果。
 
 Specifically，we found that Reranked Contextual Embedding and Contextual BM25 reduced the top-20-chunk retrieval failure rate by 67%（5.7% → 1.9%).
 
-*Reranked Contextual Embedding and Contextual BM25 reduces the top-20-chunk retrieval failure rate by 67%.*#### Cost and latency considerations
-
 具体而言，我们发现，通过运用重排序上下文嵌入（Reranked Contextual Embedding）和上下文 BM25（Contextual BM25）这两种技术，在检索最重要的前 20 个文本片段（top-20-chunk）时，检索失败的概率从原先的 5.7% 大幅下降到了 1.9%，降幅高达 67%。
 
-* 重排序上下文嵌入和上下文 BM25 将检索最重要的前 20 个文本片段的失败率降低了 67%。*#### 成本和延迟的考量
+*Reranked Contextual Embedding and Contextual BM25 reduces the top-20-chunk retrieval failure rate by 67%.*
+
+*重排序上下文嵌入和上下文 BM25 将检索最重要的前 20 个文本片段的失败率降低了 67%。*
+
+##### Cost and latency considerations
+
+成本和延迟的考量
 
 One important consideration with reranking is the impact on latency and cost，especially when reranking a large number of chunks. Because reranking adds an extra step at runtime，it inevitably adds a small amount of latency，even though the reranker scores all the chunks in parallel. There is an inherent trade-off between reranking more chunks for better performance vs. reranking fewer for lower latency and cost. We recommend experimenting with different settings on your specific use case to find the right balance.
 
