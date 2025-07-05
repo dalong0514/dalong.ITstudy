@@ -1,4 +1,10 @@
-### 原始提示词
+[Zotero MCP | Your Research Library in Claude](https://stevenyuyy.us/zotero-mcp/)
+
+### 提示词
+
+在zotero中搜索与machine learning相关的论文
+
+#### 原始提示词
 
 Search Tools
 zotero_search_items: Search your library
@@ -18,47 +24,18 @@ zotero_get_notes: Retrieve notes from your Zotero library
 zotero_search_notes: Search in notes and annotations (including PDF-extracted)
 zotero_create_note: Create a new note for an item (beta feature)
 
-### 安装
+#### Claude 里的提示词
 
-[54yyyu/zotero-mcp: Zotero MCP: Connects your Zotero research library with Claude and other AI assistants via the Model Context Protocol to discuss papers, get summaries, analyze citations, and more.](https://github.com/54yyyu/zotero-mcp?tab=readme-ov-file)
+Example prompts:
+"Search my library for papers on machine learning"
+"Find recent articles I've added about climate change"
+"Summarize the key findings from my paper on quantum computing"
+"Extract all PDF annotations from my paper on neural networks"
+"Search my notes and annotations for mentions of 'reinforcement learning'"
+"Create a detailed note for my climate paper with a summary of key points"
 
-```
-uv tool install "git+https://github.com/54yyyu/zotero-mcp.git"
-```
-
-### 配置
-
-```
-zotero-mcp setup  # Auto-configure for Claude Desktop
-```
-
-配置完成后的信息：
-
-Using arguments passed from command line
-Found zotero-mcp in PATH at: /Users/Daglas/.local/bin/zotero-mcp
-Using zotero-mcp at: /Users/Daglas/.local/bin/zotero-mcp
-Found Claude Desktop config at: /Users/Daglas/Library/Application Support/Claude/claude_desktop_config.json
-
-Setup with the following settings:
-  Local API: True
-Loaded existing config from: /Users/Daglas/Library/Application Support/Claude/claude_desktop_config.json
-
-Successfully wrote config to: /Users/Daglas/Library/Application Support/Claude/claude_desktop_config.json
-
-Setup complete!
-To use Zotero in Claude Desktop:
-1. Restart Claude Desktop if it's running
-2. In Claude, type: /tools zotero
-
-Note: Make sure Zotero desktop is running and the local API is enabled in preferences.
-
-\### shiys
-
-
-### Claude 客户端提示词
 
 在 Claude 客户端里输入 /tools zotero 后得到的回复：
-
 
 I can help you work with your Zotero library! Here are the Zotero tools I have available:
 
@@ -89,10 +66,47 @@ I can help you work with your Zotero library! Here are the Zotero tools I have a
 
 What would you like to do with your Zotero library? I can help you search for specific papers, organize your collection, work with notes and annotations, or perform any other Zotero-related tasks.
 
-### 官方文档
+### 配置
 
-[Zotero MCP | Your Research Library in Claude](https://stevenyuyy.us/zotero-mcp/)
+#### Claude 客户端里配置
 
+先安装：
+
+[54yyyu/zotero-mcp: Zotero MCP: Connects your Zotero research library with Claude and other AI assistants via the Model Context Protocol to discuss papers, get summaries, analyze citations, and more.](https://github.com/54yyyu/zotero-mcp?tab=readme-ov-file)
+
+```
+uv tool install "git+https://github.com/54yyyu/zotero-mcp.git"
+```
+
+再配置：
+
+```
+zotero-mcp setup  # Auto-configure for ### 01 Desktop
+```
+
+配置完成后的信息：
+
+Using arguments passed from command line
+Found zotero-mcp in PATH at: /Users/Daglas/.local/bin/zotero-mcp
+Using zotero-mcp at: /Users/Daglas/.local/bin/zotero-mcp
+Found Claude Desktop config at: /Users/Daglas/Library/Application Support/Claude/claude_desktop_config.json
+
+Setup with the following settings:
+  Local API: True
+Loaded existing config from: /Users/Daglas/Library/Application Support/Claude/claude_desktop_config.json
+
+Successfully wrote config to: /Users/Daglas/Library/Application Support/Claude/claude_desktop_config.json
+
+Setup complete!
+To use Zotero in Claude Desktop:
+1. Restart Claude Desktop if it's running
+2. In Claude, type: /tools zotero
+
+Note: Make sure Zotero desktop is running and the local API is enabled in preferences.
+
+\### shiys
+
+#### cursor 里配置
 
 cursor 中的配置：
 
