@@ -136,7 +136,7 @@ sudo pip install mysql-connector-python --allow-external mysql-connector-python
 1、cd 到 Java 的目录下。
 
 2、执行 Java 命令。
- 但是，当我们需要同时使用多个工具的时候，比如又有 java、maven、git 等等，而且是多台机器的时候，我们通常需要很多繁琐的 cd 操作。而配置环境变量就可以使我们可以快速的运行这些脚本了。
+但是，当我们需要同时使用多个工具的时候，比如又有 java、maven、git 等等，而且是多台机器的时候，我们通常需要很多繁琐的 cd 操作。而配置环境变量就可以使我们可以快速的运行这些脚本了。
 
 使用场景 2，如果我们又有 JDK1.7，又有 JDK1.8，而且需要经常的切换，那么怎么办？ 
 
@@ -186,4 +186,4 @@ sudo pip install mysql-connector-python --allow-external mysql-connector-python
 
 	pyenv local 2.7.5
 
-目前查看版本没效果，推测是现在除了苹果自动的 2.7.10 版本 pyenv 识别不了，mac 里目前只有 3.6.3 这一个版本；待确认。
+目前查看版本没效果，推测是现在除了苹果自动的 2.7.10 版本 pyenv 识别不了，mac 里目前只有 3.6.3 这一个版本；待确认。
