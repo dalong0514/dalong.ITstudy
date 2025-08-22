@@ -22,6 +22,38 @@ Claude
 
 ### 记录
 
+用 DeepSeek 大模型驱动 cc。
+
+1、先在 shell 里设置代理：
+
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+
+$env:HTTP_PROXY = "http://127.0.0.1:7890"
+$env:HTTPS_PROXY = "http://127.0.0.1:7890"
+
+2、设置环境变量：
+
+export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
+export ANTHROPIC_AUTH_TOKEN=DEEPSEEK_API_KEY
+export ANTHROPIC_MODEL=deepseek-chat
+export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
+
+
+export ANTHROPIC_MODEL=deepseek-reasoner
+export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
+
+URL 和 key 的配置已经写到了 .zshrc 文件里。
+
+
+$env:ANTHROPIC_BASE_URL = "https://api.deepseek.com/anthropic"
+$env:ANTHROPIC_AUTH_TOKEN="sk-"
+$env:ANTHROPIC_MODEL="deepseek-chat"
+$env:ANTHROPIC_SMALL_FAST_MODEL="deepseek-chat"
+
+
+---
+
 用 kimi k2 大模型驱动 cc。
 
 1、先在 shell 里设置代理：
@@ -38,5 +70,4 @@ $env:ANTHROPIC_BASE_URL = "https://api.moonshot.cn/anthropic/"
 $env:ANTHROPIC_AUTH_TOKEN="sk-"
 
 export ANTHROPIC_BASE_URL=https://api.moonshot.cn/anthropic/
-
 export ANTHROPIC_AUTH_TOKEN=sk-
