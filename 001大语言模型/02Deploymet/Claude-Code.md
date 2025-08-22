@@ -6,6 +6,8 @@
 
 [Claude Code 概述 - Anthropic](https://docs.anthropic.com/zh-CN/docs/claude-code/overview)
 
+[Home - Anthropic](https://docs.anthropic.com/en/home)
+
 [Node.js — Download Node.js®](https://nodejs.org/en/download)
 
 ### 安装记录
