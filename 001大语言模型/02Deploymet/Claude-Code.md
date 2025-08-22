@@ -56,9 +56,12 @@ URL 和 key 的配置已经写到了 .zshrc 文件里。
 
 $env:ANTHROPIC_BASE_URL = "https://api.deepseek.com/anthropic"
 $env:ANTHROPIC_AUTH_TOKEN="sk-"
+
 $env:ANTHROPIC_MODEL="deepseek-chat"
 $env:ANTHROPIC_SMALL_FAST_MODEL="deepseek-chat"
 
+$env:ANTHROPIC_MODEL="deepseek-reasoner"
+$env:ANTHROPIC_SMALL_FAST_MODEL="deepseek-chat"
 
 ---
 
