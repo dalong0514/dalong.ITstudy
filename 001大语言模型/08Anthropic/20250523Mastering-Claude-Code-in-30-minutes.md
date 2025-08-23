@@ -132,8 +132,6 @@ If you're not sure which of these to use, this is like kind of an insane matrix 
 
 举例来说，如果你运行 `/memory` 命令，你可以看到所有被加载的内存文件。比如，我可能有企业策略文件、我的用户内存文件、项目 `Claude.md` 文件，以及一个嵌套的 `Claude.md` 文件（它只在特定目录下被引入）。同样，当你运行 `/memory` 命令时，你可以编辑特定的内存文件。当你输入 `#` 符号来记录信息时，你可以选择将它保存到哪个内存文件中。
 
-### 05
-
 So yeah, that's the next step. Take the time to configure Claude.md, MCP servers, all the stuff that your team uses, so that you can use it once, configure it once, and then share it with everyone. An example of this is in our apps repo for Anthropic. This is like the repo that we have all of our web and apps code in. There's a Puppeteer MCP server, and we share this with the team.
 
 好的，下一步就是花时间配置 Claude.md、MCP 服务器，以及团队所需的所有工具。这样一来，你只需配置一次，就能在团队内共享使用。举个例子，Anthropic 的应用仓库中就包含了我们所有的网络和应用程序代码。其中有一个 Puppeteer MCP 服务器，我们就是以这种方式与团队共享的。
@@ -141,6 +139,8 @@ So yeah, that's the next step. Take the time to configure Claude.md, MCP servers
 And there's an MCP JSON checked in, so any engineer working in that repo can use Puppeteer in order to pilot end-to-end tests and to screenshot automatically and iterate so that every engineer doesn't have to install it themselves.
 
 而且，由于有一个 MCP JSON 文件已提交，任何在该代码库中工作的工程师都可以利用 Puppeteer 来执行端到端测试，并自动进行截图和迭代，从而省去了每位工程师自行安装 Puppeteer 的麻烦。
+
+### 05
 
 This is a talk about pro tips, so I just want to take a quick interlude to talk about some common key bindings that people may not know. It's very hard to build for terminal. It's also very fun. It feels like rediscovering this new design language. But something about terminal is it's extremely minimal, and so sometimes it's hard to discover these key bindings.
 
@@ -156,7 +156,7 @@ Anytime you want Claude to remember something, so for example, if it's not using
 
 If you ever want to drop down to bash mode, so just run a bash command, you can hit the exclamation mark and type in your command. That will run locally, but that also goes into the context window, so Claude will see it on the next turn. And this is pretty good for long-running commands if you know exactly what you want to do or any command that you want to get into context, and Claude will see the command and the output. You can add mention thousand folders.
 
-如果你想进入 bash 模式，直接运行 bash 命令，可以按下感叹号并输入你的命令。这个命令会在本地运行，但它的内容也会被添加到上下文窗口中，这样 Claude 在下一次交互时就能看到它。如果你确切知道自己想执行什么操作，或者任何你希望 Claude 看到其命令和输出的指令，这种方法对于长时间运行的命令来说都非常有用。你可以通过这种方式处理成千上万个文件夹。
+如果你想进入 bash 模式，直接运行 bash 命令，可以按下感叹号 ! 并输入你的命令。这个命令会在本地运行，但它的内容也会被添加到上下文窗口中，这样 Claude 在下一次交互时就能看到它。如果你确切知道自己想执行什么操作，或者任何你希望 Claude 看到其命令和输出的指令，这种方法对于长时间运行的命令来说都非常有用。你可以通过这种方式处理成千上万个文件夹。
 
 Anytime you can hit escape to stop what Claude is doing, no matter what Claude is doing, you can always safely hit escape. It's not going to corrupt the session, it's not going to mess anything up. So maybe Claude is doing a file edit, I'll hit escape, I'll tell it what to do differently, or maybe it suggested a 20 line edit and I'm like, actually 19 of these lines look perfect, but one line you should change. I'll hit escape, I'll tell it that, and then I'll tell it to redo that.
 
@@ -166,7 +166,9 @@ You can hit escape twice to jump back in history, and then after you're done wit
 
 你可以按两次 Escape 键来回溯历史记录；会话结束后，如果你想恢复之前的会话，可以使用 `resume` 或 `--continue` 命令来启动 Claude。此外，任何时候如果你想查看更多输出，可以按 Control + R 键，这会显示完整的输出内容，与 Claude 在其上下文窗口（context window）中看到的内容相同。
 
-The next thing I want to talk about is the Claude code SDK. So we talked about this at the top. Right after this, Sid is doing a session, I think just across the hallway, and he's going to go super deep on the SDK. If you hadn't played around with this, if you use the dash P flag in Claude, this is what the SDK is. And we've been planning a bunch of features over the last few weeks to make it even better.
+### 06
+
+xt thing I want to talk about is the Claude code SDK. So we talked about this at the top. Right after this, Sid is doing a session, I think just across the hallway, and he's going to go super deep on the SDK. If you hadn't played around with this, if you use the dash P flag in Claude, this is what the SDK is. And we've been planning a bunch of features over the last few weeks to make it even better.
 
 接下来我想谈谈 Claude 代码软件开发工具包（SDK）。我们在一开始就提到了它。紧接着，Sid 将在（我想是）走廊尽头的房间进行一个专题讨论，他会深入讲解这个 SDK。如果你还没有尝试过，当你使用 Claude 中的 `-P` 标志时，你就是在体验这个 SDK。在过去几周里，我们一直在规划一系列新功能，力求让它变得更好用。
 
@@ -183,16 +185,20 @@ The piping is also pretty cool. So you can use like, for example, git status and
 The final thing, and this is probably the most advanced use case as we see, I'm sort of a Claude normie, so I'll have usually one Claude running at a time, and maybe I'll have a few terminal tabs for a few different repos running at a time. When I look at power users in and out of Anthropic, almost always they're going to have SSH sessions, they'll have Tmux tunnels into their Claude sessions. They're going to have a bunch of checkouts of the same repo so that they can run a bunch of Claude's in parallel in that repo, or they're using Git work trees to have some kind of isolation as they do this.
 
 最后一点，这可能是我们所见过的最进阶的用法了。我本人是比较「普通」的 Claude 用户，通常只会同时运行一个 Claude 会话，并且可能只开几个终端标签页来处理不同的代码仓库。但当我观察 Anthropic 内外的那些高级用户时，他们几乎总是会利用 SSH 会话，通过 Tmux 隧道连接到他们的 Claude 会话。他们会在同一个代码仓库中检出（checkout）多个副本，以便在这些副本上并行运行多个 Claude 实例，或者他们会使用 Git work trees 来确保操作时的隔离性。
-</step3_ref_translation>
 
 And we're actively working on making this easier to use, but for now, like, these are some ideas for how to do more work in parallel with Claude. You can run as many sessions as you want, and there's a lot that you can get done in parallel. So yeah, that's it. I wanted to also leave some time for Q and A. So I think this is the last slide that I have. And yeah, if folks have questions, there's mics on both sides. And yeah, we'd love to answer any questions.
 
 我们正在积极努力使其更易于使用，但目前，这些是关于如何利用 Claude 并行处理更多任务的一些思路。您可以运行任意数量的会话，并且可以并行完成大量工作。好了，我的分享就到这里。我还想留出一些时间进行问答环节。这应该是我准备的最后一张幻灯片了。如果大家有问题，两边都有麦克风，我们很乐意为大家解答。
 
-I did, hey Boris, thanks for building Claude Code. And I was wondering what was the hardest implementation, hardest part of the implementation for you of building it? I think there's a lot of tricky parts. I think one part that is especially tricky is the things that we do to make bash commands safe. Bash is inherently pretty dangerous and it can change system state in unexpected ways. But at the same time, if you have to manually approve every single bash command, it's super annoying as an engineer and you can't really be productive because you're just constantly approving every command. And just kind of navigating how to do this safely in a way that scales across the different kinds of code bases people have, because not everyone runs their code in a Docker container, was pretty tricky. And essentially the thing we landed on is there's some commands that are read-only, there's some static analysis that we do in order to figure out which commands can be combined in safe ways, and then we have this pretty complex tiered permission system, so that you can allow list and block list commands at different levels.
+### 07
 
-<step3_refined_translation>
-是的，Boris，感谢你构建了 Claude Code。我一直在想，对你来说，在构建 Claude Code 的过程中，最困难的实现部分是什么呢？我觉得有很多难题。其中一个特别棘手的地方在于，我们为了确保 Bash 命令的安全性所做的努力。Bash 本身就相当危险，它可能会以意想不到的方式改变系统状态。但与此同时，如果工程师每次都要手动批准 Bash 命令，那会非常令人恼火，效率也会大打折扣，因为你不得不不停地批准命令。如何安全地处理这些命令，并使其能够适应各种不同的代码库 —— 毕竟并非所有人都将代码运行在 Docker 容器中 —— 这确实是个难题。我们最终的解决方案是：有些命令被设定为只读；我们还进行了一些静态分析，以确定哪些命令可以安全地组合使用；此外，我们设计了一个相当复杂的分层权限系统，允许你在不同级别上设置命令的「白名单」（允许列表）和「黑名单」（阻止列表）。
+I did, hey Boris, thanks for building Claude Code. And I was wondering what was the hardest implementation, hardest part of the implementation for you of building it? 
+
+是的，Boris，感谢你构建了 Claude Code。我一直在想，对你来说，在构建 Claude Code 的过程中，最困难的实现部分是什么呢？
+
+I think there's a lot of tricky parts. I think one part that is especially tricky is the things that we do to make bash commands safe. Bash is inherently pretty dangerous and it can change system state in unexpected ways. But at the same time, if you have to manually approve every single bash command, it's super annoying as an engineer and you can't really be productive because you're just constantly approving every command. And just kind of navigating how to do this safely in a way that scales across the different kinds of code bases people have, because not everyone runs their code in a Docker container, was pretty tricky. And essentially the thing we landed on is there's some commands that are read-only, there's some static analysis that we do in order to figure out which commands can be combined in safe ways, and then we have this pretty complex tiered permission system, so that you can allow list and block list commands at different levels.
+
+我觉得有很多难题。其中一个特别棘手的地方在于，我们为了确保 Bash 命令的安全性所做的努力。Bash 本身就相当危险，它可能会以意想不到的方式改变系统状态。但与此同时，如果工程师每次都要手动批准 Bash 命令，那会非常令人恼火，效率也会大打折扣，因为你不得不不停地批准命令。如何安全地处理这些命令，并使其能够适应各种不同的代码库 —— 毕竟并非所有人都将代码运行在 Docker 容器中 —— 这确实是个难题。我们最终的解决方案是：有些命令被设定为只读；我们还进行了一些静态分析，以确定哪些命令可以安全地组合使用；此外，我们设计了一个相当复杂的分层权限系统，允许你在不同级别上设置命令的「白名单」（允许列表）和「黑名单」（阻止列表）。
 
 Hi Boris, You mentioned giving an image to Claude Code, which made me wonder if there's some sort of multimodal functionality that I'm not aware of. Are you just pointing it at an image on the file system or something? Yeah, so Claude Code is fully multimodal. It has been from the start. It's in a terminal, so it's a little hard to discover. But yeah, you can take an image and just drag and drop it in, that'll work. You can give it a file path, that'll work. You can copy and paste the image in, and that works too. So I'll use this pretty often for if I have like a mock of something, I'll just drag and drop in the mock, I'll tell it to implement it, I'll give it up a tier server so it can iterate against it. And yeah, it's just fully automated.
 
@@ -208,9 +214,9 @@ How much have you, I don't know if this is, is this on? How much you can use cod
 
 Okay, very cool. Thank you. All right. I think very cool, thank you. All right, I think that's it, thanks.
 
-I'm going to go ahead and get a little bit of 
-
 好的，非常感谢。
+
+I'm going to go ahead and get a little bit of 
 
 我想借此机会，向大家详细介绍一些关键内容。
 
@@ -220,4 +226,4 @@ I'm going to go ahead and get a little bit of
 
 例如，在资本市场领域，我们拥有一些卓越的解决方案，生成式人工智能（Generative AI）不仅被用于总结，还能对财报电话会议进行实时分析。财报电话会议一直是获取阿尔法（alpha）的重要来源，但问题在于它们通常没有摘要，也缺乏分析，往往只是以一种杂乱无章的方式呈现。现在，生成式 AI（Generative AI）被用来实时总结、分析财报电话会议，并从中获取阿尔法（alpha）。
 
-很多人会说，生成式 AI（Generative AI）是一个「黑箱」，也有人会说，你不能完全依赖它，因为它会「幻觉」。还有人会说，你不能在金融服务领域实际应用它，因为你需要某种完全透明、完全可审计、完全可解释的东西。这当然是对的。但我要再次强调，这正是人工智能（AI）革命如此强大的原因，因为它不仅仅关乎大语言模型（Large Language Model），还关乎许多其他方面：数据安全、数据治理、负责任的 AI（Responsible AI）。它关乎提供你所需的工具，以确保生成式 AI（Generative AI）的应用能够带来可解释、可审计和透明的益处。因此，我们 Microsoft（微软）、Amazon（亚马逊）和 OpenAI（OpenAI）正在做的是，为你提供工具，让你不仅能够将大语言模型（Large Language Model）用于这些目的，还能为这些大语言模型（Large Language Model）加上一个治理「外壳」、一个安全「外壳」和一个负责任的 AI（Responsible AI)「外壳」，从而使它们能够安全有效地用于这些目的。
+很多人会说，生成式 AI（Generative AI）是一个「黑箱」，也有人会说，你不能完全依赖它，因为它会「幻觉」。还有人会说，你不能在金融服务领域实际应用它，因为你需要某种完全透明、完全可审计、完全可解释的东西。这当然是对的。但我要再次强调，这正是人工智能（AI）革命如此强大的原因，因为它不仅仅关乎大语言模型（Large Language Model），还关乎许多其他方面：数据安全、数据治理、负责任的 AI（Responsible AI）。它关乎提供你所需的工具，以确保生成式 AI（Generative AI）的应用能够带来可解释、可审计和透明的益处。因此，我们 Microsoft（微软）、Amazon（亚马逊）和 OpenAI（OpenAI）正在做的是，为你提供工具，让你不仅能够将大语言模型（Large Language Model）用于这些目的，还能为这些大语言模型（Large Language Model）加上一个治理「外壳」、一个安全「外壳」和一个负责任的 AI（Responsible AI）「外壳」，从而使它们能够安全有效地用于这些目的。
