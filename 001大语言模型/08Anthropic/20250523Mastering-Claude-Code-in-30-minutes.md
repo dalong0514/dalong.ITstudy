@@ -200,30 +200,26 @@ I think there's a lot of tricky parts. I think one part that is especially trick
 
 我觉得有很多难题。其中一个特别棘手的地方在于，我们为了确保 Bash 命令的安全性所做的努力。Bash 本身就相当危险，它可能会以意想不到的方式改变系统状态。但与此同时，如果工程师每次都要手动批准 Bash 命令，那会非常令人恼火，效率也会大打折扣，因为你不得不不停地批准命令。如何安全地处理这些命令，并使其能够适应各种不同的代码库 —— 毕竟并非所有人都将代码运行在 Docker 容器中 —— 这确实是个难题。我们最终的解决方案是：有些命令被设定为只读；我们还进行了一些静态分析，以确定哪些命令可以安全地组合使用；此外，我们设计了一个相当复杂的分层权限系统，允许你在不同级别上设置命令的「白名单」（允许列表）和「黑名单」（阻止列表）。
 
-Hi Boris, You mentioned giving an image to Claude Code, which made me wonder if there's some sort of multimodal functionality that I'm not aware of. Are you just pointing it at an image on the file system or something? Yeah, so Claude Code is fully multimodal. It has been from the start. It's in a terminal, so it's a little hard to discover. But yeah, you can take an image and just drag and drop it in, that'll work. You can give it a file path, that'll work. You can copy and paste the image in, and that works too. So I'll use this pretty often for if I have like a mock of something, I'll just drag and drop in the mock, I'll tell it to implement it, I'll give it up a tier server so it can iterate against it. And yeah, it's just fully automated.
+Hi Boris, You mentioned giving an image to Claude Code, which made me wonder if there's some sort of multimodal functionality that I'm not aware of. Are you just pointing it at an image on the file system or something? 
 
-Hi Boris，你提到把图片给 Claude Code 处理，这让我好奇它是不是有什么我不知道的多模态功能。你只是让它指向文件系统上的图片，还是有其他方式？是的，Claude Code 从一开始就完全支持多模态功能。因为它是在终端中运行的，所以可能不太容易被发现。但没错，你可以直接拖放图片进去，这样就能识别；你也可以给它一个文件路径，同样能识别；甚至直接复制粘贴图片，它也能处理。所以我经常这样用：如果我有一个界面的原型图（mock），我就会直接拖放进去，让 Claude Code 实现它，然后我会给它配置一个后端服务器，这样它就可以针对原型进行反复测试和改进。没错，整个过程都是全自动的。
+Hi Boris，你提到把图片给 Claude Code 处理，这让我好奇它是不是有什么我不知道的多模态功能。你只是让它指向文件系统上的图片，还是有其他方式？
+
+Yeah, so Claude Code is fully multimodal. It has been from the start. It's in a terminal, so it's a little hard to discover. But yeah, you can take an image and just drag and drop it in, that'll work. You can give it a file path, that'll work. You can copy and paste the image in, and that works too. So I'll use this pretty often for if I have like a mock of something, I'll just drag and drop in the mock, I'll tell it to implement it, I'll give it up a tier server so it can iterate against it. And yeah, it's just fully automated.
+
+是的，Claude Code 从一开始就完全支持多模态功能。因为它是在终端中运行的，所以可能不太容易被发现。但没错，你可以直接拖放图片进去，这样就能识别；你也可以给它一个文件路径，同样能识别；甚至直接复制粘贴图片，它也能处理。所以我经常这样用：如果我有一个界面的原型图（mock），我就会直接拖放进去，让 Claude Code 实现它，然后我会给它配置一个后端服务器，这样它就可以针对原型进行反复测试和改进。没错，整个过程都是全自动的。
 
 Hey, why did you build a CLI tool instead of an IDE? Yeah, it's a good question. I think there's probably two reasons. One is we started this at Anthropic. And at Anthropic, people use a broad range of IDEs. And some people use VS Code, other people use Zed, or Xcode, or Vim, or Emacs. And it was just hard to build something that works for everyone. And so terminal is just the common denominator. The second thing is Adanthropic, we see up close how fast the model is getting better. And so I think there's a good chance that by the end of the year, people aren't using IDEs anymore. And so we want to get ready for this future, and we want to avoid over-investing in UI and other layers on top, given that the way the models are progressing, it just may not be useful work pretty soon.
 
 您可能会问，为什么我们选择开发一个命令行界面（CLI）工具，而不是一个集成开发环境（IDE）？这是一个很好的问题，我认为主要有以下两点原因。首先，我们是在 Anthropic 启动这个项目的。在 Anthropic 内部，大家使用的 IDE 五花八门，有的人用 VS Code，有的人用 Zed、Xcode、Vim 或者 Emacs。因此，要开发一个能兼容所有这些环境的工具，挑战性很大。相比之下，终端（terminal）就是一个通用的解决方案，可以适用于所有人。其次，在 Anthropic，我们切身体会到了模型迭代速度之快。因此，我们认为很有可能到今年年底，开发者们将不再像现在这样依赖 IDE。为了迎接这个未来，我们希望避免在用户界面（UI）和其他上层架构上投入过多资源。考虑到当前模型的发展速度，这些投入可能很快就会变得不再那么有价值。
 
-How much have you, I don't know if this is, is this on? How much you can use code for machine learning modeling and almost that auto ML experience? I was curious what the experience has been so far with that. Yeah, I think the question was how much are we using Claude Code for machine learning and modeling? We actually use it for this a bunch. So both engineers and researchers at Anthropic use Claude Code every day. I think about 80% of people at Anthropic that are technical use Claude Code every day. And hopefully you can see that in the product and kind of the amount of love and dog fooding we've put into it. But this includes researchers who use tools like the notebook tool to edit and run notebooks.
+How much have you, I don't know if this is, is this on? How much you can use code for machine learning modeling and almost that auto ML experience? I was curious what the experience has been so far with that. 
 
-你们在多大程度上利用代码进行机器学习建模，并获得近似自动化机器学习（AutoML）的体验？我很好奇你们在这方面的经验如何。是的，我想问题是：我们使用 Claude Code（Claude Code）进行机器学习建模的程度有多高？我们实际上大量使用了它。Anthropic 的工程师和研究人员每天都在使用 Claude Code。我想 Anthropic 大约 80% 的技术人员每天都会用到 Claude Code。希望你们能在产品中感受到我们投入的热情和内部测试（即「狗粮式开发」）。这包括研究人员，他们会使用像笔记本工具这样的工具来编辑和运行代码。
+你们在多大程度上利用代码进行机器学习建模，并获得近似自动化机器学习（AutoML）的体验？我很好奇你们在这方面的经验如何。
+
+Yeah, I think the question was how much are we using Claude Code for machine learning and modeling? We actually use it for this a bunch. So both engineers and researchers at Anthropic use Claude Code every day. I think about 80% of people at Anthropic that are technical use Claude Code every day. And hopefully you can see that in the product and kind of the amount of love and dog fooding we've put into it. But this includes researchers who use tools like the notebook tool to edit and run notebooks.
+
+是的，我想问题是：我们使用 Claude Code 进行机器学习建模的程度有多高？我们实际上大量使用了它。Anthropic 的工程师和研究人员每天都在使用 Claude Code。我想 Anthropic 大约 80% 的技术人员每天都会用到 Claude Code。希望你们能在产品中感受到我们投入的热情和内部测试（即「狗粮式开发」）。这包括研究人员，他们会使用像笔记本工具这样的工具来编辑和运行代码。
 
 Okay, very cool. Thank you. All right. I think very cool, thank you. All right, I think that's it, thanks.
 
 好的，非常感谢。
-
-I'm going to go ahead and get a little bit of 
-
-我想借此机会，向大家详细介绍一些关键内容。
-
-目前，人寿保险（life insurance）实际上并未受到（人工智能）冲击，但金融服务业的其他领域，无论是银行业务、资本市场、财富管理还是资产管理，我们都看到了令人难以置信的广泛应用，而且速度惊人。
-
-现在，你提到了人工智能（AI）的炒作周期。我们无疑正处于一个巨大的人工智能炒作周期中。我们正处于顶峰，有人甚至说正在走下坡路。但与 2017、2018、2019、2020 甚至 2021 年初（当时我们开始看到一些早期迹象，预示着未来的发展）不同的是，人们现在不再问「人工智能能做什么」，而是问「我能用人工智能做什么」。这才是如今的重大区别。因此，我们在金融服务行业中首次看到的，不是炒作，而是人工智能应用带来的实实在在、可衡量的效益，尤其是生成式 AI（Generative AI）。
-
-例如，在资本市场领域，我们拥有一些卓越的解决方案，生成式人工智能（Generative AI）不仅被用于总结，还能对财报电话会议进行实时分析。财报电话会议一直是获取阿尔法（alpha）的重要来源，但问题在于它们通常没有摘要，也缺乏分析，往往只是以一种杂乱无章的方式呈现。现在，生成式 AI（Generative AI）被用来实时总结、分析财报电话会议，并从中获取阿尔法（alpha）。
-
-很多人会说，生成式 AI（Generative AI）是一个「黑箱」，也有人会说，你不能完全依赖它，因为它会「幻觉」。还有人会说，你不能在金融服务领域实际应用它，因为你需要某种完全透明、完全可审计、完全可解释的东西。这当然是对的。但我要再次强调，这正是人工智能（AI）革命如此强大的原因，因为它不仅仅关乎大语言模型（Large Language Model），还关乎许多其他方面：数据安全、数据治理、负责任的 AI（Responsible AI）。它关乎提供你所需的工具，以确保生成式 AI（Generative AI）的应用能够带来可解释、可审计和透明的益处。因此，我们 Microsoft（微软）、Amazon（亚马逊）和 OpenAI（OpenAI）正在做的是，为你提供工具，让你不仅能够将大语言模型（Large Language Model）用于这些目的，还能为这些大语言模型（Large Language Model）加上一个治理「外壳」、一个安全「外壳」和一个负责任的 AI（Responsible AI）「外壳」，从而使它们能够安全有效地用于这些目的。
