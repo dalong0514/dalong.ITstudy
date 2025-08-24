@@ -291,36 +291,40 @@ Key insight: A model's negative log likelihood is equal to the minimum number
 How it works: The authors trained hundreds of GPT-2 style models to predict the next token in two text datasets: (i) a synthetic dataset of 64-token strings in which each token was generated randomly and (ii) the FineWeb dataset of text from the web, its examples truncated to 64 tokens and deduplicated. They trained models from 100,000 to 20 million parameters on subsets of these datasets from 16,000 to 4 million examples. Then they computed the how much of the datasets the models had memorized:
 
 它们的工作原理如下：作者训练了数百个 GPT-2 风格的模型，旨在预测两个文本数据集中的下一个 Token（Token）：
+
 （i）一个合成数据集，由 64 个 Token 的字符串组成，每个 Token 都是随机生成的；
+
 （ii）FineWeb 文本数据集，其中的网络文本示例被截断为 64 个 Token 并进行了去重。
+
 他们使用这些数据集的子集来训练模型，这些模型的参数量从 100,000 个到 2000 万个不等，每个子集包含 16,000 到 400 万个样本。随后，他们计算了模型对数据集的记忆量：
 
-* The authors computed the number of bits needed to represent each training example based on the likelihoods of the trained model and a superior model. For models trained on synthetic data, the superior model was the distribution used to generate the data. For models trained on a subset of FineWeb, they used GPT-2 trained on all FineWeb examples (after truncation and deduplication).
+1 The authors computed the number of bits needed to represent each training example based on the likelihoods of the trained model and a superior model. For models trained on synthetic data, the superior model was the distribution used to generate the data. For models trained on a subset of FineWeb, they used GPT-2 trained on all FineWeb examples (after truncation and deduplication).
 
-* 作者们计算了表示每个训练样本所需的比特数，这个计算基于已训练模型和一个表现更优模型的似然值（likelihoods）。具体来说，对于那些用合成数据（synthetic data）训练的模型，表现更优的模型就是用来生成这些数据的原始数据分布。而对于那些用 FineWeb 数据集子集训练的模型，他们则使用了在所有 FineWeb 样本（经过截断和去重处理后）上训练的 GPT-2 模型作为参照。
+作者们计算了表示每个训练样本所需的比特数，这个计算基于已训练模型和一个表现更优模型的似然值（likelihoods）。具体来说，对于那些用合成数据（synthetic data）训练的模型，表现更优的模型就是用来生成这些数据的原始数据分布。而对于那些用 FineWeb 数据集子集训练的模型，他们则使用了在所有 FineWeb 样本（经过截断和去重处理后）上训练的 GPT-2 模型作为参照。
 
-* They subtracted the number of bits computed for the superior model from the number computed for the trained model. A positive difference indicated the amount of memorization. A zero or negative difference indicated that memorization did not occur.
+2 They subtracted the number of bits computed for the superior model from the number computed for the trained model. A positive difference indicated the amount of memorization. A zero or negative difference indicated that memorization did not occur.
 
 他们将优越模型计算出的比特数从训练模型计算出的比特数中减去。正的差值表明了记忆的程度。零或负的差值则表示没有发生记忆。
 
-* To find the amount of data the model had memorized. they summed the number of bits memorized per example.
+3 To find the amount of data the model had memorized. they summed the number of bits memorized per example.
+
+为了探究模型究竟记忆了多少数据，研究人员计算出模型在每个示例（example）中记忆的比特（bit）总数。
 
 Results: The maximum number of bits a model memorized rose linearly with its parameter count regardless of the training dataset, amount of training data, or model size.
 
-* 为了探究模型究竟记忆了多少数据，研究人员计算出模型在每个示例（example）中记忆的比特（bit）总数。
-
 结果：研究发现，模型能记忆的最大信息量（bits memorized）与其参数数量（parameter count）呈线性增长关系。这意味着，无论训练数据集（training dataset）的类型、训练数据（training data）的多少，还是模型自身的大小（model size）如何，这种线性关系都始终成立。
 
-* Trained on synthetic data, a model's memorization increased linearly and then plateaued after a certain amount of training data.
+1 Trained on synthetic data, a model's memorization increased linearly and then plateaued after a certain amount of training data.
 
-* Maximum memorization was approximately 3.5 to 3.6 bits per parameter (their models used 16 bits to represent each parameter).
+当模型在合成数据上进行训练时，其记忆能力（memorization）会先线性增长，在训练数据达到一定量后便会趋于平稳。
 
-*  当模型在合成数据上进行训练时，其记忆能力（memorization）会先线性增长，在训练数据达到一定量后便会趋于平稳。
-*  模型能达到的最大记忆能力约为每个参数 3.5 到 3.6 比特（值得一提的是，他们的模型使用 16 比特来表示每个参数）。
+2 Maximum memorization was approximately 3.5 to 3.6 bits per parameter (their models used 16 bits to represent each parameter).
 
-* Trained on FineWeb, a model's memorization increased linearly with the amount of training data before decreasing as the model started to generalize (that is, the number of bits memorized per parameter fell and benchmark scores rose). This result showed that models memorize until they reach a maximum capacity and then start to generalize.
+模型能达到的最大记忆能力约为每个参数 3.5 到 3.6 比特（值得一提的是，他们的模型使用 16 比特来表示每个参数）。
 
-*  当模型在 FineWeb 上进行训练时，其对训练数据的记忆（memorization）量会随着训练数据量的增加而线性增长。随后，当模型开始泛化（generalize）时 —— 也就是说，模型每个参数记忆的比特数减少，同时基准分数（benchmark scores）上升 —— 其记忆量便开始下降。这一结果表明，模型会持续记忆训练数据，直到达到其最大容量，此后才会开始学习泛化。
+3 Trained on FineWeb, a model's memorization increased linearly with the amount of training data before decreasing as the model started to generalize (that is, the number of bits memorized per parameter fell and benchmark scores rose). This result showed that models memorize until they reach a maximum capacity and then start to generalize.
+
+当模型在 FineWeb 上进行训练时，其对训练数据的记忆（memorization）量会随着训练数据量的增加而线性增长。随后，当模型开始泛化（generalize）时 —— 也就是说，模型每个参数记忆的比特数减少，同时基准分数（benchmark scores）上升 —— 其记忆量便开始下降。这一结果表明，模型会持续记忆训练数据，直到达到其最大容量，此后才会开始学习泛化。
 
 Why it matters: Some previous efforts to measure memorization calculated the percentage of examples for which, given an initial sequence of tokens, a model would generate the rest. However, generating a repetitive sequence like "dog dog dog…" does not mean that a model has memorized it, and solving a simple arithmetic problem does not mean the model has memorized it or even encountered it in its training data. This work provides a theoretical basis for estimating how much of their training sets models memorize. It also lays a foundation for further work to reduce memorization without increasing the sizes of training datasets.
 
