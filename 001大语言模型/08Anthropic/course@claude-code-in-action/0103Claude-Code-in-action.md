@@ -60,10 +60,6 @@ There's one last set of demonstrations that I'd like to give you. Remember what 
 
 最后还有一组演示我想给各位展示。请记住我刚才提到的观点：Claude 杰出的工具运用能力，正是 Claude Code 未来能与您和您的团队共同成长的关键。下面我就立刻为大家展示一个例子。
 
-
-
-
-
 Claude Code has a very close integration with GitHub. You can set up Claude Code to run inside of a GitHub action, where it will be executed automatically based upon certain events, like creating a pull request or when directly mentioned inside an issue. When Claude Code runs on GitHub, it not only gets to view and run your code, but it also gets to access a new set of tools for interacting with GitHub, like the ability to create comments or create commits or pull requests and so on. You can use this integration to automatically review pull requests.
 
 Claude Code 与 GitHub 实现了非常紧密的集成。你可以将 Claude Code 配置为在 GitHub Actions 内部运行，这样它就会根据特定事件自动执行，例如创建拉取请求，或者在某个问题中被直接提及。当 Claude Code 在 GitHub 上运行时，它不仅能够查看并运行你的代码，还能访问一系列新的工具，用以与 GitHub 进行交互，比如创建评论、提交代码或发起拉取请求等。通过这种集成，你还可以实现自动审查拉取请求的功能。
