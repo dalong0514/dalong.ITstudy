@@ -6,17 +6,19 @@ I've got my code editor open inside that small project. I'm going to start up th
 
 我已经在那个小项目里打开了代码编辑器。我将用 `npm run dev` 启动开发服务器。运行后，我就可以在浏览器中访问 `localhost:3000`，看到应用程序正在运行了。
 
-We are going to use Cloud Code to do a little bit of work on this project. But first, there's something really critical I want you to understand around using Cloud Code. Specifically, I want you to walk away from this course with a strong understanding of context management. You see, inside a typical project, there might be dozens or hundreds of files, each with a tremendous amount of information. Whenever we ask Cloud Code a question or give it a task, there is some ideal amount of information that Claude needs; just enough to help understand how to answer your question or complete your task. As soon as we start adding in additional information that's not relevant, Claude Code's effectiveness will start to decrease. So it is really important for us to help guide Claude towards relevant files or documentation inside of our project. Claude Code can certainly work without any hand-holding, but you'll get the best results if you provide just a little bit of guidance. So for the remainder of this video, I'm going to give you a bunch of different tips on how to give Claude the best context possible.
+We are going to use Claude Code to do a little bit of work on this project. But first, there's something really critical I want you to understand around using Claude Code. Specifically, I want you to walk away from this course with a strong understanding of context management. You see, inside a typical project, there might be dozens or hundreds of files, each with a tremendous amount of information. Whenever we ask Claude Code a question or give it a task, there is some ideal amount of information that Claude needs; just enough to help understand how to answer your question or complete your task. As soon as we start adding in additional information that's not relevant, Claude Code's effectiveness will start to decrease. So it is really important for us to help guide Claude towards relevant files or documentation inside of our project. Claude Code can certainly work without any hand-holding, but you'll get the best results if you provide just a little bit of guidance. So for the remainder of this video, I'm going to give you a bunch of different tips on how to give Claude the best context possible.
 
-我们将使用 Cloud Code 在这个项目上做一些工作。但首先，有一些关于使用 Cloud Code 的关键点，我希望你务必理解。具体来说，我希望你学完本课程后，能对上下文管理有深刻理解。你看，在一个典型的项目中，可能包含几十甚至上百个文件，每个文件都承载着大量信息。每当我们向 Cloud Code 提问或给它一个任务时，Claude 需要一个理想的信息量 —— 这些信息恰好能帮助它理解如何回答你的问题或完成你的任务。一旦我们开始添加不相关的额外信息，Cloud Code 的效率就会开始降低。因此，引导 Claude 找到项目中相关的文件或文档就变得非常重要。Claude Code 当然可以在无需任何人工干预的情况下工作，但如果你提供一点点指导，就能获得最好的结果。所以，在本视频的剩余部分，我将为你提供各种技巧，教你如何为 Claude 提供最佳的上下文。
+我们将使用 Claude Code 在这个项目上做一些工作。但首先，有一些关于使用 Claude Code 的关键点，我希望你务必理解。具体来说，我希望你学完本课程后，能对上下文管理有深刻理解。你看，在一个典型的项目中，可能包含几十甚至上百个文件，每个文件都承载着大量信息。每当我们向 Claude Code 提问或给它一个任务时，Claude 需要一个理想的信息量 —— 这些信息恰好能帮助它理解如何回答你的问题或完成你的任务。一旦我们开始添加不相关的额外信息，Claude Code 的效率就会开始降低。因此，引导 Claude 找到项目中相关的文件或文档就变得非常重要。Claude Code 当然可以在无需任何人工干预的情况下工作，但如果你提供一点点指导，就能获得最好的结果。所以，在本视频的剩余部分，我将为你提供各种技巧，教你如何为 Claude 提供最佳的上下文。
+
+### 01
 
 To get started, inside my editor, I've opened up my terminal and I'm going to start Claude code up by running the `Claude` command. Whenever you run Claude code in a project for the first time, I highly recommend running the `/init` command. This gets Claude to take a deep look at your entire codebase. It'll figure out the purpose of the project, the general architecture, relevant commands, critical files, and so on. After this search, it'll summarize its findings and place them into a file called `Claude.md`.
 
-为了开始，我在编辑器中打开了终端，并将通过运行 `Claude` 命令来启动 Claude 代码（Claude code）。每当你在一个项目中首次运行 Claude 代码时，我强烈推荐运行 `/init` 命令。这个命令会让 Claude 深入扫描你的整个代码库，以便它能了解项目的目的、整体架构、相关命令、关键文件等信息。完成扫描后，它会将所有发现总结并写入一个名为 `Claude.md` 的文件。
+为了开始，我在编辑器中打开了终端，并将通过运行 `Claude` 命令来启动 Claude code。每当你在一个项目中首次运行 Claude 代码时，我强烈推荐运行 `/init` 命令。这个命令会让 Claude 深入扫描你的整个代码库，以便它能了解项目的目的、整体架构、相关命令、关键文件等信息。完成扫描后，它会将所有发现总结并写入一个名为 `Claude.md` 的文件。
 
-When Claude tries to create this file, it'll ask for permission. You can either hit enter to accept, or if you don't want to have to grant permission to every file write request, you can also press `Shift + Tab`, which will allow Cloud Code to freely write files in your project. I would encourage you to open up the `Claude.md` file that was generated and take a look at its contents. As I mentioned, the contents of this file are included in every request we make up to Claude. This file really has two different purposes. First, it helps Claude better understand your codebase so it can find relevant code more quickly. And second, it serves as a location where you can give Claude some general guidance.
+When Claude tries to create this file, it'll ask for permission. You can either hit enter to accept, or if you don't want to have to grant permission to every file write request, you can also press `Shift + Tab`, which will allow Claude Code to freely write files in your project. I would encourage you to open up the `Claude.md` file that was generated and take a look at its contents. As I mentioned, the contents of this file are included in every request we make up to Claude. This file really has two different purposes. First, it helps Claude better understand your codebase so it can find relevant code more quickly. And second, it serves as a location where you can give Claude some general guidance.
 
-当 Claude 尝试创建这个文件时，它会弹出一个权限请求。你可以直接按回车键同意，或者，如果你不想每次写入文件都手动授权，也可以按住 `Shift + Tab` 键，这样 Cloud Code 就能在你的项目中自由地进行文件写入操作了。我建议你打开自动生成的 `Claude.md` 文件，仔细看看里面的内容。正如我之前提到的，这个文件的内容会被包含在我们发送给 Claude 的每一个请求中。这个文件主要有两个作用：第一，它能帮助 Claude 更好地理解你的代码库结构，从而更快地定位到需要的代码片段；第二，它也是一个你可以用来给 Claude 提供一些通用指导的地方。
+当 Claude 尝试创建这个文件时，它会弹出一个权限请求。你可以直接按回车键同意，或者，如果你不想每次写入文件都手动授权，也可以按住 `Shift + Tab` 键，这样 Claude Code 就能在你的项目中自由地进行文件写入操作了。我建议你打开自动生成的 `Claude.md` 文件，仔细看看里面的内容。正如我之前提到的，这个文件的内容会被包含在我们发送给 Claude 的每一个请求中。这个文件主要有两个作用：第一，它能帮助 Claude 更好地理解你的代码库结构，从而更快地定位到需要的代码片段；第二，它也是一个你可以用来给 Claude 提供一些通用指导的地方。
 
 Just so you know, there are multiple `Claude.md` files that Claude code will make use of. There's a project level, a local level, and a machine level. The project level is what we just generated by running the `/init` command. We are generally going to commit this file to source control, like Git. We're going to share this file with other engineers and it's going to have some project-specific directions that we want to hand off to Claude.
 
@@ -26,6 +28,8 @@ Optionally, we can also create a `Claude.local.md` file. This file is not going 
 
 此外，我们还可以创建一个 `Claude.local.md` 文件。这个文件不会被提交到代码库，通常也不会与任何其他工程师共享。你可以在这个文件中放入一些只希望 Claude 为你执行的个人指令。最后，你的电脑上可以有一个全局的 `Claude.md` 文件。这个文件将包含适用于你在本地运行的所有项目的指令。
 
+### 02
+
 Now, I keep on mentioning giving Claude special or custom instructions, so let me show you an example of that. Let's imagine that Claude is using comments way too often in the code that it writes. We can address this by updating our `Claude.md` file. We can either manually modify the file or, a little bit of a shortcut is inside of Claude code, we can put in a pound sign. This puts us in memory mode. This allows us to edit one of our `Claude.md` files intelligently. So we can put in a request like, "Don't write comments so often." I'll then specify that I want to add this instruction to the project `Claude.md` file. And Claude is then going to merge this instruction into that file intelligently. If I then open the file up and do a search, I'll see that, in fact, yes, it did add in that new instruction.
 
 现在，我一直在说我们可以给 Claude 提供特殊的或自定义的指令，下面我就来给你展示一个例子。假设 Claude 在编写代码时，总是习惯性地添加太多注释。要解决这个问题，我们可以更新 `Claude.md` 文件。你可以手动修改这个文件，或者，有个小技巧：在 Claude 的代码里输入一个井号 `#`。这样做会让你进入内存模式（memory mode），允许我们更智能地编辑 `Claude.md` 文件。然后我们可以提出一个请求，比如：「不要那么频繁地写注释。」接着，我会明确指出要把这条指令添加到项目的 `Claude.md` 文件中。之后，Claude 就会智能地将这条指令合并到该文件中。如果我再打开文件搜索一下，就会发现，这条新指令确实已经被添加进去了。
@@ -34,17 +38,17 @@ Now that we've created our `Claude.md` file, I want to give you a better underst
 
 现在我们已经创建了 `Claude.md` 文件，我想让你更好地理解如何在对话中引入（pull in）特定的上下文信息。让我们设想一下，我们想要更好地了解这个项目中的认证系统是如何运作的。我们当然可以直接让 Claude 告诉我们，那样它就会在我们的代码库中搜索并找到与认证系统相关的文件。这种方法肯定有效，但会耗费一些时间。另一种方式是，如果我们已经知道一些与认证系统相关的文件，我们可以使用 `@` 字符来提及它们。当我们提及一个文件时，它将自动被包含在 `RequestOptOp` 这个 `Claude` 操作中。
 
-This is an excellent technique for pointing Claude in a specific direction. You can use the same syntax to also mention files inside of CloudMD. Let me show you an example of why that is really useful.
+This is an excellent technique for pointing Claude in a specific direction. You can use the same syntax to also mention files inside of Claude.md. Let me show you an example of why that is really useful.
 
-这是一个非常棒的技巧，能帮助你引导 Claude 关注特定方面。你也可以用同样的语法来引用 CloudMD 里的文件。接下来，我将展示一个非常有用的例子。
+这是一个非常棒的技巧，能帮助你引导 Claude 关注特定方面。你也可以用同样的语法来引用 Claude.md 里的文件。接下来，我将展示一个非常有用的例子。
 
-Inside the Prisma folder of this project, there's a file called `schema.prisma`. This file contains a complete definition of all the different tables and types of records that exist inside the SQLite database that is used to store information inside this project. Because this information is so important and relevant to so many aspects of this project, I might decide to mention this file inside of my CloudMD file.
+Inside the Prisma folder of this project, there's a file called `schema.prisma`. This file contains a complete definition of all the different tables and types of records that exist inside the SQLite database that is used to store information inside this project. Because this information is so important and relevant to so many aspects of this project, I might decide to mention this file inside of my Claude.md file.
 
-在这个项目的 Prisma 文件夹中，有一个名为 `schema.prisma` 的文件。这个文件完整定义了项目中用于存储信息的 SQLite 数据库中的所有表和记录类型。由于这些信息对于项目的许多方面都至关重要，我可能会选择在我的 CloudMD 文件中提及这个文件。
+在这个项目的 Prisma 文件夹中，有一个名为 `schema.prisma` 的文件。这个文件完整定义了项目中用于存储信息的 SQLite 数据库中的所有表和记录类型。由于这些信息对于项目的许多方面都至关重要，我可能会选择在我的 Claude.md 文件中提及这个文件。
 
 Let me see how I do that. First, I'll enter a pound to enter memory mode. I'll then mention that schema file and specifically tell Claude to reference that file anytime it needs to better understand the structure of data inside the database. Once the update is complete, I'm going to take a look at the Claude MD file and just verify that the note was added.
 
-让我演示一下具体操作。首先，我会输入一个「#」号（井号）来进入内存模式。接着，我会提及那个模式文件（schema file），并明确指示 Claude，如果它需要更好地理解数据库中的数据结构，就随时参考这个文件。更新完成后，我会检查 Claude MD 文件，确认这条记录是否已经添加进去。
+让我演示一下具体操作。首先，我会输入一个「#」号（井号）来进入内存模式。接着，我会提及那个模式文件（schema file），并明确指示 Claude，如果它需要更好地理解数据库中的数据结构，就随时参考这个文件。更新完成后，我会检查 Claude.md 文件，确认这条记录是否已经添加进去。
 
 When you mention a file like this, its contents are automatically included inside of your request. So if I ask what attributes the user has, Claude can immediately answer without reading the schema file. Thank you.
 
