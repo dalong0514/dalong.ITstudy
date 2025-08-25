@@ -100,7 +100,7 @@ And then after that is where I'm launching Claude Code programmatically. Specifi
 
 Once Claude Code runs and I get a response back out of it, I check and see if Claude decides that, yeah, the changes look okay, or maybe we've got a duplicate query. And if we do, then we're going to exit early with an exit code of two, which is going to give this feedback back to Claude and hopefully tell it that it needs to make a change.
 
-云代码运行并返回响应后，我会检查云端是否认为这些更改是可接受的，或者是否存在重复的查询。如果存在重复查询，我们会立即以退出码 2 终止进程。这个退出码会将反馈信息传回云端，以指示其需要进行相应的调整。
+Claude 代码运行并返回响应后，我会检查 Claude 是否认为这些更改是可接受的，或者是否存在重复的查询。如果存在重复查询，我们会立即以退出码 2 终止进程。这个退出码会将反馈信息传回 Claude，以指示其需要进行相应的调整。
 
 So now that I've got this additional hook put together and enabled by removing that process exit zero at the top, I'm going to again restart Claude Code and then run the same query again. And hopefully this time it might initially put in that duplicate query, but then our hook right here is going to run and hopefully tell it, hey, we don't want that duplicate code. You should make use of some already existing query to implement this functionality.
 
