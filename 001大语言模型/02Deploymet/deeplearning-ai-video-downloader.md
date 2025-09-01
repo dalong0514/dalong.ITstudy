@@ -2,6 +2,11 @@
 
 [khengyun/deeplearning-ai-video-downloader](https://github.com/khengyun/deeplearning-ai-video-downloader)
 
+Chrome 浏览器里要自己加载插件。
+
+/Users/Daglas/dalong.tools/deeplearning-ai-video-downloader/extension
+
+
 2025-02-17
 
 项目 deeplearning-ai-video-downloader 在 docker 里占用的端口是 3000，跟 fastgpt 相同，冲突。将项目里所有的 3000 搜索替换成了 3002。
