@@ -44,6 +44,19 @@ $env:HTTPS_PROXY = "http://127.0.0.1:7890"
 
 2、设置环境变量：
 
+deepseek 的配置：
+
+官方新的配置说明：
+
+export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
+export ANTHROPIC_AUTH_TOKEN=${DEEPSEEK_API_KEY}
+export API_TIMEOUT_MS=600000
+export ANTHROPIC_MODEL=deepseek-chat
+export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
+
+
+之前用的配置：
+
 export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
 export ANTHROPIC_AUTH_TOKEN=DEEPSEEK_API_KEY
 export ANTHROPIC_MODEL=deepseek-chat
@@ -56,7 +69,7 @@ export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
 URL 和 key 的配置已经写到了 .zshrc 文件里。
 
 
-$env:ANTHROPIC_BASE_URL = "https://api.deepseek.com/anthropic"
+$env:ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
 $env:ANTHROPIC_AUTH_TOKEN="sk-"
 
 $env:ANTHROPIC_MODEL="deepseek-chat"
@@ -65,22 +78,29 @@ $env:ANTHROPIC_SMALL_FAST_MODEL="deepseek-chat"
 $env:ANTHROPIC_MODEL="deepseek-reasoner"
 $env:ANTHROPIC_SMALL_FAST_MODEL="deepseek-chat"
 
+ANTHROPIC_API_KEY
+
+CLAUDE_CODE_MAX_OUTPUT_TOKENS
+128000
+
 ---
 
-用 kimi k2 大模型驱动 cc。
+kimi 的配置：
 
-1、先在 shell 里设置代理：
-
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=http://127.0.0.1:7890
-
-$env:HTTP_PROXY = "http://127.0.0.1:7890"
-$env:HTTPS_PROXY = "http://127.0.0.1:7890"
-
-2、设置环境变量：
-
-$env:ANTHROPIC_BASE_URL = "https://api.moonshot.cn/anthropic/"
-$env:ANTHROPIC_AUTH_TOKEN="sk-"
-
-export ANTHROPIC_BASE_URL=https://api.moonshot.cn/anthropic/
+export ANTHROPIC_BASE_URL=https://api.moonshot.cn/anthropic
 export ANTHROPIC_AUTH_TOKEN=sk-
+
+
+$env:ANTHROPIC_BASE_URL = "https://api.moonshot.cn/anthropic"
+$env:ANTHROPIC_AUTH_TOKEN="sk-"
+$env:ANTHROPIC_MODEL="kimi-k2-turbo-preview"
+$env:ANTHROPIC_SMALL_FAST_MODEL="kimi-k2-turbo-preview"
+
+---
+
+GLM 的配置：
+
+$env:ANTHROPIC_BASE_URL = "https://open.bigmodel.cn/api/anthropic"
+$env:ANTHROPIC_AUTH_TOKEN="sk-"
+$env:ANTHROPIC_MODEL="glm-4.5"
+$env:ANTHROPIC_SMALL_FAST_MODEL="glm-4.5"
