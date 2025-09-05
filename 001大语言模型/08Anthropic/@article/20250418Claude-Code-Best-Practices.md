@@ -26,7 +26,7 @@ Looking for more detailed information? Our comprehensive documentation at claude
 
 正在寻找更详细的信息吗？我们在 claude.ai/code 的全面文档涵盖了本文中介绍的所有功能，并提供了更多示例、实现细节和高级技术。
 
-### 1. Customize your setup
+### 01. Customize your setup
 
 个性化你的配置
 
@@ -110,32 +110,29 @@ CLAUDE.md 文件可以放置在以下几个位置：
 
 你的代码仓库根目录，或者你运行 claude 的目录（这是最常见的用法）。你可以将文件命名为 CLAUDE.md 并提交到 Git 仓库，这样就能在不同的会话中与团队成员共享（推荐这样做）；或者，你也可以将其命名为 CLAUDE.local.md 并将其添加到 .gitignore 文件中，使其不被 Git 追踪。
 
+2 Any parent of the directory where you run claude. This is most useful for monorepos, where you might run claude from root/foo, and have CLAUDE.md files in both root/CLAUDE.md and root/foo/CLAUDE.md. Both of these will be pulled into context automatically
 
+你运行 claude 命令的目录的任何父级目录。这对于单体仓库（monorepos）场景最为实用，比如你可能在 `root/foo` 目录下运行 claude，并且在 `root/CLAUDE.md` 和 `root/foo/CLAUDE.md` 中都存在 `CLAUDE.md` 文件。这两个文件都会被自动加载到上下文中。
 
+3 Any child of the directory where you run claude. This is the inverse of the above, and in this case, Claude will pull in CLAUDE.md files on demand when you work with files in child directories
 
+你运行 Claude 的目录下的任何子目录。这与上述情况正好相反，在这种情况下，当你处理子目录中的文件时，Claude 将按需（即需要时）加载 CLAUDE.md 文件。
 
+4 Your home folder (~/.claude/CLAUDE.md), which applies it to all your claude sessions
 
-* Any parent of the directory where you run claude. This is most useful for monorepos, where you might run claude from root/foo, and have CLAUDE.md files in both root/CLAUDE.md and root/foo/CLAUDE.md. Both of these will be pulled into context automatically
+你的主文件夹（~/.claude/CLAUDE.md），其中配置会应用到你所有的 Claude 会话中。
 
-*  你运行 claude 命令的目录的任何父级目录。这对于单体仓库（monorepos）场景最为实用，比如你可能在 `root/foo` 目录下运行 claude，并且在 `root/CLAUDE.md` 和 `root/foo/CLAUDE.md` 中都存在 `CLAUDE.md` 文件。这两个文件都会被自动加载到上下文中。
-
-* Any child of the directory where you run claude. This is the inverse of the above, and in this case, Claude will pull in CLAUDE.md files on demand when you work with files in child directories
-
-* 你运行 Claude 的目录下的任何子目录。这与上述情况正好相反，在这种情况下，当你处理子目录中的文件时，Claude 将按需（即需要时）加载 CLAUDE.md 文件。
-
-* Your home folder (~/.claude/CLAUDE.md), which applies it to all your claude sessions
-
-When you run the /init command, Claude will automatically generate a CLAUDE.md for you.
-
-* 你的主文件夹（~/.claude/CLAUDE.md），其中配置会应用到你所有的 Claude 会话中。
+5 When you run the /init command, Claude will automatically generate a CLAUDE.md for you.
 
 当你运行 /init 命令时，Claude 会自动为你生成一个 CLAUDE.md 文件。
 
-### b. Tune your CLAUDE.md files
+b. Tune your CLAUDE.md files
+
+调整你的 CLAUDE.md 文件
 
 Your CLAUDE.md files become part of Claude's prompts, so they should be refined like any frequently used prompt. A common mistake is adding extensive content without iterating on its effectiveness. Take time to experiment and determine what produces the best instruction following from the model.
 
-### b. 调整你的 CLAUDE.md 文件你的 CLAUDE.md 文件会成为 Claude 接收的提示（prompt，即你给它的指令）的一部分，所以它们应该像其他经常使用的提示词一样，经过反复的推敲和优化。一个常见的错误是，在不迭代验证效果的情况下，就添加了大量的内容。你需要花时间去实验，看看什么能让模型更好地遵循你的指令。
+你的 CLAUDE.md 文件会成为 Claude 接收的提示（prompt，即你给它的指令）的一部分，所以它们应该像其他经常使用的提示词一样，经过反复的推敲和优化。一个常见的错误是，在不迭代验证效果的情况下，就添加了大量的内容。你需要花时间去实验，看看什么能让模型更好地遵循你的指令。
 
 You can add content to your CLAUDE.md manually or press the # key to give Claude an instruction that it will automatically incorporate into the relevant CLAUDE.md. Many engineers use # frequently to document commands, files, and style guidelines while coding, then include CLAUDE.md changes in commits so team members benefit as well.
 
@@ -145,93 +142,97 @@ At Anthropic, we occasionally run CLAUDE.md files through the prompt improver an
 
 在 Anthropic，我们偶尔会用提示词改进器（prompt improver）处理 CLAUDE.md 文件，并且经常调整指令（例如，通过添加「IMPORTANT」或「YOU MUST」等强调词语）来提高模型遵循指令的能力。
 
-### c. Curate Claude's list of allowed tools
+c. Curate Claude's list of allowed tools
+
+c. 配置 Claude 的工具允许列表
 
 By default, Claude Code requests permission for any action that might modify your system: file writes, many bash commands, MCP tools, etc. We designed Claude Code with this deliberately conservative approach to prioritize safety. You can customize the allowlist to permit additional tools that you know are safe, or to allow potentially unsafe tools that are easy to undo (e.g., file editing, git commit).
 
-### c. 配置 Claude 的工具允许列表默认情况下，Claude Code 会请求执行任何可能修改你系统的操作的权限，比如文件写入、运行许多 bash 命令以及使用 MCP 工具等。我们设计 Claude Code 时，就采用了这种刻意保守的策略，目的就是将安全性放在首位。你可以自定义这个允许列表（allowlist），来允许你确认安全的额外工具，或者允许那些虽然可能不安全但很容易撤销的操作工具（ 例如：文件编辑、git commit ）。
+默认情况下，Claude Code 会请求执行任何可能修改你系统的操作的权限，比如文件写入、运行许多 bash 命令以及使用 MCP 工具等。我们设计 Claude Code 时，就采用了这种刻意保守的策略，目的就是将安全性放在首位。你可以自定义这个允许列表（allowlist），来允许你确认安全的额外工具，或者允许那些虽然可能不安全但很容易撤销的操作工具（例如：文件编辑、git commit）。
 
 There are four ways to manage allowed tools:
 
-* Select "Always allow" when prompted during a session.
-
 有四种方式来管理允许的工具：
 
-* 在会话过程中收到提示时，选择「始终允许」。
+1 Select "Always allow" when prompted during a session.
 
-* Use the /permissions command after starting Claude Code to add or remove tools from the allowlist. For example, you can add Edit to always allow file edits, Bash(git commit:*) to allow git commits, or mcp__puppeteer__puppeteer_navigate to allow navigating with the Puppeteer MCP server.
+在会话过程中收到提示时，选择「始终允许」。
 
-* 启动 Claude Code 后，使用 `/permissions` 命令可以从白名单中添加或移除工具。例如，你可以添加 Edit 以始终允许文件编辑；添加 Bash（git commit:*）来允许 git 提交；或者添加 mcp__puppeteer__puppeteer_navigate，以允许通过 Puppeteer MCP 服务器进行导航。
+2 Use the /permissions command after starting Claude Code to add or remove tools from the allowlist. For example, you can add Edit to always allow file edits, Bash(git commit:*) to allow git commits, or mcp__puppeteer__puppeteer_navigate to allow navigating with the Puppeteer MCP server.
 
-* Manually edit your .claude/settings.json or ~/.claude.json (we recommend checking the former into source control to share with your team).
+启动 Claude Code 后，使用 `/permissions` 命令可以从白名单中添加或移除工具。例如，你可以添加 Edit 以始终允许文件编辑；添加 Bash（git commit:*）来允许 git 提交；或者添加 mcp__puppeteer__puppeteer_navigate，以允许通过 Puppeteer MCP 服务器进行导航。
 
-* Use the --allowedTools CLI flag for session-specific permissions.
+3 Manually edit your .claude/settings.json or ~/.claude.json (we recommend checking the former into source control to share with your team).
 
-*  你可以手动编辑 .claude/settings.json 或～/.claude.json 文件 （我们建议将前者纳入版本控制，以便与你的团队共享）。
-*  使用 --allowedTools CLI 标志，可以设置会话专属的权限。
+你可以手动编辑 .claude/settings.json 或～/.claude.json 文件 （我们建议将前者纳入版本控制，以便与你的团队共享）。
 
-### d. If using GitHub, install the gh CLI
+4 Use the --allowedTools CLI flag for session-specific permissions.
+
+使用 --allowedTools CLI 标志，可以设置会话专属的权限。
+
+d. If using GitHub, install the gh CLI
+
+如果使用 GitHub，请安装 gh CLI（gh CLI）
 
 Claude knows how to use the gh CLI to interact with GitHub for creating issues, opening pull requests, reading comments, and more. Without gh installed, Claude can still use the GitHub API or MCP server (if you have it installed).
 
-### d. 如果使用 GitHub，请安装 gh CLI（gh CLI)
+Claude 知道如何使用 gh CLI（gh CLI）与 GitHub 交互，例如创建议题（issues）、开启拉取请求（pull requests）和阅读评论（comments）等。如果没有安装 gh CLI，Claude 仍然可以使用 GitHub API 或者 MCP 服务器（MCP server）（如果您已经安装了后者）。
 
-Claude 知道如何使用 gh CLI（gh CLI）与 GitHub 交互，例如创建议题（issues）、开启拉取请求（pull requests）和阅读评论（comments）等。如果没有安装 gh CLI，Claude 仍然可以使用 GitHub API 或者 MCP 服务器（MCP server)（如果您已经安装了后者）。
+### 02. Give Claude more tools
 
-## 2. Give Claude more tools
+为 Claude 提供更多工具
 
 Claude has access to your shell environment, where you can build up sets of convenience scripts and functions for it just like you would for yourself. It can also leverage more complex tools through MCP and REST APIs.
 
-## 2. 为 Claude 提供更多工具
-
 Claude 可以访问你的 shell 环境（shell environment），你可以像给自己准备工具一样，为它构建一系列便捷的脚本和函数。它还可以通过 MCP（MCP）和 REST API（REST API）来调用更复杂的工具。
 
-### a. Use Claude with bash tools
+a. Use Claude with bash tools
+
+使用 Claude 结合 bash 工具
 
 Claude Code inherits your bash environment, giving it access to all your tools. While Claude knows common utilities like unix tools and gh, it won't know about your custom bash tools without instructions:
 
-### a. 使用 Claude 结合 bash 工具
-
 Claude Code 能够利用你现有的 bash 环境，从而可以访问你所有的工具。尽管 Claude 熟悉常见的实用工具，例如 Unix 工具和 gh，但如果未提供相关指令，它将无法识别或使用你自定义的 bash 工具：
 
-1. Tell Claude the tool name with usage examples
+1 Tell Claude the tool name with usage examples
 
-2. Tell Claude to run --help to see tool documentation
+告诉 Claude 工具名称以及如何使用它
 
-1. 告诉 Claude 工具名称以及如何使用它
-2. 告诉 Claude 运行 --help 以查看工具文档
+2 Tell Claude to run --help to see tool documentation
 
-3. Document frequently used tools in CLAUDE.md
+告诉 Claude 运行 --help 以查看工具文档
 
-### b. Use Claude with MCP
+3 Document frequently used tools in CLAUDE.md
 
-3. 在 CLAUDE.md 中记录常用工具
+在 CLAUDE.md 中记录常用工具
 
-### b. 将 Claude 与 MCP（Multi-Cloud Platform）结合使用
+b. Use Claude with MCP
+
+b. 将 Claude 与 MCP 结合使用
 
 Claude Code functions as both an MCP server and client. As a client, it can connect to any number of MCP servers to access their tools in three ways:
 
-* In project config (available when running Claude Code in that directory)
-
 Claude Code 既能充当 MCP 服务器，也能充当 MCP 客户端（MCP client）。作为客户端，它可以连接到任意数量的 MCP 服务器（MCP server），并通过以下三种方式访问这些服务器提供的工具：
 
-*  通过项目配置（project config）来访问（当你在特定目录中运行 Claude Code 时，此配置便会生效)
+1 In project config (available when running Claude Code in that directory)
 
-* In global config (available in all projects)
+通过项目配置（project config）来访问（当你在特定目录中运行 Claude Code 时，此配置便会生效）
 
-* In a checked-in .mcp.json file (available to anyone working in your codebase). For example, you can add Puppeteer and Sentry servers to your .mcp.json, so that every engineer working on your repo can use these out of the box.
+1 In global config (available in all projects)
 
-*  在全局配置文件中（所有项目均可使用）。
+在全局配置文件中（所有项目均可使用）。
 
-*  在已纳入版本控制的 .mcp.json 文件中（团队中任何访问你代码库的成员均可使用）。例如，你可以将 Puppeteer 和 Sentry 服务器添加到你的 .mcp.json 文件中，这样所有在你的代码库上工作的工程师都能够开箱即用地使用它们。
+2 In a checked-in .mcp.json file (available to anyone working in your codebase). For example, you can add Puppeteer and Sentry servers to your .mcp.json, so that every engineer working on your repo can use these out of the box.
+
+在已纳入版本控制的 .mcp.json 文件中（团队中任何访问你代码库的成员均可使用）。例如，你可以将 Puppeteer 和 Sentry 服务器添加到你的 .mcp.json 文件中，这样所有在你的代码库上工作的工程师都能够开箱即用地使用它们。
 
 When working with MCP, it can also be helpful to launch Claude with the --mcp-debug flag to help identify configuration issues.
 
-### c. Use custom slash commands
-
 在使用 MCP 工作时，启动 Claude 并附带 `--mcp-debug` 标志也会很有用，这有助于识别配置问题。
 
-### c. 使用自定义斜杠命令
+c. Use custom slash commands
+
+使用自定义斜杠命令
 
 For repeated workflows—debugging loops, log analysis, etc.—store prompt templates in Markdown files within the .claude/commands folder. These become available through the slash commands menu when you type /. You can check these commands into git to make them available for the rest of your team.
 
@@ -239,79 +240,69 @@ For repeated workflows—debugging loops, log analysis, etc.—store prompt temp
 
 Custom slash commands can include the special keyword $ARGUMENTS to pass parameters from command invocation.
 
-For example, here's a slash command that you could use to automatically pull and fix a Github issue:
-
 自定义斜杠命令（slash command）可以使用特殊关键字 $ARGUMENTS，以便在调用命令时传递参数。
+
+For example, here's a slash command that you could use to automatically pull and fix a Github issue:
 
 例如，下面是一个斜杠命令，你可以用它来自动拉取并修复一个 Github 问题：
 
 ```
-
 Please analyze and fix the GitHub issue: $ARGUMENTS.
-
-请分析并解决此 GitHub 问题：$ARGUMENTS。
 
 Follow these steps:
 
 1. Use `gh issue view` to get the issue details
-
-请按照以下步骤操作：
-
-1. 使用 `gh issue view` 获取问题详情
-
 2. Understand the problem described in the issue
-
 3. Search the codebase for relevant files
-
-2. 理解工单（issue）中描述的具体问题
-
-3. 在代码库中搜索相关文件
-
 4. Implement the necessary changes to fix the issue
-
 5. Write and run tests to verify the fix
-
-4. 执行必要的修改，以解决问题
-
-5. 编写并运行测试，以验证修复效果
-
 6. Ensure code passes linting and type checking
-
 7. Create a descriptive commit message
-
-6. 确保代码通过 linting（linting）检查和类型检查
-7. 创建一个描述性的提交消息
-
 8. Push and create a PR
 
 Remember to use the GitHub CLI (`gh`) for all GitHub-related tasks.
+```
 
-8. 推送并创建一个 PR。
+```
+请分析并解决此 GitHub 问题：$ARGUMENTS。
+
+请按照以下步骤操作：
+
+1 使用 `gh issue view` 获取问题详情
+2 理解工单（issue）中描述的具体问题
+3 在代码库中搜索相关文件
+4 执行必要的修改，以解决问题
+5 编写并运行测试，以验证修复效果
+6 确保代码通过 linting（linting）检查和类型检查
+7 创建一个描述性的提交消息
+8 推送并创建一个 PR
+
 请记住，所有 GitHub 相关的任务都要使用 GitHub CLI（`gh`）来完成。
-
 ```
 
 Putting the above content into .claude/commands/fix-github-issue.md makes it available as the /project:fix-github-issue command in Claude Code. You could then for example use /project:fix-github-issue 1234 to have Claude fix issue #1234. Similarly, you can add your own personal commands to the ~/.claude/commands folder for commands you want available in all of your sessions.
 
 将上述内容保存到 .claude/commands/fix-github-issue.md 文件中后，它就能在 Claude Code 中作为 `/project:fix-github-issue` 命令使用了。举例来说，您可以使用 `/project:fix-github-issue 1234` 让 Claude 来处理 GitHub 上的 #1234 号问题。同样，您也可以将自己的专属命令添加到 `~/.claude/commands` 文件夹中，这样这些命令就能在您的所有会话中随时调用。
 
-## 3. Try common workflows
+## 03. Try common workflows
+
+尝试常见工作流程
 
 Claude Code doesn't impose a specific workflow, giving you the flexibility to use it how you want. Within the space this flexibility affords, several successful patterns for effectively using Claude Code have emerged across our community of users:
 
-## 3. 尝试常见工作流程
-
 Claude Code 不会强制用户遵循特定的工作流程，这赋予了你极大的自由，可以按照自己的方式使用它。在这样灵活的使用空间里，我们的用户社区逐渐摸索出了几种有效利用 Claude Code 的成功模式：
 
-### a. Explore, plan, code, commit
+a. Explore, plan, code, commit
+
+探索、规划、编码、提交
 
 This versatile workflow suits many problems:
 
-### a. 探索、规划、编码、提交这种灵活的工作流程适用于许多问题：
+这种灵活的工作流程适用于许多问题：
 
-1. Ask Claude to read relevant files, images, or URLs, providing either general pointers ("read the file that handles logging") or specific filenames ("read logging.py"), but explicitly tell it not to write any code just yet.This is the part of the workflow where you should consider strong use of subagents, especially for complex problems. Telling Claude to use subagents to verify details or investigate particular questions it might have, especially early on in a conversation or task, tends to preserve context availability without much downside in terms of lost efficiency.
+1 Ask Claude to read relevant files, images, or URLs, providing either general pointers ("read the file that handles logging") or specific filenames ("read logging.py"), but explicitly tell it not to write any code just yet.This is the part of the workflow where you should consider strong use of subagents, especially for complex problems. Telling Claude to use subagents to verify details or investigate particular questions it might have, especially early on in a conversation or task, tends to preserve context availability without much downside in terms of lost efficiency.
 
-1. 这一步是让 Claude 阅读相关文件、图片或 URL。你可以给出泛泛的提示（比如「阅读处理日志的文件」），也可以提供具体的文件名（例如「阅读 logging.py」），但务必明确告诉它，目前还不要编写任何代码。在处理复杂问题时，这是工作流程中您应该着重考虑使用子智能体（subagents）的阶段。让 Claude 使用子智能体（subagents）来核实细节或探究它可能遇到的特定问题，尤其是在对话或任务的早期，通常能很好地保持上下文可用性，同时又不会损失太多效率。
+这一步是让 Claude 阅读相关文件、图片或 URL。你可以给出泛泛的提示（比如「阅读处理日志的文件」），也可以提供具体的文件名（例如「阅读 logging.py」），但务必明确告诉它，目前还不要编写任何代码。在处理复杂问题时，这是工作流程中您应该着重考虑使用子智能体（subagents）的阶段。让 Claude 使用子智能体（subagents）来核实细节或探究它可能遇到的特定问题，尤其是在对话或任务的早期，通常能很好地保持上下文可用性，同时又不会损失太多效率。
 
 2. This is the part of the workflow where you should consider strong use of subagents, especially for complex problems. Telling Claude to use subagents to verify details or investigate particular questions it might have, especially early on in a conversation or task, tends to preserve context availability without much downside in terms of lost efficiency.
 
@@ -324,7 +315,6 @@ This versatile workflow suits many problems:
 4. If the results of this step seem reasonable, you can have Claude create a document or a GitHub issue with its plan so that you can reset to this spot if the implementation (step 3) isn't what you want.
 
 4. 如果这一步的结果看起来合理，你可以让 Claude 创建一份文档或一个 GitHub issue（GitHub issue），里面详细说明它的计划。这样一来，如果后续的实现（第三步）不符合你的预期，你就可以轻松地回溯到这个节点。
-</step3_3_refined_translation>
 
 5. Ask Claude to implement its solution in code. This is also a good place to ask it to explicitly verify the reasonableness of its solution as it implements pieces of the solution.
 
@@ -406,7 +396,7 @@ Instead of supervising Claude, you can use claude --dangerously-skip-permissions
 
 Letting Claude run arbitrary commands is risky and can result in data loss, system corruption, or even data exfiltration (e.g., via prompt injection attacks). To minimize these risks, use --dangerously-skip-permissions in a container without internet access. You can follow this reference implementation using Docker Dev Containers.
 
-允许 Claude 运行任意命令具有很高风险，可能导致数据丢失、系统损坏，甚至引发数据外泄（例如，通过提示注入攻击（prompt injection attacks)）。为了将这些风险降到最低，建议您在没有互联网访问的容器中使用 `--dangerously-skip-permissions` 参数。您可以参考以下实现方案，它利用了 Docker Dev Containers（Docker Dev Containers）。
+允许 Claude 运行任意命令具有很高风险，可能导致数据丢失、系统损坏，甚至引发数据外泄（例如，通过提示注入攻击（prompt injection attacks））。为了将这些风险降到最低，建议您在没有互联网访问的容器中使用 `--dangerously-skip-permissions` 参数。您可以参考以下实现方案，它利用了 Docker Dev Containers（Docker Dev Containers）。
 
 ### e. Codebase Q&A
 
@@ -499,11 +489,13 @@ You can also ask Claude to clean up or make aesthetic improvements to your Jupyt
 
 你还可以请 Claude 在你向同事展示 Jupyter notebook 之前，对它进行清理或进行美化。具体来说，当你告诉它要让 notebook 或其数据可视化「美观悦目」时，这有助于提醒它，它正在为优化人类的观看体验而努力。
 
-## 4. Optimize your workflow
+### 04. Optimize your workflow
+
+优化你的工作流程
 
 The suggestions below apply across all workflows:
 
-## 4. 优化你的工作流程以下建议适用于所有工作流程：
+以下建议适用于所有工作流程：
 
 ### a. Be specific in your instructions
 
@@ -641,11 +633,11 @@ Most sessions involve a combination of these approaches. For example, you can pi
 
 大多数情况下，会话会结合使用这些方法。例如，你可以传入一个日志文件，然后告诉 Claude 使用一个工具来获取额外的上下文，以便调试这些日志。
 
-## 5. Use headless mode to automate your infra
+### 05. Use headless mode to automate your infra
+
+使用无头模式实现基础设施自动化
 
 Claude Code includes headless mode for non-interactive contexts like CI, pre-commit hooks, build scripts, and automation. Use the -p flag with a prompt to enable headless mode, and --output-format stream-json for streaming JSON output.
-
-## 5. 使用无头模式实现基础设施自动化
 
 Claude Code 提供了一种「无头模式（headless mode）」，专门用于 CI（Continuous Integration，持续集成）、pre-commit 钩子（pre-commit hooks）、构建脚本以及其他自动化流程等非交互式环境。要启用无头模式，只需配合提示（prompt）使用 `-p` 标志即可；如果需要输出 JSON 格式的数据流，则使用 `--output-format stream-json` 参数。
 
@@ -669,11 +661,13 @@ Claude Code can provide subjective code reviews beyond what traditional linting 
 
 Claude Code 不仅仅能像传统代码检查工具那样发现问题，它还能提供更具「主观性」的代码审查，找出那些机器难以察觉的问题，例如：错别字、过时的注释，以及可能导致误解的函数或变量名等等。
 
-## 6. Uplevel with multi-Claude workflows
+### 06. Uplevel with multi-Claude workflows
+
+利用多 Claude 工作流实现进阶
 
 Beyond standalone usage, some of the most powerful applications involve running multiple Claude instances in parallel:
 
-## 6. 利用多 Claude 工作流实现进阶除了单独使用，Claude 最强大的一些应用在于并行运行多个 Claude 实例：
+除了单独使用，Claude 最强大的一些应用在于并行运行多个 Claude 实例：
 
 ### a. Have one Claude write code; use another Claude to verify
 
@@ -818,11 +812,11 @@ For both of these use cases, it can be helpful to use the --verbose flag for deb
 
 What are your tips and best practices for working with Claude Code? Tag @AnthropicAI so we can see what you're building!
 
-## Acknowledgements
-
 在使用 Claude Code 时，你有哪些技巧和最佳实践？请标记 @AnthropicAI ，以便我们能看到你正在构建什么！
 
-## 致谢
+### Acknowledgements
+
+致谢
 
 Written by Boris Cherny. This work draws upon best practices from across the broader Claude Code user community, whose creative approaches and workflows continue to inspire us. Special thanks also to Daisy Hollman, Ashwin Bhat, Cat Wu, Sid Bidasaria, Cal Rueb, Nodir Turakulov, Barry Zhang, Drew Hodun and many other Anthropic engineers whose valuable insights and practical experience with Claude Code helped shape these recommendations.
 
