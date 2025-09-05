@@ -304,39 +304,47 @@ This versatile workflow suits many problems:
 
 这一步是让 Claude 阅读相关文件、图片或 URL。你可以给出泛泛的提示（比如「阅读处理日志的文件」），也可以提供具体的文件名（例如「阅读 logging.py」），但务必明确告诉它，目前还不要编写任何代码。在处理复杂问题时，这是工作流程中您应该着重考虑使用子智能体（subagents）的阶段。让 Claude 使用子智能体（subagents）来核实细节或探究它可能遇到的特定问题，尤其是在对话或任务的早期，通常能很好地保持上下文可用性，同时又不会损失太多效率。
 
-2. This is the part of the workflow where you should consider strong use of subagents, especially for complex problems. Telling Claude to use subagents to verify details or investigate particular questions it might have, especially early on in a conversation or task, tends to preserve context availability without much downside in terms of lost efficiency.
+2 This is the part of the workflow where you should consider strong use of subagents, especially for complex problems. Telling Claude to use subagents to verify details or investigate particular questions it might have, especially early on in a conversation or task, tends to preserve context availability without much downside in terms of lost efficiency.
 
-2. 在工作流程的这一环节，我们应该着重考虑使用子智能体（subagents），尤其是在处理复杂问题时。指示 Claude 调用子智能体来核实细节，或者探究它可能遇到的具体问题，特别是在一次对话或一项任务的早期阶段，通常有助于保持上下文的可用性，同时又不会明显牺牲效率。
+在工作流程的这一环节，我们应该着重考虑使用子智能体（subagents），尤其是在处理复杂问题时。指示 Claude 调用子智能体来核实细节，或者探究它可能遇到的具体问题，特别是在一次对话或一项任务的早期阶段，通常有助于保持上下文的可用性，同时又不会明显牺牲效率。
 
-3. Ask Claude to make a plan for how to approach a specific problem. We recommend using the word "think" to trigger extended thinking mode, which gives Claude additional computation time to evaluate alternatives more thoroughly. These specific phrases are mapped directly to increasing levels of thinking budget in the system: "think" < "think hard" < "think harder" < "ultrathink." Each level allocates progressively more thinking budget for Claude to use.If the results of this step seem reasonable, you can have Claude create a document or a GitHub issue with its plan so that you can reset to this spot if the implementation (step 3) isn't what you want.
+3 Ask Claude to make a plan for how to approach a specific problem. We recommend using the word "think" to trigger extended thinking mode, which gives Claude additional computation time to evaluate alternatives more thoroughly. These specific phrases are mapped directly to increasing levels of thinking budget in the system: "think" < "think hard" < "think harder" < "ultrathink." Each level allocates progressively more thinking budget for Claude to use.If the results of this step seem reasonable, you can have Claude create a document or a GitHub issue with its plan so that you can reset to this spot if the implementation (step 3) isn't what you want.
 
-3. 让 Claude 为解决特定问题制定一份计划。我们建议使用「think」这个词来触发扩展思考模式，这样能让 Claude 获得额外的计算时间，从而更全面地评估各种备选方案。系统将这些特定短语直接对应到逐步递增的思考预算级别：」think」<」think hard」<」think harder」<」ultrathink」。每个级别都会为 Claude 分配更多的思考预算。如果这一步的结果看起来合理，你可以让 Claude 根据其计划生成一个文档或一个 GitHub issue，这样如果后续的实施（第 3 步）不尽如人意，你可以随时回到这一步。
+让 Claude 为解决特定问题制定一份计划。我们建议使用「think」这个词来触发扩展思考模式，这样能让 Claude 获得额外的计算时间，从而更全面地评估各种备选方案。系统将这些特定短语直接对应到逐步递增的思考预算级别：think < think hard < think harder < ultrathink。每个级别都会为 Claude 分配更多的思考预算。如果这一步的结果看起来合理，你可以让 Claude 根据其计划生成一个文档或一个 GitHub issue，这样如果后续的实施（第 3 步）不尽如人意，你可以随时回到这一步。
 
-4. If the results of this step seem reasonable, you can have Claude create a document or a GitHub issue with its plan so that you can reset to this spot if the implementation (step 3) isn't what you want.
+4 If the results of this step seem reasonable, you can have Claude create a document or a GitHub issue with its plan so that you can reset to this spot if the implementation (step 3) isn't what you want.
 
-4. 如果这一步的结果看起来合理，你可以让 Claude 创建一份文档或一个 GitHub issue（GitHub issue），里面详细说明它的计划。这样一来，如果后续的实现（第三步）不符合你的预期，你就可以轻松地回溯到这个节点。
+如果这一步的结果看起来合理，你可以让 Claude 创建一份文档或一个 GitHub issue（GitHub issue），里面详细说明它的计划。这样一来，如果后续的实现（第三步）不符合你的预期，你就可以轻松地回溯到这个节点。
 
-5. Ask Claude to implement its solution in code. This is also a good place to ask it to explicitly verify the reasonableness of its solution as it implements pieces of the solution.
+5 Ask Claude to implement its solution in code. This is also a good place to ask it to explicitly verify the reasonableness of its solution as it implements pieces of the solution.
 
-5. 让 Claude 用代码实现其解决方案。同时，在它逐步实现方案的过程中，我们还可以要求它明确验证其解决方案的合理性。
+让 Claude 用代码实现其解决方案。同时，在它逐步实现方案的过程中，我们还可以要求它明确验证其解决方案的合理性。
 
-6. Ask Claude to commit the result and create a pull request. If relevant, this is also a good time to have Claude update any READMEs or changelogs with an explanation of what it just did.
+6 Ask Claude to commit the result and create a pull request. If relevant, this is also a good time to have Claude update any READMEs or changelogs with an explanation of what it just did.
 
-6. 让 Claude 提交最终成果，并创建一个拉取请求（pull request）。如果适用，这也是一个好时机，让 Claude 更新项目中的任何 README 文档或更新日志（changelog），并解释它刚刚完成了哪些工作。
+让 Claude 提交最终成果，并创建一个拉取请求（pull request）。如果适用，这也是一个好时机，让 Claude 更新项目中的任何 README 文档或更新日志（changelog），并解释它刚刚完成了哪些工作。
 
 Steps #1-#2 are crucial—without them, Claude tends to jump straight to coding a solution. While sometimes that's what you want, asking Claude to research and plan first significantly improves performance for problems requiring deeper thinking upfront.
 
 步骤 #1-#2 至关重要 —— 如果没有它们，Claude 往往会直接着手编写解决方案。虽然有时你可能需要这种直接的方式，但如果先让 Claude 进行研究和规划，那么在解决那些需要前期深入思考的问题时，其表现会显著提升。
 
-### b. Write tests, commit; code, iterate, commit
+b. Write tests, commit; code, iterate, commit
+
+b. 编写测试、提交；编写代码、迭代、再提交
 
 This is an Anthropic-favorite workflow for changes that are easily verifiable with unit, integration, or end-to-end tests. Test-driven development (TDD) becomes even more powerful with agentic coding:
 
-### b. 编写测试、提交；编写代码、迭代、再提交这是 Anthropic 公司偏爱的一种工作流程，特别适合那些可以通过单元测试、集成测试或端到端测试轻松验证的改动。当与智能体编码（agentic coding）结合使用时，测试驱动开发（TDD）的威力会变得更加强大：
+这是 Anthropic 公司偏爱的一种工作流程，特别适合那些可以通过单元测试、集成测试或端到端测试轻松验证的改动。当与智能体编码（agentic coding）结合使用时，测试驱动开发（TDD）的威力会变得更加强大：
 
-1. Ask Claude to write tests based on expected input/output pairs. Be explicit about the fact that you're doing test-driven development so that it avoids creating mock implementations, even for functionality that doesn't exist yet in the codebase.
+1 Ask Claude to write tests based on expected input/output pairs. Be explicit about the fact that you're doing test-driven development so that it avoids creating mock implementations, even for functionality that doesn't exist yet in the codebase.
 
-1. 让 Claude 根据预期的输入 / 输出对来编写测试。请明确说明你正在进行测试驱动开发（test-driven development），这样它就不会创建模拟实现（mock implementations），即使是针对代码库中尚未实现的功能。
+让 Claude 根据预期的输入 / 输出对来编写测试。请明确说明你正在进行测试驱动开发（test-driven development），这样它就不会创建模拟实现（mock implementations），即使是针对代码库中尚未实现的功能。
+
+
+
+
+
+
 
 2. Tell Claude to run the tests and confirm they fail. Explicitly telling it not to write any implementation code at this stage is often helpful.
 
