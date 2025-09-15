@@ -220,27 +220,33 @@ My strategy is to identify where the slowdown is happening and hand off just eno
 
 我的策略是找出导致效率降低的地方，然后将恰好足够的任务交给大语言模型（LLM）以恢复进展。具体来说，我的实践经验是：
 
-#### Narrate the story to the model
+#### 3.1 Narrate the story to the model
+
+向模型讲述故事
 
 When I start writing (especially for something like a paper intro), I begin by "talking through" the structure as if I'm explaining it to a colleague. I paste that rough narrative into the LLM and ask it to generate a detailed outline. I don't move forward until that outline feels structurally solid.
 
-向模型讲述故事当我开始写作时（尤其是像论文引言这样的内容），我会先「口头梳理」一下文章的结构，就像在向同事解释一样。我会把这段粗略的叙述粘贴到大语言模型（LLM）中，然后让它生成一个详细的提纲。只有当这个提纲在结构上足够完善时，我才会着手进行下一步。
+当我开始写作时（尤其是像论文引言这样的内容），我会先「口头梳理」一下文章的结构，就像在向同事解释一样。我会把这段粗略的叙述粘贴到大语言模型（LLM）中，然后让它生成一个详细的提纲。只有当这个提纲在结构上足够完善时，我才会着手进行下一步。
 
-#### Write the paragraph myself, even if it's rough
+#### 3.2 Write the paragraph myself, even if it's rough
+
+亲自动手写段落，哪怕再粗糙也没关系
 
 Once I have the outline, for every paragraph, I try to write the actual paragraph myself, even if it's ugly. If I know what I want to say but can't get the sentence out (unfortunately, this happens often), I'll write a half-baked version and ask the LLM to help me finish it.
 
-亲自动手写段落，哪怕再粗糙也没关系一旦有了大纲，对于每个段落，我都会尝试自己亲自动手去写，哪怕初稿显得再粗糙也没关系。如果我知道自己想表达什么，却不知如何措辞（不幸的是，这种情况经常发生），我就会先写一个不成熟的版本，然后请大语言模型（LLM）帮我润色和完成。
+一旦有了大纲，对于每个段落，我都会尝试自己亲自动手去写，哪怕初稿显得再粗糙也没关系。如果我知道自己想表达什么，却不知如何措辞（不幸的是，这种情况经常发生），我就会先写一个不成熟的版本，然后请大语言模型（LLM）帮我润色和完成。
 
 This post includes a real example. I typed: "In the last couple of years, I've written and reviewed several technical papers and blog posts. Something always feels slightly off, enough to make the writing quietly uninviting. At the same time, I feel like I get tremendous value from using LLMs to write…" And then just added: "finish it". The model gave me a few completions. I picked the best one, made a small edit, and moved on.
 
 本文包含一个真实的例子。我这样输入：「在过去的几年里，我写过并审阅了几篇技术论文和博客文章。总有些细节不够到位，使得文章读起来不那么引人入胜。同时，我发现使用大语言模型（LLM）进行写作能带来巨大价值……」接着我只需补充一句：「完成它。」模型给出了几个续写方案。我从中选择了最好的一个，做了小修改，然后继续了。
 
-#### Use scoped rewrite strategies during revision
+#### 3.3 Use scoped rewrite strategies during revision
+
+修改时采用有针对性的重写策略
 
 When I re-read a sentence or paragraph that feels off, I don't simply ask the model to "make it better." I ask something specific; usually for the LLM to follow one of the following rhetorical patterns.
 
-修改时采用有针对性的重写策略当我重新读到一个句子或段落，觉得它读起来不太顺畅时，我不会简单地要求模型（model)「把它改好」。我会提出具体的要求；通常是让大语言模型（LLM）按照以下某种修辞模式进行修改。
+当我重新读到一个句子或段落，觉得它读起来不太顺畅时，我不会简单地要求模型（model）「把它改好」。我会提出具体的要求；通常是让大语言模型（LLM）按照以下某种修辞模式进行修改。
 
 The first is to put the subject and verb close together, at the beginning of the sentence. The second pattern I use is SWBST: Somebody Wanted But So Then. It's a basic storytelling structure—often taught in early writing education, but surprisingly effective in technical contexts because it helps convey motivation, conflict, and resolution in a compact form. The "Somebody" is the actor, "Wanted" states the goal, "But" introduces the obstacle, "So" explains the response, and "Then" describes the outcome. In technical writing, this structure makes it easier to show how a decision was made or how a system evolved in response to a problem. E.g., consider the sentence "We used GPT-4 for summarization. We wanted fluent answers, but it hallucinated facts. So we added a retrieval step. Then we re-ranked outputs based on citation accuracy." Each sentence does one job. The pattern is simple, but it makes the logic of a decision easy to follow.
 
