@@ -89,29 +89,33 @@ Our goal is to increase the surface area over which agents can be effective in s
 
 ### 02. How to write tools
 
+如何编写工具
+
 In this section, we describe how you can collaborate with agents both to write and to improve the tools you give them. Start by standing up a quick prototype of your tools and testing them locally. Next, run a comprehensive evaluation to measure subsequent changes. Working alongside agents, you can repeat the process of evaluating and improving your tools until your agents achieve strong performance on real-world tasks.
 
-如何编写工具在本节中，我们将介绍你如何与 AI 智能体（AI agents）协作，共同编写并改进提供给它们的工具。首先，你需要快速开发工具原型，并在本地进行测试。接着，进行一次全面的评估，以衡量每次改进带来的变化。通过与 AI 智能体（AI agents）紧密合作，你可以不断重复评估和改进工具的过程，直到它们在实际任务中展现出卓越的性能。
+在本节中，我们将介绍你如何与 AI 智能体（AI agents）协作，共同编写并改进提供给它们的工具。首先，你需要快速开发工具原型，并在本地进行测试。接着，进行一次全面的评估，以衡量每次改进带来的变化。通过与 AI 智能体（AI agents）紧密合作，你可以不断重复评估和改进工具的过程，直到它们在实际任务中展现出卓越的性能。
 
-#### Building a prototype
+#### 2.1 Building a prototype
+
+动手搭建原型
 
 It can be difficult to anticipate which tools agents will find ergonomic and which tools they won't without getting hands-on yourself. Start by standing up a quick prototype of your tools. If you're using Claude Code to write your tools (potentially in one-shot), it helps to give Claude documentation for any software libraries, APIs, or SDKs (including potentially the MCP SDK) your tools will rely on. LLM-friendly documentation can commonly be found in flat llms.txt files on official documentation sites (here's our API's).
 
-动手搭建原型如果不亲自动手体验，你很难预判 AI 智能体（AI Agent）会觉得哪些工具好用（符合人体工程学（ergonomic)），哪些又不好用。所以，不妨先快速搭建一个你工具的初步原型。如果你使用 Claude Code 来编写工具（可能是一次性完成），那么向 Claude 提供你的工具将依赖的软件库、API 或 SDK（包括可能的 MCP SDK）的文档，会非常有帮助。对大语言模型（Large Language Model，LLM）友好的文档通常可以在官方文档网站上以简单的 llms.txt 文本文件形式找到（比如我们 API 的文档就是如此）。
+如果不亲自动手体验，你很难预判 AI 智能体（AI Agent）会觉得哪些工具好用（符合人体工程学（ergonomic）），哪些又不好用。所以，不妨先快速搭建一个你工具的初步原型。如果你使用 Claude Code 来编写工具（可能是一次性完成），那么向 Claude 提供你的工具将依赖的软件库、API 或 SDK（包括可能的 MCP SDK）的文档，会非常有帮助。对大语言模型（Large Language Model，LLM）友好的文档通常可以在官方文档网站上以简单的 llms.txt 文本文件形式找到（比如我们 API 的文档就是如此）。
 
 Wrapping your tools in a local MCP server or Desktop extension (DXT) will allow you to connect and test your tools in Claude Code or the Claude Desktop app.
 
-To connect your local MCP server to Claude Code, run claude mcp add <name> <command> [args...].
-
 将你的工具封装在本地 MCP 服务器或桌面扩展（Desktop extension，DXT）中，你就可以在 Claude Code 或 Claude 桌面应用程序中连接并测试这些工具。
+
+To connect your local MCP server to Claude Code, run claude mcp add <name> <command> [args...].
 
 要将你的本地 MCP 服务器连接到 Claude Code，请运行 `claude mcp add <name> <command> [args...]` 命令。
 
 To connect your local MCP server or DXT to the Claude Desktop app, navigate to Settings > Developer or Settings > Extensions, respectively.
 
-Tools can also be passed directly into Anthropic API calls for programmatic testing.
-
 为了将你的本地 MCP 服务器或 DXT 连接到 Claude 桌面应用（Claude Desktop app），你需要分别前往「设置> 开发者」或「设置> 扩展」界面。
+
+Tools can also be passed directly into Anthropic API calls for programmatic testing.
 
 此外，工具也可以直接通过 Anthropic API 调用传入，以便进行程序化测试（programmatic testing）。
 
@@ -119,48 +123,59 @@ Test the tools yourself to identify any rough edges. Collect feedback from your 
 
 请您亲自测试这些工具，找出它们可能存在的任何不足之处。同时，也要收集用户的反馈，以便您能更好地理解这些工具预计能支持哪些应用场景和提示词，从而形成更直观的判断。
 
-#### Running an evaluation
+#### 2.2 Running an evaluation
+
+运行评估
 
 Next, you need to measure how well Claude uses your tools by running an evaluation. Start by generating lots of evaluation tasks, grounded in real world uses. We recommend collaborating with an agent to help analyze your results and determine how to improve your tools. See this process end-to-end in our tool evaluation cookbook.
 
-运行评估接下来，你需要通过进行评估来衡量 Claude 使用你的工具的效果。首先，请基于真实世界的应用场景，生成大量的评估任务。我们建议与一个 AI 智能体（AI Agent）协作，以帮助分析你的评估结果，并确定如何改进你的工具。有关此过程的端到端详情，请参阅我们的工具评估指南。
+接下来，你需要通过进行评估来衡量 Claude 使用你的工具的效果。首先，请基于真实世界的应用场景，生成大量的评估任务。我们建议与一个 AI 智能体（AI Agent）协作，以帮助分析你的评估结果，并确定如何改进你的工具。有关此过程的端到端详情，请参阅我们的工具评估指南。
 
-Held-out test set performance of our internal Slack tools Generating evaluation tasks
+[anthropic-cookbook/tool\_evaluation/tool\_evaluation.ipynb at main · anthropics/anthropic-cookbook](https://github.com/anthropics/anthropic-cookbook/blob/main/tool_evaluation/tool_evaluation.ipynb)
+
+Held-out test set performance of our internal Slack tools 
+
+我们内部 Slack 工具的保留测试集性能：
+
+#### 2.3 Generating evaluation tasks
+
+生成评估任务
 
 With your early prototype, Claude Code can quickly explore your tools and create dozens of prompt and response pairs. Prompts should be inspired by real-world uses and be based on realistic data sources and services (for example, internal knowledge bases and microservices). We recommend you avoid overly simplistic or superficial "sandbox" environments that don't stress-test your tools with sufficient complexity. Strong evaluation tasks might require multiple tool calls—potentially dozens.
 
-我们内部 Slack 工具的保留测试集性能：生成评估任务有了你的早期原型，Claude Code 可以快速探索你的工具，并创建数十个提示（prompt）和响应（response）对。这些提示应该源于实际使用场景，并基于真实的数据源和服务（例如，内部知识库和微服务）来设计。我们建议你避免使用过于简单或流于表面的「沙盒」环境，因为它们无法通过足够的复杂度来对你的工具进行压力测试。有效的评估任务可能需要进行多次工具调用，甚至多达数十次。
+有了你的早期原型，Claude Code 可以快速探索你的工具，并创建数十个提示（prompt）和响应（response）对。这些提示应该源于实际使用场景，并基于真实的数据源和服务（例如，内部知识库和微服务）来设计。我们建议你避免使用过于简单或流于表面的「沙盒」环境，因为它们无法通过足够的复杂度来对你的工具进行压力测试。有效的评估任务可能需要进行多次工具调用，甚至多达数十次。
 
 Here are some examples of strong tasks:
 
-* Schedule a meeting with Jane next week to discuss our latest Acme Corp project. Attach the notes from our last project planning meeting and reserve a conference room.
-
 以下是一些复杂任务的例子：
 
-* 下周和 Jane 安排一个会议，讨论我们最新的 Acme Corp 项目。任务包括附上我们上次项目规划会议的记录，并预订一间会议室。
+1 Schedule a meeting with Jane next week to discuss our latest Acme Corp project. Attach the notes from our last project planning meeting and reserve a conference room.
 
-* Customer ID 9182 reported that they were charged three times for a single purchase attempt. Find all relevant log entries and determine if any other customers were affected by the same issue.
+下周和 Jane 安排一个会议，讨论我们最新的 Acme Corp 项目。任务包括附上我们上次项目规划会议的记录，并预订一间会议室。
 
-*  客户 ID 9182 报告称，他们在一次购买尝试中被重复收取了三次费用。请找出所有相关的日志条目，并确定是否有其他客户也受到了同样问题的影响。
+2 Customer ID 9182 reported that they were charged three times for a single purchase attempt. Find all relevant log entries and determine if any other customers were affected by the same issue.
 
-* Customer Sarah Chen just submitted a cancellation request. Prepare a retention offer. Determine: (1) why they're leaving, (2) what retention offer would be most compelling, and (3) any risk factors we should be aware of before making an offer.
+客户 ID 9182 报告称，他们在一次购买尝试中被重复收取了三次费用。请找出所有相关的日志条目，并确定是否有其他客户也受到了同样问题的影响。
 
-*  客户 Sarah Chen 刚刚提交了一份取消请求。请准备一份挽留优惠方案。需要确定以下三点：（1）客户离开的原因是什么，（2）哪种挽留方案最能打动客户，以及（3）在提供方案之前，我们需要警惕哪些风险。
+3 Customer Sarah Chen just submitted a cancellation request. Prepare a retention offer. Determine: (1) why they're leaving, (2) what retention offer would be most compelling, and (3) any risk factors we should be aware of before making an offer.
+
+客户 Sarah Chen 刚刚提交了一份取消请求。请准备一份挽留优惠方案。需要确定以下三点：（1）客户离开的原因是什么，（2）哪种挽留方案最能打动客户，以及（3）在提供方案之前，我们需要警惕哪些风险。
 
 And here are some weaker tasks:
 
-* Schedule a meeting with jane@acme.corp next week.
-
 以下是一些更简单的任务：
-* 下周与 jane@acme.corp 安排一次会议。
 
-* Search the payment logs for purchase_complete and customer_id=9182.
+1 Schedule a meeting with jane@acme.corp next week.
 
-* Find the cancellation request by Customer ID 45892.
+下周与 jane@acme.corp 安排一次会议。
 
-* 搜索支付日志，查找购买完成的记录以及客户 ID 为 9182 的记录。
+2 Search the payment logs for purchase_complete and customer_id=9182.
 
-* 查找客户 ID 45892 提交的取消请求。
+搜索支付日志，查找购买完成的记录以及客户 ID 为 9182 的记录。
+
+3 Find the cancellation request by Customer ID 45892.
+
+查找客户 ID 45892 提交的取消请求。
 
 Each evaluation prompt should be paired with a verifiable response or outcome. Your verifier can be as simple as an exact string comparison between ground truth and sampled responses, or as advanced as enlisting Claude to judge the response. Avoid overly strict verifiers that reject correct responses due to spurious differences like formatting, punctuation, or valid alternative phrasings.
 
@@ -170,7 +185,7 @@ For each prompt-response pair, you can optionally also specify the tools you exp
 
 对于每个提示 - 响应对，你还可以选择性地指定你期望一个 AI 智能体（AI Agent）在解决任务时调用的工具，目的是衡量 AI 智能体（AI Agent）在评估期间是否成功理解并正确使用每个工具的用途。然而，由于解决任务可能存在多种有效路径，请尽量避免过度指定或过度限制其策略。
 
-Running the evaluation
+#### 2.4 Running the evaluation
 
 We recommend running your evaluation programmatically with direct LLM API calls. Use simple agentic loops (while-loops wrapping alternating LLM API and tool calls): one loop for each evaluation task. Each evaluation agent should be given a single task prompt and your tools.
 
@@ -190,11 +205,13 @@ As well as top-level accuracy, we recommend collecting other metrics like the to
 
 Held-out test set performance of our internal Asana tools
 
-Analyzing resultsAgents are your helpful partners in spotting issues and providing feedback on everything from contradictory tool descriptions to inefficient tool implementations and confusing tool schemas. However, keep in mind that what agents omit in their feedback and responses can often be more important than what they include. LLMs don't always say what they mean.
-
 我们内部 Asana 工具在独立测试集上的性能表现
 
-** 分析结果 **
+#### 2.5 Analyzing results
+
+分析结果
+
+Agents are your helpful partners in spotting issues and providing feedback on everything from contradictory tool descriptions to inefficient tool implementations and confusing tool schemas. However, keep in mind that what agents omit in their feedback and responses can often be more important than what they include. LLMs don't always say what they mean.
 
 AI 智能体（AI Agent）是您发现问题和提供反馈的得力助手，它们能就各种情况提供帮助，包括：相互矛盾的工具描述、低效的工具实现方式，以及令人困惑的工具架构。然而，请记住，AI 智能体在其反馈和回应中「省略了什么」，往往比它们「包含了什么」更为重要。因为大语言模型（LLM）并不总是直接表达其真实意图。
 
@@ -206,11 +223,13 @@ Analyze your tool calling metrics. Lots of redundant tool calls might suggest so
 
 分析你的工具调用指标（tool calling metrics）。大量的冗余工具调用（redundant tool calls）可能表明有必要对分页或 token 限制参数进行一些优化调整；而大量因参数无效导致的工具错误，则可能说明工具的描述不够清晰或缺乏足够好的示例。当我们推出 Claude 的网页搜索工具时，我们曾发现 Claude 不必要地将「2025」附加到工具的查询参数中，这不仅导致搜索结果出现偏差，也降低了性能。我们通过改进工具描述，成功地引导 Claude 走向了正确的方向。
 
-#### Collaborating with agents
+#### 2.6 Collaborating with agents
+
+与 AI 智能体协作
 
 You can even let agents analyze your results and improve your tools for you. Simply concatenate the transcripts from your evaluation agents and paste them into Claude Code. Claude is an expert at analyzing transcripts and refactoring lots of tools all at once—for example, to ensure tool implementations and descriptions remain self-consistent when new changes are made.
 
-与 AI 智能体协作你甚至可以放心地让智能体（agents）帮你分析结果并改进你的工具。只需将你的评估智能体生成的对话记录串联起来，然后将其粘贴到 Claude Code 中。Claude 擅长分析这些记录，并能一次性重构大量工具 —— 例如，确保在进行新的修改时，工具的实现和描述能保持内部一致性（self-consistent）。
+你甚至可以放心地让智能体（agents）帮你分析结果并改进你的工具。只需将你的评估智能体生成的对话记录串联起来，然后将其粘贴到 Claude Code 中。Claude 擅长分析这些记录，并能一次性重构大量工具 —— 例如，确保在进行新的修改时，工具的实现和描述能保持内部一致性（self-consistent）。
 
 In fact, most of the advice in this post came from repeatedly optimizing our internal tool implementations with Claude Code. Our evaluations were created on top of our internal workspace, mirroring the complexity of our internal workflows, including real projects, documents, and messages.
 
@@ -222,9 +241,9 @@ We relied on held-out test sets to ensure we did not overfit to our "training" e
 
 In the next section, we'll share some of what we learned from this process.
 
-### 03. Principles for writing effective tools
-
 在下一节中，我们将分享从这个过程中积累的一些经验。
+
+### 03. Principles for writing effective tools
 
 编写高效工具的原则
 
@@ -327,7 +346,7 @@ Here's an example of a concise tool response (72 tokens):
 
 以下是一个详细的工具响应示例（206 个 Token):
 
-以下是一个简洁的工具响应示例（72 个 Token):
+以下是一个简洁的工具响应示例（72 个 Token）:
 
 Slack threads and thread replies are identified by unique `thread_ts`which are required to fetch thread replies. `thread_ts`and other IDs ( `channel_id`, `user_id`) can be retrieved from a `"detailed"`tool response to enable further tool calls that require these. `"concise"`tool responses return only thread content and exclude IDs. In this example, we use ~⅓ of the tokens with `"concise"`tool responses. 
 
