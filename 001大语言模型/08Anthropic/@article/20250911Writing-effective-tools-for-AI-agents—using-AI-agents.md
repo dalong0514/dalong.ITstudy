@@ -249,9 +249,9 @@ In the next section, we'll share some of what we learned from this process.
 
 In this section, we distill our learnings into a few guiding principles for writing effective tools.
 
-#### Choosing the right tools for agents
-
 在本节中，我们将我们的经验提炼成一些设计高效工具的指导原则。
+
+#### 3.1 Choosing the right tools for agents
 
 为 AI 智能体（AI Agent）选择合适的工具
 
@@ -277,17 +277,17 @@ Tools can consolidate functionality, handling potentially multiple discrete oper
 
 Here are some examples:
 
-* Instead of implementing a list_users, list_events, and create_event tools, consider implementing a schedule_event tool which finds availability and schedules an event.
+1 Instead of implementing a list_users, list_events, and create_event tools, consider implementing a schedule_event tool which finds availability and schedules an event.
 
 与其分别实现「列出用户（list_users）」、「列出事件（list_events）」和「创建事件（create_event）」这些工具，不如考虑实现一个「日程事件（schedule_event）」工具，它能自动查找空闲时间并安排事件。
 
-* Instead of implementing a read_logs tool, consider implementing a search_logs tool which only returns relevant log lines and some surrounding context.
+2 Instead of implementing a read_logs tool, consider implementing a search_logs tool which only returns relevant log lines and some surrounding context.
 
-* Instead of implementing get_customer_by_id, list_transactions, and list_notes tools, implement a get_customer_context tool which compiles all of a customer's recent & relevant information all at once.
+与其实现一个名为 `read_logs` 的工具，不如考虑实现一个名为 `search_logs` 的工具。后者仅返回相关的日志行以及它们的一些周边上下文信息。
 
-*  与其实现一个名为 `read_logs` 的工具，不如考虑实现一个名为 `search_logs` 的工具。后者仅返回相关的日志行以及它们的一些周边上下文信息。
+3 Instead of implementing get_customer_by_id, list_transactions, and list_notes tools, implement a get_customer_context tool which compiles all of a customer's recent & relevant information all at once.
 
-*  与其分别实现 `get_customer_by_id`、`list_transactions` 和 `list_notes` 等工具，不如实现一个名为 `get_customer_context` 的工具。这个工具能够一次性汇集所有客户近期和相关的信息。
+与其分别实现 `get_customer_by_id`、`list_transactions` 和 `list_notes` 等工具，不如实现一个名为 `get_customer_context` 的工具。这个工具能够一次性汇集所有客户近期和相关的信息。
 
 Make sure each tool you build has a clear, distinct purpose. Tools should enable agents to subdivide and solve tasks in much the same way that a human would, given access to the same underlying resources, and simultaneously reduce the context that would have otherwise been consumed by intermediate outputs.
 
@@ -297,11 +297,13 @@ Too many tools or overlapping tools can also distract agents from pursuing effic
 
 工具过多或功能重叠，也可能让 AI 智能体（AI Agent）分心，难以采取高效的策略。因此，对于你要构建（或不构建）哪些工具进行审慎且有选择性的规划，将会带来丰厚的回报。
 
-#### Namespacing your tools
+#### 3.2 Namespacing your tools
+
+给你的工具做命名空间管理
 
 Your AI agents will potentially gain access to dozens of MCP servers and hundreds of different tools–including those by other developers. When tools overlap in function or have a vague purpose, agents can get confused about which ones to use.
 
-给你的工具做命名空间管理你的 AI 智能体（AI agents）未来可能会连接到几十台 MCP 服务器，并使用数百种不同的工具 —— 其中也包括其他开发者开发的工具。当这些工具的功能有所重叠，或者其用途不够明确时，智能体（agents）就很难判断该使用哪一个了。
+你的 AI 智能体（AI agents）未来可能会连接到几十台 MCP 服务器，并使用数百种不同的工具 —— 其中也包括其他开发者开发的工具。当这些工具的功能有所重叠，或者其用途不够明确时，智能体（agents）就很难判断该使用哪一个了。
 
 Namespacing (grouping related tools under common prefixes) can help delineate boundaries between lots of tools; MCP clients sometimes do this by default. For example, namespacing tools by service (e.g., asana_search, jira_search) and by resource (e.g., asana_projects_search, asana_users_search), can help agents select the right tools at the right time.
 
@@ -315,11 +317,13 @@ Agents might call the wrong tools, call the right tools with the wrong parameter
 
 AI 智能体（AI Agent）在工作中可能会遇到各种问题：它们可能会选择错误的工具，即使选对了工具也可能传入不正确的参数，或者调用的工具数量不足，甚至会错误地处理工具返回的结果。为了解决这些问题，我们可以有选择地设计工具，让这些工具的名称能直接反映任务的自然子环节。这样做的好处是多方面的：一方面，你可以减少加载到智能体上下文中的工具数量和工具描述；另一方面，也能将原本由智能体自身在上下文中进行的决策计算（即「智能体计算」）转移到工具调用本身去完成。这种方法能有效降低智能体整体出错的风险。
 
-#### Returning meaningful context from your tools
+#### 3.3 Returning meaningful context from your tools
+
+让你的工具返回更有意义的上下文信息
 
 In the same vein, tool implementations should take care to return only high signal information back to agents. They should prioritize contextual relevance over flexibility, and eschew low-level technical identifiers (for example: uuid, 256px_image_url, mime_type). Fields like name, image_url, and file_type are much more likely to directly inform agents' downstream actions and responses.
 
-让你的工具返回更有意义的上下文信息同样地，工具在设计和实现时，应确保只返回高价值信息给 AI 智能体（AI Agent）。在返回信息时，应优先考虑其与上下文的相关性，而非一味追求灵活性；同时，应避免返回低级的技术标识符 （例如：uuid，256px_image_url，mime_type）。像 name、image_url 和 file_type 这样的字段，更有可能直接为 AI 智能体的后续行动和响应提供有效信息。
+同样地，工具在设计和实现时，应确保只返回高价值信息给 AI 智能体（AI Agent）。在返回信息时，应优先考虑其与上下文的相关性，而非一味追求灵活性；同时，应避免返回低级的技术标识符 （例如：uuid，256px_image_url，mime_type）。像 name、image_url 和 file_type 这样的字段，更有可能直接为 AI 智能体的后续行动和响应提供有效信息。
 
 Agents also tend to grapple with natural language names, terms, or identifiers significantly more successfully than they do with cryptic identifiers. We've found that merely resolving arbitrary alphanumeric UUIDs to more semantically meaningful and interpretable language (or even a 0-indexed ID scheme) significantly improves Claude's precision in retrieval tasks by reducing hallucinations.
 
@@ -342,25 +346,25 @@ enum ResponseFormat {
 
 Here's an example of a detailed tool response (206 tokens):
 
-Here's an example of a concise tool response (72 tokens):
-
 以下是一个详细的工具响应示例（206 个 Token):
+
+Here's an example of a concise tool response (72 tokens):
 
 以下是一个简洁的工具响应示例（72 个 Token）:
 
 Slack threads and thread replies are identified by unique `thread_ts`which are required to fetch thread replies. `thread_ts`and other IDs ( `channel_id`, `user_id`) can be retrieved from a `"detailed"`tool response to enable further tool calls that require these. `"concise"`tool responses return only thread content and exclude IDs. In this example, we use ~⅓ of the tokens with `"concise"`tool responses. 
 
-Even your tool response structure—for example XML, JSON, or Markdown—can have an impact on evaluation performance: there is no one-size-fits-all solution. This is because LLMs are trained on next-token prediction and tend to perform better with formats that match their training data. The optimal response structure will vary widely by task and agent. We encourage you to select the best response structure based on your own evaluation.
-
 Slack 的话题串及其回复都通过一个独特的 `thread_ts` 来识别，这个 `thread_ts` 是获取话题串回复的关键。像 `thread_ts` 这样的 ID（包括 `channel_id` 和 `user_id`）可以从一个 `"detailed"` 工具响应（tool response）中获取，从而能够进行需要这些 ID 的后续工具调用。相比之下，`"concise"` 工具响应只会返回话题串内容，不包含这些 ID。在这个例子中，使用 `"concise"` 工具响应大约能节省 ⅓ 的 token。
+
+Even your tool response structure—for example XML, JSON, or Markdown—can have an impact on evaluation performance: there is no one-size-fits-all solution. This is because LLMs are trained on next-token prediction and tend to perform better with formats that match their training data. The optimal response structure will vary widely by task and agent. We encourage you to select the best response structure based on your own evaluation.
 
 不仅如此，你的工具响应结构 —— 比如 XML、JSON 或 Markdown—— 也可能对评估性能产生影响：因为没有一种结构是万能的。这是因为大语言模型（Large Language Model）是基于下一词元预测（next-token prediction）训练的，它们往往在遇到与训练数据相匹配的格式时表现更出色。最佳的响应结构会因任务和 AI 智能体（AI Agent）的不同而有很大差异。我们建议你根据自己的评估来选择最合适的响应结构。
 
-#### Optimizing tool responses for token efficiency
-
-Optimizing the quality of context is important. But so is optimizing the quantity of context returned back to agents in tool responses.
+#### 3.4 Optimizing tool responses for token efficiency
 
 优化工具响应的 Token 效率（Token efficiency）
+
+Optimizing the quality of context is important. But so is optimizing the quantity of context returned back to agents in tool responses.
 
 优化上下文（context）的质量固然重要，但同样关键的是，要优化工具响应（tool responses）中返回给 AI 智能体（AI Agent）的上下文数量。
 
@@ -374,17 +378,17 @@ If you choose to truncate responses, be sure to steer agents with helpful instru
 
 Here's an example of a truncated tool response:
 
-Here's an example of an unhelpful error response:
-
 这是一个被截断的工具响应示例：
+
+Here's an example of an unhelpful error response:
 
 这是一个没有帮助的错误响应示例：
 
 Here's an example of a helpful error response:
 
-Tool truncation and error responses can steer agents towards more token-efficient tool-use behaviors (using filters or pagination) or give examples of correctly formatted tool inputs. ### Prompt-engineering your tool descriptions
-
 这里有一个有益的错误响应的例子：
+
+Tool truncation and error responses can steer agents towards more token-efficient tool-use behaviors (using filters or pagination) or give examples of correctly formatted tool inputs. ### Prompt-engineering your tool descriptions
 
 工具截断（Tool truncation）和错误响应（error responses）可以引导 AI 智能体（AI agent）采取更高效地利用 Token（Token）的工具使用行为（例如，使用过滤器或分页），或者给出格式正确的工具输入示例。### 提示工程（Prompt-engineering）你的工具描述
 
