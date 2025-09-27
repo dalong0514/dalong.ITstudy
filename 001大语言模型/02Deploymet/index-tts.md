@@ -19,6 +19,8 @@ hf download IndexTeam/IndexTTS-2 --local-dir=checkpoints
 
 uv run webui.py
 
+mac 上只能用 mps，无法用 deepseed 加速。
+
 uv run webui.py --deepspeed
 
 python webui.py --deepspeed
@@ -28,6 +30,24 @@ python webui.py --deepspeed
 http://127.0.0.1:7860
 
 
+
+结论：当前机器不适合开启 DeepSpeed。
+
+诊断要点
+
+- 未检测到 NVIDIA CUDA/GPU：nvidia-smi 不存在，nvcc 未安装。
+- uv run tools/gpu_check.py 检测到 Apple MPS 可用，CUDA/ROCm/XPU 均不可用。
+- DeepSpeed 主要服务于 NVIDIA CUDA（Linux/Windows）。在 macOS + MPS 上不会生效，项目会自动回退为普通推理。
+
+建议用法
+
+- 启动 WebUI（不要加 --deepspeed）：
+    - uv run webui.py
+- 若想看可用参数：
+    - uv run webui.py -h
+
+如果你有一台带 NVIDIA 显卡的 Linux/Windows 机器并希望使用 DeepSpeed，我可以给你一套针对 CUDA 12.8 的安装与验证清
+单（含 PyTorch CUDA 构建、驱动/Toolkit、deepspeed 安装与基准建议）。
 
 
 

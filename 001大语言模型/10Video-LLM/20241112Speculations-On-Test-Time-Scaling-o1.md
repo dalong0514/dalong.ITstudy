@@ -8,6 +8,8 @@ Recently, OpenAI released a new graph. Given the impact of their previous ones, 
 
 最近，OpenAI 发布了一张新图表。考虑到他们以往图表所产生的影响，这份新图表引起了广泛关注。在这张图表的左侧，我们看到一条与之前常见的曲线非常相似的曲线。这条曲线表明，随着训练时间计算量（training time compute）的增加，模型在处理复杂任务时的准确率会持续提升。而在图表的右侧，我们看到了一条全新的曲线。这条曲线同样展示了计算量与模型性能之间的关系。不同之处在于，这条曲线关注的是测试时间计算量（test time compute）。我们观察到，随着系统中测试时间计算量的增加，模型在该任务上的性能得到了显著提升。这是一个全新的发现，在此之前，我们从未在语言建模（language modeling）领域中见到过类似现象，这无疑是一个备受关注的重要话题。
 
+### 01
+
 Before we dive into this topic more, it's worth noting what these problems actually look like. Well, they're pretty hard. We're not just doing retrieval or things that look a bit more like pattern matching. We're doing full-on reasoning in technical mathematical problems.
 
 在我们深入探讨这个话题之前，有必要先了解一下这些问题究竟有多难。可以说，它们相当棘手。我们不仅仅是在进行信息检索，也不是在做那些更像是模式匹配的任务，而是要对技术性的数学问题进行全面的逻辑推理。
@@ -40,6 +42,8 @@ As we'll see, we don't think this is exactly what OpenAI is doing, but it gives 
 
 正如我们将看到的，我们认为这并非 OpenAI 正在做的具体事情，但这能让你大致了解他们在开发系统时是如何探索测试时计算（test time compute）的早期应用的。实际上，关于这一点，我们对 OpenAI 内部的情况知之甚少。事实上，我不会过多地去预测他们到底在做什么，但我希望借此模型发布的机会，对开放研究领域正在发生的一切进行一次调查。
 
+### 02
+
 In this talk, I'll give a survey of the public literature related to OpenAI's O1. As part of this process, I also took the opportunity to call up a lot of different researchers in the field. It's a nice perk of being a professor that a lot of different people will talk to me. And for this talk, I talked to about 25 different people about what they think is going on. Finally, I will include some rumors from social media. I'm not gonna weight these too highly because who knows what's going on in practice, but that will give us some constraints for thinking about what the system could be doing.
 
 在本次演讲中，我将对与 OpenAI 的 O1 相关的公开文献进行一次全面回顾。在此过程中，我还借此机会联系了该领域的许多研究人员。作为一名教授，有一个好处就是很多人都愿意与我交流。为了这次演讲，我与大约 25 位不同的人进行了交谈，听取了他们对当前进展的看法。最后，我还会分享一些来自社交媒体的传闻。我不会过分看重这些传闻，因为实际情况谁也说不准，但它们能为我们思考这个系统可能在做什么提供一些参考线索。
@@ -63,6 +67,8 @@ Secondly, the method uses chain of thought. Specifically, it's using chain of th
 Finally, the system is data efficient. What this means is that it's learned from a relatively small set of data examples. This is not making any claim about compute efficiency or even parameter efficiency, just that the amount of actual problems it needs is relatively small, where relative here is compared to, say, training on the entire internet.
 
 最后，该系统实现了数据高效。这意味着它仅仅通过相对较少的数据示例就完成了学习。这里并不是说它在计算效率或参数效率方面表现突出，而只是强调它所需处理的实际数据量相对较少，这里的「相对」是与在整个互联网上进行训练这类任务相比而言的。
+
+### 02
 
 In addition to this sentence, there are several other assumptions that people seem to be making about these models. The first is that it is a single final language model that generates an extremely long and coherent chain of thought. Just to make that clear once again, it's just a model that babbles to itself until it thinks it has good enough information to make a guess of the answer to your hard problem.
 
@@ -100,6 +106,8 @@ Another ability that we see in these chains is forms of backtracking. So in this
 
 我们还在这些「思维链」中看到一种能力，那就是回溯的形式。例如，在处理数学问题时，它可能会描述一些它可能需要计算的中间项。接着，它会在中间停下来，并说：「嗯，实际上，这可能不会直接帮助我们。」这使得模型能够返回并重新评估，从而决定它可能需要采取不同的思考路径。这看起来有点像搜索，但实际上它并非通过传统的搜索算法执行的。这仅仅是模型在进行内部的「自我对话」，以最终确定答案。
 
+### 03
+
 A final ability we see is something like self-evaluation. Here we see it say, "Let's analyze each option." It then specifies the options it might want to consider, and it asks itself, "Is that a good explanation?" The answer is a bit informal. It says, "Hmm," and then goes on to the next option itself. But again, this is an ability that can be used by the model in order to explore different possibilities and determine which ones might make sense.
 
 我们看到的最后一个能力是类似自我评估的能力。在这里，我们看到它会说：「让我们分析每个选项。」然后它会指定它可能想要考虑的选项，并且它会自问：「这是一个好的解释吗？」它的回答有些随意。它说：「嗯，」然后它会继续分析下一个选项。但同样，这是一种模型可以用来探索不同可能性并确定哪些可能合理的能力。
@@ -125,6 +133,8 @@ Specifically, we'll sample 't' steps, represented by the green dots in the illus
 Many papers have noted that there's a way to get better answers to these problems. Instead of taking a single chain of thought and using it to produce the answer, we can sample 'n' chains of thought. Once we have these 'n' different chains of thought, we can take a majority vote to determine the majority answer. In this diagram, each of these chains of thought is sampled independently, and then we perform some sort of normalization. The answers that are most common are the ones we decide. This provides a strong baseline and a way to utilize more test time compute to slightly improve our answers. You can obviously do this to a large extent, but people have found that it doesn't lead to some of the amazing results that we're seeing in the 01 blog post.
 
 许多论文已经指出，有一种方法可以更好地解决这些问题。我们不必仅仅依靠单一的思维链来得出答案，而是可以对「n」个思维链进行抽样。一旦我们有了这「n」个不同的思维链，我们就可以通过多数投票来确定最终答案。在此图中，这些思维链中的每一个都是独立采样的，然后我们进行某种标准化处理。我们选择的便是那些最常出现的答案。这提供了一个强大的基线，也是一种通过增加测试计算量来略微提升答案准确性的方法。显然，你可以在很大程度上应用这种方法，但人们发现它并未产生我们在 01 博客文章中看到的一些惊人结果。
+
+### 04
 
 The second piece of machinery we need is a verifier. Explicitly, we'll assume that we have an automatic verifier, but we only have it at training time. We'll define this automatic verifier as taking some answer 'y' and telling us if it is wrong or right. This verifier might be, say, regular expressions to check that we've solved a math problem, or it might be something more complex like full-on unit tests for code. Again, just to make it clear, we don't have this at test time, but we are going to utilize it as a way to provide training signal for us to produce a better model. Throughout this talk, I'm going to assume that we have an automatic verifier. This is a common assumption in much of the research, and I think it's a reasonable assumption for solving these problems.
 
