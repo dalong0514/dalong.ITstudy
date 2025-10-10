@@ -1,5 +1,7 @@
 ## 20250327AINews-OpenAI-adopts-MCP
 
+[AINews | AINews](https://news.smol.ai/)
+
 [[AINews] OpenAI adopts MCP • Buttondown](https://buttondown.com/ainews/archive/ainews-ghibli-memes/)
 
 MCP is all you need.
