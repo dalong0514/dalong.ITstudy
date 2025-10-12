@@ -27,7 +27,7 @@ system_template = "You are a helpful AI assistant.... Reply in Simplified Chines
 ```py
                 # 截取前 similarity_top_k 个节点
                 return sorted_nodes[:self.similarity_top_k]
-``
+```
 
 剔除的代码：
 
@@ -39,8 +39,7 @@ system_template = "You are a helpful AI assistant.... Reply in Simplified Chines
                 filtered_nodes = [node for node in top_k_nodes if node.score >= 0.4]
                 
                 return filtered_nodes
-``
-
+```
 
 
 https://x.com/op7418/status/1890332159639998907
