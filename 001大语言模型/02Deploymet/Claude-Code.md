@@ -46,6 +46,14 @@ $env:HTTPS_PROXY = "http://127.0.0.1:7890"
 
 deepseek 的配置：
 
+.zshrc 文件里的内容：
+
+\# Claude Code environment variables
+export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
+export ANTHROPIC_API_KEY=xx
+export ANTHROPIC_MODEL=deepseek-reasoner
+export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
+
 官方新的配置说明：
 
 export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
@@ -82,6 +90,37 @@ ANTHROPIC_API_KEY
 
 CLAUDE_CODE_MAX_OUTPUT_TOKENS
 128000
+
+---
+
+豆包的配置：
+
+[火山方舟管理控制台](https://console.volcengine.com/ark/region:ark+cn-beijing/apikey?apikey=%7B%7D)
+
+[火山方舟管理控制台](https://console.volcengine.com/ark/region:ark+cn-beijing/openManagement?OpenModelVisible=false&tab=CodingPlan)
+
+\# Claude Code environment variables
+export ANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding
+export ANTHROPIC_API_KEY=xx
+export ANTHROPIC_MODEL=doubao-seed-code-preview-latest
+export API_TIMEOUT_MS=3000000
+
+
+ANTHROPIC_BASE_URL：https://ark.cn-beijing.volces.com/api/coding
+ANTHROPIC_AUTH_TOKEN：获取API Key。
+ANTHROPIC_MODEL: doubao-seed-code-preview-latest
+
+vim ~/.claude/settings.json
+
+{
+    "env": {
+        "ANTHROPIC_AUTH_TOKEN": "ARK_API_KEY",
+        "ANTHROPIC_BASE_URL": "https://ark.cn-beijing.volces.com/api/coding",
+        "API_TIMEOUT_MS": "3000000",
+        "ANTHROPIC_MODEL": "doubao-seed-code-preview-latest"
+    }
+}
+
 
 ---
 
