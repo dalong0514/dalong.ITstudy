@@ -122,6 +122,14 @@ vim ~/.claude/settings.json
 }
 
 
+$env:ANTHROPIC_BASE_URL="https://ark.cn-beijing.volces.com/api/coding"
+$env:ANTHROPIC_AUTH_TOKEN="xx"
+
+$env:ANTHROPIC_MODEL="doubao-seed-code-preview-latest"
+$env:ANTHROPIC_SMALL_FAST_MODEL="doubao-seed-code-preview-latest"
+
+
+
 ---
 
 kimi 的配置：
