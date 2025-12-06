@@ -48,19 +48,16 @@ deepseek 的配置：
 
 .zshrc 文件里的内容：
 
-\# Claude Code environment variables
-export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
-export ANTHROPIC_API_KEY=xx
-export ANTHROPIC_MODEL=deepseek-reasoner
-export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
-
 官方新的配置说明：
 
+\# Claude Code environment variables
 export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
 export ANTHROPIC_AUTH_TOKEN=${DEEPSEEK_API_KEY}
 export API_TIMEOUT_MS=600000
 export ANTHROPIC_MODEL=deepseek-chat
 export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+
 
 
 之前用的配置：
@@ -69,7 +66,7 @@ export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
 export ANTHROPIC_AUTH_TOKEN=DEEPSEEK_API_KEY
 export ANTHROPIC_MODEL=deepseek-chat
 export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
-
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
 
 export ANTHROPIC_MODEL=deepseek-reasoner
 export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
@@ -101,7 +98,7 @@ CLAUDE_CODE_MAX_OUTPUT_TOKENS
 
 \# Claude Code environment variables
 export ANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding
-export ANTHROPIC_API_KEY=xx
+export ANTHROPIC_AUTH_TOKEN=xx
 export ANTHROPIC_MODEL=doubao-seed-code-preview-latest
 export API_TIMEOUT_MS=3000000
 
