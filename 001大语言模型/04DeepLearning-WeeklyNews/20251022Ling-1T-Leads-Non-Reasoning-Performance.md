@@ -1,20 +1,20 @@
-## Ling-1T-Leads-Non-Reasoning-Performance
+## 20251022Ling-1T-Leads-Non-Reasoning-Performance
 
 [Ling-1T Leads Non-Reasoning Performance, MCP Poses Security Risks, California Regulates AI, and more...](https://www.deeplearning.ai/the-batch/issue-324/)
 
 Dear friends,
 
-In last week's letter, I explained how effective agentic AI development needs a disciplined evals and error analysis process, and described an approach to performing evals. This week, I'd like to summarize the core ideas behind error analysis and describe some best practices. Given the rapid pace of improvement in LLMs, when error analysis points to a problem, your options for how to address it are greater than before. Let me explain.
+In last week’s letter, I explained how effective agentic AI development needs a disciplined evals and error analysis process, and described an approach to performing evals. This week, I’d like to summarize the core ideas behind error analysis and describe some best practices. Given the rapid pace of improvement in LLMs, when error analysis points to a problem, your options for how to address it are greater than before. Let me explain.
 
-在上周的信函中，我阐述了有效的 AI 智能体开发为何需要一个规范的评估（evals）和错误分析流程，并介绍了一种进行评估的方法。本周，我想总结错误分析的核心概念，并分享一些最佳实践。鉴于大语言模型（LLM）的快速进步，当错误分析发现问题时，您可选择的解决方案比以往更加丰富。下面请允许我详细说明。
+在上周的信中，我阐述了要有效地开发 AI 智能体（AI Agent），为何必须遵循严谨的评估（Evals）和误差分析流程，并介绍了一种进行评估的方法。本周，我想总结一下误差分析背后的核心思想，并分享一些最佳实践。鉴于大语言模型（LLM）的飞速进步，当误差分析指出某个问题时，你可采取的应对方案比以往要多得多。下面我来详细说明。
 
-Take the problem of building a basic Deep Research agent that searches the web to write a detailed report on a topic like "recent developments in black-hole science." An agent might take a sequence of steps to generate the final report, such as (i) use an LLM to generate a handful of web search queries related to the topic, (ii) call a web-search API to get lists of results, (iii) use an LLM to identify the most promising sources to fetch, and (iv) ask the LLM to use these sources to write the report.
+Take the problem of building a basic Deep Research agent that searches the web to write a detailed report on a topic like “recent developments in black-hole science.” An agent might take a sequence of steps to generate the final report, such as (i) use an LLM to generate a handful of web search queries related to the topic, (ii) call a web-search API to get lists of results, (iii) use an LLM to identify the most promising sources to fetch, and (iv) ask the LLM to use these sources to write the report.
 
-以构建基础深度研究代理为例，该代理通过网络搜索来撰写诸如「黑洞科学最新进展」这类主题的详细报告。这类代理通常执行以下步骤来生成最终报告：(i）使用大语言模型生成几个与主题相关的网络搜索查询，(ii）调用网络搜索 API 获取搜索结果列表，(iii）使用大语言模型识别最值得获取的信息源，以及（iv）指示大语言模型基于这些信息源撰写报告。
+以构建一个基础的深度研究智能体为例，其任务是搜索网络，并撰写一份关于「黑洞科学的最新进展」这类主题的详细报告。该智能体可能会执行以下一系列步骤来生成最终报告：(i）使用大语言模型（LLM）生成几个与该主题相关的网络搜索查询；(ii）调用网络搜索 API 以获取结果列表；(iii）再次利用大语言模型，从结果中筛选出最有价值的资料来源；(iv）最后，指示大语言模型基于这些资料撰写报告。
 
 If the final report is subpar compared to the work of a human researcher following the same steps, the gap in performance could be from any of the steps. A basic error analysis procedure might involve gathering a sample set of topics where the output is subpar, and reading the results of every step of the workflow — called the traces — to see which step most frequently generated results materially worse than a human would have. This is very valuable for deciding what step to focus on improving.
 
-如果最终报告的质量不及遵循相同研究步骤的人类研究人员，那么这种表现差距可能源于工作流程中的任何一个环节。基本的错误分析方法包括：收集一些输出效果不理想的主题样本，然后仔细检查工作流程中每个步骤的执行记录（称为轨迹），找出哪个环节最频繁地产生了明显逊于人类水平的结果。这种方法对于确定需要优先改进的环节非常有帮助。
+如果最终报告的质量不及遵循相同步骤的人类研究员，那么这种性能上的差距可能源于工作流程中的任何一个环节。一个基本的错误分析流程可能包括：收集一批报告质量不佳的主题样本，然后逐一检查工作流中每个步骤的输出结果（这些记录被称为跟踪记录（traces)），从而找出哪个步骤最频繁地产出了明显逊于人类水平的结果。这对于确定应优先改进哪个环节至关重要。
 
 A common misconception of error analysis is that it takes a lot of work to get started. The key principle is to look at the steps of the workflow and see which steps did a bad job on a given input, often by benchmarking to human level performance (HLP). Assuming we are automating a task where HLP is desirable, then the most important thing is to systematically examine traces to understand when the agent is falling short of HLP. And just as we can get started with evals using a quick-and-dirty initial cut at it (maybe using just a handful of examples) followed by iterating to improve, so too with error analysis.
 
