@@ -26,9 +26,9 @@ Specifically, it is fine to start by reading one or just a handful of traces inf
 
 This type of analysis is extremely useful for deciding where to focus your efforts to improve the overall agentic workflow's performance!
 
-In addition to improving the execution of individual steps, we can change how we decompose a complex task into steps. When it came to pipelines built using machine learning or deep learning rather than LLMs, I found that the structure of the workflow — that is, how you decompose an overall task into a sequence of steps to be carried out — changed rarely. It was a big deal to rearchitect this! But in the past couple of years, because LLMs are improving so rapidly, I see much more rapid iteration on the design of workflows.
-
 这类分析对于确定应该将改进重点放在哪些方面，以提升整个 AI 智能体工作流（AI Agent Workflow）的性能非常有帮助！
+
+In addition to improving the execution of individual steps, we can change how we decompose a complex task into steps. When it came to pipelines built using machine learning or deep learning rather than LLMs, I found that the structure of the workflow — that is, how you decompose an overall task into a sequence of steps to be carried out — changed rarely. It was a big deal to rearchitect this! But in the past couple of years, because LLMs are improving so rapidly, I see much more rapid iteration on the design of workflows.
 
 除了优化单个步骤的执行效果，我们还可以调整复杂任务的分解方式。在基于机器学习或深度学习（而非大语言模型）构建的流水线中，我发现工作流的结构 —— 也就是将整体任务拆分为一系列执行步骤的方式 —— 很少发生变化。重新设计这种架构曾是件相当困难的事！但在过去几年里，由于大语言模型的发展速度惊人，我观察到工作流设计的迭代进程明显加快了。
 
@@ -42,73 +42,75 @@ Another example: Perhaps a year ago, we used hard-coded rules to decide what web
 
 I go through many more examples in the Agentic AI course. Check it out if you want to learn more about evals and error analysis.
 
-Keep building!
-
 我在「AI 智能体」课程中还会深入讲解更多实例。如果你想进一步了解评估方法和错误分析技巧，欢迎来学习。
 
-继续加油！
+Keep building!
 
 Andrew
 
 ### News
 
-安德鲁
-
-### 新闻动态
+新闻动态
 
 #### Reasoning Without "Thinking"
 
+无需「思考」的推理
+
 Reasoning models typically learn to undertake a separate process of "thinking" through their output of before they produce final response. Ant Group built a top non-reasoning model that can take similar steps as part of its immediate response.
 
-#### 无需「思考」的推理推理模型（Reasoning Model）通常会在输出最终响应之前，通过学习来进行一个独立的「思考」过程。蚂蚁集团构建了一个顶级的非推理模型，能够在即时响应中采取类似的思考步骤。
+推理模型（Reasoning Model）通常会在输出最终响应之前，通过学习来进行一个独立的「思考」过程。蚂蚁集团构建了一个顶级的非推理模型，能够在即时响应中采取类似的思考步骤。
 
 What's new: Ant Group, an affiliate of Alibaba and owner of the online payments provider Alipay, released Ling-1T, a huge, open, non-reasoning model that outperforms both open and closed counterparts.
 
-最新消息：阿里巴巴关联企业、在线支付平台支付宝的所有者蚂蚁集团发布了灵 - 1T（Ling-1T），这是一个大规模开源非推理模型，其性能表现超越了同类开源和闭源模型。
+最新消息：阿里巴巴关联企业、在线支付平台支付宝的所有者蚂蚁集团发布了灵-1T（Ling-1T），这是一个大规模开源非推理模型，其性能表现超越了同类开源和闭源模型。
 
-* Input/output: Text in (up to 128,000 tokens), text out (up to 32,000 tokens)
+1 Input/output: Text in (up to 128,000 tokens), text out (up to 32,000 tokens)
 
-* Architecture: Mixture-of-Experts (MoE) transformer, 1 trillion parameters, 50 billion parameters active per token
+输入 / 输出：支持文本输入（最多 128,000 个 Token），文本输出（最多 32,000 个 Token）
 
-* 输入 / 输出：支持文本输入（最多 128,000 个 Token），文本输出（最多 32,000 个 Token）
-* 架构：采用混合专家（MoE）Transformer 架构，总参数量为 1 万亿，每个 Token 处理时动态使用 500 亿参数
+2 Architecture: Mixture-of-Experts (MoE) transformer, 1 trillion parameters, 50 billion parameters active per token
 
-* Performance: Outperformed leading non-reasoning models in 22 of 31 benchmark tests of reasoning, math, coding, general knowledge, and writing.
+架构：采用混合专家（MoE）Transformer 架构，总参数量为 1 万亿，每个 Token 处理时动态使用 500 亿参数
 
-* Availability: Weights free to download from HuggingFace and ModelScope for commercial and noncommercial uses under the MIT license, API $0.56/$0.112/$2.24 per million input/cached/output tokens via zenmux.ai
+3 Performance: Outperformed leading non-reasoning models in 22 of 31 benchmark tests of reasoning, math, coding, general knowledge, and writing.
 
-* 性能：在 31 项涵盖推理、数学、编程、通识知识和写作的基准测试中，有 22 项的表现优于领先的非推理模型。
-* 可用性：模型权重可在 HuggingFace 和 ModelScope 免费下载，基于 MIT 许可证可用于商业和非商业用途；通过 zenmux.ai 提供的 API 服务，每百万个输入 / 缓存 / 输出 token（Token）的价格分别为 0.56 美元 / 0.112 美元 / 2.24 美元。
+性能：在 31 项涵盖推理、数学、编程、通识知识和写作的基准测试中，有 22 项的表现优于领先的非推理模型。
 
-* Undisclosed: Training data, specific training methods
+4 Availability: Weights free to download from HuggingFace and ModelScope for commercial and noncommercial uses under the MIT license, API $0.56/$0.112/$2.24 per million input/cached/output tokens via zenmux.ai
+
+可用性：模型权重可在 HuggingFace 和 ModelScope 免费下载，基于 MIT 许可证可用于商业和非商业用途；通过 zenmux.ai 提供的 API 服务，每百万个输入 / 缓存 / 输出 token（Token）的价格分别为 0.56 美元 / 0.112 美元 / 2.24 美元。
+
+5 Undisclosed: Training data, specific training methods
+
+未披露：训练数据，具体训练方法
 
 How it works: The team emphasized chain-of-thought reasoning in both the pretraining and fine-tuning phases of development, but it didn't train the model to undertake a separate reasoning, or thinking, process before producing its final output. This means the model can reason selectively depending on the input.
 
-* 未披露：训练数据，具体训练方法工作原理：研发团队在预训练和微调阶段都特别强调了思维链推理（chain-of-thought reasoning），但并未训练模型在生成最终答案前执行独立的推理或思考过程。这意味着模型能够根据输入内容灵活调整其推理方式。
+工作原理：研发团队在预训练和微调阶段都特别强调了思维链推理（chain-of-thought reasoning），但并未训练模型在生成最终答案前执行独立的推理或思考过程。这意味着模型能够根据输入内容灵活调整其推理方式。
 
-* The team pretrained Ling-1T on 20 trillion tokens. In the last part of pretraining, they used a curated subset in which over 40 percent consisted of chain-of-thought data.
+1 The team pretrained Ling-1T on 20 trillion tokens. In the last part of pretraining, they used a curated subset in which over 40 percent consisted of chain-of-thought data.
 
-* 研究团队使用 20 万亿个 Token 对 Ling-1T 进行了预训练。在预训练的最后阶段，他们采用了精选的数据子集，其中思维链（chain-of-thought）数据的占比超过 40%。
+研究团队使用 20 万亿个 Token 对 Ling-1T 进行了预训练。在预训练的最后阶段，他们采用了精选的数据子集，其中思维链（chain-of-thought）数据的占比超过 40%。
 
-* They fine-tuned the model via supervised fine-tuning on examples that were augmented with chains of thought via CoT-Evo. CoT-Evo takes a training dataset and generates and evolves chains of thought (CoTs) for each example in the dataset. It evolves CoTs by repeatedly scoring them, selecting them (based on score, difference from other CoTs, and random chance), and modifying them via an LLM. The team fine-tuned Ling-1T on the examples with the highest-scoring CoTs.
+2 They fine-tuned the model via supervised fine-tuning on examples that were augmented with chains of thought via CoT-Evo. CoT-Evo takes a training dataset and generates and evolves chains of thought (CoTs) for each example in the dataset. It evolves CoTs by repeatedly scoring them, selecting them (based on score, difference from other CoTs, and random chance), and modifying them via an LLM. The team fine-tuned Ling-1T on the examples with the highest-scoring CoTs.
 
-* 研究团队通过监督微调的方式对模型进行优化，使用的训练样本经过了 CoT-Evo 的思维链增强处理。CoT-Evo 能够处理训练数据集，为其中的每个样本生成并优化思维链。其优化过程包含三个核心步骤：首先对思维链进行评分，然后根据评分结果、与其他思维链的差异性以及一定的随机概率进行筛选，最后通过大语言模型对选中的思维链进行修改。团队最终选取了思维链评分最高的训练样本，对 Ling-1T 模型进行了微调。
+研究团队通过监督微调的方式对模型进行优化，使用的训练样本经过了 CoT-Evo 的思维链增强处理。CoT-Evo 能够处理训练数据集，为其中的每个样本生成并优化思维链。其优化过程包含三个核心步骤：首先对思维链进行评分，然后根据评分结果、与其他思维链的差异性以及一定的随机概率进行筛选，最后通过大语言模型对选中的思维链进行修改。团队最终选取了思维链评分最高的训练样本，对 Ling-1T 模型进行了微调。
 
-* In addition, they fine-tuned the model using a reinforcement learning algorithm developed internally called Linguistic-Unit Policy Optimization (LPO). Unlike GRPO and GSPO, LPO "treats sentences as the natural semantic action units, enabling precise alignment between rewards and reasoning behavior," the company said.
+3 In addition, they fine-tuned the model using a reinforcement learning algorithm developed internally called Linguistic-Unit Policy Optimization (LPO). Unlike GRPO and GSPO, LPO "treats sentences as the natural semantic action units, enabling precise alignment between rewards and reasoning behavior," the company said.
 
-* 此外，该公司使用内部开发的强化学习算法 —— 语言单元策略优化（Linguistic-Unit Policy Optimization，简称 LPO）对模型进行了微调。与 GRPO 和 GSPO 不同，LPO"将句子视为自然的语义行动单元，能够实现奖励机制与推理行为的精准匹配」。
+此外，该公司使用内部开发的强化学习算法 —— 语言单元策略优化（Linguistic-Unit Policy Optimization，简称 LPO）对模型进行了微调。与 GRPO 和 GSPO 不同，LPO"将句子视为自然的语义行动单元，能够实现奖励机制与推理行为的精准匹配」。
 
 Results: In Ant Group's tests, Ling-1T generally outperformed three top non-reasoning models: DeepSeek-V3.1-Teriminus (thinking mode disabled), Moonshot Kimi-K2-Instruct, and OpenAI GPT-5 (thinking mode disabled), as well as Google Gemini 2.5 Pro set to minimum thinking (128 tokens).
 
 结果：在蚂蚁集团的测试中，Ling-1T 整体表现优于三款顶尖的非推理模型：DeepSeek-V3.1-Terminus（思考模式关闭）、Moonshot Kimi-K2-Instruct 和 OpenAI GPT-5（思考模式关闭），以及谷歌 Gemini 2.5 Pro（最小思考模式设置为 128 个 token）。
 
-* Ling-1T achieved the highest performance on 22 of 31 benchmarks tested and best or second-best performance on 29 of 31 benchmarks that cover general knowledge, coding, math, reasoning, writing, and agentic tasks.
+1 Ling-1T achieved the highest performance on 22 of 31 benchmarks tested and best or second-best performance on 29 of 31 benchmarks that cover general knowledge, coding, math, reasoning, writing, and agentic tasks.
 
-* Ling-1T 在测试的 31 个基准中的 22 个上取得了最佳表现，并在涵盖常识、编程、数学、推理、写作和 AI 智能体任务的 31 个基准中，有 29 个都达到了第一或第二的成绩。
+Ling-1T 在测试的 31 个基准中的 22 个上取得了最佳表现，并在涵盖常识、编程、数学、推理、写作和 AI 智能体任务的 31 个基准中，有 29 个都达到了第一或第二的成绩。
 
-* It performed best in the math and reasoning categories, achieving the best performance in all benchmarks tested. For instance, on math questions in AIME 2025, Ling-1T achieved 70.42 percent accuracy, whereas the second-best model, Gemini 2.5 Pro set to minimum thinking, achieved 70.10 percent accuracy.
+2 It performed best in the math and reasoning categories, achieving the best performance in all benchmarks tested. For instance, on math questions in AIME 2025, Ling-1T achieved 70.42 percent accuracy, whereas the second-best model, Gemini 2.5 Pro set to minimum thinking, achieved 70.10 percent accuracy.
 
-* 在数学和推理这两个类别中，它的表现最为出色，在所有参与测试的基准测试中都位居榜首。举例来说，在 AIME 2025 的数学题目上，Ling-1T 的准确率达到了 70.42%，而位列第二的模型 ——Gemini 2.5 Pro 在最小思考模式下 —— 准确率为 70.10%。
+在数学和推理这两个类别中，它的表现最为出色，在所有参与测试的基准测试中都位居榜首。举例来说，在 AIME 2025 的数学题目上，Ling-1T 的准确率达到了 70.42%，而位列第二的模型 —— Gemini 2.5 Pro 在最小思考模式下 —— 准确率为 70.10%。
 
 Yes, but: The team published results of only one agentic benchmark and admits to limited performance in this area. It says it will improve agentic performance in future releases.
 
@@ -128,9 +130,11 @@ We're thinking: Two years ago, weights for Ling-family models were closed, but 
 
 #### MCP Poses Security Risks
 
+MCP（Model Context Protocol）构成安全风险
+
 The ability to easily connect large language models to tools and data sources has made Model Context Protocol popular among developers, but it also opens security holes, research shows.
 
-#### MCP（Model Context Protocol）构成安全风险研究表明，将大语言模型轻松连接到工具和数据源的能力使得模型上下文协议（Model Context Protocol）在开发者群体中颇受欢迎，但这也带来了安全风险。
+研究表明，将大语言模型轻松连接到工具和数据源的能力使得模型上下文协议（Model Context Protocol）在开发者群体中颇受欢迎，但这也带来了安全风险。
 
 What's new: Golan Yosef at Pynt, an API security firm, analyzed security risks of Model Context Protocol (MCP) servers. The work shows that when systems use multiple MCP servers, vulnerabilities rise rapidly.
 
@@ -142,35 +146,35 @@ How it works: MCP's flexible, modular, dynamic design is a double-edged sword. 
 
 * For each server, Yosef evaluated two properties: whether it would process inputs from unsafe sources that can't be fully verified or controlled (such as emails, chats, Slack messages, or scraped web pages) and whether it allowed powerful actions like code execution, file access, or calling APIs. He deemed servers that had both traits to be high-risk, since it could execute an attacker's instructions without a user's approval.
 
-* 对于每个服务器，Yosef 评估了两个属性：是否会处理来自无法完全验证或控制的不安全来源的输入（例如电子邮件、聊天、Slack 消息或网络爬取的网页），以及是否允许执行高权限操作，如代码执行、文件访问或 API 调用。他认为同时具备这两个特征的服务器属于高风险类别，因为这类服务器能够在未经用户批准的情况下执行攻击者的指令。
+对于每个服务器，Yosef 评估了两个属性：是否会处理来自无法完全验证或控制的不安全来源的输入（例如电子邮件、聊天、Slack 消息或网络爬取的网页），以及是否允许执行高权限操作，如代码执行、文件访问或 API 调用。他认为同时具备这两个特征的服务器属于高风险类别，因为这类服务器能够在未经用户批准的情况下执行攻击者的指令。
 
 * He estimated how risk increases as systems use greater numbers of servers. (He didn't disclose the formula or method used to derive the estimates.)
 
+他评估了风险随系统使用服务器数量增加而上升的趋势。（但未透露用于推导这些评估结果的公式或方法。）
+
 * He validated his risk model by attacking real-world MCP setups, including cases where unsafe input from one server caused another server to execute commands automatically.
 
-* 他评估了风险随系统使用服务器数量增加而上升的趋势。（但未透露用于推导这些评估结果的公式或方法。）
-
-* 通过攻击真实世界的 MCP 设置（MCP setups），他验证了自己的风险模型，其中包括某台服务器的非安全输入导致其他服务器自动执行命令的案例。
+通过攻击真实世界的 MCP 设置（MCP setups），他验证了自己的风险模型，其中包括某台服务器的非安全输入导致其他服务器自动执行命令的案例。
 
 Results: The study identified widespread patterns of vulnerability that compound as systems add MCP servers.
 
-* Of the servers tested, 72 percent of servers tested exposed at least one sensitive capability to attackers, and 9 percent of servers tested were deemed high-risk.
-
 结果：研究发现普遍存在的漏洞模式，这些模式会随着系统增加 MCP 服务器而不断累积放大。
 
-* 在受测服务器中，72% 的服务器向攻击者暴露了至少一项敏感权限，9% 的服务器属于高风险级别。
+* Of the servers tested, 72 percent of servers tested exposed at least one sensitive capability to attackers, and 9 percent of servers tested were deemed high-risk.
+
+在受测服务器中，72% 的服务器向攻击者暴露了至少一项敏感权限，9% 的服务器属于高风险级别。
 
 * 13 percent of servers accepted inputs from unsafe sources, enabling attackers without direct access to their targets to deliver malicious text (HTML, emails, Markdown) that servers downstream might interpret as code.
 
-* 13% 的服务器会接收来自不安全来源的输入，这使得攻击者即使无法直接访问目标系统，也能传递恶意文本（HTML、电子邮件、Markdown），而这些内容在下游服务器中可能被当作代码执行。
+13% 的服务器会接收来自不安全来源的输入，这使得攻击者即使无法直接访问目标系统，也能传递恶意文本（HTML、电子邮件、Markdown），而这些内容在下游服务器中可能被当作代码执行。
 
 * Risk of an exploitable configuration compounded rapidly with the first few servers added before flattening. Combining 2 servers created 36 percent chance of a vulnerable configuration, Combining 3 reached 52 percent chance, 5 servers exceeded 71 percent change, and 10 servers approached 92 percent chance.
 
-* 可利用配置（Exploitable Configuration）的风险随着前几台服务器的加入而快速累积，之后增长趋于平缓。组合 2 台服务器产生脆弱配置的概率为 36%，组合 3 台服务器时达到 52%，5 台服务器时超过 71%，10 台服务器时接近 92%。
+可利用配置（Exploitable Configuration）的风险随着前几台服务器的加入而快速累积，之后增长趋于平缓。组合 2 台服务器产生脆弱配置的概率为 36%，组合 3 台服务器时达到 52%，5 台服务器时超过 71%，10 台服务器时接近 92%。
 
 * The study documents real-world examples in which attackers executed privileged actions. In one case, a plug-in web scraper fetched HTML, supplied by an attacker, that a Markdown parser interpreted as commands, which a shell plug-in duly executed.
 
-* 该研究记录了攻击者执行特权操作的真实案例。其中一个案例显示：插件式网页抓取工具获取到攻击者提供的 HTML 内容后，Markdown 解析器将其解释为系统命令，最终由 shell 插件执行了这些命令。
+该研究记录了攻击者执行特权操作的真实案例。其中一个案例显示：插件式网页抓取工具获取到攻击者提供的 HTML 内容后，Markdown 解析器将其解释为系统命令，最终由 shell 插件执行了这些命令。
 
 Behind the news: Anthropic launched MCP in November 2024, and OpenAI and Microsoft adopted it by spring 2025. Despite its lax security, the protocol now connects to over 6,000 servers. Authentication remained optional until March, when OAuth 2.1 authorization frameworks were added. The change prevents unauthorized access to MCP servers, but it doesn't prevent malicious or malformed data from flowing between servers and triggering unintended actions.
 
@@ -182,11 +186,11 @@ Why it matters: Securing individual MCP servers is important but not sufficient
 
 We're thinking: Securing individual components is a tough task in its own right, but systems of MCP components must be secured at the system level.
 
-#### California Builds AI Regulatory Regime
-
 我们的思考是：保护单个组件本身已是一项艰巨任务，但对于由 MCP 组件组成的系统而言，必须在系统层面进行整体保护。
 
-#### 加州构建人工智能监管制度
+#### California Builds AI Regulatory Regime
+
+加州构建人工智能监管制度
 
 In the absence of national laws that specifically regulate AI in the United States, California moved to regulate the technology within its own borders, passing four bills in less than a month.
 
@@ -202,35 +206,35 @@ How it works: Together, the bills don't ban any particular applications outrigh
 
 * SB 53 requires that developers of frontier models, defined as those whose training requires processing greater than 1026 integer or floating-point operations — a level currently associated with very large and powerful models — provide more transparency about their models' capabilities and potential risks. It also requires that developers with annual revenue above $500 million publish safety frameworks that show how they follow industry and international standards and assess and mitigate risk. In addition, they must report on their models' uses and capabilities at release and report any critical safety incidents within 15 days. Noncompliant developers could face fines of up to $1 million. The law protects whistleblowers within AI companies against retaliation and provides anonymous channels to report illegal or unsafe behavior. The bill takes effect in June 2026.
 
-* SB 53 法案要求前沿模型（定义为其训练过程需要超过 10^26 次整数或浮点运算的模型，这个运算量级目前对应于超大规模的高性能模型）的开发者必须提高模型能力与潜在风险的透明度。同时，年收入超过 5 亿美元的开发者需要公布安全框架，详细说明其如何遵循行业与国际标准，并进行风险评估与防控。此外，这些企业必须在模型发布时说明其功能特性与应用场景，并在 15 天内上报所有重大安全事故。违规开发者将面临最高 100 万美元的罚款。该法案还明确规定保护 AI 企业内部举报人免遭打击报复，并设立了非法或危险行为的匿名举报渠道。此项立法将于 2026 年 6 月正式实施。
+SB 53 法案要求前沿模型（定义为其训练过程需要超过 10^26 次整数或浮点运算的模型，这个运算量级目前对应于超大规模的高性能模型）的开发者必须提高模型能力与潜在风险的透明度。同时，年收入超过 5 亿美元的开发者需要公布安全框架，详细说明其如何遵循行业与国际标准，并进行风险评估与防控。此外，这些企业必须在模型发布时说明其功能特性与应用场景，并在 15 天内上报所有重大安全事故。违规开发者将面临最高 100 万美元的罚款。该法案还明确规定保护 AI 企业内部举报人免遭打击报复，并设立了非法或危险行为的匿名举报渠道。此项立法将于 2026 年 6 月正式实施。
 
 * SB 243 aims to prevent chatbots from harming minors and other vulnerable users. It bars exposing minors to sexual content and requires developers to disclose that chatbots are AI-generated and provide a general warning that chatbots may not be suited for minors. The bill also requires developers to provide specific support to users who discuss suicide or self-harm and to issue an annual report on mental health issues related to using their chatbots.
 
-* SB 243 法案旨在防止聊天机器人对未成年人及其他弱势群体造成伤害。该法案禁止向未成年人展示性内容，要求开发者必须披露聊天机器人由 AI 生成的事实，并给出通用警示 —— 聊天机器人可能不适用于未成年人。法案还规定开发者需为讨论自杀或自残的用户提供专项支持，并每年发布与其聊天机器人使用相关的心理健康问题报告。
+SB 243 法案旨在防止聊天机器人对未成年人及其他弱势群体造成伤害。该法案禁止向未成年人展示性内容，要求开发者必须披露聊天机器人由 AI 生成的事实，并给出通用警示 —— 聊天机器人可能不适用于未成年人。法案还规定开发者需为讨论自杀或自残的用户提供专项支持，并每年发布与其聊天机器人使用相关的心理健康问题报告。
 
 * AB 316 prohibits defendants in lawsuits from shifting responsibility onto AI systems by claiming that they harmed plaintiffs autonomously. It applies to anyone who develops, modifies, or uses an AI system.
 
-* AB 316 法案禁止被告在诉讼中通过声称「AI 系统自主造成损害」来推卸责任。该法规适用于任何开发、修改或使用人工智能系统的个人或组织。
+AB 316 法案禁止被告在诉讼中通过声称「AI 系统自主造成损害」来推卸责任。该法规适用于任何开发、修改或使用人工智能系统的个人或组织。
 
 * AB 853 requires that AI-generated media be labeled clearly as such. Furthermore, it requires that all media (AI-generated or not) include information about who made it and how. The bill requires that cameras, audio recorders, computers, and other media-capture devices record such provenance data, and that large-scale media distributors (2,000,000 monthly active users or more) disclose it.
 
-* AB 853 要求将 AI 生成的媒体（AI-generated media）明确标注为 AI 生成。此外，该法案要求所有媒体（无论是 AI 生成还是非 AI 生成）都必须包含关于制作者和制作方式的信息。法案规定相机、录音设备、计算机和其他媒体采集设备必须记录此类来源数据（provenance data），并要求月活跃用户达到 200 万及以上的大型媒体分发平台披露这些数据。
+AB 853 要求将 AI 生成的媒体（AI-generated media）明确标注为 AI 生成。此外，该法案要求所有媒体（无论是 AI 生成还是非 AI 生成）都必须包含关于制作者和制作方式的信息。法案规定相机、录音设备、计算机和其他媒体采集设备必须记录此类来源数据（provenance data），并要求月活跃用户达到 200 万及以上的大型媒体分发平台披露这些数据。
 
 What they're saying: Reaction among AI developers has been mixed. SB 53 drew the loudest and most widely varied commentary.
 
-* Collin McCune, head of government affairs at the venture capital firm Andreessen Horowitz, said SB 53 puts startups at a disadvantage: "States have an important role in regulating AI. But if lawmakers really want to protect their citizens, this isn't the way. They should target harmful uses through consumer protection laws and similar safeguards — not dictate how technologists build technology."
-
 业内人士表示：AI 开发者对此反应不一。其中 SB 53 法案引发的讨论最为激烈且观点多样。
 
-* 风险投资公司 Andreessen Horowitz 的政府事务负责人 Collin McCune 认为，SB 53 法案会让初创企业处于劣势："各州在监管 AI 方面确实扮演重要角色。但如果立法者真心想要保护公民，这种方式并不妥当。他们应该通过消费者保护法和类似保障措施来针对有害应用，而非硬性规定技术人员该如何开发技术。"
+* Collin McCune, head of government affairs at the venture capital firm Andreessen Horowitz, said SB 53 puts startups at a disadvantage: "States have an important role in regulating AI. But if lawmakers really want to protect their citizens, this isn't the way. They should target harmful uses through consumer protection laws and similar safeguards — not dictate how technologists build technology."
+
+风险投资公司 Andreessen Horowitz 的政府事务负责人 Collin McCune 认为，SB 53 法案会让初创企业处于劣势："各州在监管 AI 方面确实扮演重要角色。但如果立法者真心想要保护公民，这种方式并不妥当。他们应该通过消费者保护法和类似保障措施来针对有害应用，而非硬性规定技术人员该如何开发技术。"
 
 * Chris Lehane at OpenAI opposed California's approach: "History shows that on issues of economic competitiveness and national security — from railroads to aviation to the internet — America leads best with clear, nationwide rules, not a patchwork of state or local regulations. Fragmented state‑by‑state approaches create friction, duplication, and missed opportunities."
 
-* OpenAI 的 Chris Lehane 反对加州的做法："历史表明，在处理经济竞争力和国家安全问题时 —— 从铁路到航空再到互联网 —— 美国最有效的做法是建立清晰的全国性规则，而不是各州或地方零散的法规拼盘。各州各自为政的做法会导致摩擦丛生、资源重复浪费，并错失发展良机。"
+OpenAI 的 Chris Lehane 反对加州的做法："历史表明，在处理经济竞争力和国家安全问题时 —— 从铁路到航空再到互联网 —— 美国最有效的做法是建立清晰的全国性规则，而不是各州或地方零散的法规拼盘。各州各自为政的做法会导致摩擦丛生、资源重复浪费，并错失发展良机。"
 
 * Anthropic endorsed SB 53: "We've long advocated for thoughtful AI regulation, and our support for this bill comes after careful consideration of the lessons learned from California's previous attempt at AI regulation (SB 1047). While we believe that frontier AI safety is best addressed at the federal level instead of a patchwork of state regulations, powerful AI advancements won't wait for consensus in Washington."
 
-* Anthropic 支持 SB 53 法案："我们长期倡导审慎的 AI（人工智能）监管，在仔细考量了从加州先前人工智能监管尝试（SB 1047）中吸取的教训后，我们决定支持这项法案。虽然我们认为前沿人工智能安全最好在联邦层面解决，而非依赖零散的各州法规，但迅猛的人工智能技术进步不会等待华盛顿达成共识。"
+Anthropic 支持 SB 53 法案："我们长期倡导审慎的 AI（人工智能）监管，在仔细考量了从加州先前人工智能监管尝试（SB 1047）中吸取的教训后，我们决定支持这项法案。虽然我们认为前沿人工智能安全最好在联邦层面解决，而非依赖零散的各州法规，但迅猛的人工智能技术进步不会等待华盛顿达成共识。"
 
 Behind the news: SB 53 modifies parts of SB 1047, which Governor Newsom vetoed in 2024 after opposition from the tech community. That law would have required third-party audits and made companies liable for the uses of their models. Recently, Newsom also vetoed SB 7, which would have required employers to notify employees and applicants if AI systems were used to make employment decisions like hiring and firing.
 
@@ -246,13 +250,17 @@ We're thinking: While these laws are better for the users, innovators, and busi
 
 #### Better Agentic Prompts Automically
 
+自动生成更优的智能体提示优化
+
 Honing an agent's prompt can yield better results than fine-tuning the underlying large language model via reinforcement learning.
 
-#### 自动生成更优的智能体提示优化智能体（Agent）的提示词，相比通过强化学习微调底层大语言模型，能够产生更好的效果。
+智能体（Agent）的提示词，相比通过强化学习微调底层大语言模型，能够产生更好的效果。
 
 What's new: Lakshya A. Agrawal and colleagues at UC Berkeley, Stanford, BespokeLabs.ai, Notre Dame, Databricks, and MIT developed GEPA, an algorithm that improves the performance of agentic systems by improving their prompts. The authors position it as an efficient alternative to fine-tuning an agent's large language model via reinforcement learning.
 
 最新进展：Lakshya A. Agrawal 与来自加州大学伯克利分校、斯坦福大学、BespokeLabs.ai、圣母大学、Databricks 和麻省理工学院的研究团队共同开发了 GEPA 算法，该算法通过优化提示词来提升 AI 智能体系统的性能。研究者认为，这种方法可以高效替代通过强化学习来微调 AI 智能体大语言模型的传统方案。
+
+[[2507.19457] GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](https://arxiv.org/abs/2507.19457?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-9tiNHdmNr-jAEE3HVY9fP1Lcm56LeMrR0wBxUocbR1H9a-06UVJIWJ_esmy81GQTiH5MkA)
 
 Key insight: Agentic models trained via reinforcement learning typically must take a complicated series of actions to earn a simple reward, including calling a large language model multiple times for different purposes, or modules, of the workflow. But a well designed prompt can take into account the various problems an agent may run into and thus guide the model more efficiently. The trick is to write prompts that anticipate such problems. To accomplish this, a large language model can analyze an agent's behavior as it responds to a given prompt, identify associations between the prompt and outcome (for instance, a failed tool call), and compose a more effective prompt.
 
@@ -264,23 +272,23 @@ How it works: Prompting agents based on Alibaba's Qwen3-8B, the authors used GE
 
 * Given each prompt to be fed to the LLM (initially the default prompts, later revised prompts selected for their effectiveness), the agent responds to a random subset of examples from a benchmark's training set.
 
-* 对于每个要输入到大语言模型（LLM）的提示（初始为默认提示，后续则选用因其有效性而筛选出的修订提示），该 AI 智能体会对从基准训练集中随机抽取的示例子集进行响应。
+对于每个要输入到大语言模型（LLM）的提示（初始为默认提示，后续则选用因其有效性而筛选出的修订提示），该 AI 智能体会对从基准训练集中随机抽取的示例子集进行响应。
 
 * GEPA selects which prompt to modify, alternating between the various modules. A separate Qwen3-8B instance examines the agent's traces (generated text, tool calls, and results) and revises the prompt.
 
-* GEPA 选择需要修改的提示，并在不同模块之间轮换选择。一个独立的 Qwen3-8B 实例会分析智能体的运行轨迹（包括生成的文本、工具调用及其结果），并对提示进行优化改进。
+GEPA 选择需要修改的提示，并在不同模块之间轮换选择。一个独立的 Qwen3-8B 实例会分析智能体的运行轨迹（包括生成的文本、工具调用及其结果），并对提示进行优化改进。
 
 * GEPA evaluates the revised prompt in a two-step process. First it feeds it to the agent along with the examples used previously and the prompts by other modules. If the revised prompt improves the agent's performance, GEPA adds it to a pool of candidate prompts and then scores its performance on each example in the benchmark's validation set.
 
-* GEPA 采用两步流程来评估修订后的提示：首先，将修订后的提示与此前使用的示例及其他模块的提示一并提供给智能体。若该提示能提升智能体性能，GEPA 会将其纳入候选提示库，并针对基准验证集中的每个示例进行性能评分。
+GEPA 采用两步流程来评估修订后的提示：首先，将修订后的提示与此前使用的示例及其他模块的提示一并提供给智能体。若该提示能提升智能体性能，GEPA 会将其纳入候选提示库，并针对基准验证集中的每个示例进行性能评分。
 
 * From the pool, GEPA identifies prompts that achieved the highest score on at least one example. It selects a set of prompts (one for each module) for the next round of revision, prioritizing prompts that excelled on multiple questions.
 
-* GEPA 从候选池中识别出至少在某个示例上得分最高的提示，并为下一轮修订选择一组提示（每个模块对应一个），优先考虑在多个问题上表现优异的提示。
+GEPA 从候选池中识别出至少在某个示例上得分最高的提示，并为下一轮修订选择一组提示（每个模块对应一个），优先考虑在多个问题上表现优异的提示。
 
 * GEPA repeats the previous steps until it has exhausted a predefined processing budget. It chooses the set of prompts that achieved the highest average score across all examples in the validation set.
 
-* GEPA 会重复前面的步骤，直到用完预定义的处理预算。然后选择在验证集所有样本上取得最高平均得分的提示（prompts）集合。
+GEPA 会重复前面的步骤，直到用完预定义的处理预算。然后选择在验证集所有样本上取得最高平均得分的提示（prompts）集合。
 
 Results: The authors pitted custom and open-source agents that used GEPA against versions for which Qwen3-8B was fine-tuned on a given benchmark via Group Relative Policy Optimization (GRPO). They measured both the agents' performance and the number of agent executions required.
 
@@ -288,13 +296,13 @@ Results: The authors pitted custom and open-source agents that used GEPA agains
 
 * Across HotpotQA (questions that require reasoning over multiple paragraphs), IFBench (following instructions), HoVer (verifying facts), and PUPA (which gauges balance between helpfulness and unwanted sharing of personal information), agents that used GEPA consistently achieved better performance on all four.
 
-* 在 HotpotQA（需要多段落推理的问题）、IFBench（指令跟随）、HoVer（事实验证）和 PUPA（评估帮助性与不必要个人信息分享之间的平衡性）这四个基准测试中，采用 GEPA 的智能体在所有四项任务上都一致表现出了更优的性能。
+在 HotpotQA（需要多段落推理的问题）、IFBench（指令跟随）、HoVer（事实验证）和 PUPA（评估帮助性与不必要个人信息分享之间的平衡性）这四个基准测试中，采用 GEPA 的智能体在所有四项任务上都一致表现出了更优的性能。
 
 * Moreover, they did this with far greater efficiency, requiring up to 35 times fewer agent executions.
 
-Yes, but: The authors compared GEPA to fine-tuning via reinforcement learning using a single, relatively small model. Questions remain regarding how the results would scale to larger models or generalize to other models, and how GEPA would compare to supervised fine-tuning.
+此外，他们实现这一目标的效率要高得多，所需的智能体执行次数最多可减少至原来的 1/35。
 
-* 此外，他们实现这一目标的效率要高得多，所需的智能体执行次数最多可减少至原来的 1/35。
+Yes, but: The authors compared GEPA to fine-tuning via reinforcement learning using a single, relatively small model. Questions remain regarding how the results would scale to larger models or generalize to other models, and how GEPA would compare to supervised fine-tuning.
 
 不过需要指出的是：作者仅将 GEPA 与使用单个相对较小模型进行强化学习微调的方法进行了对比。关于这种方法在更大规模模型上的扩展性、在其他模型上的泛化能力，以及 GEPA 与监督微调方法的比较效果，仍有待进一步研究。
 
