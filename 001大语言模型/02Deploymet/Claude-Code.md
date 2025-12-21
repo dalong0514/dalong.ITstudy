@@ -94,6 +94,8 @@ minimax 的配置
 
 [在 AI 编程工具里使用 M2 - MiniMax 开放平台文档中心](https://platform.minimaxi.com/docs/guides/text-ai-coding-tools)
 
+[Coding Plan - MiniMax API 开放平台](https://platform.minimaxi.com/user-center/payment/coding-plan)
+
 \# Claude Code environment variables
 export ANTHROPIC_BASE_URL=https://api.minimaxi.com/anthropic
 export ANTHROPIC_AUTH_TOKEN=<MINIMAX_API_KEY>
