@@ -53,7 +53,7 @@ deepseek 的配置：
 \# Claude Code environment variables
 export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
 export ANTHROPIC_AUTH_TOKEN=${DEEPSEEK_API_KEY}
-export API_TIMEOUT_MS=600000
+export API_TIMEOUT_MS=3000000
 export ANTHROPIC_MODEL=deepseek-chat
 export ANTHROPIC_SMALL_FAST_MODEL=deepseek-chat
 export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
@@ -87,6 +87,40 @@ ANTHROPIC_API_KEY
 
 CLAUDE_CODE_MAX_OUTPUT_TOKENS
 128000
+
+---
+
+minimax 的配置
+
+[在 AI 编程工具里使用 M2 - MiniMax 开放平台文档中心](https://platform.minimaxi.com/docs/guides/text-ai-coding-tools)
+
+\# Claude Code environment variables
+export ANTHROPIC_BASE_URL=https://api.minimaxi.com/anthropic
+export ANTHROPIC_AUTH_TOKEN=<MINIMAX_API_KEY>
+export API_TIMEOUT_MS=3000000
+export ANTHROPIC_MODEL=MiniMax-M2
+export ANTHROPIC_SMALL_FAST_MODEL=MiniMax-M2
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.minimaxi.com/anthropic",
+    "ANTHROPIC_AUTH_TOKEN": "<MINIMAX_API_KEY>",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1,
+    "ANTHROPIC_MODEL": "MiniMax-M2",
+    "ANTHROPIC_SMALL_FAST_MODEL": "MiniMax-M2",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "MiniMax-M2",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M2",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M2"
+  }
+}
+
+
+ANTHROPIC_BASE_URL 需根据地理位置设置：
+国内用户使用 https://api.minimaxi.com/anthropic
+国际用户使用 https://api.minimax.io/anthropic
+
 
 ---
 
