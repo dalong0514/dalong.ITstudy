@@ -736,7 +736,7 @@ Here's a simple test: when you define your product's job, ask yourself — "If I
 
 Now reframe: "If I gave this tool to ten users in a specific edge case, like compliance managers at fintech startups preparing SOC2 reports, would nine out of ten say this saves them hours and feels reliable?" If yes, you've found an edge case worth building around.
 
-现在换个角度思考："如果我把这个工具交给某个细分场景下的十位用户，例如金融科技初创公司里负责准备 SOC2 报告的合规经理，十之八九的人会不会都认为这工具既帮他们省下了大量时间，又非常可靠？」如果答案是肯定的，那么你就找到了一个值得为之投入开发的利基场景。
+现在换个角度思考：「如果我把这个工具交给某个细分场景下的十位用户，例如金融科技初创公司里负责准备 SOC2 报告的合规经理，十之八九的人会不会都认为这工具既帮他们省下了大量时间，又非常可靠？」如果答案是肯定的，那么你就找到了一个值得为之投入开发的利基场景。
 
 The essence of AI PMF is embedding into workflows. And embedding starts with trust. You don't earn trust by trying to do everything; you earn it by doing one painful job so well that users can't imagine working without you. That's why in AI, you must design for edge cases, not averages.
 
@@ -748,15 +748,17 @@ Build where models shine. Build where hallucination risk is low. Build where the
 
 ### Step 5. Build a Trust Layer Before You Scale
 
+步骤 5. 在扩展之前，先构建信任层
+
 In SaaS, scaling is often about adding features, tightening onboarding, and pumping money into distribution. If your tool helps sales teams save time or makes HR workflows easier, customers will forgive imperfections along the way, as long as you're responsive and moving fast.
 
-步骤 5. 在扩展之前，先构建信任层在 SaaS（Software as a Service）领域，扩展通常意味着增加新功能、优化用户上手流程，以及将资金投入到市场推广中。如果你的工具能帮助销售团队节省时间，或者让 HR 的工作流程更顺畅，那么只要你反应敏捷、行动迅速，客户是能够包容产品在成长过程中的一些小瑕疵的。
+在 SaaS（Software as a Service）领域，扩展通常意味着增加新功能、优化用户上手流程，以及将资金投入到市场推广中。如果你的工具能帮助销售团队节省时间，或者让 HR 的工作流程更顺畅，那么只要你反应敏捷、行动迅速，客户是能够包容产品在成长过程中的一些小瑕疵的。
 
 But in AI, the rules are different. You cannot scale without trust. And trust is not a marketing slogan, it is a product layer.
 
-#### Why trust is the real product
-
 但在人工智能（AI）领域，规则截然不同。若缺乏信任，则无法实现规模化增长。而信任并非一句营销口号，它是产品的一个核心层面。
+
+#### Why trust is the real product
 
 为什么信任才是真正的产品
 
@@ -780,56 +782,72 @@ A trust layer isn't just one feature. It's a combination of design, transparency
 
 Here are some common components:
 
-1. Human-in-the-loop controls → Users get the ability to review, accept, or reject AI outputs before they become final.Example: A medical scribe that highlights each sentence for doctor approval instead of auto-submitting notes.
-
 以下是一些常见的组成部分：
 
-1. 人在回路控制（Human-in-the-loop controls）→ 用户可以在 AI 输出最终生效前，对其进行审查、接受或拒绝。例如：一款医疗笔记助手会高亮显示每个生成的句子，等待医生确认，而非自动提交完整笔记。
+1 Human-in-the-loop controls → Users get the ability to review, accept, or reject AI outputs before they become final.Example: A medical scribe that highlights each sentence for doctor approval instead of auto-submitting notes.
 
-2. Example: A medical scribe that highlights each sentence for doctor approval instead of auto-submitting notes.
+人在回路控制（Human-in-the-loop controls）→ 用户可以在 AI 输出最终生效前，对其进行审查、接受或拒绝。例如：一款医疗笔记助手会高亮显示每个生成的句子，等待医生确认，而非自动提交完整笔记。
 
-3. Confidence indicators → Show uncertainty or highlight risky sections.Example: An AI legal reviewer that flags clauses it is "less certain about," prompting human attention.
+2 Example: A medical scribe that highlights each sentence for doctor approval instead of auto-submitting notes.
 
-2. 示例：一个医疗记录助手，它会高亮显示每一个句子，等待医生确认，而非自动提交病历记录。
+示例：一个医疗记录助手，它会高亮显示每一个句子，等待医生确认，而非自动提交病历记录。
 
-3. 置信度指标 → 用于显示不确定性或突出显示存在风险的部分。示例：一个 AI 法律条文审查工具，它会将其「置信度较低」的条款标记出来，从而需要人工重点审核。
+3 Confidence indicators → Show uncertainty or highlight risky sections.Example: An AI legal reviewer that flags clauses it is "less certain about," prompting human attention.
 
-4. Example: An AI legal reviewer that flags clauses it is "less certain about," prompting human attention.
+置信度指标 → 用于显示不确定性或突出显示存在风险的部分。示例：一个 AI 法律条文审查工具，它会将其「置信度较低」的条款标记出来，从而需要人工重点审核。
 
-5. Explainability hooks → Let users drill into why an answer was given.Example: An AI fraud detector that provides "reason codes" tied to transaction anomalies.
+4 Example: An AI legal reviewer that flags clauses it is "less certain about," prompting human attention.
 
-4. 示例：一款 AI 法律审阅工具，能够标记出其「把握较低」的条款，从而提请人工复核。
+示例：一款 AI 法律审阅工具，能够标记出其「把握较低」的条款，从而提请人工复核。
 
-5. 可解释性接口 → 让用户可以深入追溯答案的生成依据。示例：一款 AI 欺诈检测系统，能够提供与交易异常相对应的「原因代码」。
+5 Explainability hooks → Let users drill into why an answer was given.Example: An AI fraud detector that provides "reason codes" tied to transaction anomalies.
 
-6. Example: An AI fraud detector that provides "reason codes" tied to transaction anomalies.
+可解释性接口 → 让用户可以深入追溯答案的生成依据。示例：一款 AI 欺诈检测系统，能够提供与交易异常相对应的「原因代码」。
 
-7. Audit trails → Log every suggestion, correction, and override for accountability.Example: An AI compliance tool that timestamps every user edit to prove regulatory diligence.
+6 Example: An AI fraud detector that provides "reason codes" tied to transaction anomalies.
 
-6. 示例：一个 AI 欺诈检测系统，它能提供与交易异常相对应的「原因代码」。
+示例：一个 AI 欺诈检测系统，它能提供与交易异常相对应的「原因代码」。
 
-7. 审计追踪（Audit Trail）→ 记录所有的 AI 建议、人工更正以及手动覆写操作，以确保责任可追溯。示例：一个 AI 合规工具，它会为用户的每一次编辑打上时间戳，用以证明其符合监管要求。
+7 Audit trails → Log every suggestion, correction, and override for accountability.Example: An AI compliance tool that timestamps every user edit to prove regulatory diligence.
 
-8. Example: An AI compliance tool that timestamps every user edit to prove regulatory diligence.
+审计追踪（Audit Trail）→ 记录所有的 AI 建议、人工更正以及手动覆写操作，以确保责任可追溯。示例：一个 AI 合规工具，它会为用户的每一次编辑打上时间戳，用以证明其符合监管要求。
 
-9. Safe defaults → When uncertain, the system defaults to non-destructive outputs.Example: An AI customer support agent that escalates tricky cases to humans instead of improvising.
+8 Example: An AI compliance tool that timestamps every user edit to prove regulatory diligence.
 
-8. 示例：一款 AI 合规工具，它会为用户的每一次编辑都打上时间戳，以此作为符合监管尽职要求的证明。
-9. 默认安全策略 → 当系统不确定该如何处理时，它会默认采取保守、无害的输出方式。示例：一个 AI 客户支持代理，在遇到棘手问题时，会选择将案例转交给人工客服处理，而不是自作主张。
+示例：一款 AI 合规工具，它会为用户的每一次编辑都打上时间戳，以此作为符合监管尽职要求的证明。
 
-10. Example: An AI customer support agent that escalates tricky cases to humans instead of improvising.
+9 Safe defaults → When uncertain, the system defaults to non-destructive outputs.Example: An AI customer support agent that escalates tricky cases to humans instead of improvising.
+
+默认安全策略 → 当系统不确定该如何处理时，它会默认采取保守、无害的输出方式。示例：一个 AI 客户支持代理，在遇到棘手问题时，会选择将案例转交给人工客服处理，而不是自作主张。
+
+10 Example: An AI customer support agent that escalates tricky cases to humans instead of improvising.
+
+示例：一个 AI 客户支持智能体，它选择将棘手案例转交给人类处理，而不是自行即兴发挥。
 
 Each of these adds friction in the short term… but that friction creates confidence, and confidence accelerates long-term adoption.
-
-10. 示例：一个 AI 客户支持智能体，它选择将棘手案例转交给人类处理，而不是自行即兴发挥。
 
 上述每一项措施在短期内都会增加一些阻力…… 但这种阻力有助于建立信任，而信任将加速技术的长期采纳。
 
 #### Case example: The medical scribe company
 
+案例示例：医疗文书记录公司
+
 One company in the healthcare space learned this the hard way. Their first product automatically generated patient notes from doctor-patient conversations. It was fast and technically impressive. But adoption stalled. Doctors didn't trust the system, because even if 95% of the notes were correct, the 5% errors could lead to malpractice.
 
-案例示例：医疗文书记录公司一家医疗健康领域的公司为此付出了惨痛教训。他们的首款产品能够根据医患对话自动生成病历记录。产品速度很快，技术上也令人赞叹。然而，它的市场推广却陷入了停滞。医生们并不信任这套系统，因为即便 95% 的记录是准确的，那剩下的 5% 错误也可能引发医疗事故。
+一家医疗健康领域的公司为此付出了惨痛教训。他们的首款产品能够根据医患对话自动生成病历记录。产品速度很快，技术上也令人赞叹。然而，它的市场推广却陷入了停滞。医生们并不信任这套系统，因为即便 95% 的记录是准确的，那剩下的 5% 错误也可能引发医疗事故。
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 The company pivoted to include a trust layer: instead of auto-submitting, the tool displayed each generated sentence with a simple "approve" or "edit" option. What happened? Initially, this slowed down usage slightly. But within weeks, doctors reported higher confidence, and as they saw fewer errors over time, they began approving most sentences automatically. Within months, the same doctors were saying, "I can't imagine writing notes manually anymore."
 
