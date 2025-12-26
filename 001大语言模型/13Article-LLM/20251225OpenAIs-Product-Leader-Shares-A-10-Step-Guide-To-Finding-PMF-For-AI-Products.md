@@ -640,56 +640,59 @@ Instead, AI products find PMF fastest when they are designed for edge cases, tho
 
 #### Why averages don't work in AI
 
+为何「平均」水准在 AI 领域行不通
+
 Think of a general-purpose AI writing tool. You pitch it as: "Write anything — emails, essays, blog posts, sales copy, social media." That sounds powerful, but it immediately creates two problems:
 
-为何「平均」水准在 AI 领域行不通以一款通用 AI 写作工具为例。你可能会这样推销它：「它能写任何东西 —— 电子邮件、论文、博客文章、销售文案、社交媒体帖子。」这听起来功能强大，但立刻带来了两个问题：
+以一款通用 AI 写作工具为例。你可能会这样推销它：「它能写任何东西 —— 电子邮件、论文、博客文章、销售文案、社交媒体帖子。」这听起来功能强大，但立刻带来了两个问题：
 
-1. Output quality is inconsistent. Writing a technical blog post requires different tone, accuracy, and context than writing a birthday invitation. Averages stretch the model too thin. Users encounter errors, awkward phrasing, or hallucinated facts, and they lose trust.
+1 Output quality is inconsistent. Writing a technical blog post requires different tone, accuracy, and context than writing a birthday invitation. Averages stretch the model too thin. Users encounter errors, awkward phrasing, or hallucinated facts, and they lose trust.
 
-1. 输出质量不稳定。撰写技术博客文章所需的语气、准确性和上下文，与写一份生日邀请函截然不同。试图让模型面面俱到，反而会使其能力分散，表现不佳。用户会遇到错误、生硬的措辞或事实性幻觉（Hallucination），从而逐渐失去信任。
+输出质量不稳定。撰写技术博客文章所需的语气、准确性和上下文，与写一份生日邀请函截然不同。试图让模型面面俱到，反而会使其能力分散，表现不佳。用户会遇到错误、生硬的措辞或事实性幻觉（Hallucination），从而逐渐失去信任。
 
-2. Value is unclear. When you promise "write anything," you're competing against dozens of similar tools. Users don't know why they should pick yours, because it doesn't solve a specific pain point better than alternatives.
+2 Value is unclear. When you promise "write anything," you're competing against dozens of similar tools. Users don't know why they should pick yours, because it doesn't solve a specific pain point better than alternatives.
 
-2. 核心价值不清晰。当一款产品宣称能够「撰写任何内容」时，它实际上是在与市场上众多功能相似的工具竞争。用户很难弄清楚为什么要选择你的产品，因为它并没有在解决某个具体用户痛点方面，展现出比同类产品更突出的优势。
+核心价值不清晰。当一款产品宣称能够「撰写任何内容」时，它实际上是在与市场上众多功能相似的工具竞争。用户很难弄清楚为什么要选择你的产品，因为它并没有在解决某个具体用户痛点方面，展现出比同类产品更突出的优势。
 
 The result? Curiosity-driven signups, weak retention, and churn.
 
-#### Edge cases as a wedge
-
 结果就是：用户出于好奇而注册，留存率却很低，最终导致流失。
 
-#### 将边缘情况作为突破口
+#### Edge cases as a wedge
+
+将边缘情况作为突破口
 
 Now contrast this with an AI product designed around a narrow edge case: drafting investor updates for founders. This job has unique qualities:
 
-* 80% of the content is predictable - growth metrics, recent milestones, upcoming goals.
-
 与此形成对比的，是另一类围绕特定边缘场景设计的 AI 产品：例如，为初创公司创始人起草面向投资者的定期汇报。这类工作有其独特之处：
 
-* 80% 的内容是高度可预测的 —— 无非是增长数据、近期里程碑以及下一阶段目标。
+1 80% of the content is predictable - growth metrics, recent milestones, upcoming goals.
 
-* Founders dread writing it because it's repetitive and time-consuming.
+80% 的内容是高度可预测的 —— 无非是增长数据、近期里程碑以及下一阶段目标。
 
-* Accuracy matters, but the structure and context reduce the risk of hallucination.
+2 Founders dread writing it because it's repetitive and time-consuming.
 
-*  创始人们往往对撰写此类文件感到头疼，因为它内容重复，耗时费力。
-*  内容准确固然关键，但清晰的框架与丰富的背景信息能有效降低信息「幻觉」（Hallucination）的风险。
+创始人们往往对撰写此类文件感到头疼，因为它内容重复，耗时费力。
 
-* The output doesn't need to be perfect prose, it just needs to be a solid draft the founder can polish in minutes.
+3 Accuracy matters, but the structure and context reduce the risk of hallucination.
+
+内容准确固然关键，但清晰的框架与丰富的背景信息能有效降低信息「幻觉」（Hallucination）的风险。
+
+4 The output doesn't need to be perfect prose, it just needs to be a solid draft the founder can polish in minutes.
+
+输出的内容无需字字珠玑，它只需要是一份扎实的初稿，让创始人能在几分钟内完成润色即可。
 
 By focusing on this edge case, the product doesn't try to be everything to everyone. Instead, it becomes magical for a small but important workflow. And once a founder uses it and realizes it saves them two hours per month while still keeping investors happy, the product quickly embeds into their routine.
-
-* 输出的内容无需字字珠玑，它只需要是一份扎实的初稿，让创始人能在几分钟内完成润色即可。
 
 通过专注于这一特定场景，产品避免了追求面面俱到。相反，它在一个虽小但关键的工作流程中变得不可或缺。一旦创始人开始使用，并发现它每月能为自己节省两小时，同时还能让投资者满意，这款产品就会迅速融入他们的日常工作。
 
 This is the pattern: AI products win by excelling in narrow, structured jobs where human pain is high and model predictability is high.
 
-#### Why this builds trust faster
-
 其模式在于：AI 产品若想胜出，必须专注于那些人类痛点突出、且模型表现稳定可预测的特定、结构化任务。
 
-#### 为何此模式能更快赢得信任
+#### Why this builds trust faster
+
+为何此模式能更快赢得信任
 
 One of the most dangerous pitfalls in AI PMF is what I call "hallucination shock." This is the moment when a user, initially excited by your product, suddenly realizes they can't trust it. Maybe the AI lawyer drafts a contract with a fake clause. Maybe the AI researcher invents citations. Maybe the AI doctor suggests a dangerous dosage. Even a single shocking error can destroy trust, and once trust is broken, it's almost impossible to rebuild.
 
@@ -697,34 +700,39 @@ One of the most dangerous pitfalls in AI PMF is what I call "hallucination shock
 
 Designing for edge cases mitigates this risk. When you choose jobs where 80% of the context is predictable and the constraints are narrow, the model has less room to go off the rails. The outputs feel consistently reliable, which accelerates trust-building. Users start thinking: "I can count on this tool for this specific job." That's the first step toward making your AI product a default.
 
-针对边界情况（Edge Cases）进行设计，能够有效降低这种风险。如果你选择那些上下文有 80% 可预测、且约束条件明确的特定任务，模型「出错」或「失控」的可能性就会大大降低。其输出结果会显得始终如一地可靠，从而快速建立起用户的信任。用户会开始想："干这个活儿，靠这个工具准没错。」这正是让你的 AI 产品成为用户默认选择的第一步。
+针对边界情况（Edge Cases）进行设计，能够有效降低这种风险。如果你选择那些上下文有 80% 可预测、且约束条件明确的特定任务，模型「出错」或「失控」的可能性就会大大降低。其输出结果会显得始终如一地可靠，从而快速建立起用户的信任。用户会开始想：「干这个活儿，靠这个工具准没错。」这正是让你的 AI 产品成为用户默认选择的第一步。
 
 #### Edge cases compound into averages
 
+边缘情况共同构成普遍情况
+
 Here's the counterintuitive part: starting with edge cases doesn't limit your growth, it accelerates it. Because once you dominate one edge case, you earn the right to expand into adjacent ones.
 
-#### 边缘情况共同构成普遍情况反直觉之处在于：从边缘情况入手，非但不会限制你的发展，反而会加速这一进程。因为一旦你攻克了一个边缘情况，便能够顺势扩展到相邻的领域。
+反直觉之处在于：从边缘情况入手，非但不会限制你的发展，反而会加速这一进程。因为一旦你攻克了一个边缘情况，便能够顺势扩展到相邻的领域。
 
-* From "AI for investor updates," you can move into "AI for board reports."
+1 From "AI for investor updates," you can move into "AI for board reports."
 
-* From "AI for LTV projections in gaming," you can expand into "AI for churn modeling in SaaS."
+从「AI 撰写投资者更新报告」，可以自然延伸到「AI 生成董事会报告」。
 
-* 从「AI 撰写投资者更新报告」，可以自然延伸到「AI 生成董事会报告」。
-* 从「AI 预测游戏用户终身价值（Lifetime Value，LTV）」，可以进一步拓展到「AI 构建软件即服务（SaaS）的用户流失模型」。
+2 From "AI for LTV projections in gaming," you can expand into "AI for churn modeling in SaaS."
 
-* From "AI for compliance documentation in finance," you can broaden into "AI for audit preparation across industries."
+从「AI 预测游戏用户终身价值（Lifetime Value，LTV）」，可以进一步拓展到「AI 构建软件即服务（SaaS）的用户流失模型」。
+
+3 From "AI for compliance documentation in finance," you can broaden into "AI for audit preparation across industries."
+
+你可以从「AI 在金融合规文档领域的应用」这个点切入，进而拓展到「AI 用于跨行业的审计准备工作」。
 
 The sequence matters. If you start broad, you drown in averages and lose trust. If you start narrow, you build depth, win advocates, and then expand outward.
-
-* 你可以从「AI 在金融合规文档领域的应用」这个点切入，进而拓展到「AI 用于跨行业的审计准备工作」。
 
 这个顺序至关重要。如果一开始就铺得太广，你的方案容易流于表面、缺乏深度，从而难以取得信任。如果从具体的细分场景入手，你就能建立起扎实的案例深度，赢得首批拥护者，然后再逐步向外围拓展。
 
 #### Practical test: the edge case filter
 
+实用测试：边界情况过滤器
+
 Here's a simple test: when you define your product's job, ask yourself — "If I gave this AI tool to ten random users in the broad market, would the outputs delight all ten? Or would five get annoyed and lose trust?" If the latter, you're chasing averages.
 
-#### 实用测试：边界情况过滤器这里有一个简单的测试方法：在定义你的产品职责时，不妨问问自己 ——「如果我把这个 AI 工具交给广阔市场上的十位随机用户，它的输出结果能让所有十个人都感到满意甚至惊喜吗？还是说，其中五个人会感到恼火并对产品失去信任？」如果答案是后者，那么你很可能只是在追求满足平均水平，而忽略了那些棘手的边界情况。
+这里有一个简单的测试方法：在定义你的产品职责时，不妨问问自己 ——「如果我把这个 AI 工具交给广阔市场上的十位随机用户，它的输出结果能让所有十个人都感到满意甚至惊喜吗？还是说，其中五个人会感到恼火并对产品失去信任？」如果答案是后者，那么你很可能只是在追求满足平均水平，而忽略了那些棘手的边界情况。
 
 Now reframe: "If I gave this tool to ten users in a specific edge case, like compliance managers at fintech startups preparing SOC2 reports, would nine out of ten say this saves them hours and feels reliable?" If yes, you've found an edge case worth building around.
 
@@ -742,7 +750,7 @@ Build where models shine. Build where hallucination risk is low. Build where the
 
 In SaaS, scaling is often about adding features, tightening onboarding, and pumping money into distribution. If your tool helps sales teams save time or makes HR workflows easier, customers will forgive imperfections along the way, as long as you're responsive and moving fast.
 
-### 步骤 5. 在扩展之前，先构建信任层在 SaaS（Software as a Service）领域，扩展通常意味着增加新功能、优化用户上手流程，以及将资金投入到市场推广中。如果你的工具能帮助销售团队节省时间，或者让 HR 的工作流程更顺畅，那么只要你反应敏捷、行动迅速，客户是能够包容产品在成长过程中的一些小瑕疵的。
+步骤 5. 在扩展之前，先构建信任层在 SaaS（Software as a Service）领域，扩展通常意味着增加新功能、优化用户上手流程，以及将资金投入到市场推广中。如果你的工具能帮助销售团队节省时间，或者让 HR 的工作流程更顺畅，那么只要你反应敏捷、行动迅速，客户是能够包容产品在成长过程中的一些小瑕疵的。
 
 But in AI, the rules are different. You cannot scale without trust. And trust is not a marketing slogan, it is a product layer.
 
@@ -750,7 +758,7 @@ But in AI, the rules are different. You cannot scale without trust. And trust is
 
 但在人工智能（AI）领域，规则截然不同。若缺乏信任，则无法实现规模化增长。而信任并非一句营销口号，它是产品的一个核心层面。
 
-#### 为什么信任才是真正的产品
+为什么信任才是真正的产品
 
 Here's the uncomfortable truth: AI adoption rarely fails because of accuracy. It fails because of trust gaps. Your model could be 95% accurate, but if the 5% of failures are catastrophic — hallucinated citations, fabricated financial figures, incorrect medical terms — users will abandon you instantly. In AI, perceived reliability matters more than technical accuracy.
 
@@ -768,7 +776,7 @@ That's why every successful AI product I've worked with has invested early in wh
 
 A trust layer isn't just one feature. It's a combination of design, transparency, and workflow choices that shift the product from "magical demo" to "dependable tool."
 
-#### 信任层的构成信任层不仅仅是一个单一功能。它是设计、透明度与工作流程选择的综合体，旨在将产品从「炫酷的演示」转化为「可靠的工具」。
+信任层的构成信任层不仅仅是一个单一功能。它是设计、透明度与工作流程选择的综合体，旨在将产品从「炫酷的演示」转化为「可靠的工具」。
 
 Here are some common components:
 
@@ -821,7 +829,7 @@ Each of these adds friction in the short term… but that friction creates confi
 
 One company in the healthcare space learned this the hard way. Their first product automatically generated patient notes from doctor-patient conversations. It was fast and technically impressive. But adoption stalled. Doctors didn't trust the system, because even if 95% of the notes were correct, the 5% errors could lead to malpractice.
 
-#### 案例示例：医疗文书记录公司一家医疗健康领域的公司为此付出了惨痛教训。他们的首款产品能够根据医患对话自动生成病历记录。产品速度很快，技术上也令人赞叹。然而，它的市场推广却陷入了停滞。医生们并不信任这套系统，因为即便 95% 的记录是准确的，那剩下的 5% 错误也可能引发医疗事故。
+案例示例：医疗文书记录公司一家医疗健康领域的公司为此付出了惨痛教训。他们的首款产品能够根据医患对话自动生成病历记录。产品速度很快，技术上也令人赞叹。然而，它的市场推广却陷入了停滞。医生们并不信任这套系统，因为即便 95% 的记录是准确的，那剩下的 5% 错误也可能引发医疗事故。
 
 The company pivoted to include a trust layer: instead of auto-submitting, the tool displayed each generated sentence with a simple "approve" or "edit" option. What happened? Initially, this slowed down usage slightly. But within weeks, doctors reported higher confidence, and as they saw fewer errors over time, they began approving most sentences automatically. Within months, the same doctors were saying, "I can't imagine writing notes manually anymore."
 
@@ -833,7 +841,7 @@ The paradox is that by adding friction, the company built trust. And by building
 
 其中的悖论在于：公司通过增加（用户操作的）摩擦，反而建立了信任。而正是凭借这份信任，他们才得以实现规模化增长。
 
-#### 没有信任，为何无法实现规模化？
+没有信任，为何无法实现规模化？
 
 I've seen dozens of AI startups chase scale too early. They raise funding, pour money into ads or outbound sales, and get initial signups. But without a trust layer, usage stalls. Early adopters encounter hallucinations, lose confidence, and churn. Word-of-mouth turns negative. Scaling amplifies distrust instead of adoption.
 
@@ -870,7 +878,7 @@ Trust is not binary, it's a curve you can measure, improve, and reinforce.
 
 信任并非简单的非此即彼，而是一条可以被衡量、优化并不断巩固的曲线。
 
-#### 信任的复利效应
+信任的复利效应
 
 Here's the beauty of trust in AI: once established, it compounds. Every user correction improves the model, every improvement strengthens reliability, every reliable moment deepens habit. Over time, trust shifts from "I review everything the AI produces" to "I trust it for 80% of the job" to "I can't imagine working without it."
 
@@ -890,7 +898,7 @@ In AI, trust isn't a side benefit, it's the core product. Build it before you sc
 
 在人工智能（AI）领域，信任不是附加项，而是产品本身。先建立信任，再追求扩张。
 
-### 步骤 6. 以采用深度衡量产品市场匹配（PMF），而非表面指标
+步骤 6. 以采用深度衡量产品市场匹配（PMF），而非表面指标
 
 In SaaS, the playbook for measuring product-market fit is well established. You look at DAU/WAU ratios, you measure retention curves, you send Net Promoter Score (NPS) surveys, and you see how many users would be "very disappointed" if your product disappeared. These metrics are useful for deterministic software, where features either work or they don't.
 
@@ -906,7 +914,7 @@ If you rely on vanity metrics in AI, you'll fool yourself into thinking you have
 
 如果你在人工智能（AI）领域依赖虚荣指标，就会在远未真正达到产品市场契合度（Product-Market Fit，PMF）之前，就自欺欺人地以为已经成功了。
 
-#### 虚荣指标的陷阱
+虚荣指标的陷阱
 
 Let's start with the numbers most founders obsess over:
 
@@ -931,7 +939,7 @@ I've seen AI companies raise millions on the back of vanity metrics, only to col
 
 AI products are probabilistic. Outputs vary. Trust builds slowly. Adoption happens in layers, not in a single leap. That means you need metrics that capture not just if people are using your product, but how they are using it, and how deeply it has replaced their old way of working.
 
-#### 为何 AI 需要多维度的评估指标
+为何 AI 需要多维度的评估指标
 
 AI 产品本质上是概率性的，其输出结果具有不确定性。用户信任的建立是一个缓慢的过程，而产品的普及采纳也是层层递进，而非一蹴而就。因此，你需要的评估指标，不仅要能反映用户是否在使用你的产品，更要能揭示他们如何使用，以及该产品在多大程度上深度取代了他们原有的工作模式。
 
@@ -1001,7 +1009,7 @@ These metrics get at the heart of AI PMF: are you replacing painful workflows, s
 
 这些指标直指 AI 产品与市场匹配（Product-Market Fit，PMF）的核心：你的产品是否取代了低效繁琐的工作流程、节省了大量时间，并赢得了广泛的用户信任？
 
-#### 案例：一家 AI 法律初创公司
+案例：一家 AI 法律初创公司
 
 One AI legal startup had an early growth surge. Thousands of lawyers signed up. Retention looked healthy. NPS scores were high. But when we dug deeper, we saw override rates near 90%. Lawyers were rewriting almost every clause the system generated. The product wasn't actually reducing workload, it was just creating more editing.
 
@@ -1015,7 +1023,7 @@ This company didn't have PMF. They had curiosity-driven usage. It wasn't until t
 
 Here's a simple way to measure adoption depth: build a dashboard that tracks:
 
-#### 构建 AI 产品市场契合度（PMF）仪表板这里有一个衡量产品采用深度的简单方法：构建一个仪表板来跟踪：
+构建 AI 产品市场契合度（PMF）仪表板这里有一个衡量产品采用深度的简单方法：构建一个仪表板来跟踪：
 
 * Override rate (is trust building?)
 
@@ -1038,7 +1046,7 @@ If these numbers improve month over month, you're on the path to PMF — even if
 
 如果这些指标能逐月改善，那么你正走在实现产品市场契合（Product-Market Fit，PMF）的道路上 —— 即便日活跃用户（Daily Active Users，DAU）没有爆发式增长。反之，如果这些指标停滞不前，那你的产品可能只是昙花一现，仍停留在依靠新鲜感吸引用户的阶段。
 
-#### 为何用户使用深度比单纯增长更重要
+为何用户使用深度比单纯增长更重要
 
 Growth can be manufactured. You can buy ads, do outbound sales, or launch on Product Hunt and see thousands of signups. But depth cannot be faked. Either your product becomes the default way a user solves their painful job, or it doesn't.
 
@@ -1062,7 +1070,7 @@ Adoption depth, not surface activity, is the signal. Track it, optimize for it, 
 
 用户深度，而非表面活跃度，才是关键信号。追踪这个深度指标，围绕它进行优化，让它引领你找到真正的产品市场契合（Product-Market Fit，PMF）。
 
-### 步骤 7. 在达成 PMF 的过程中构建护城河，而非事后补建
+步骤 7. 在达成 PMF 的过程中构建护城河，而非事后补建
 
 In most startup advice, moats are treated as something you worry about later. First, get traction. Then, once you've hit product-market fit, think about defensibility. That logic holds in SaaS, where building features takes time, competitors can't instantly copy your code, and first-mover advantage buys you breathing room. But in AI, this advice is fatal. If you wait until after PMF to build moats, you may never get the chance.
 
@@ -1088,7 +1096,7 @@ This is why AI companies die even after "finding traction": they mistake early u
 
 这正是许多 AI 公司在「取得初步成功」后仍会失败的原因：它们错误地将早期用户的使用，等同于建立了可持续竞争优势的采纳。若没有护城河，产品市场契合度（PMF）将是昙花一现的。
 
-#### AI 护城河的三大类别
+AI 护城河的三大类别
 
 To avoid that fate, you must weave moats into your PMF journey. The strongest AI moats tend to fall into three categories: data, distribution, and trust.
 
@@ -1136,7 +1144,7 @@ To avoid that fate, you must weave moats into your PMF journey. The strongest AI
 
 Take Jasper, one of the earliest AI writing startups. They raised $125M at a $1.5B valuation, riding the wave of "AI for copywriting." But their moat was thin. They had early traction, but no proprietary data loops, no unique distribution wedge, and limited trust differentiation. When OpenAI's ChatGPT went mainstream, Jasper's differentiation collapsed.
 
-#### 案例对比：Jasper 与 Perplexity
+案例对比：Jasper 与 Perplexity
 
 以 Jasper 为例，它是最早的 AI 写作初创公司之一。该公司搭上了「AI 文案写作」的快车，以 15 亿美元的估值融资了 1.25 亿美元。然而，其竞争壁垒却十分薄弱。虽然早期市场势头不错，但公司既没有构建专有的数据飞轮，也缺乏独特的市场分销优势，在用户信任度上也未能建立起足够的差异化。当 OpenAI 的 ChatGPT 席卷主流市场时，Jasper 的差异化优势便荡然无存。
 
@@ -1176,7 +1184,7 @@ So how do you avoid the Jasper trap and build moats while you're still searching
 
 The earlier you build moats, the faster they compound. A feedback loop started with 10 customers can evolve into a dataset of millions of interactions by the time you hit scale. A niche distribution wedge can expand into an enterprise-wide lock-in. A reputation for reliability in one critical edge case can expand into adjacent domains.
 
-#### 早期构建护城河的复利效应护城河构建得越早，其复利增长效应就越显著。一个始于 10 位用户的反馈循环，在业务规模化时，可能已演变为一个包含数百万次交互的数据集。一个利基市场的分销切入点，可以拓展为全企业范围的生态壁垒。在某个至关重要的特殊场景下建立的可靠声誉，能够顺势渗透到相邻领域。
+早期构建护城河的复利效应护城河构建得越早，其复利增长效应就越显著。一个始于 10 位用户的反馈循环，在业务规模化时，可能已演变为一个包含数百万次交互的数据集。一个利基市场的分销切入点，可以拓展为全企业范围的生态壁垒。在某个至关重要的特殊场景下建立的可靠声誉，能够顺势渗透到相邻领域。
 
 Moats are not something you bolt on after PMF. In AI, moats are part of PMF.
 
@@ -1196,7 +1204,7 @@ In SaaS, moats protect you after you win. In AI, moats are how you win.
 
 在 SaaS（软件即服务）领域，护城河是在你取得成功后保护你的壁垒。而在 AI（人工智能）领域，护城河本身就是你赢得竞争的关键。
 
-### 步骤 8. 依据价值，而非功能定价
+步骤 8. 依据价值，而非功能定价
 
 In SaaS, pricing often starts with features. You see the classic three-tier plans: Basic, Pro, Enterprise. Each tier unlocks more features — more seats, more storage, more integrations. Customers compare plans like a menu and decide based on what they need. This works because SaaS features are relatively sticky: it takes real engineering work to copy them, and over time, feature depth becomes a defensible moat.
 
@@ -1214,7 +1222,7 @@ Instead, AI products must price against value — the measurable, undeniable out
 
 Let's take a simple example: an "AI email assistant" that drafts replies. You price it at $10/month per user. At first, customers pay. But then competitors offer the same at $5, or bundle it into Gmail for free. Suddenly, your pricing looks ridiculous. You're left discounting just to survive.
 
-#### 为何基于功能的定价在 AI 领域行不通来看一个简单的例子：一款能帮你起草回复的「AI 电子邮件助手」。你把它定价为每月每用户 10 美元。起初，客户愿意买单。但很快，竞争对手推出了功能相同的服务，每月只收 5 美元，甚至直接免费打包进 Gmail。突然间，你的定价就显得非常可笑了。到头来，你只能靠不断打折来勉强维持。
+为何基于功能的定价在 AI 领域行不通来看一个简单的例子：一款能帮你起草回复的「AI 电子邮件助手」。你把它定价为每月每用户 10 美元。起初，客户愿意买单。但很快，竞争对手推出了功能相同的服务，每月只收 5 美元，甚至直接免费打包进 Gmail。突然间，你的定价就显得非常可笑了。到头来，你只能靠不断打折来勉强维持。
 
 The problem isn't your product — it's your pricing logic. You priced it as if the feature itself was the value. But in AI, features are never the value. The value lies in the outcomes the feature enables.
 
@@ -1224,7 +1232,7 @@ The problem isn't your product — it's your pricing logic. You priced it as if 
 
 Imagine instead that you position your AI email assistant not as "unlimited AI-drafted emails for $10/month" but as "we cut your average support rep's response time in half, reducing staffing needs by 20%." Suddenly, you can price based on savings, not features.
 
-#### 基于价值的定价模式试想一下，如果你这样定位你的 AI 邮件助手：不是「每月 10 美元，无限量使用 AI 生成邮件草稿」，而是「我们能将您客服代表的平均响应时间缩短一半，从而减少 20% 的人力配置」。这样一来，你的定价依据就从功能本身，转变为了它能带来的成本节省。
+基于价值的定价模式试想一下，如果你这样定位你的 AI 邮件助手：不是「每月 10 美元，无限量使用 AI 生成邮件草稿」，而是「我们能将您客服代表的平均响应时间缩短一半，从而减少 20% 的人力配置」。这样一来，你的定价依据就从功能本身，转变为了它能带来的成本节省。
 
 This is why the best AI companies don't sell features — they sell outcome contracts.
 
@@ -1250,7 +1258,7 @@ Pricing for value means your revenue scales with your customer's savings, risk r
 
 Over years of working with AI and enterprise clients, I've found a simple heuristic: AI products can usually capture 10–30% of the value they create.
 
-#### 经验法则：所创造价值的 10%～30%
+经验法则：所创造价值的 10%～30%
 
 根据我多年来与人工智能（AI）以及企业客户打交道的经验，总结出一条简单的经验法则：AI 产品通常能够获取其自身所创造价值的 10% 至 30%。
 
@@ -1273,7 +1281,7 @@ This anchors your pricing to impact, not to a feature menu. It also creates a na
 
 A traditional SaaS fraud dashboard might charge $50 per seat. But for enterprise clients, the number of seats is irrelevant… The fraud problem doesn't scale linearly with user count. Meanwhile, an AI fraud detection system that blocks $5M in attempted fraud per quarter can justify a value-based contract worth hundreds of thousands, even if the "features" look similar on the surface.
 
-#### 案例对比：AI 欺诈检测 vs. SaaS 欺诈仪表板传统的 SaaS 欺诈仪表板可能按每个用户席位收费 50 美元。但对于企业客户而言，席位数量并非关键…… 因为欺诈问题的严重程度并不会随用户数量线性增长。相比之下，一个每季度能拦截 500 万美元欺诈企图的 AI 欺诈检测系统，其价值就足以支撑一份价值数十万美元的基于价值的合同，即便两者表面的「功能」看起来相差无几。
+案例对比：AI 欺诈检测 vs. SaaS 欺诈仪表板传统的 SaaS 欺诈仪表板可能按每个用户席位收费 50 美元。但对于企业客户而言，席位数量并非关键…… 因为欺诈问题的严重程度并不会随用户数量线性增长。相比之下，一个每季度能拦截 500 万美元欺诈企图的 AI 欺诈检测系统，其价值就足以支撑一份价值数十万美元的基于价值的合同，即便两者表面的「功能」看起来相差无几。
 
 The fraud dashboard sells features. The AI system sells outcomes. Guess which one has better retention and defensibility?
 
@@ -1281,7 +1289,7 @@ The fraud dashboard sells features. The AI system sells outcomes. Guess which on
 
 反欺诈仪表盘售卖的是功能，而 AI 系统售卖的是结果。试想一下，哪一个能带来更高的用户留存和更强的竞争壁垒？
 
-#### 为什么客户青睐价值定价
+为什么客户青睐价值定价
 
 At first, founders worry that value-based pricing will scare customers away. In reality, the opposite is true. When you tie your price to value:
 
@@ -1304,7 +1312,7 @@ This alignment builds stronger relationships and higher willingness to pay.
 
 这种（价值）契合能建立更牢固的客户关系，并带来更高的支付意愿。
 
-#### 如何实施基于价值的定价
+如何实施基于价值的定价
 
 1. Quantify the baseline. Measure how much time, money, or risk the current workflow costs.
 
@@ -1328,7 +1336,7 @@ Example: An AI supply chain startup charges $50K/year base + 15% of verified log
 
 Here's the deeper insight: value-based pricing itself is a moat. When customers see that your product is tied to their business outcomes, it's harder for competitors to undercut you with a cheaper per-seat plan. A competitor may offer the same feature at half the price, but if you're delivering measurable ROI, your customer won't switch. They'll stay loyal, because outcomes are harder to fake than features.
 
-#### 价值定价背后的隐秘壁垒其深层逻辑在于：基于价值的定价（value-based pricing）本身就是一个强大的竞争壁垒。一旦客户认识到你的产品与他们的业务成果紧密挂钩，竞争对手就很难仅凭更便宜的按席位付费方案来挖走客户。即使竞争对手以半价提供相同的功能，但只要你能持续交付可衡量的投资回报率（ROI），客户就不会轻易转向。他们会保持忠诚，因为实实在在的业务成果，远比单纯的功能列表更难被模仿或替代。
+价值定价背后的隐秘壁垒其深层逻辑在于：基于价值的定价（value-based pricing）本身就是一个强大的竞争壁垒。一旦客户认识到你的产品与他们的业务成果紧密挂钩，竞争对手就很难仅凭更便宜的按席位付费方案来挖走客户。即使竞争对手以半价提供相同的功能，但只要你能持续交付可衡量的投资回报率（ROI），客户就不会轻易转向。他们会保持忠诚，因为实实在在的业务成果，远比单纯的功能列表更难被模仿或替代。
 
 At this stage of your journey, you may be tempted to slap a $20/month SaaS price tag on your AI product. Resist it.
 
@@ -1348,7 +1356,7 @@ In AI, features commoditize. Outcomes endure. Price for value, not for features.
 
 在人工智能（AI）领域，功能终将趋于同质化，唯有成果方能历久弥新。应依据价值定价，而非依据功能定价。
 
-### 步骤 9：将市场推广（Distribution）视为产品市场匹配（Product-Market Fit，PMF）的一部分，而非 PMF 达成之后的步骤
+步骤 9：将市场推广（Distribution）视为产品市场匹配（Product-Market Fit，PMF）的一部分，而非 PMF 达成之后的步骤
 
 In traditional startup wisdom, distribution is often treated as a second act. First, you focus on finding product-market fit. Then, once you've proven that people want your product, you worry about growth, channels, and scaling. The underlying assumption is that if you've built something people love, distribution will come later, growth is just a matter of pouring fuel on the fire.
 
@@ -1362,7 +1370,7 @@ That logic does not hold in AI. In AI, distribution is part of PMF itself. Why? 
 
 There are three reasons AI demands distribution-first thinking:
 
-#### 人工智能为何必须即刻拥抱分布式架构人工智能的发展要求我们优先考虑分布式架构，主要有以下三个原因：
+人工智能为何必须即刻拥抱分布式架构人工智能的发展要求我们优先考虑分布式架构，主要有以下三个原因：
 
 1. The novelty tax: Users are curious about AI, so they'll try anything once. But curiosity-driven usage is fragile. Unless your product embeds itself where the job actually happens, users won't return. Distribution is what turns curiosity into habit.
 
@@ -1410,7 +1418,7 @@ Think about distribution not as an afterthought but as a three-stage system that
 
 One AI startup tried to launch a standalone app for hospital documentation. The value was clear, but adoption was weak. Why? Because doctors didn't want to leave their EHR (Electronic Health Record) systems to use a separate tool. The product was technically impressive, but distribution was misaligned.
 
-#### 案例：独立应用与嵌入式 API 对比一家人工智能（AI）初创公司曾尝试推出一款用于医院文书工作的独立应用。产品的价值很明显，但市场接受度却很低。原因何在？因为医生们不愿意离开他们正在使用的电子健康记录（EHR）系统，转而去操作一个独立的工具。这款产品在技术上固然出色，但其分发模式与用户的实际工作场景严重脱节。
+案例：独立应用与嵌入式 API 对比一家人工智能（AI）初创公司曾尝试推出一款用于医院文书工作的独立应用。产品的价值很明显，但市场接受度却很低。原因何在？因为医生们不愿意离开他们正在使用的电子健康记录（EHR）系统，转而去操作一个独立的工具。这款产品在技术上固然出色，但其分发模式与用户的实际工作场景严重脱节。
 
 They pivoted: instead of an app, they built an API that embedded directly inside Epic and Cerner (the dominant EHR systems). Overnight, adoption surged. Same underlying value, but the distribution wedge changed everything. Doctors no longer had to change behavior — the AI showed up where they already worked.
 
@@ -1422,7 +1430,7 @@ The lesson: in AI, distribution is not a growth channel — it's part of the pro
 
 核心启示：在人工智能（AI）领域，产品触达用户的方式（Distribution）本身并非单纯的增长渠道，而是产品体验不可或缺的一环。
 
-#### 实现产品市场契合（Product-Market Fit）的实用渠道策略
+实现产品市场契合（Product-Market Fit）的实用渠道策略
 
 * Embed, don't replace. Find the tools your ICP already uses daily and integrate directly. AI that feels invisible will win over AI that demands new habits.
 
@@ -1443,7 +1451,7 @@ The lesson: in AI, distribution is not a growth channel — it's part of the pro
 
 I've seen AI founders hit early traction, then pour money into paid acquisition. The result? Lots of signups, weak activation, high churn. Because even if users show up, the product isn't where the job happens. No distribution wedge, no habit, no stickiness. Scaling only amplified the leaks.
 
-#### 为何缺乏市场匹配的扩张会失败我见过不少 AI 初创公司的创始人，在取得初步市场反响后，便大举投入资金进行付费获客。结果如何？注册量暴涨，但用户激活率很低，流失率却很高。因为即使用户被吸引来了，产品也并未融入他们实际需要完成任务的场景。没有独特的市场切入点，无法形成用户习惯，也就没有产品粘性。一味追求扩张，只会让用户流失的漏洞变得更大。
+为何缺乏市场匹配的扩张会失败我见过不少 AI 初创公司的创始人，在取得初步市场反响后，便大举投入资金进行付费获客。结果如何？注册量暴涨，但用户激活率很低，流失率却很高。因为即使用户被吸引来了，产品也并未融入他们实际需要完成任务的场景。没有独特的市场切入点，无法形成用户习惯，也就没有产品粘性。一味追求扩张，只会让用户流失的漏洞变得更大。
 
 The companies that survive flip the equation: they obsess about embedding into workflows and building natural loops first, then scale only once they know every new user is likely to stick.
 
@@ -1463,7 +1471,7 @@ Distribution isn't the sequel to PMF. In AI, distribution is PMF.
 
 分布并非概率质量函数（Probability Mass Function，PMF）的进阶概念。在人工智能（AI）领域，分布指的就是概率质量函数（PMF）。
 
-### 步骤 10. 建立制度化的反馈 → 模型 → 产品迭代循环
+步骤 10. 建立制度化的反馈 → 模型 → 产品迭代循环
 
 If there's one truth that separates fleeting AI demos from durable AI products, it's this: your product is only as strong as the feedback loops you institutionalize. In SaaS, product feedback is about features. Users ask for new buttons, better dashboards, or integrations. You prioritize the roadmap, ship updates, and customers see progress. In AI, feedback is not just about features — it's about truth. Every correction, rejection, or acceptance from a user is a signal that can (and must) feed directly back into the model.
 
@@ -1499,7 +1507,7 @@ After six months, Startup A is still relying on manual iteration. Startup B has 
 
 The most successful AI companies design for a self-reinforcing loop:
 
-#### 复利式反馈 → 模型 → 产品循环最成功的 AI 公司都围绕一个自我强化的循环进行设计：
+复利式反馈 → 模型 → 产品循环最成功的 AI 公司都围绕一个自我强化的循环进行设计：
 
 1. User interacts with output.Approves, edits, rejects, or escalates.
 
@@ -1547,7 +1555,7 @@ This isn't a nice-to-have. It's the operating system of an AI company. Without i
 
 One AI sales coaching platform built their moat not by having the flashiest demo, but by capturing corrections from thousands of sales reps. Every time a rep adjusted a suggested response, the system logged it. Over time, those corrections created a dataset of what "good" sales language looked like in specific industries.
 
-#### 案例：AI 销售辅导（AI Sales Coaching)
+案例：AI 销售辅导（AI Sales Coaching)
 
 一个 AI 销售辅导平台构筑其竞争壁垒的方式，并不在于做出最炫目的演示，而在于持续收集数千名销售代表的反馈修正。每当有销售代表修改了系统建议的回复，这个行为都会被系统记录下来。长此以往，这些修正数据便汇聚成一个数据集，清晰地勾勒出在特定行业里，何为「优秀」的销售话术。
 
@@ -1559,7 +1567,7 @@ Fast forward two years: competitors could copy the idea, but they couldn't copy 
 
 1. Design UI for corrections. Don't hide feedback behind obscure buttons. Make it effortless for users to accept, reject, or edit outputs.Example: Approve/reject toggles, inline editing, or one-click escalation.
 
-#### 如何将反馈制度化
+如何将反馈制度化
 
 1. **设计用于修正的用户界面**。不要将反馈功能隐藏在难以发现的按钮后面。要让用户能够轻松地接受、拒绝或编辑输出结果。例如：提供批准 / 拒绝开关、支持内联编辑，或实现一键问题上报功能。
 
@@ -1592,7 +1600,7 @@ Fast forward two years: competitors could copy the idea, but they couldn't copy 
 
 There's another hidden benefit: when users see their corrections lead to visible improvements, trust grows. They stop thinking of your AI as a black box and start seeing it as a partner that learns from them. This transforms the relationship from "I don't trust this tool" to "I'm training this tool for my needs." That psychological shift is the foundation of durable adoption.
 
-#### 当反馈产生效果，信任随之而来这里还有一个隐藏的好处：当用户发现自己的纠正带来了明显的改进时，信任感便会增强。他们不再把你的 AI 看作一个神秘的黑箱，而是开始将其视为一个能从自己这里学习的伙伴。这种转变将用户与工具的关系，从「我不信任这个东西」升级为「我在按自己的需要培养它」。这种心理上的转变，正是用户愿意长期使用该产品的基石。
+当反馈产生效果，信任随之而来这里还有一个隐藏的好处：当用户发现自己的纠正带来了明显的改进时，信任感便会增强。他们不再把你的 AI 看作一个神秘的黑箱，而是开始将其视为一个能从自己这里学习的伙伴。这种转变将用户与工具的关系，从「我不信任这个东西」升级为「我在按自己的需要培养它」。这种心理上的转变，正是用户愿意长期使用该产品的基石。
 
 The risk of ignoring feedback
 
@@ -1614,9 +1622,11 @@ The companies that survive this AI wave will be the ones that institutionalize f
 
 ### Conclusion: Building AI Products That Endure
 
+结论
+
 Finding PMF in AI is not about chasing scale for its own sake or being the loudest demo on launch day. It's about proving, over and over again, that your product creates undeniable value in the places where pain is sharpest and trust matters most.
 
-### 结论：构建持久的 AI 产品在 AI 领域找到产品市场契合度（Product-Market Fit，PMF），其关键不在于盲目追求规模，也不在于发布当天做出最炫目的演示。其核心在于，能够持续证明你的产品在用户痛点最深、信任至关重要的场景中，创造了无可辩驳的价值。
+构建持久的 AI 产品在 AI 领域找到产品市场契合度（Product-Market Fit，PMF），其关键不在于盲目追求规模，也不在于发布当天做出最炫目的演示。其核心在于，能够持续证明你的产品在用户痛点最深、信任至关重要的场景中，创造了无可辩驳的价值。
 
 The founders who succeed won't be those who try to boil the ocean, but those who start narrow, design for edge cases, and build defensibility into their product from day one. They'll be the ones who obsess over trust, who measure adoption depth instead of vanity, and who treat distribution not as a growth lever but as part of the product itself.
 
@@ -1631,6 +1641,5 @@ The AI landscape is crowded, noisy, and unforgiving. But it is also wide open fo
 人工智能（AI）的竞技场拥挤不堪、嘈杂喧闹、且充满挑战。然而，对于那些愿意以精准姿态切入的人来说，这片天地也无比广阔。是湮没于喧嚣，还是铸就历久弥新的事业，其分野并非取决于雄心或炒作，而是源于**精准定位并持之以恒**的准则。
 
 If you want to master building AI products that will last for the decades to come, consider joining Miqdad's 6-week AI PM Certification with $500 off. Book here.
-
 
 如果你想精通构建能历久弥新的 AI 产品，欢迎加入 Miqdad 为期 6 周的 AI 产品经理（AI Product Manager）认证课程，立减 500 美元。立即预订。
