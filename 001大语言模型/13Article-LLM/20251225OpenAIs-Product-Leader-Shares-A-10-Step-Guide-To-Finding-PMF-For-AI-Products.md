@@ -366,7 +366,7 @@ AI is seductive because features demo so well. Show a slick transcription, a per
 
 Users ask:
 
-"Does this solve my actual problem?
+Does this solve my actual problem?
 
 用户常常会这样问：
 
@@ -374,49 +374,51 @@ Users ask:
 
 Does this remove the bottleneck I've been struggling with every week?
 
-Does it save me money, reduce risk, or free up my time?"
-
 这能解决那个每周都困扰我的瓶颈问题吗？
+
+Does it save me money, reduce risk, or free up my time?"
 
 它能帮我省钱、降低风险，还是为我节省时间？
 
 If the answer is no, the feature doesn't matter.
 
-This is why many AI startups get stuck in "demo land." They build clever outputs, win applause on social media, maybe even drive a wave of signups, but churn follows because the features don't anchor to a painful enough problem. The output is interesting, not indispensable.
-
 如果答案是否定的，那么这个功能就无关紧要。
+
+This is why many AI startups get stuck in "demo land." They build clever outputs, win applause on social media, maybe even drive a wave of signups, but churn follows because the features don't anchor to a painful enough problem. The output is interesting, not indispensable.
 
 这正是许多 AI 初创公司陷入「演示陷阱」的原因。他们打造了精巧的功能演示，在社交媒体上赢得了满堂彩，甚至可能带来一波用户注册，但随之而来的便是用户流失，因为这些功能并未真正解决用户的痛点。其产出固然有趣，却并非不可或缺。
 
 #### Bottlenecks: where pain compounds
 
+瓶颈所在：痛点滋生的地方
+
 So where should you look? Instead of chasing features, look for bottlenecks, those points in workflows where progress grinds to a halt, where time sinks are the norm, where expertise is scarce, or where mistakes carry outsized consequences.
 
-#### 瓶颈所在：痛点滋生的地方那么，究竟该从何处着手呢？与其追逐各种功能，不如聚焦于瓶颈。瓶颈是工作流中那些进展缓慢如牛、时间黑洞频现、专业人才难觅，或是小错酿成大祸的环节。
+那么，究竟该从何处着手呢？与其追逐各种功能，不如聚焦于瓶颈。瓶颈是工作流中那些进展缓慢如牛、时间黑洞频现、专业人才难觅，或是小错酿成大祸的环节。
 
 Here are three categories of bottlenecks that consistently create high-leverage opportunities for AI:
 
-1. Time sinks → Processes that consume hours of high-value talent. Example: Analysts spending days consolidating data into quarterly reports. AI can collapse this into minutes.
-
 以下是三类持续为人工智能（AI）创造高杠杆机会的瓶颈：
 
-1. **时间黑洞** → 那些大量消耗高价值人才时间的流程。例如：分析师需要花费数天来整理并汇总数据，以完成季度报告。AI 可以将这一过程压缩到几分钟。
+1 Time sinks → Processes that consume hours of high-value talent. Example: Analysts spending days consolidating data into quarterly reports. AI can collapse this into minutes.
 
-2. Expertise gaps → Tasks that require rare, expensive skills. Example: Contract review in legal teams. AI can democratize expertise by giving mid-level employees "senior-level" guidance.
+**时间黑洞** → 那些大量消耗高价值人才时间的流程。例如：分析师需要花费数天来整理并汇总数据，以完成季度报告。AI 可以将这一过程压缩到几分钟。
 
-2. 专业知识缺口 → 指那些需要稀有且昂贵技能的任务。例如：法律团队中的合同审查。人工智能（AI）能够为中级员工提供「高级别」的指导，从而让专业知识不再高不可攀。
+2 Expertise gaps → Tasks that require rare, expensive skills. Example: Contract review in legal teams. AI can democratize expertise by giving mid-level employees "senior-level" guidance.
 
-3. Regulation headaches → Jobs where errors carry massive penalties. Example: Healthcare coding or financial compliance. AI can reduce human error and de-risk millions in fines.
+专业知识缺口 → 指那些需要稀有且昂贵技能的任务。例如：法律团队中的合同审查。人工智能（AI）能够为中级员工提供「高级别」的指导，从而让专业知识不再高不可攀。
 
-3. 监管难题类工作：指那些一旦出错便会招致巨额惩罚的岗位。例如：医疗信息编码或金融合规审查。人工智能（AI）能够减少人为失误，从而帮助规避数百万美元的罚款风险。
+3 Regulation headaches → Jobs where errors carry massive penalties. Example: Healthcare coding or financial compliance. AI can reduce human error and de-risk millions in fines.
+
+监管难题类工作：指那些一旦出错便会招致巨额惩罚的岗位。例如：医疗信息编码或金融合规审查。人工智能（AI）能够减少人为失误，从而帮助规避数百万美元的罚款风险。
 
 When you find a bottleneck that sits at the intersection of these categories, you've found a high-leverage pain point that people will pay to eliminate.
 
-#### Case study: Radiology AI
-
 当你找到一个处于这些类别交叉点的瓶颈时，你就发现了一个关键痛点，人们愿意为此付费解决。
 
-#### 案例研究：医学影像 AI
+#### Case study: Radiology AI
+
+案例研究：医学影像 AI
 
 Let's take radiology as an example. Many AI startups in healthcare have built imaging models with the pitch: "Our model detects tumors 5% more accurately than the state of the art." Impressive technically, but in practice, this pitch often fails to drive adoption.
 
@@ -440,17 +442,19 @@ Notice the shift: same underlying technology (language + image models), but inst
 
 #### Why pain beats features every time
 
+为何痛点总能击败功能
+
 When you build around features, you're always vulnerable: the next model release, the next well-funded competitor, or the next API update can erase your advantage. But when you build around pain points, you're resilient.
 
-#### 为何痛点总能击败功能如果你围绕功能来打造产品，你将始终处于被动：下一次模型迭代、下一个财力雄厚的竞争对手，或是下一次 API 更新，都可能让你原有的优势荡然无存。但如果你围绕痛点来构建，你的根基将稳固得多。
+如果你围绕功能来打造产品，你将始终处于被动：下一次模型迭代、下一个财力雄厚的竞争对手，或是下一次 API 更新，都可能让你原有的优势荡然无存。但如果你围绕痛点来构建，你的根基将稳固得多。
 
-* A feature-first company says: "We summarize meetings better than others."
+1 A feature-first company says: "We summarize meetings better than others."
 
-* A pain-first company says: "We help sales teams recover 20% more pipeline by eliminating manual follow-ups."
+一个以功能为先的公司会说：「我们的会议纪要功能比别家做得更好。」
 
-* 一个以功能为先的公司会说：「我们的会议纪要功能比别家做得更好。」
+2 A pain-first company says: "We help sales teams recover 20% more pipeline by eliminating manual follow-ups."
 
-* 一个以痛点为先的公司会说：「我们通过自动化手动跟进工作，帮助销售团队多回收 20% 的销售管线（pipeline）机会。」
+一个以痛点为先的公司会说：「我们通过自动化手动跟进工作，帮助销售团队多回收 20% 的销售管线（pipeline）机会。」
 
 The second statement ties directly to business value. It's hard to copy because it requires deep integration with customer context, not just API access. And most importantly, it creates urgency. Features invite curiosity. Pain points drive budgets.
 
@@ -458,29 +462,31 @@ The second statement ties directly to business value. It's hard to copy because 
 
 How to uncover high-leverage pain points
 
+如何发掘关键性痛点
+
 Finding these pain points requires going deeper than surface-level user interviews. Most customers will say they want "better features" because that's what's visible. But your job as a founder is to dig past symptoms to root causes.
 
-如何发掘关键性痛点要找到这些痛点，需要比流于表面的用户访谈更深入。大多数客户会说他们想要「更好的功能」，因为这是他们能直观看到的。但你作为创始人的职责，是透过现象看本质，深挖症状，找到根本原因。
+要找到这些痛点，需要比流于表面的用户访谈更深入。大多数客户会说他们想要「更好的功能」，因为这是他们能直观看到的。但你作为创始人的职责，是透过现象看本质，深挖症状，找到根本原因。
 
 Ask:
 
-* What tasks do your users consistently procrastinate on? (signal: painful time sinks)
+1 What tasks do your users consistently procrastinate on? (signal: painful time sinks)
 
-* 你的用户总是习惯性拖延哪些任务？（信号：那些耗时且令人痛苦的工作）
+你的用户总是习惯性拖延哪些任务？（信号：那些耗时且令人痛苦的工作）
 
-* What errors have cost them real money or reputation? (signal: regulation headaches)
+2 What errors have cost them real money or reputation? (signal: regulation headaches)
 
-* What expertise do they wish they had on staff but can't afford? (signal: expertise gaps)
+哪些错误让他们赔了钱或损害了声誉？（信号指向：监管难题）
 
-*  哪些错误让他们赔了钱或损害了声誉？（信号指向：监管难题）
+3 What expertise do they wish they had on staff but can't afford? (signal: expertise gaps)
 
-*  他们希望团队具备哪些目前负担不起的专业知识？（信号指向：专业能力缺口）
+他们希望团队具备哪些目前负担不起的专业知识？（信号指向：专业能力缺口）
 
-* What's the worst-case scenario if this job is done poorly? (signal: high leverage)
+4 What's the worst-case scenario if this job is done poorly? (signal: high leverage)
+
+如果这项工作没做好，最坏的结果会是什么？（关键信号：高杠杆效应）
 
 A useful exercise is to map your target customer's workflow step by step and highlight the moments of friction, delay, or risk. Often, the highest-leverage opportunities are not where users say they want help, but where the workflow bottlenecks naturally cluster.
-
-* 如果这项工作没做好，最坏的结果会是什么？（关键信号：高杠杆效应）
 
 一个行之有效的方法是：逐步梳理目标客户的整个工作流程，并标出其中存在摩擦、延误或风险的环节。通常，能产生最大杠杆效应的机会，并不在用户口头声称需要帮助的地方，而恰恰隐藏在工作流程中瓶颈自然集中的那些环节。
 
@@ -494,15 +500,17 @@ And once you anchor your product around a high-leverage pain point, every featur
 
 ### Step 3. Narrow Your Initial ICP to the Point of Uncomfort
 
+步骤 3. 将你的初始理想客户画像（ICP）聚焦到令人不适的程度
+
 One of the most common mistakes I see AI founders make is starting far too broad.
 
-### 步骤 3. 将你的初始理想客户画像（ICP）聚焦到令人不适的程度我观察到 AI 创业者最常犯的一个错误，就是一开始把目标市场定得过于宽泛。
+我观察到 AI 创业者最常犯的一个错误，就是一开始把目标市场定得过于宽泛。
 
 They'll say things like, "Our AI tool is for all marketers." Or "Our product helps every salesperson." Or worse, "Anyone who writes can use this."
 
-On the surface, broad markets sound attractive. After all, the Total Addressable Market (TAM) looks enormous. Investors nod when you say "billions of potential users."
+他们常会这样说：「我们的 AI 工具面向所有营销人员。」或者「我们的产品能助力每一位销售人员。」更夸张的还有：「任何需要写作的人都能使用它。」
 
-他们常会这样说："我们的 AI 工具面向所有营销人员。」或者「我们的产品能助力每一位销售人员。」更夸张的还有："任何需要写作的人都能使用它。"
+On the surface, broad markets sound attractive. After all, the Total Addressable Market (TAM) looks enormous. Investors nod when you say "billions of potential users."
 
 表面上看，宽泛的市场定位颇具吸引力。毕竟，总可寻址市场（TAM）的规模显得十分庞大。当你说出「数十亿潜在用户」时，投资者往往会表示认可。
 
@@ -520,50 +528,55 @@ They care about whether your product solves their exact, painful problem better 
 
 #### Why narrowing feels counterintuitive
 
+为什么聚焦目标客户
+
 Most founders resist narrowing their ICP because it feels like limiting upside. If you say your tool is only for "performance marketers at $10–50M DTC brands," you worry you're cutting out 95% of the market. If you say your AI forecasting tool is only for "gaming PMs," you fear investors will think it's too niche.
 
-#### 为什么聚焦目标客户感觉反直觉大多数创始人不愿意收窄他们的理想客户画像（Ideal Customer Profile，ICP），因为这感觉像是主动限制了增长潜力。如果你声称自己的工具只服务于「价值 1000 万至 5000 万美元的 DTC（直面消费者）品牌中的绩效营销人员」，你可能会担心自己放弃了 95% 的市场。如果你说自家的人工智能（AI）预测工具只面向「游戏产品经理（Product Manager）」，你又害怕投资者会认为这个市场过于细分。
+感觉反直觉大多数创始人不愿意收窄他们的理想客户画像（Ideal Customer Profile，ICP），因为这感觉像是主动限制了增长潜力。如果你声称自己的工具只服务于「价值 1000 万至 5000 万美元的 DTC（直面消费者）品牌中的绩效营销人员」，你可能会担心自己放弃了 95% 的市场。如果你说自家的人工智能（AI）预测工具只面向「游戏产品经理（Product Manager）」，你又害怕投资者会认为这个市场过于细分。
 
 But here's the paradox: the narrower you go at the start, the faster you find PMF. Why? Because when you define your ICP precisely, three powerful things happen:
 
 然而，这里存在一个悖论：你最初的定位越精准，找到产品市场契合（Product-Market Fit，PMF）的速度就越快。为什么呢？因为当你精确地定义了你的理想客户画像（Ideal Customer Profile，ICP）时，就会引发三个强大的效应：
 
-1. You speak their language. Instead of vague messaging like "AI for marketers", you can say "AI that fixes post-iOS14 attribution leaks for DTC brands." The latter hits like a lightning bolt because it mirrors the exact pain your ICP feels.
+1 You speak their language. Instead of vague messaging like "AI for marketers", you can say "AI that fixes post-iOS14 attribution leaks for DTC brands." The latter hits like a lightning bolt because it mirrors the exact pain your ICP feels.
 
-1. 你能用他们的语言沟通。与其使用「面向营销人员的 AI」这样模糊的信息，不如说「为 DTC 品牌修复 iOS14 更新后归因数据泄露的 AI。」后者之所以能一针见血，是因为它精准映射了你的理想客户画像（ICP， Ideal Customer Profile）正在经历的确切痛点。
+你能用他们的语言沟通。与其使用「面向营销人员的 AI」这样模糊的信息，不如说「为 DTC 品牌修复 iOS14 更新后归因数据泄露的 AI。」后者之所以能一针见血，是因为它精准映射了你的理想客户画像（ICP， Ideal Customer Profile）正在经历的确切痛点。
 
-2. You embed deeply into workflows. When you build for everyone, you design shallow features that kind of work for many. When you build for a narrow ICP, you can tailor integrations, UI, and outputs exactly for their workflow, making the product indispensable.
+2 You embed deeply into workflows. When you build for everyone, you design shallow features that kind of work for many. When you build for a narrow ICP, you can tailor integrations, UI, and outputs exactly for their workflow, making the product indispensable.
 
-2. **深度集成工作流程**。如果面向大众市场开发产品，往往只能设计一些通用的功能，勉强满足多数人的需求。而如果针对一个狭窄的特定客户群体（ICP）进行开发，就能根据他们具体的工作流程，量身打造集成方案、用户界面和输出结果，从而打造出不可或缺的产品。
+**深度集成工作流程**。如果面向大众市场开发产品，往往只能设计一些通用的功能，勉强满足多数人的需求。而如果针对一个狭窄的特定客户群体（ICP）进行开发，就能根据他们具体的工作流程，量身打造集成方案、用户界面和输出结果，从而打造出不可或缺的产品。
 
-3. You accelerate word-of-mouth. When you solve a niche group's pain so well, they become evangelists. The DTC founder tells other founders at their mastermind. The gaming PM shares your tool in their Slack community. Early growth in AI doesn't come from ads; it comes from tight communities spreading tools that actually work.
+3 You accelerate word-of-mouth. When you solve a niche group's pain so well, they become evangelists. The DTC founder tells other founders at their mastermind. The gaming PM shares your tool in their Slack community. Early growth in AI doesn't come from ads; it comes from tight communities spreading tools that actually work.
 
-3. 你能加速口碑传播。当你把一个细分人群的痛点解决得足够出色时，他们就会变成你的忠实倡导者。那位直接面向消费者（DTC）的创始人会在他的创业者圈子里推荐你的产品。那位游戏产品经理也会在他们的 Slack 社区里分享你的工具。人工智能（AI）领域的早期增长，往往不是靠广告推动的；而是靠那些联系紧密的社区，口口相传那些真正好用的工具。
+你能加速口碑传播。当你把一个细分人群的痛点解决得足够出色时，他们就会变成你的忠实倡导者。那位直接面向消费者（DTC）的创始人会在他的创业者圈子里推荐你的产品。那位游戏产品经理也会在他们的 Slack 社区里分享你的工具。人工智能（AI）领域的早期增长，往往不是靠广告推动的；而是靠那些联系紧密的社区，口口相传那些真正好用的工具。
 
 #### Example: Post-iOS14 marketers vs. "all marketers"
 
+示例：iOS 14 更新后的营销人员与「所有营销人员」对比
+
 Let's make this concrete. Imagine you're building an AI analytics tool. You could pitch it as "AI that helps marketers optimize campaigns."
 
-#### 示例：iOS14 更新后的营销人员与「所有营销人员」对比具体来说。假设你正在开发一款 AI（Artificial Intelligence）分析工具。你可以将其宣传为「能帮助营销人员优化广告活动的 AI」。
+具体来说。假设你正在开发一款 AI（Artificial Intelligence）分析工具。你可以将其宣传为「能帮助营销人员优化广告活动的 AI」。
 
 Sounds fine, but it's vague. Which marketers? Paid search? Brand marketers? Social media managers? Each has different workflows, pains, and budgets.
 
-Now let's narrow. You choose performance marketers at $10–50M DTC brands struggling with post-iOS14 tracking. Suddenly, everything sharpens:
-
 话虽如此，但这定义太宽泛了。具体指的是哪些营销人员？是负责付费搜索的？品牌营销的？还是社交媒体运营的？他们的工作流程、痛点与预算都各不相同。
+
+Now let's narrow. You choose performance marketers at $10–50M DTC brands struggling with post-iOS14 tracking. Suddenly, everything sharpens:
 
 现在，让我们把范围收窄。假设你聚焦于那些年营收在 1000 万至 5000 万美元的直面消费者（DTC）品牌，并且他们的绩效营销人员正苦于应对 iOS 14 隐私政策更新后的追踪难题。突然间，整个画面就清晰锐利了起来：
 
-* Pain clarity: Post-iOS14, attribution has become unreliable. Performance marketers at this revenue band are losing millions to inefficient ad spend and have budgets to fix it.
+1 Pain clarity: Post-iOS14, attribution has become unreliable. Performance marketers at this revenue band are losing millions to inefficient ad spend and have budgets to fix it.
 
-*  **归因痛点**：自 iOS 14 更新以来，广告归因变得不可靠。处于这一收入规模的效果营销人员，正因广告投放效率低下而损失数百万美元，并且他们手握预算来解决这一问题。
+**归因痛点**：自 iOS 14 更新以来，广告归因变得不可靠。处于这一收入规模的效果营销人员，正因广告投放效率低下而损失数百万美元，并且他们手握预算来解决这一问题。
 
-* Workflow clarity: These marketers live in Meta Ads Manager, Google Analytics, and Shopify. You can build integrations directly into their stack.
+2 Workflow clarity: These marketers live in Meta Ads Manager, Google Analytics, and Shopify. You can build integrations directly into their stack.
 
-* Message clarity: Your pitch becomes, "We help $10–50M DTC brands recover lost performance by fixing attribution leaks caused by iOS14." That is ten times more compelling than "AI for marketers."
+**工作流契合度高**：这些营销人员的日常工作高度依赖 Meta Ads Manager、Google Analytics 和 Shopify 等平台。你可以将产品直接集成到他们现有的工作流中。
 
-*  **工作流契合度高**：这些营销人员的日常工作高度依赖 Meta Ads Manager、Google Analytics 和 Shopify 等平台。你可以将产品直接集成到他们现有的工作流中。
-*  **价值主张清晰**：你的销售说辞可以非常明确：「我们帮助年收入在千万至五千万美元级别的直接面向消费者（DTC）品牌，通过修复 iOS14 更新导致的归因数据漏洞，挽回流失的广告绩效。」这比泛泛而谈的「给营销人员用的 AI」要**有说服力十倍**。
+3 Message clarity: Your pitch becomes, "We help $10–50M DTC brands recover lost performance by fixing attribution leaks caused by iOS14." That is ten times more compelling than "AI for marketers."
+
+**价值主张清晰**：你的销售说辞可以非常明确：「我们帮助年收入在千万至五千万美元级别的直接面向消费者（DTC）品牌，通过修复 iOS 14 更新导致的归因数据漏洞，挽回流失的广告绩效。」这比泛泛而谈的「给营销人员用的 AI」要有说服力十倍。
 
 By narrowing, you don't shrink your chances of success. You increase them, because now your product has a chance to become a "must-have" for a well-defined group.
 
@@ -571,30 +584,35 @@ By narrowing, you don't shrink your chances of success. You increase them, becau
 
 #### The discomfort test
 
+不适感测试
+
 Here's a rule of thumb I share with founders: if your ICP definition doesn't feel uncomfortably narrow, it's not narrow enough.
 
-#### 不适感测试我常与创始人们分享一条经验法则：如果你对理想客户画像（Ideal Customer Profile，ICP）的定义，没有让你觉得窄到难受，那就说明它还不够窄。
+我常与创始人们分享一条经验法则：如果你对理想客户画像（Ideal Customer Profile，ICP）的定义，没有让你觉得窄到难受，那就说明它还不够窄。
 
-* Saying "marketers" is too broad.
+1 Saying "marketers" is too broad.
 
-* Saying "performance marketers" is still too broad.
+使用「营销人员」这个说法太过宽泛。
 
-* 使用「营销人员」这个说法太过宽泛。
-* 即使称之为「效果营销人员（performance marketers）」，定义范围依然不够精确。
+2 Saying "performance marketers" is still too broad.
 
-* Saying "performance marketers at $10–50M DTC brands struggling with post-iOS14 tracking", that's the level of specificity you need.
+即使称之为「效果营销人员（performance marketers）」，定义范围依然不够精确。
+
+3 Saying "performance marketers at $10–50M DTC brands struggling with post-iOS14 tracking", that's the level of specificity you need.
+
+说出「那些在 iOS 14 隐私更新（post-iOS14）后追踪遇阻、业务规模在 1000 万至 5000 万美元的直营（DTC）品牌中的绩效营销人员」，就需要具体到这个程度。
 
 Why? Because when you pitch to that group, you'll see heads nod immediately. You're describing their exact life, not some abstract persona. And that resonance is the first signal you're on the right track toward PMF.
-
-* 说出「那些在 iOS14 隐私更新（post-iOS14）后追踪遇阻、业务规模在 1000 万至 5000 万美元的直营（DTC）品牌中的绩效营销人员」，就需要具体到这个程度。
 
 为什么？因为当你向这个群体推介时，他们会立刻频频点头。你描述的是他们切身的真实处境，而非某个模糊抽象的用户画像。而这种共鸣，正是你的产品迈向产品市场契合（Product-Market Fit，PMF）正确轨道的首个信号。
 
 #### ICP narrowing as an accelerant
 
+收窄理想客户画像（ICP）作为增长催化剂
+
 In SaaS, you can sometimes start broad because horizontal products (like Slack or Dropbox) can ride network effects or virality. But in AI, where novelty fades fast and features are easy to clone, narrow ICP is your survival. It forces you to build a product so deeply valuable to a niche group that they can't live without it. And from there, you earn the right to expand.
 
-#### 收窄理想客户画像（ICP）作为增长催化剂在 SaaS（软件即服务）领域，企业有时可以采取宽泛的切入点，因为像 Slack 或 Dropbox 这样的横向产品（即面向广泛用户的通用型产品）能够借助网络效应或病毒式传播获得增长。但在人工智能（AI）领域，新奇感消退极快，产品功能也容易被复制，因此，聚焦于一个狭窄的理想客户画像（ICP）关乎企业生存。这迫使你必须为某个细分群体打造一款价值如此深厚、不可或缺的产品。唯有在此基础上，你才获得了向外扩张的资格。
+在 SaaS（软件即服务）领域，企业有时可以采取宽泛的切入点，因为像 Slack 或 Dropbox 这样的横向产品（即面向广泛用户的通用型产品）能够借助网络效应或病毒式传播获得增长。但在人工智能（AI）领域，新奇感消退极快，产品功能也容易被复制，因此，聚焦于一个狭窄的理想客户画像（ICP）关乎企业生存。这迫使你必须为某个细分群体打造一款价值如此深厚、不可或缺的产品。唯有在此基础上，你才获得了向外扩张的资格。
 
 So don't ask, "Who could use this?" Ask, "Who needs this so badly they'll pay tomorrow?" The answer will almost always be a smaller group than you first imagined. That's the group that will give you the traction, feedback, and revenue to survive. And ironically, that's also the group that will one day allow you to grow big.
 
@@ -602,9 +620,11 @@ So don't ask, "Who could use this?" Ask, "Who needs this so badly they'll pay to
 
 ### Step 4. Design for Edge Cases, Not Averages
 
+步骤 4. 为边缘情况设计，而非为平均值设计
+
 In traditional SaaS, finding PMF usually means building for the averages. You identify the most common workflows, you optimize for the broad middle of user behavior, and you ensure the 80% of everyday use cases are covered.
 
-### 步骤 4. 为边缘情况设计，而非为平均值设计在传统的 SaaS（软件即服务）领域，寻找产品市场契合度（PMF）通常意味着针对平均值进行设计。你需要识别最常见的工作流程，为主流用户行为模式进行优化，并确保覆盖 80% 的日常使用场景。
+在传统的 SaaS（软件即服务）领域，寻找产品市场契合度（PMF）通常意味着针对平均值进行设计。你需要识别最常见的工作流程，为主流用户行为模式进行优化，并确保覆盖 80% 的日常使用场景。
 
 Customers accept that edge cases will require workarounds, because SaaS is deterministic… if the button is there and the workflow is supported, it works every time.
 
@@ -622,7 +642,7 @@ Instead, AI products find PMF fastest when they are designed for edge cases, tho
 
 Think of a general-purpose AI writing tool. You pitch it as: "Write anything — emails, essays, blog posts, sales copy, social media." That sounds powerful, but it immediately creates two problems:
 
-#### 为何「平均」水准在 AI 领域行不通以一款通用 AI 写作工具为例。你可能会这样推销它：「它能写任何东西 —— 电子邮件、论文、博客文章、销售文案、社交媒体帖子。」这听起来功能强大，但立刻带来了两个问题：
+为何「平均」水准在 AI 领域行不通以一款通用 AI 写作工具为例。你可能会这样推销它：「它能写任何东西 —— 电子邮件、论文、博客文章、销售文案、社交媒体帖子。」这听起来功能强大，但立刻带来了两个问题：
 
 1. Output quality is inconsistent. Writing a technical blog post requires different tone, accuracy, and context than writing a birthday invitation. Averages stretch the model too thin. Users encounter errors, awkward phrasing, or hallucinated facts, and they lose trust.
 
