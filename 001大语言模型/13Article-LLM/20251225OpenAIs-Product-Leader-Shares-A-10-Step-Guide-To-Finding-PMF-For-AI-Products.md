@@ -836,28 +836,15 @@ One company in the healthcare space learned this the hard way. Their first produ
 
 一家医疗健康领域的公司为此付出了惨痛教训。他们的首款产品能够根据医患对话自动生成病历记录。产品速度很快，技术上也令人赞叹。然而，它的市场推广却陷入了停滞。医生们并不信任这套系统，因为即便 95% 的记录是准确的，那剩下的 5% 错误也可能引发医疗事故。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 The company pivoted to include a trust layer: instead of auto-submitting, the tool displayed each generated sentence with a simple "approve" or "edit" option. What happened? Initially, this slowed down usage slightly. But within weeks, doctors reported higher confidence, and as they saw fewer errors over time, they began approving most sentences automatically. Within months, the same doctors were saying, "I can't imagine writing notes manually anymore."
 
 该公司调整了策略，引入了一个「信任层」：工具不再自动提交生成的文本，而是将每一个生成的句子显示出来，并提供简单的「批准」或「编辑」选项。结果如何呢？起初，这让使用流程稍微慢了一点。但几周之内，医生们表示他们的信心提升了，并且随着使用中看到的错误越来越少，他们开始习惯性地批准大部分句子。几个月后，同样是这些医生感叹道：「我已经无法想象再回去手动写笔记了。」
 
 The paradox is that by adding friction, the company built trust. And by building trust, they unlocked scale.
 
-#### Why scaling without trust fails
-
 其中的悖论在于：公司通过增加（用户操作的）摩擦，反而建立了信任。而正是凭借这份信任，他们才得以实现规模化增长。
+
+#### Why scaling without trust fails
 
 没有信任，为何无法实现规模化？
 
@@ -871,30 +858,33 @@ The lesson: if you scale before building trust, you're just scaling churn. And o
 
 How to measure trust in AI products
 
+如何衡量用户对 AI 产品的信任
+
 Unlike SaaS, where you can look at DAUs or retention curves, trust needs its own metrics. Some signals I recommend tracking include:
 
-如何衡量用户对 AI 产品的信任在 SaaS（软件即服务）领域，我们可以通过日活跃用户数（DAUs）或留存曲线（retention curves）等指标进行评估。然而，对于 AI 产品，衡量信任则需要一套独立的指标。以下是我推荐关注的一些关键信号：
+在 SaaS（软件即服务）领域，我们可以通过日活跃用户数（DAUs）或留存曲线（retention curves）等指标进行评估。然而，对于 AI 产品，衡量信任则需要一套独立的指标。以下是我推荐关注的一些关键信号：
 
-* Override rate → How often users accept outputs without changes. Lower override = higher trust.
+1 Override rate → How often users accept outputs without changes. Lower override = higher trust.
 
-* Correction velocity → How quickly users edit errors. Faster edits suggest users are still engaged despite flaws.
+**采纳率（Override Rate)** → 用户不经任何修改就直接采纳 AI 输出的频率。采纳率越低，通常意味着用户对系统的信任度越高。
 
-* **采纳率（Override Rate)** → 用户不经任何修改就直接采纳 AI 输出的频率。采纳率越低，通常意味着用户对系统的信任度越高。
-* **修正速度（Correction Velocity)** → 用户发现并修正输出中错误的速度。修正速度越快，表明即使输出存在瑕疵，用户的参与度和使用意愿依然很强。
+2 Correction velocity → How quickly users edit errors. Faster edits suggest users are still engaged despite flaws.
 
-* Escalation ratio → How often users escalate AI tasks to humans. Declining ratios = rising trust.
+**修正速度（Correction Velocity)** → 用户发现并修正输出中错误的速度。修正速度越快，表明即使输出存在瑕疵，用户的参与度和使用意愿依然很强。
 
-* Workflow replacement → Are users replacing old workflows with your AI product, or using it as a novelty sidekick?
+3 Escalation ratio → How often users escalate AI tasks to humans. Declining ratios = rising trust.
 
-* 升级比例（Escalation ratio）→ 用户将 AI 处理的任务转交给人工处理的频率。比例下降意味着信任度上升。
+升级比例（Escalation ratio）→ 用户将 AI 处理的任务转交给人工处理的频率。比例下降意味着信任度上升。
 
-* 工作流程替换（Workflow replacement）→ 用户是在用你的 AI 产品替代旧有工作流程，还是仅仅将其当作一个辅助性的新奇工具？
+4 Workflow replacement → Are users replacing old workflows with your AI product, or using it as a novelty sidekick?
+
+工作流程替换（Workflow replacement）→ 用户是在用你的 AI 产品替代旧有工作流程，还是仅仅将其当作一个辅助性的新奇工具？
 
 Trust is not binary, it's a curve you can measure, improve, and reinforce.
 
-#### The compounding nature of trust
-
 信任并非简单的非此即彼，而是一条可以被衡量、优化并不断巩固的曲线。
+
+#### The compounding nature of trust
 
 信任的复利效应
 
@@ -904,17 +894,17 @@ AI 信任的妙处在于：一旦建立，便会不断累积、增强。用户�
 
 And once your product reaches that threshold, competitors can't just swoop in with a shinier demo. Trust is sticky. Trust is a moat.
 
-Your temptation might be to chase more users, more demos, more features. Resist it. Instead, focus on building the trust layer that makes your early users confident advocates. Without it, you'll forever be a demo. With it, you can scale into a default.
-
 一旦你的产品跨过了那个临界点，竞争对手就无法仅凭一个更花哨的演示来轻易抢夺市场。信任具有黏性。信任本身就是一条护城河。
+
+Your temptation might be to chase more users, more demos, more features. Resist it. Instead, focus on building the trust layer that makes your early users confident advocates. Without it, you'll forever be a demo. With it, you can scale into a default.
 
 你可能会忍不住去追逐更多的用户、制造更多的演示、添加更多的功能。请抵制这种冲动。相反，你应该专注于构建那个「信任层」，让你早期的用户转变为忠实的拥趸。没有这个信任层，你的产品将永远停留在演示阶段。而拥有了它，你便能将产品发展成用户心中不假思索的首选。
 
 In AI, trust isn't a side benefit, it's the core product. Build it before you scale.
 
-### Step 6. Measure PMF with Adoption Depth, Not Vanity Metrics
-
 在人工智能（AI）领域，信任不是附加项，而是产品本身。先建立信任，再追求扩张。
+
+### Step 6. Measure PMF with Adoption Depth, Not Vanity Metrics
 
 步骤 6. 以采用深度衡量产品市场匹配（PMF），而非表面指标
 
@@ -928,26 +918,27 @@ But in AI, these same metrics can be dangerously misleading, because AI products
 
 If you rely on vanity metrics in AI, you'll fool yourself into thinking you have PMF long before you do.
 
-#### The vanity metric trap
-
 如果你在人工智能（AI）领域依赖虚荣指标，就会在远未真正达到产品市场契合度（Product-Market Fit，PMF）之前，就自欺欺人地以为已经成功了。
+
+#### The vanity metric trap
 
 虚荣指标的陷阱
 
 Let's start with the numbers most founders obsess over:
 
-* Daily Active Users (DAU): Someone logs in daily. But why? Are they actually using your product for their core workflow, or are they just poking around out of curiosity? Many AI tools see a surge of DAU after launch, only to plummet when the novelty wears off.
-
 首先，我们来看看那些令大多数创始人魂牵梦绕的指标：
 
-* 日活跃用户（DAU)：指每天登录的用户。但关键在于他们为何登录？他们是真正将你的产品用于核心工作，还是仅仅出于好奇前来体验？许多人工智能（AI）工具在发布初期会迎来日活跃用户的激增，可一旦新鲜感过去，这个数字便常常会急剧下滑。
+1 Daily Active Users (DAU): Someone logs in daily. But why? Are they actually using your product for their core workflow, or are they just poking around out of curiosity? Many AI tools see a surge of DAU after launch, only to plummet when the novelty wears off.
 
-* Retention curves: Someone comes back every week. But what are they doing? A few casual interactions don't mean your product has become indispensable.
+日活跃用户（DAU)：指每天登录的用户。但关键在于他们为何登录？他们是真正将你的产品用于核心工作，还是仅仅出于好奇前来体验？许多人工智能（AI）工具在发布初期会迎来日活跃用户的激增，可一旦新鲜感过去，这个数字便常常会急剧下滑。
 
-* NPS surveys: A user says they "love" the product. But does "love" translate into trust and reliance, or just admiration for a cool demo?
+2 Retention curves: Someone comes back every week. But what are they doing? A few casual interactions don't mean your product has become indispensable.
 
-*  **用户留存曲线（Retention Curves)**：有用户每周都会回来。但他们究竟在做什么？几次随意的互动，并不能证明你的产品已不可或缺。
-*  **净推荐值（NPS）调查**：用户表示他们「爱」这款产品。但这种「爱」究竟意味着信任和依赖，还是仅仅是对某个炫酷演示功能的好感？
+用户留存曲线（Retention Curves)：有用户每周都会回来。但他们究竟在做什么？几次随意的互动，并不能证明你的产品已不可或缺。
+
+3 NPS surveys: A user says they "love" the product. But does "love" translate into trust and reliance, or just admiration for a cool demo?
+
+净推荐值（NPS）调查：用户表示他们「爱」这款产品。但这种「爱」究竟意味着信任和依赖，还是仅仅是对某个炫酷演示功能的好感？
 
 I've seen AI companies raise millions on the back of vanity metrics, only to collapse months later because those numbers masked the lack of true workflow embedding.
 
@@ -955,77 +946,69 @@ I've seen AI companies raise millions on the back of vanity metrics, only to col
 
 #### Why AI needs different signals
 
-AI products are probabilistic. Outputs vary. Trust builds slowly. Adoption happens in layers, not in a single leap. That means you need metrics that capture not just if people are using your product, but how they are using it, and how deeply it has replaced their old way of working.
-
 为何 AI 需要多维度的评估指标
+
+AI products are probabilistic. Outputs vary. Trust builds slowly. Adoption happens in layers, not in a single leap. That means you need metrics that capture not just if people are using your product, but how they are using it, and how deeply it has replaced their old way of working.
 
 AI 产品本质上是概率性的，其输出结果具有不确定性。用户信任的建立是一个缓慢的过程，而产品的普及采纳也是层层递进，而非一蹴而就。因此，你需要的评估指标，不仅要能反映用户是否在使用你的产品，更要能揭示他们如何使用，以及该产品在多大程度上深度取代了他们原有的工作模式。
 
 Three core depth metrics for AI PMF
 
-1. Override RateDefinition: The percentage of AI outputs that users accept without editing.Why it matters: A low override rate means users don't trust the system yet; they're correcting too much. A declining override rate over time means users are trusting more and embedding your tool deeper.Example: An AI legal drafting tool may start with 70% of outputs heavily edited. As the model improves and trust builds, that drops to 30%. That decline is far more meaningful than raw DAU growth.
-
 衡量 AI 产品市场契合度的三个核心深度指标
 
-1. 采纳率（Override Rate)
+1 Override Rate
+
+采纳率（Override Rate)
+
+Definition: The percentage of AI outputs that users accept without editing.
+
 定义：用户未作修改就直接采纳的 AI 输出所占的百分比。
+
+Why it matters: A low override rate means users don't trust the system yet; they're correcting too much. A declining override rate over time means users are trusting more and embedding your tool deeper.
+
 为何重要：采纳率低，意味着用户尚未信任该系统，因此对输出结果进行了过多修改。如果采纳率随时间推移而下降，则意味着用户信任度在提升，并且您的工具正更深地融入他们的工作流程。
+
+Example: An AI legal drafting tool may start with 70% of outputs heavily edited. As the model improves and trust builds, that drops to 30%. That decline is far more meaningful than raw DAU growth.
+
 示例：一款 AI 法律文书起草工具，最初可能有 70% 的输出内容被用户大幅修改。随着模型改进和信任建立，这个比例会下降到 30%。这种采纳率的下降，远比单纯的日活跃用户（DAU）增长更有意义。
 
-2. Definition: The percentage of AI outputs that users accept without editing.
+2 Speed Delta
 
-3. Why it matters: A low override rate means users don't trust the system yet; they're correcting too much. A declining override rate over time means users are trusting more and embedding your tool deeper.
+速度差值
 
-2. 定义：用户不经修改就直接采纳的 AI 输出所占的百分比。
+Definition: The time saved compared to the old workflow.
 
-3. 为何重要：过载率（Override Rate）过低，意味着用户尚未信任该系统，仍在进行大量手动修正。反之，如果过载率随着时间推移而下降，则表明用户对工具的信任度在增加，并且该工具正更深地融入他们的工作流程中。
+定义：相较于旧工作流程所节省的时间。
 
-4. Example: An AI legal drafting tool may start with 70% of outputs heavily edited. As the model improves and trust builds, that drops to 30%. That decline is far more meaningful than raw DAU growth.
+Why it matters: If your product saves users 5 minutes, that's a convenience. If it saves them 5 hours, that's a workflow revolution. Speed delta quantifies your value beyond novelty.
 
-4. 示例：一款 AI 法律文书起草工具（AI legal drafting tool），其生成的初稿在开始时可能有 70% 都需要人工大幅修改。随着模型性能的提升和用户信任度的建立，这个比例可能会降至 30%。这种下降趋势所体现的价值，远比单纯的日活跃用户（DAU）数量增长要重要得多。
-
-5. Speed DeltaDefinition: The time saved compared to the old workflow.Why it matters: If your product saves users 5 minutes, that's a convenience. If it saves them 5 hours, that's a workflow revolution. Speed delta quantifies your value beyond novelty.Example: An AI compliance tool reduces quarterly reporting from 3 weeks of work to 2 days. That speed delta signals transformative PMF.
-
-5. 速度差值定义：相较于旧工作流程所节省的时间。
 重要性：如果你的产品能为用户节省 5 分钟，这算是一种便利。但如果能节省 5 小时，那将引发一场流程革命。速度差值这一指标，能够量化你的产品超越其「新颖性」之外的真正价值。
+
+Example: An AI compliance tool reduces quarterly reporting from 3 weeks of work to 2 days. That speed delta signals transformative PMF.
+
 示例：一款人工智能（AI）合规工具，将季度报告所需时间从 3 周缩短至 2 天。如此巨大的速度差值，标志着其实现了变革性的产品市场契合度（Product-Market Fit，PMF）。
 
-6. Definition: The time saved compared to the old workflow.
+3 Workflow Stickiness
 
-7. Why it matters: If your product saves users 5 minutes, that's a convenience. If it saves them 5 hours, that's a workflow revolution. Speed delta quantifies your value beyond novelty.
+工作流嵌入度（粘性）
 
-6. 定义：相较于旧有工作流程所节省的时间。
+Definition: The extent to which your product has become the default way of completing the job.
 
-7. 为何重要：如果你的产品能为用户节省 5 分钟，这算是一种便利。但如果能为他们节省 5 小时，这就堪称一场工作流程的革命。**节省的时间差**（Speed delta）这一指标，能够量化你的产品所带来的、超越其表面新鲜感的实际价值。
+定义：指你的产品在多大程度上成为了用户完成某项任务的默认选择。
 
-8. Example: An AI compliance tool reduces quarterly reporting from 3 weeks of work to 2 days. That speed delta signals transformative PMF.
+Why it matters: Users may try AI once and then revert to old tools. Stickiness measures whether they've abandoned the old way entirely.
 
-9. Workflow StickinessDefinition: The extent to which your product has become the default way of completing the job.Why it matters: Users may try AI once and then revert to old tools. Stickiness measures whether they've abandoned the old way entirely.Example: A customer support team using AI agents for 80% of tickets has achieved stickiness; if they're only using it for 10% of tickets, you're still in demo land.
+为何重要：用户可能只是尝鲜式地使用一次 AI 工具，随后又换回原来的工具。工作流嵌入度衡量的，正是用户是否已经完全抛弃了旧有的工作方式。
 
-8. 示例：一款 AI 合规工具将季度报告所需时间从 3 周缩短到 2 天。如此巨大的效率提升，标志着产品实现了变革性的产品市场契合度（Product-Market Fit，PMF）。
+Example: A customer support team using AI agents for 80% of tickets has achieved stickiness; if they're only using it for 10% of tickets, you're still in demo land.
 
-9. 工作流嵌入度（粘性）
-  定义：指你的产品在多大程度上成为了用户完成某项任务的默认选择。
-  为何重要：用户可能只是尝鲜式地使用一次 AI 工具，随后又换回原来的工具。工作流嵌入度衡量的，正是用户是否已经完全抛弃了旧有的工作方式。
-  示例：如果一个客户支持团队 80% 的工单都交由 AI 智能体处理，那说明其工作流已具备高嵌入度；反之，如果使用率仅为 10%，那么该产品很可能还停留在概念验证或演示阶段。
-
-10. Definition: The extent to which your product has become the default way of completing the job.
-
-11. Why it matters: Users may try AI once and then revert to old tools. Stickiness measures whether they've abandoned the old way entirely.
-
-10. 定义：你的产品在多大程度上成为了用户完成某项任务的默认选择。
-
-11. 为何重要：用户可能只是尝试一次 AI（产品），之后又重新使用旧工具。粘性这一指标衡量的就是用户是否已经完全放弃了旧方法。
-
-12. Example: A customer support team using AI agents for 80% of tickets has achieved stickiness; if they're only using it for 10% of tickets, you're still in demo land.
-
-12. 示例：一个客户支持团队如果使用 AI 智能体处理 80% 的工单，说明已经形成了深度依赖；如果使用率只有 10%，那说明它仍然停留在演示或试用阶段。
+示例：如果一个客户支持团队 80% 的工单都交由 AI 智能体处理，那说明其工作流已具备高嵌入度；反之，如果使用率仅为 10%，那么该产品很可能还停留在概念验证或演示阶段。
 
 These metrics get at the heart of AI PMF: are you replacing painful workflows, saving significant time, and earning trust at scale?
 
-#### Case example: The AI legal startup
-
 这些指标直指 AI 产品与市场匹配（Product-Market Fit，PMF）的核心：你的产品是否取代了低效繁琐的工作流程、节省了大量时间，并赢得了广泛的用户信任？
+
+#### Case example: The AI legal startup
 
 案例：一家 AI 法律初创公司
 
@@ -1039,30 +1022,33 @@ This company didn't have PMF. They had curiosity-driven usage. It wasn't until t
 
 #### Building an AI PMF dashboard
 
+构建 AI 产品市场契合度（PMF）仪表板
+
 Here's a simple way to measure adoption depth: build a dashboard that tracks:
 
-构建 AI 产品市场契合度（PMF）仪表板这里有一个衡量产品采用深度的简单方法：构建一个仪表板来跟踪：
+这里有一个衡量产品采用深度的简单方法：构建一个仪表板来跟踪：
 
-* Override rate (is trust building?)
+1 Override rate (is trust building?)
 
-* Time-to-complete (is speed increasing?)
+否决率（Override Rate）—— 这个指标是否意味着信任正在建立？
 
-*  否决率（Override Rate）—— 这个指标是否意味着信任正在建立？
-*  任务耗时（Time-to-Complete）—— 这个指标是否表明效率正在提升？
+2 Time-to-complete (is speed increasing?)
 
-* % of jobs completed fully in your product vs. old workflow (is stickiness rising?)
+任务耗时（Time-to-Complete）—— 这个指标是否表明效率正在提升？
 
-* Repeat job usage (are users bringing recurring jobs back to your tool, not just trying it once?)
+3 % of jobs completed fully in your product vs. old workflow (is stickiness rising?)
 
-*  在你的产品中完全完成的任务占比 vs. 旧工作流程（用户粘性是否在提高？）
+在你的产品中完全完成的任务占比 vs. 旧工作流程（用户粘性是否在提高？）
 
-*  任务的重复使用率（用户是否会持续使用你的工具处理周期性任务，而非仅作一次性尝试？）
+4 Repeat job usage (are users bringing recurring jobs back to your tool, not just trying it once?)
+
+任务的重复使用率（用户是否会持续使用你的工具处理周期性任务，而非仅作一次性尝试？）
 
 If these numbers improve month over month, you're on the path to PMF — even if DAUs aren't skyrocketing. If they stagnate, you're stuck in novelty territory.
 
-#### Why adoption depth matters more than growth
-
 如果这些指标能逐月改善，那么你正走在实现产品市场契合（Product-Market Fit，PMF）的道路上 —— 即便日活跃用户（Daily Active Users，DAU）没有爆发式增长。反之，如果这些指标停滞不前，那你的产品可能只是昙花一现，仍停留在依靠新鲜感吸引用户的阶段。
+
+#### Why adoption depth matters more than growth
 
 为何用户使用深度比单纯增长更重要
 
@@ -1076,17 +1062,17 @@ Depth is also your best defense. Competitors can copy your features, but they ca
 
 At this stage of your journey, the question isn't, "How many users do we have?" The question is, "How many users can't live without us?"
 
-Vanity metrics will give you false confidence. Depth metrics will tell you the truth. And in AI, the truth is that PMF is measured not by how many people try your product, but by how deeply it becomes the default for the painful jobs they care most about.
-
 在当前的发展阶段，关键问题不再是「我们有多少用户？」，而是「有多少用户离不开我们？」
+
+Vanity metrics will give you false confidence. Depth metrics will tell you the truth. And in AI, the truth is that PMF is measured not by how many people try your product, but by how deeply it becomes the default for the painful jobs they care most about.
 
 虚荣指标（Vanity metrics）只会带来虚假的信心。深度指标（Depth metrics）才能揭示真相。尤其在人工智能领域，真正的产品市场契合度（Product-Market Fit，PMF）并非取决于有多少人试用你的产品，而在于你的产品在多大程度上，成为了用户解决其核心痛点任务的默认方案。
 
 Adoption depth, not surface activity, is the signal. Track it, optimize for it, and let it guide you to real PMF.
 
-### Step 7. Build Moats During PMF, Not After
-
 用户深度，而非表面活跃度，才是关键信号。追踪这个深度指标，围绕它进行优化，让它引领你找到真正的产品市场契合（Product-Market Fit，PMF）。
+
+### Step 7. Build Moats During PMF, Not After
 
 步骤 7. 在达成 PMF 的过程中构建护城河，而非事后补建
 
@@ -1100,9 +1086,11 @@ Why? Because in AI, your "technology advantage" is vanishingly small. The models
 
 #### The myth of "we'll add moats later"
 
+「我们以后再建护城河」的神话
+
 I can't count how many AI founders I've heard say something like: "We'll focus on getting users now, and once we hit PMF, we'll start thinking about defensibility." This mindset works in SaaS because the very act of building PMF creates defensibility: you accumulate switching costs, integrations, and data over time almost by default. But in AI, novelty attracts users fast — and competitors just as fast.
 
-####「我们以后再建护城河」的神话我数不清听过多少 AI 创始人说过类似这样的话：「我们现在专注于获取用户，一旦我们达到产品市场契合（Product/Market Fit，PMF），我们就会开始考虑防御性。」这种思维方式在 SaaS（软件即服务）领域或许有效，因为构建 PMF 的过程本身就会自然而然地建立起防御壁垒：随着时间的推移，你会几乎自动地积累用户的转换成本、系统集成和专属数据。但在 AI 领域，新颖性能够迅速吸引用户 —— 而竞争对手的跟进速度也同样迅猛。
+我数不清听过多少 AI 创始人说过类似这样的话：「我们现在专注于获取用户，一旦我们达到产品市场契合（Product/Market Fit，PMF），我们就会开始考虑防御性。」这种思维方式在 SaaS（软件即服务）领域或许有效，因为构建 PMF 的过程本身就会自然而然地建立起防御壁垒：随着时间的推移，你会几乎自动地积累用户的转换成本、系统集成和专属数据。但在 AI 领域，新颖性能够迅速吸引用户 —— 而竞争对手的跟进速度也同样迅猛。
 
 Imagine this: you launch an AI customer support tool. Early traction is strong. Churn is manageable. Investors get excited. But you haven't built any unique distribution, you haven't captured proprietary data, and your brand doesn't carry trust in high-stakes contexts. Within six months, three better-funded competitors release nearly identical products. Suddenly, your "PMF" vanishes because customers see no reason to stay with you.
 
@@ -1110,59 +1098,57 @@ Imagine this: you launch an AI customer support tool. Early traction is strong. 
 
 This is why AI companies die even after "finding traction": they mistake early usage for defensible adoption. Without moats, PMF is temporary.
 
-#### Three categories of AI moats
-
 这正是许多 AI 公司在「取得初步成功」后仍会失败的原因：它们错误地将早期用户的使用，等同于建立了可持续竞争优势的采纳。若没有护城河，产品市场契合度（PMF）将是昙花一现的。
+
+#### Three categories of AI moats
 
 AI 护城河的三大类别
 
 To avoid that fate, you must weave moats into your PMF journey. The strongest AI moats tend to fall into three categories: data, distribution, and trust.
 
-1. Data Moat → proprietary feedback loops, unique datasets, or structured outcomes that competitors can't access.Example: An AI sales coaching tool that improves by analyzing millions of call transcripts corrected by actual reps. Each correction makes the product smarter in ways competitors can't replicate without the same dataset.Why it matters: APIs are open to everyone, but your dataset is not. Data becomes a compounding advantage if you start collecting it early.
-
 为了避免那种命运，你必须在你的产品市场契合（Product-Market Fit，PMF）旅程中构建护城河。最强大的人工智能（AI）护城河往往分为三类：数据、渠道和信任。
 
-1. **数据护城河**：指专有的反馈循环、独特的数据集或竞争对手无法获取的结构化成果。
-  *  **示例**：一款人工智能销售辅导工具，它通过分析由真实销售代表修正的数百万条通话记录来不断改进。每一次修正都让产品变得更智能，而竞争对手若没有相同的数据集，便无法复制这种进步。
-  *  **其重要性在于**：应用程序编程接口（APIs）对所有人开放，但你的数据集却非如此。如果你能尽早开始收集数据，数据就会成为一种不断累积的竞争优势。
+1 Data Moat → proprietary feedback loops, unique datasets, or structured outcomes that competitors can't access.
 
-2. Example: An AI sales coaching tool that improves by analyzing millions of call transcripts corrected by actual reps. Each correction makes the product smarter in ways competitors can't replicate without the same dataset.
+数据护城河：指专有的反馈循环、独特的数据集或竞争对手无法获取的结构化成果。
 
-2. 示例：一款 AI 销售辅导工具，它通过分析海量由真实销售代表修正过的通话转录文本（call transcripts）来不断自我改进。每一次修正都让产品变得更聪明，而这种优势是竞争对手在缺乏相同数据集的情况下无法复制的。
+Example: An AI sales coaching tool that improves by analyzing millions of call transcripts corrected by actual reps. Each correction makes the product smarter in ways competitors can't replicate without the same dataset.
 
-3. Why it matters: APIs are open to everyone, but your dataset is not. Data becomes a compounding advantage if you start collecting it early.
+示例：一款人工智能销售辅导工具，它通过分析由真实销售代表修正的数百万条通话记录来不断改进。每一次修正都让产品变得更智能，而竞争对手若没有相同的数据集，便无法复制这种进步。
 
-4. Distribution Moat → embedding so deeply into workflows, integrations, or ecosystems that switching costs become prohibitive.Example: An AI compliance product that integrates directly into Epic hospital systems or SAP financial systems. Even if a competitor matches your features, replacing you would require ripping out workflow-critical integrations.Why it matters: The more your product becomes invisible infrastructure inside critical workflows, the harder it is to displace.
+Why it matters: APIs are open to everyone, but your dataset is not. Data becomes a compounding advantage if you start collecting it early.
 
-3. 关键所在：API 向所有人开放，但你的数据集却独一无二。如果你能尽早开始收集数据，数据就会形成一种滚雪球式的累积优势。
+其重要性在于：应用程序编程接口（APIs）对所有人开放，但你的数据集却非如此。如果你能尽早开始收集数据，数据就会成为一种不断累积的竞争优势。
 
-4. 分销护城河 —— 即通过深度嵌入用户的工作流程、集成体系或生态系统，使得替换成本高不可攀。例如：一款直接集成到 Epic 医院系统或 SAP 财务系统中的 AI 合规产品。即使竞争对手的功能与你旗鼓相当，要想替换你，也必须先剥离那些对工作流至关重要的集成环节。关键所在：你的产品越是深度融入关键工作流，成为其中无形的底层设施，就越难以被撼动和取代。
+2 Distribution Moat → embedding so deeply into workflows, integrations, or ecosystems that switching costs become prohibitive.
 
-5. Example: An AI compliance product that integrates directly into Epic hospital systems or SAP financial systems. Even if a competitor matches your features, replacing you would require ripping out workflow-critical integrations.
+分销护城河 —— 即通过深度嵌入用户的工作流程、集成体系或生态系统，使得替换成本高不可攀。
 
-5. 示例：一款直接集成到 Epic 医院系统或 SAP 财务系统中的 AI 合规产品。即使竞争对手的功能与你旗鼓相当，想要替换掉你，也意味着必须拆除那些对工作流程至关重要的集成，这在实际操作中非常困难。
+Example: An AI compliance product that integrates directly into Epic hospital systems or SAP financial systems. Even if a competitor matches your features, replacing you would require ripping out workflow-critical integrations.
 
-6. Why it matters: The more your product becomes invisible infrastructure inside critical workflows, the harder it is to displace.
+示例：一款直接集成到 Epic 医院系统或 SAP 财务系统中的 AI 合规产品。即使竞争对手的功能与你旗鼓相当，想要替换掉你，也意味着必须拆除那些对工作流程至关重要的集成，这在实际操作中非常困难。
 
-7. Trust Moat → reputation built in high-stakes environments where mistakes are costly.Example: In healthcare or legal AI, once your brand is seen as the "safe" choice, competitors face years of uphill battle to convince customers they're equally reliable.Why it matters: Trust cannot be bought. It must be earned slowly, through consistent reliability. And once you have it, it's one of the stickiest moats of all.
+Why it matters: The more your product becomes invisible infrastructure inside critical workflows, the harder it is to displace.
 
-6. 其重要性在于：你的产品越是深度融入关键工作流程，成为不可或缺的隐形基础设施，其被替代的难度就越大。
+其重要性在于：你的产品越是深度融入关键工作流程，成为不可或缺的隐形基础设施，其被替代的难度就越大。
 
-7. 信任护城河：这是在犯错成本极高的高风险环境中建立起的声誉。以医疗或法律领域的 AI 应用为例，一旦你的品牌被公认为「安全」之选，竞争对手将需要耗费数年时间进行艰苦的市场攻坚，才能让客户相信他们同样可靠。其重要性在于：信任无法用金钱购买，只能依靠始终如一的可靠性来缓慢积累。而一旦建立，它将成为所有竞争壁垒中最难以撼动的一种。
+3 Trust Moat → reputation built in high-stakes environments where mistakes are costly.
 
-8. Example: In healthcare or legal AI, once your brand is seen as the "safe" choice, competitors face years of uphill battle to convince customers they're equally reliable.
+信任护城河：这是在犯错成本极高的高风险环境中建立起的声誉。
 
-8. 示例：在医疗或法律人工智能（AI）领域，一旦你的品牌被视为「安全」的选择，竞争对手就需要花费数年时间进行一场艰苦的攀登，才能让客户相信他们同样可靠。
+Example: In healthcare or legal AI, once your brand is seen as the "safe" choice, competitors face years of uphill battle to convince customers they're equally reliable.
 
-9. Why it matters: Trust cannot be bought. It must be earned slowly, through consistent reliability. And once you have it, it's one of the stickiest moats of all.
+示例：在医疗或法律人工智能（AI）领域，一旦你的品牌被视为「安全」的选择，竞争对手就需要花费数年时间进行一场艰苦的攀登，才能让客户相信他们同样可靠。
 
-9. 其重要性在于：信任是买不来的。它只能通过始终如一的可靠表现，慢慢积累赢得。而一旦你获得了信任，它便会成为所有竞争壁垒中，最牢固、最持久的一道护城河。
+Why it matters: Trust cannot be bought. It must be earned slowly, through consistent reliability. And once you have it, it's one of the stickiest moats of all.
+
+其重要性在于：信任是买不来的。它只能通过始终如一的可靠表现，慢慢积累赢得。而一旦你获得了信任，它便会成为所有竞争壁垒中，最牢固、最持久的一道护城河。
 
 #### Case example: Jasper vs. Perplexity
 
-Take Jasper, one of the earliest AI writing startups. They raised $125M at a $1.5B valuation, riding the wave of "AI for copywriting." But their moat was thin. They had early traction, but no proprietary data loops, no unique distribution wedge, and limited trust differentiation. When OpenAI's ChatGPT went mainstream, Jasper's differentiation collapsed.
-
 案例对比：Jasper 与 Perplexity
+
+Take Jasper, one of the earliest AI writing startups. They raised $125M at a $1.5B valuation, riding the wave of "AI for copywriting." But their moat was thin. They had early traction, but no proprietary data loops, no unique distribution wedge, and limited trust differentiation. When OpenAI's ChatGPT went mainstream, Jasper's differentiation collapsed.
 
 以 Jasper 为例，它是最早的 AI 写作初创公司之一。该公司搭上了「AI 文案写作」的快车，以 15 亿美元的估值融资了 1.25 亿美元。然而，其竞争壁垒却十分薄弱。虽然早期市场势头不错，但公司既没有构建专有的数据飞轮，也缺乏独特的市场分销优势，在用户信任度上也未能建立起足够的差异化。当 OpenAI 的 ChatGPT 席卷主流市场时，Jasper 的差异化优势便荡然无存。
 
@@ -1172,45 +1158,47 @@ Now compare Perplexity. They weren't first to market. But they built a distribut
 
 The lesson is clear: traction without moats is fragile. PMF without defensibility is a mirage.
 
-How to build moats during PMF
-
 教训很清楚：没有护城河的增长是脆弱的。缺乏壁垒的产品市场契合（PMF）不过是海市蜃楼。
+
+How to build moats during PMF
 
 那么，如何在实现产品市场契合（PMF）的过程中，同步构建护城河？
 
 So how do you avoid the Jasper trap and build moats while you're still searching for PMF? Here are a few strategies:
 
-* Instrument feedback from day one. Every correction, rejection, or approval should be captured. That data is the raw material for your moat.
-
 那么，当你还在寻找产品市场契合（PMF）时，该如何避免重蹈 Jasper 的覆辙，并同时构筑自己的竞争护城河呢？以下是一些策略：
 
-* **从第一天起就将反馈数据化。**用户的每一次修改、拒绝或认可，都应该被系统性地捕获和记录。这些数据，就是你未来构建护城河的原始材料。
+1 Instrument feedback from day one. Every correction, rejection, or approval should be captured. That data is the raw material for your moat.
 
-* Go where others can't. Choose distribution wedges that competitors can't easily copy. For example, embedding into industry-specific workflows or securing exclusive partnerships.
+从第一天起就将反馈数据化。用户的每一次修改、拒绝或认可，都应该被系统性地捕获和记录。这些数据，就是你未来构建护城河的原始材料。
 
-* 进军他人难以触及的领域。选择竞争对手无法轻易模仿的市场切入策略。例如，深度嵌入到特定行业的工作流程中，或是建立独家合作伙伴关系。
+2 Go where others can't. Choose distribution wedges that competitors can't easily copy. For example, embedding into industry-specific workflows or securing exclusive partnerships.
 
-* Make trust visible. Build transparency features (citations, audit logs, confidence scores) that not only reduce hallucination risk but also establish your brand as the "safe" choice.
+进军他人难以触及的领域。选择竞争对手无法轻易模仿的市场切入策略。例如，深度嵌入到特定行业的工作流程中，或是建立独家合作伙伴关系。
 
-*  **让信任看得见**。构建透明的功能特性（例如引用来源、审计日志、置信度分数），这不仅能降低 AI 幻觉（Hallucination）的风险，更能将您的品牌打造为「安全可靠」的代名词。
+3 Make trust visible. Build transparency features (citations, audit logs, confidence scores) that not only reduce hallucination risk but also establish your brand as the "safe" choice.
 
-* Tie value to outcomes. If your product saves money or reduces risk, build contracts and case studies that showcase it. This strengthens trust and creates switching friction.
+让信任看得见。构建透明的功能特性（例如引用来源、审计日志、置信度分数），这不仅能降低 AI 幻觉（Hallucination）的风险，更能将您的品牌打造为「安全可靠」的代名词。
 
-*  将产品价值与实际成果紧密关联。如果你的产品能够节省成本或降低风险，应通过设计相应的合同条款和制作详实的案例研究来加以证明。这有助于巩固客户信任，并提高用户的转换门槛（即增加其更换供应商的难度）。
+4 Tie value to outcomes. If your product saves money or reduces risk, build contracts and case studies that showcase it. This strengthens trust and creates switching friction.
+
+将产品价值与实际成果紧密关联。如果你的产品能够节省成本或降低风险，应通过设计相应的合同条款和制作详实的案例研究来加以证明。这有助于巩固客户信任，并提高用户的转换门槛（即增加其更换供应商的难度）。
 
 #### The compounding effect of early moats
 
+早期构建护城河的复利效应
+
 The earlier you build moats, the faster they compound. A feedback loop started with 10 customers can evolve into a dataset of millions of interactions by the time you hit scale. A niche distribution wedge can expand into an enterprise-wide lock-in. A reputation for reliability in one critical edge case can expand into adjacent domains.
 
-早期构建护城河的复利效应护城河构建得越早，其复利增长效应就越显著。一个始于 10 位用户的反馈循环，在业务规模化时，可能已演变为一个包含数百万次交互的数据集。一个利基市场的分销切入点，可以拓展为全企业范围的生态壁垒。在某个至关重要的特殊场景下建立的可靠声誉，能够顺势渗透到相邻领域。
+护城河构建得越早，其复利增长效应就越显著。一个始于 10 位用户的反馈循环，在业务规模化时，可能已演变为一个包含数百万次交互的数据集。一个利基市场的分销切入点，可以拓展为全企业范围的生态壁垒。在某个至关重要的特殊场景下建立的可靠声誉，能够顺势渗透到相邻领域。
 
 Moats are not something you bolt on after PMF. In AI, moats are part of PMF.
 
-At this stage of your journey, your product may feel fragile. You're chasing adoption, refining edge cases, and proving value. But even now, you should be asking: "What part of this product will still be defensible a year from now, when competitors clone our features?"
-
 护城河并非在产品市场契合（Product-Market Fit，简称 PMF）达成之后才匆忙加筑的。在人工智能（AI）领域，护城河本身就是 PMF 不可或缺的一部分。
 
-在当前这个发展阶段，你的产品可能显得比较脆弱。你正忙于推广获客、打磨各种极端使用场景，并向市场验证产品的核心价值。但即便如此，你现在就应该思考一个问题："如果竞争对手照搬了我们的所有功能，那么一年之后，这款产品的哪些部分依然能构建起难以逾越的壁垒？"
+At this stage of your journey, your product may feel fragile. You're chasing adoption, refining edge cases, and proving value. But even now, you should be asking: "What part of this product will still be defensible a year from now, when competitors clone our features?"
+
+在当前这个发展阶段，你的产品可能显得比较脆弱。你正忙于推广获客、打磨各种极端使用场景，并向市场验证产品的核心价值。但即便如此，你现在就应该思考一个问题：「如果竞争对手照搬了我们的所有功能，那么一年之后，这款产品的哪些部分依然能构建起难以逾越的壁垒？」
 
 If you're not building moats while finding PMF, you're building for someone else's future. They'll copy your idea, leverage their distribution, and own the market you proved was valuable. But if you weave data, distribution, and trust moats into your PMF process, you're not just finding fit, you're building foundations competitors can't easily shake.
 
@@ -1218,9 +1206,9 @@ If you're not building moats while finding PMF, you're building for someone else
 
 In SaaS, moats protect you after you win. In AI, moats are how you win.
 
-### Step 8. Price for Value, Not Features
-
 在 SaaS（软件即服务）领域，护城河是在你取得成功后保护你的壁垒。而在 AI（人工智能）领域，护城河本身就是你赢得竞争的关键。
+
+### Step 8. Price for Value, Not Features
 
 步骤 8. 依据价值，而非功能定价
 
@@ -1248,15 +1236,26 @@ The problem isn't your product — it's your pricing logic. You priced it as if 
 
 #### What value-based pricing looks like
 
+基于价值的定价模式
+
 Imagine instead that you position your AI email assistant not as "unlimited AI-drafted emails for $10/month" but as "we cut your average support rep's response time in half, reducing staffing needs by 20%." Suddenly, you can price based on savings, not features.
 
-基于价值的定价模式试想一下，如果你这样定位你的 AI 邮件助手：不是「每月 10 美元，无限量使用 AI 生成邮件草稿」，而是「我们能将您客服代表的平均响应时间缩短一半，从而减少 20% 的人力配置」。这样一来，你的定价依据就从功能本身，转变为了它能带来的成本节省。
+试想一下，如果你这样定位你的 AI 邮件助手：不是「每月 10 美元，无限量使用 AI 生成邮件草稿」，而是「我们能将您客服代表的平均响应时间缩短一半，从而减少 20% 的人力配置」。这样一来，你的定价依据就从功能本身，转变为了它能带来的成本节省。
+
+
+
+
+
+
+
+
+
 
 This is why the best AI companies don't sell features — they sell outcome contracts.
 
-* An AI fraud detection tool doesn't charge per seat. It charges as a percentage of dollars saved from blocked fraud.
-
 这就是为什么顶尖的 AI 公司不售卖功能，而是提供基于结果的合约。
+
+* An AI fraud detection tool doesn't charge per seat. It charges as a percentage of dollars saved from blocked fraud.
 
 * 一款 AI 欺诈检测工具并非按用户席位收费，而是按照其拦截欺诈所节省金额的百分比来计费。
 
