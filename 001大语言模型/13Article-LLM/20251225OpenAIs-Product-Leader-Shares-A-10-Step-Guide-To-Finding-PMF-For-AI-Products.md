@@ -266,57 +266,59 @@ When you find one of these jobs, AI doesn't feel like an add-on, it feels like t
 
 Consider two product ideas:
 
-* AI Notes App: You join meetings, the app transcribes and summarizes. The benefit? Saves you maybe 20 minutes per day, assuming you trust the output. The cost of not using it? You just keep writing notes yourself, a mildly annoying but manageable process.
-
 考虑两个产品创意：
 
-* **AI 笔记应用（AI Notes App)**：你参加会议，应用自动完成录音转文字并生成摘要。它能带来什么好处呢？或许每天能为你节省出 20 分钟左右的时间 —— 当然，这得建立在你信任其输出结果的基础上。那如果不用它呢？代价就是你得继续亲力亲为地记笔记，这事儿虽然有点烦人，但倒也还能应付得来。
+1 AI Notes App: You join meetings, the app transcribes and summarizes. The benefit? Saves you maybe 20 minutes per day, assuming you trust the output. The cost of not using it? You just keep writing notes yourself, a mildly annoying but manageable process.
 
-* AI Compliance Copilot: You work in financial services. Every week, you spend 3–5 hours preparing compliance documentation for audits, manually checking transactions, copy-pasting clauses, and formatting reports. An AI system reduces this to 5 minutes of review, ensuring accuracy and audit-readiness. The benefit? You save 10+ hours per week, reduce human error, and de-risk million-dollar penalties. The cost of not using it? You burn hours of high-paid employee time and expose yourself to legal risk.
+AI 笔记应用（AI Notes App）：你参加会议，应用自动完成录音转文字并生成摘要。它能带来什么好处呢？或许每天能为你节省出 20 分钟左右的时间 —— 当然，这得建立在你信任其输出结果的基础上。那如果不用它呢？代价就是你得继续亲力亲为地记笔记，这事儿虽然有点烦人，但倒也还能应付得来。
 
-* AI 合规助手（AI Compliance Copilot)：假设您在金融服务行业工作。每周，您都需要耗费 3 至 5 小时来准备审计所需的合规文件、手动核对交易、复制粘贴条款并格式化报告。而一套 AI 系统能将这项工作压缩至仅需 5 分钟进行复核，确保文件的准确性并使其随时满足审计要求。带来的好处？您每周可节省超过 10 小时，减少人为失误，并规避可能高达数百万美元的罚款风险。反之，若不采用它，代价则是持续浪费高薪员工的宝贵时间，并使公司暴露于法律风险之中。
+2 AI Compliance Copilot: You work in financial services. Every week, you spend 3–5 hours preparing compliance documentation for audits, manually checking transactions, copy-pasting clauses, and formatting reports. An AI system reduces this to 5 minutes of review, ensuring accuracy and audit-readiness. The benefit? You save 10+ hours per week, reduce human error, and de-risk million-dollar penalties. The cost of not using it? You burn hours of high-paid employee time and expose yourself to legal risk.
+
+AI 合规助手（AI Compliance Copilot)：假设您在金融服务行业工作。每周，您都需要耗费 3 至 5 小时来准备审计所需的合规文件、手动核对交易、复制粘贴条款并格式化报告。而一套 AI 系统能将这项工作压缩至仅需 5 分钟进行复核，确保文件的准确性并使其随时满足审计要求。带来的好处？您每周可节省超过 10 小时，减少人为失误，并规避可能高达数百万美元的罚款风险。反之，若不采用它，代价则是持续浪费高薪员工的宝贵时间，并使公司暴露于法律风险之中。
 
 One is a convenience. The other is survival. Which one do you think will achieve PMF faster?
 
-This is the difference between AI as a bolt-on versus AI as a native solution. And it's why your first step in building an AI product is not brainstorming features but identifying jobs where AI is not just helpful but transformative.
-
 一种产品提供便利，另一种产品关乎生存。你认为哪一类会更快实现产品市场契合（Product-Market Fit，PMF)？
+
+This is the difference between AI as a bolt-on versus AI as a native solution. And it's why your first step in building an AI product is not brainstorming features but identifying jobs where AI is not just helpful but transformative.
 
 这便体现了外挂式 AI（AI as a bolt-on）与原生式 AI（AI as a native solution）的根本区别。正因如此，构建 AI 产品的第一步并非头脑风暴功能，而是去识别那些 AI 不仅能提供帮助、更能带来颠覆性变革的用户需求场景。
 
 #### A simple framework: Pain × Frequency × AI Advantage
 
+一个简单的框架：痛苦 × 频率 × AI 优势
+
 To systematize this search, I use a framework that evaluates jobs along three axes:
 
-#### 一个简单的框架：痛苦 × 频率 × AI 优势为了更系统地寻找（这类机会），我采用了一个框架，它从三个维度对工作进行评估：
+为了更系统地寻找（这类机会），我采用了一个框架，它从三个维度对工作进行评估：
 
-1. Pain: How costly is the job today if left unsolved? Does it waste time, money, or reputation? Would the user pay to have it eliminated?
+1 Pain: How costly is the job today if left unsolved? Does it waste time, money, or reputation? Would the user pay to have it eliminated?
 
-2. Frequency: How often does this job occur? A rare pain, even if severe, might not support a company. The sweet spot is recurring pain that compounds over weeks and months.
+痛点：如果今天不解决，这个用户任务会带来多高的代价？它会造成时间、金钱还是声誉上的损失？用户是否愿意为此付费来消除它？
 
-1. 痛点：如果今天不解决，这个用户任务会带来多高的代价？它会造成时间、金钱还是声誉上的损失？用户是否愿意为此付费来消除它？
+2 Frequency: How often does this job occur? A rare pain, even if severe, might not support a company. The sweet spot is recurring pain that compounds over weeks and months.
 
-2. 频率：这个任务多久发生一次？一个罕见的痛点，即使非常严重，也可能不足以支撑一个可行的商业项目。最理想的（商业）机会点在于那种反复出现、并在数周乃至数月内不断累积恶化的痛点。
+频率：这个任务多久发生一次？一个罕见的痛点，即使非常严重，也可能不足以支撑一个可行的商业项目。最理想的（商业）机会点在于那种反复出现、并在数周乃至数月内不断累积恶化的痛点。
 
-3. AI Advantage: Can AI provide a step-change improvement, not just a marginal one? Does it reduce hours to minutes, increase accuracy by an order of magnitude, or make something possible that was previously impossible?
+3 AI Advantage: Can AI provide a step-change improvement, not just a marginal one? Does it reduce hours to minutes, increase accuracy by an order of magnitude, or make something possible that was previously impossible?
 
-3. AI 优势：AI 能否带来跨越式的提升，而非仅仅是渐进式的改进？它能否将耗时从数小时缩短至数分钟，将准确度提升一个数量级，或是实现以往无法达成的目标？
+AI 优势：AI 能否带来跨越式的提升，而非仅仅是渐进式的改进？它能否将耗时从数小时缩短至数分钟，将准确度提升一个数量级，或是实现以往无法达成的目标？
 
 You can even think of it as a scoring exercise:
 
-* A high-pain, high-frequency job with little AI advantage is just a SaaS opportunity.
-
 你甚至可以把这看作一个打分游戏：
 
-* 如果一个工作痛点明显、发生频率高，但 AI（人工智能）能带来的优势却很有限，那么它主要就是一个 SaaS（软件即服务）的市场机会。
+1 A high-pain, high-frequency job with little AI advantage is just a SaaS opportunity.
 
-* A high-AI-advantage, low-pain job is just a demo.
+如果一个工作痛点明显、发生频率高，但 AI（人工智能）能带来的优势却很有限，那么它主要就是一个 SaaS（软件即服务）的市场机会。
 
-* But a high-pain, high-frequency, high-AI-advantage job? That's where PMF for AI products is born.
+2 A high-AI-advantage, low-pain job is just a demo.
 
-* 一个 AI 优势大、痛苦指数低的工作，充其量只是个演示案例。
+一个 AI 优势大、痛苦指数低的工作，充其量只是个演示案例。
 
-* 但一个痛点显著、发生频率高、且 AI 优势巨大的工作？这才是 AI 产品真正找到产品市场契合（PMF）的沃土。
+3 But a high-pain, high-frequency, high-AI-advantage job? That's where PMF for AI products is born.
+
+但一个痛点显著、发生频率高、且 AI 优势巨大的工作？这才是 AI 产品真正找到产品市场契合（PMF）的沃土。
 
 Take healthcare billing codes. Pain is high (errors cost billions), frequency is high (every patient visit), and AI advantage is real (models can process structured + unstructured notes faster than humans). That's fertile ground.
 
@@ -328,9 +330,9 @@ Now compare that to email subject line generation. Pain is low (copywriters alre
 
 #### The subtlety: Don't chase TAM, chase JTBD depth
 
-One last nuance: AI founders often make the mistake of saying, "This job exists for everyone, so the TAM is huge." But in AI, TAM is a trap. You don't win by being horizontal from day one. You win by going deep into a job, mastering it, and embedding yourself so tightly that expansion becomes obvious later.
+微妙之处：别追逐市场总量（TAM），要深挖用户任务（JTBD)
 
-#### 微妙之处：别追逐市场总量（TAM），要深挖用户任务（JTBD)
+One last nuance: AI founders often make the mistake of saying, "This job exists for everyone, so the TAM is huge." But in AI, TAM is a trap. You don't win by being horizontal from day one. You win by going deep into a job, mastering it, and embedding yourself so tightly that expansion becomes obvious later.
 
 最后一点需要特别注意：AI 领域的创业者常犯一个错误，他们会说：「每个人都需要完成这项任务，所以市场总量（Total Addressable Market，TAM）非常大。」然而在 AI 行业，盲目追求 TAM 是一个陷阱。成功的秘诀并非从一开始就铺开一个宽泛的横向市场。恰恰相反，你应该选择一项具体的用户任务（Job-to-be-Done，JTBD），深入其中、做到极致，并让自己（的产品）紧密嵌入到这个工作流程中。当你做得足够深时，未来的扩张路径自然会变得清晰。
 
@@ -340,9 +342,11 @@ The goal of Step 1 is not to map the entire universe of AI opportunities. It's t
 
 ### Step 2. Identify High-Leverage Pain Points, Not Features
 
+步骤 2. 识别高价值痛点，而非产品功能
+
 When founders pitch AI products, I often hear them lead with features. "We built the fastest summarizer." "Our model has 3% better accuracy." "We integrated with Slack, so you can get results instantly." On the surface, these sound compelling, they showcase capability and speed. But the problem is, features can be copied overnight. Pain points cannot.
 
-### 步骤 2. 识别高价值痛点，而非产品功能在创始人推介 AI 产品时，我常常听到他们一上来就介绍功能。"我们打造了最快的摘要工具。"」我们的模型准确率高出 3%。""我们集成了 Slack，能让你立刻拿到结果。」乍一听，这些说法很有吸引力，彰显了产品的性能和速度。但问题在于，功能是很容易被一夜复制的。而痛点则不然。
+在创始人推介 AI 产品时，我常常听到他们一上来就介绍功能。「我们打造了最快的摘要工具。」「我们的模型准确率高出 3%。」「我们集成了 Slack，能让你立刻拿到结果。」乍一听，这些说法很有吸引力，彰显了产品的性能和速度。但问题在于，功能是很容易被一夜复制的。而痛点则不然。
 
 Anyone can hook into OpenAI's API and recreate your summarizer. Anyone can tack on a Slack integration. Even model accuracy improvements rarely create lasting differentiation, because competitors can either fine-tune on similar data or wait until the next base model release levels the playing field again.
 
@@ -354,9 +358,11 @@ What cannot be cloned so easily, however, is your deep alignment with a customer
 
 #### The trap of feature-first thinking
 
+功能至上思维的陷阱
+
 AI is seductive because features demo so well. Show a slick transcription, a perfect image generation, or a clean code suggestion, and people get impressed. But what happens after the demo?
 
-#### 功能至上思维的陷阱人工智能（AI）之所以吸引人，是因为它的功能演示效果总是非常出色。无论是展示一段流畅的语音转录、一次完美的图像生成，还是一个清晰的代码建议，都能让人印象深刻。然而，演示结束之后呢？
+人工智能（AI）之所以吸引人，是因为它的功能演示效果总是非常出色。无论是展示一段流畅的语音转录、一次完美的图像生成，还是一个清晰的代码建议，都能让人印象深刻。然而，演示结束之后呢？
 
 Users ask:
 
