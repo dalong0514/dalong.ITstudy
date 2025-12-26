@@ -1242,30 +1242,21 @@ Imagine instead that you position your AI email assistant not as "unlimited AI-d
 
 试想一下，如果你这样定位你的 AI 邮件助手：不是「每月 10 美元，无限量使用 AI 生成邮件草稿」，而是「我们能将您客服代表的平均响应时间缩短一半，从而减少 20% 的人力配置」。这样一来，你的定价依据就从功能本身，转变为了它能带来的成本节省。
 
-
-
-
-
-
-
-
-
-
 This is why the best AI companies don't sell features — they sell outcome contracts.
 
 这就是为什么顶尖的 AI 公司不售卖功能，而是提供基于结果的合约。
 
-* An AI fraud detection tool doesn't charge per seat. It charges as a percentage of dollars saved from blocked fraud.
+1 An AI fraud detection tool doesn't charge per seat. It charges as a percentage of dollars saved from blocked fraud.
 
-* 一款 AI 欺诈检测工具并非按用户席位收费，而是按照其拦截欺诈所节省金额的百分比来计费。
+一款 AI 欺诈检测工具并非按用户席位收费，而是按照其拦截欺诈所节省金额的百分比来计费。
 
-* An AI supply chain optimizer doesn't charge by API call. It charges based on reduction in inventory waste or logistics costs.
+2 An AI supply chain optimizer doesn't charge by API call. It charges based on reduction in inventory waste or logistics costs.
 
-* An AI legal contract reviewer doesn't charge per document. It charges relative to the billable hours replaced.
+人工智能（AI）供应链优化工具的收费并非基于 API 调用次数，而是根据其帮助降低的库存浪费或物流成本来计算。
 
-*  人工智能（AI）供应链优化工具的收费并非基于 API 调用次数，而是根据其帮助降低的库存浪费或物流成本来计算。
+3 An AI legal contract reviewer doesn't charge per document. It charges relative to the billable hours replaced.
 
-*  人工智能（AI）法律合同审阅工具的收费并非按文档数量计算，而是相对于其所替代的传统律师计费工时来定价。
+人工智能（AI）法律合同审阅工具的收费并非按文档数量计算，而是相对于其所替代的传统律师计费工时来定价。
 
 Pricing for value means your revenue scales with your customer's savings, risk reduction, or speed gains. And unlike features, value cannot be commoditized away.
 
@@ -1273,77 +1264,83 @@ Pricing for value means your revenue scales with your customer's savings, risk r
 
 #### The heuristic: 10–30% of saved value
 
-Over years of working with AI and enterprise clients, I've found a simple heuristic: AI products can usually capture 10–30% of the value they create.
-
 经验法则：所创造价值的 10%～30%
+
+Over years of working with AI and enterprise clients, I've found a simple heuristic: AI products can usually capture 10–30% of the value they create.
 
 根据我多年来与人工智能（AI）以及企业客户打交道的经验，总结出一条简单的经验法则：AI 产品通常能够获取其自身所创造价值的 10% 至 30%。
 
-* If your AI tool saves a law firm $1M in annual billable hours, you can charge $100–300K.
+1 If your AI tool saves a law firm $1M in annual billable hours, you can charge $100–300K.
 
-* If your AI tool prevents $10M in fraud losses, you can charge $1–3M.
+如果你的 AI 工具能为一家律师事务所节省价值 100 万美元的年度计费工时，那么你可以收取 10 万至 30 万美元的费用。
 
-*  如果你的 AI 工具能为一家律师事务所节省价值 100 万美元的年度计费工时，那么你可以收取 10 万至 30 万美元的费用。
-*  如果你的 AI 工具能帮助防范 1000 万美元的欺诈损失，那么你可以收取 100 万至 300 万美元的费用。
+2 If your AI tool prevents $10M in fraud losses, you can charge $1–3M.
 
-* If your AI tool saves a compliance team 2,000 hours a year, you can charge an amount equal to 200–600 of those hours in cost.
+如果你的 AI 工具能帮助防范 1000 万美元的欺诈损失，那么你可以收取 100 万至 300 万美元的费用。
+
+3 If your AI tool saves a compliance team 2,000 hours a year, you can charge an amount equal to 200–600 of those hours in cost.
+
+如果你的 AI 工具每年能为一个合规团队节省 2,000 个工时，那么你可以收取相当于这 2,000 小时价值中 200 到 600 小时的费用作为你的产品价格。
 
 This anchors your pricing to impact, not to a feature menu. It also creates a natural fairness: customers are happy to pay because your price is directly proportional to the tangible value you deliver.
-
-* 如果你的 AI 工具每年能为一个合规团队节省 2,000 个工时，那么你可以收取相当于这 2,000 小时价值中 200 到 600 小时的费用作为你的产品价格。
 
 这样一来，你的定价是基于其产生的实际影响，而非仅仅基于一份功能清单。这本身就形成了一种自然而然的公平：客户会乐意付费，因为你的价格与你所提供的具体价值直接挂钩。
 
 #### Case example: AI fraud detection vs. SaaS fraud dashboards
 
+案例对比：AI 欺诈检测 vs. SaaS 欺诈仪表板
+
 A traditional SaaS fraud dashboard might charge $50 per seat. But for enterprise clients, the number of seats is irrelevant… The fraud problem doesn't scale linearly with user count. Meanwhile, an AI fraud detection system that blocks $5M in attempted fraud per quarter can justify a value-based contract worth hundreds of thousands, even if the "features" look similar on the surface.
 
-案例对比：AI 欺诈检测 vs. SaaS 欺诈仪表板传统的 SaaS 欺诈仪表板可能按每个用户席位收费 50 美元。但对于企业客户而言，席位数量并非关键…… 因为欺诈问题的严重程度并不会随用户数量线性增长。相比之下，一个每季度能拦截 500 万美元欺诈企图的 AI 欺诈检测系统，其价值就足以支撑一份价值数十万美元的基于价值的合同，即便两者表面的「功能」看起来相差无几。
+传统的 SaaS 欺诈仪表板可能按每个用户席位收费 50 美元。但对于企业客户而言，席位数量并非关键…… 因为欺诈问题的严重程度并不会随用户数量线性增长。相比之下，一个每季度能拦截 500 万美元欺诈企图的 AI 欺诈检测系统，其价值就足以支撑一份价值数十万美元的基于价值的合同，即便两者表面的「功能」看起来相差无几。
 
 The fraud dashboard sells features. The AI system sells outcomes. Guess which one has better retention and defensibility?
 
-#### Why customers respect value pricing
-
 反欺诈仪表盘售卖的是功能，而 AI 系统售卖的是结果。试想一下，哪一个能带来更高的用户留存和更强的竞争壁垒？
+
+#### Why customers respect value pricing
 
 为什么客户青睐价值定价
 
 At first, founders worry that value-based pricing will scare customers away. In reality, the opposite is true. When you tie your price to value:
 
-1. You signal confidence. Customers see that you're willing to be measured against outcomes.
-
 起初，创业者们担心采用价值定价会吓跑客户。但事实恰恰相反。当你的价格与你所提供的价值紧密关联时：
 
-1. 这传递了信心。客户会看到，你敢于让自己的价值用实际成果来衡量。
+1 You signal confidence. Customers see that you're willing to be measured against outcomes.
 
-2. You reduce negotiation friction. Instead of haggling over seats or features, you align on measurable business impact.
+这传递了信心。客户会看到，你敢于让自己的价值用实际成果来衡量。
 
-3. You build trust. Customers know you win only when they win.
+2 You reduce negotiation friction. Instead of haggling over seats or features, you align on measurable business impact.
 
-2. 这降低了谈判的摩擦系数。双方无需在用户席位或具体功能上纠缠，而是围绕可量化的业务成果达成共识。
-3. 这有助于建立信任。客户清楚，你的成功与他们的成功紧密绑定，唯有他们获益，你才能真正获益。
+这降低了谈判的摩擦系数。双方无需在用户席位或具体功能上纠缠，而是围绕可量化的业务成果达成共识。
+
+3 You build trust. Customers know you win only when they win.
+
+这有助于建立信任。客户清楚，你的成功与他们的成功紧密绑定，唯有他们获益，你才能真正获益。
 
 This alignment builds stronger relationships and higher willingness to pay.
 
-#### How to implement value-based pricing
-
 这种（价值）契合能建立更牢固的客户关系，并带来更高的支付意愿。
+
+#### How to implement value-based pricing
 
 如何实施基于价值的定价
 
-1. Quantify the baseline. Measure how much time, money, or risk the current workflow costs.
+1 Quantify the baseline. Measure how much time, money, or risk the current workflow costs.
 
-2. Run pilots. Show measurable improvements (hours saved, dollars protected, errors reduced).
+量化基准。衡量当前工作流程所消耗的时间、金钱或所承担的风险。
 
-1. 量化基准。衡量当前工作流程所消耗的时间、金钱或所承担的风险。
-2. 开展试点。展示可量化的改进成果（例如：节省的工时、避免的损失、减少的差错）。
+2 Run pilots. Show measurable improvements (hours saved, dollars protected, errors reduced).
 
-3. Frame contracts as ROI. Anchor pricing as a fraction of captured value (10–30%).
+开展试点。展示可量化的改进成果（例如：节省的工时、避免的损失、减少的差错）。
 
-4. Use hybrid models if needed. For early-stage, combine a base fee (to cover costs) with performance-based upside.
+3 Frame contracts as ROI. Anchor pricing as a fraction of captured value (10–30%).
 
-3. 将合同定位为投资回报率（ROI）。以所创造价值的一部分（10–30%）为基础来定价。
-4. 必要时可采用混合定价模式。对于早期项目，可以结合基础费用（用于覆盖成本）和基于绩效的收益分成。
+将合同定位为投资回报率（ROI）。以所创造价值的一部分（10–30%）为基础来定价。
+
+4 Use hybrid models if needed. For early-stage, combine a base fee (to cover costs) with performance-based upside.
+
+必要时可采用混合定价模式。对于早期项目，可以结合基础费用（用于覆盖成本）和基于绩效的收益分成。
 
 Example: An AI supply chain startup charges $50K/year base + 15% of verified logistics savings. This covers infrastructure but also scales with customer outcomes.
 
@@ -1351,17 +1348,19 @@ Example: An AI supply chain startup charges $50K/year base + 15% of verified log
 
 #### The hidden moat of value pricing
 
+价值定价背后的隐秘壁垒
+
 Here's the deeper insight: value-based pricing itself is a moat. When customers see that your product is tied to their business outcomes, it's harder for competitors to undercut you with a cheaper per-seat plan. A competitor may offer the same feature at half the price, but if you're delivering measurable ROI, your customer won't switch. They'll stay loyal, because outcomes are harder to fake than features.
 
-价值定价背后的隐秘壁垒其深层逻辑在于：基于价值的定价（value-based pricing）本身就是一个强大的竞争壁垒。一旦客户认识到你的产品与他们的业务成果紧密挂钩，竞争对手就很难仅凭更便宜的按席位付费方案来挖走客户。即使竞争对手以半价提供相同的功能，但只要你能持续交付可衡量的投资回报率（ROI），客户就不会轻易转向。他们会保持忠诚，因为实实在在的业务成果，远比单纯的功能列表更难被模仿或替代。
+其深层逻辑在于：基于价值的定价（value-based pricing）本身就是一个强大的竞争壁垒。一旦客户认识到你的产品与他们的业务成果紧密挂钩，竞争对手就很难仅凭更便宜的按席位付费方案来挖走客户。即使竞争对手以半价提供相同的功能，但只要你能持续交付可衡量的投资回报率（ROI），客户就不会轻易转向。他们会保持忠诚，因为实实在在的业务成果，远比单纯的功能列表更难被模仿或替代。
 
 At this stage of your journey, you may be tempted to slap a $20/month SaaS price tag on your AI product. Resist it.
 
-Instead, ask: "What is the true value my product creates? How much time, money, or risk does it eliminate? What fraction of that value is fair for me to capture?"
-
 在现阶段，你可能很想直接将你的 AI 产品定价为每月 20 美元的 SaaS 订阅费。请抵制住这种冲动。
 
-相反，你应该问自己："我的产品究竟创造了什么真实价值？它为用户节省了多少时间、金钱，或规避了多少风险？其中，我获取多大比例的价值才是合理的？"
+Instead, ask: "What is the true value my product creates? How much time, money, or risk does it eliminate? What fraction of that value is fair for me to capture?"
+
+相反，你应该问自己：我的产品究竟创造了什么真实价值？它为用户节省了多少时间、金钱，或规避了多少风险？其中，我获取多大比例的价值才是合理的？
 
 If you price on features, you'll always be under pressure. If you price on value, you'll always be aligned with your customer. And alignment is what keeps you alive long after novelty fades.
 
@@ -1369,9 +1368,9 @@ If you price on features, you'll always be under pressure. If you price on value
 
 In AI, features commoditize. Outcomes endure. Price for value, not for features.
 
-### Step 9. Treat Distribution as Part of PMF, Not Post-PMF
-
 在人工智能（AI）领域，功能终将趋于同质化，唯有成果方能历久弥新。应依据价值定价，而非依据功能定价。
+
+### Step 9. Treat Distribution as Part of PMF, Not Post-PMF
 
 步骤 9：将市场推广（Distribution）视为产品市场匹配（Product-Market Fit，PMF）的一部分，而非 PMF 达成之后的步骤
 
@@ -1385,57 +1384,65 @@ That logic does not hold in AI. In AI, distribution is part of PMF itself. Why? 
 
 #### Why distribution can't wait in AI
 
+人工智能为何必须即刻拥抱分布式架构
+
 There are three reasons AI demands distribution-first thinking:
 
-人工智能为何必须即刻拥抱分布式架构人工智能的发展要求我们优先考虑分布式架构，主要有以下三个原因：
+人工智能的发展要求我们优先考虑分布式架构，主要有以下三个原因：
 
-1. The novelty tax: Users are curious about AI, so they'll try anything once. But curiosity-driven usage is fragile. Unless your product embeds itself where the job actually happens, users won't return. Distribution is what turns curiosity into habit.
+1 The novelty tax: Users are curious about AI, so they'll try anything once. But curiosity-driven usage is fragile. Unless your product embeds itself where the job actually happens, users won't return. Distribution is what turns curiosity into habit.
 
-1. **新奇感代价（The novelty tax)**：用户对 AI 感到好奇，因此任何新东西他们都愿意尝试一次。但这种由好奇心驱动的使用行为并不稳固。除非你的产品能深度融入用户的实际工作场景，否则他们不会再次使用。**产品分发与触达（Distribution)**才是将一时好奇转化为长期习惯的关键。
+新奇感代价（The novelty tax)：用户对 AI 感到好奇，因此任何新东西他们都愿意尝试一次。但这种由好奇心驱动的使用行为并不稳固。除非你的产品能深度融入用户的实际工作场景，否则他们不会再次使用。产品分发与触达（Distribution）才是将一时好奇转化为长期习惯的关键。
 
-2. The clone problem: Features are easy to copy. What competitors can't easily copy is your distribution wedge — whether that's a deep integration, a unique GTM motion, or a community-driven loop.
+2 The clone problem: Features are easy to copy. What competitors can't easily copy is your distribution wedge — whether that's a deep integration, a unique GTM motion, or a community-driven loop.
 
-2. 克隆问题：产品功能易于复制。竞争对手难以复制的，是你的分销优势（distribution wedge）—— 无论是深度的产品集成、独特的市场进入策略（GTM motion），还是社区驱动的增长飞轮。
+克隆问题：产品功能易于复制。竞争对手难以复制的，是你的分销优势（distribution wedge）—— 无论是深度的产品集成、独特的市场进入策略（GTM motion），还是社区驱动的增长飞轮。
 
-3. Workflow gravity: People don't want another app. They want AI where they already work. If you force them into a new silo, they'll try it briefly, then default back to their familiar stack. Distribution is what makes your product invisible infrastructure instead of a separate tool.
+3 Workflow gravity: People don't want another app. They want AI where they already work. If you force them into a new silo, they'll try it briefly, then default back to their familiar stack. Distribution is what makes your product invisible infrastructure instead of a separate tool.
 
-3. 工作流惯性：人们不想要再多一个应用。他们希望 AI 能直接嵌入他们现有的工作环境中。如果你强迫他们切换到一个新的、孤立的应用里，他们可能只会短暂尝试，随后便会退回自己熟悉的那套工具组合。广泛而无缝的分发能力，正是让你的产品化身为「隐形」的基础设施，而非一个需要单独使用的工具的关键。
+工作流惯性：人们不想要再多一个应用。他们希望 AI 能直接嵌入他们现有的工作环境中。如果你强迫他们切换到一个新的、孤立的应用里，他们可能只会短暂尝试，随后便会退回自己熟悉的那套工具组合。广泛而无缝的分发能力，正是让你的产品化身为「隐形」的基础设施，而非一个需要单独使用的工具的关键。
 
 The distribution wedge → PLG loop → moat flywheel
 
+市场切入楔子 → 产品驱动增长（PLG）循环 → 护城河飞轮
+
 Think about distribution not as an afterthought but as a three-stage system that runs in parallel with PMF:
 
-市场切入楔子 → 产品驱动增长（PLG）循环 → 护城河飞轮不要等到产品市场匹配（Product-Market Fit，PMF）达成后才考虑分销，而应将其视为一个与 PMF 探索同步展开的三阶段体系：
+不要等到产品市场匹配（Product-Market Fit，PMF）达成后才考虑分销，而应将其视为一个与 PMF 探索同步展开的三阶段体系：
 
-1. GTM wedge: The first, narrow entry point where you land inside a customer's workflow. This could be an integration, a Chrome extension, or a single API that solves one job.Example: An AI compliance startup didn't launch a standalone app. Instead, they built a plug-in inside Epic hospital software. That wedge gave them instant credibility and adoption.
+1 GTM wedge: The first, narrow entry point where you land inside a customer's workflow. This could be an integration, a Chrome extension, or a single API that solves one job.
 
-1. **市场进入楔子（GTM wedge)**：这是首个、也是极其精准的切入点，能让你的产品直接嵌入客户现有的工作流程中。它可能是一个集成应用、一个 Chrome 浏览器扩展，或者是一个只解决特定任务的独立 API。**示例**：一家专注于人工智能合规的初创公司并没有发布独立的应用。相反，他们选择在医疗信息系统巨头 Epic 的软件内部开发了一个插件。这个精准的「楔子」为他们迅速赢得了客户的信任，并推动了产品的落地使用。
+市场进入楔子（GTM wedge）：这是首个、也是极其精准的切入点，能让你的产品直接嵌入客户现有的工作流程中。它可能是一个集成应用、一个 Chrome 浏览器扩展，或者是一个只解决特定任务的独立 API。
 
-2. Example: An AI compliance startup didn't launch a standalone app. Instead, they built a plug-in inside Epic hospital software. That wedge gave them instant credibility and adoption.
+Example: An AI compliance startup didn't launch a standalone app. Instead, they built a plug-in inside Epic hospital software. That wedge gave them instant credibility and adoption.
 
-2. 示例：有家人工智能合规初创公司并未选择推出独立应用，而是选择在 Epic 医院系统软件内部开发了一个插件。这一巧妙的切入策略，让他们迅速赢得了信任并得以推广使用。
+示例：一家专注于人工智能合规的初创公司并没有发布独立的应用。相反，他们选择在医疗信息系统巨头 Epic 的软件内部开发了一个插件。这个精准的「楔子」为他们迅速赢得了客户的信任，并推动了产品的落地使用。
 
-3. PLG loop: Once you've landed, you need a loop that spreads usage naturally. In SaaS, this might be viral invites. In AI, it's often user corrections, shared outputs, or network effects from embedded data.Example: Perplexity's mobile app makes every search shareable with citations. That loop spreads trust and drives organic installs.
+2 Example: An AI compliance startup didn't launch a standalone app. Instead, they built a plug-in inside Epic hospital software. That wedge gave them instant credibility and adoption.
 
-3. 产品驱动增长（Product-Led Growth，PLG）循环：在成功获客后，你需要建立一个能够自然促进产品采用和传播的循环机制。在 SaaS（软件即服务）领域，这可能是病毒式的邀请机制。在人工智能（AI）领域，则通常是用户对结果的修正、输出内容的分享，或是来自嵌入数据所产生的网络效应。示例：Perplexity 的移动应用程序让每一次附带引文来源的搜索都易于分享。这个分享机制传播了产品可信度，并有效驱动了应用的自然安装增长。
+2 PLG loop: Once you've landed, you need a loop that spreads usage naturally. In SaaS, this might be viral invites. In AI, it's often user corrections, shared outputs, or network effects from embedded data.
 
-4. Example: Perplexity's mobile app makes every search shareable with citations. That loop spreads trust and drives organic installs.
+产品驱动增长（Product-Led Growth，PLG）循环：在成功获客后，你需要建立一个能够自然促进产品采用和传播的循环机制。在 SaaS（软件即服务）领域，这可能是病毒式的邀请机制。在人工智能（AI）领域，则通常是用户对结果的修正、输出内容的分享，或是来自嵌入数据所产生的网络效应。
 
-5. Moat flywheel: Over time, your distribution itself becomes defensible. The more users embed you into workflows, the harder it is to rip you out. The more outputs get shared, the more data and trust you accumulate.Example: GitHub Copilot became sticky not just because of good completions, but because it embedded itself inside VS Code — a distribution moat competitors couldn't easily replicate.
+Example: Perplexity's mobile app makes every search shareable with citations. That loop spreads trust and drives organic installs.
 
-4. 示例：Perplexity 的移动应用让每一次搜索都能附带引文进行分享。这个循环有助于传播信任，并带来自然的安装量增长。
+示例：Perplexity 的移动应用程序让每一次附带引文来源的搜索都易于分享。这个分享机制传播了产品可信度，并有效驱动了应用的自然安装增长。
 
-5. 飞轮护城河：随着时间的推移，你的分发网络本身就会成为一道护城河。用户越多地将你的产品集成到他们的工作流中，你就越难以被取代。产品的输出结果被分享得越广泛，你积累的数据和信任也就越多。示例：GitHub Copilot 能够获得很高的用户粘性，不仅是因为其出色的代码补全能力，更关键的是它深度集成在了 VS Code 编辑器内部 —— 这形成了一道竞争对手难以复制的分发护城河。
+3 Moat flywheel: Over time, your distribution itself becomes defensible. The more users embed you into workflows, the harder it is to rip you out. The more outputs get shared, the more data and trust you accumulate.
 
-6. Example: GitHub Copilot became sticky not just because of good completions, but because it embedded itself inside VS Code — a distribution moat competitors couldn't easily replicate.
+飞轮护城河：随着时间的推移，你的分发网络本身就会成为一道护城河。用户越多地将你的产品集成到他们的工作流中，你就越难以被取代。产品的输出结果被分享得越广泛，你积累的数据和信任也就越多。
 
-6. 示例：GitHub Copilot 能获得很高的用户粘性，不仅是因为其智能代码补全质量上乘，更关键的原因在于它深度集成到了 VS Code 编辑器之中 —— 这构成了竞争对手难以复制的渠道（或生态）护城河。
+Example: GitHub Copilot became sticky not just because of good completions, but because it embedded itself inside VS Code — a distribution moat competitors couldn't easily replicate.
+
+示例：GitHub Copilot 能够获得很高的用户粘性，不仅是因为其出色的代码补全能力，更关键的是它深度集成在了 VS Code 编辑器内部 —— 这形成了一道竞争对手难以复制的分发护城河。
 
 #### Case example: Standalone app vs. embedded API
 
+案例：独立应用与嵌入式 API 对比
+
 One AI startup tried to launch a standalone app for hospital documentation. The value was clear, but adoption was weak. Why? Because doctors didn't want to leave their EHR (Electronic Health Record) systems to use a separate tool. The product was technically impressive, but distribution was misaligned.
 
-案例：独立应用与嵌入式 API 对比一家人工智能（AI）初创公司曾尝试推出一款用于医院文书工作的独立应用。产品的价值很明显，但市场接受度却很低。原因何在？因为医生们不愿意离开他们正在使用的电子健康记录（EHR）系统，转而去操作一个独立的工具。这款产品在技术上固然出色，但其分发模式与用户的实际工作场景严重脱节。
+一家人工智能（AI）初创公司曾尝试推出一款用于医院文书工作的独立应用。产品的价值很明显，但市场接受度却很低。原因何在？因为医生们不愿意离开他们正在使用的电子健康记录（EHR）系统，转而去操作一个独立的工具。这款产品在技术上固然出色，但其分发模式与用户的实际工作场景严重脱节。
 
 They pivoted: instead of an app, they built an API that embedded directly inside Epic and Cerner (the dominant EHR systems). Overnight, adoption surged. Same underlying value, but the distribution wedge changed everything. Doctors no longer had to change behavior — the AI showed up where they already worked.
 
@@ -1443,32 +1450,35 @@ They pivoted: instead of an app, they built an API that embedded directly inside
 
 The lesson: in AI, distribution is not a growth channel — it's part of the product experience.
 
-#### Practical ways to build distribution into PMF
-
 核心启示：在人工智能（AI）领域，产品触达用户的方式（Distribution）本身并非单纯的增长渠道，而是产品体验不可或缺的一环。
+
+#### Practical ways to build distribution into PMF
 
 实现产品市场契合（Product-Market Fit）的实用渠道策略
 
-* Embed, don't replace. Find the tools your ICP already uses daily and integrate directly. AI that feels invisible will win over AI that demands new habits.
+1 Embed, don't replace. Find the tools your ICP already uses daily and integrate directly. AI that feels invisible will win over AI that demands new habits.
 
-* Leverage correction loops. Every time a user edits an AI output, that action can improve the model, generate better outputs, and attract more usage. Distribution and product improve in lockstep.
+嵌入，而非取代。找到你的目标客户（ICP）日常已在使用的工具，并直接集成其中。那种让人察觉不到存在的 AI，会比那种要求用户改变习惯的 AI 更具优势。
 
-*  **嵌入，而非取代**。找到你的目标客户（ICP）日常已在使用的工具，并直接集成其中。那种让人察觉不到存在的 AI，会比那种要求用户改变习惯的 AI 更具优势。
-*  **善用校正循环**。用户每次对 AI 输出进行编辑，这个行为都能用于改进模型、生成更佳的结果，从而吸引更多用户使用。产品的市场推广与产品本身得以协同发展。
+2 Leverage correction loops. Every time a user edits an AI output, that action can improve the model, generate better outputs, and attract more usage. Distribution and product improve in lockstep.
 
-* Design for shareability. Outputs that can be shared with colleagues, clients, or communities create natural word-of-mouth. Transparency (citations, audit logs) amplifies credibility.
+善用校正循环。用户每次对 AI 输出进行编辑，这个行为都能用于改进模型、生成更佳的结果，从而吸引更多用户使用。产品的市场推广与产品本身得以协同发展。
 
-*  为分享而设计。能够与同事、客户或社区分享的成果，会自然形成口碑传播。保持透明度（例如提供引用来源、审计日志）能显著提升可信度。
+3 Design for shareability. Outputs that can be shared with colleagues, clients, or communities create natural word-of-mouth. Transparency (citations, audit logs) amplifies credibility.
 
-* Pick a wedge no one else is chasing. Instead of chasing broad "AI for everyone" launches, pick narrow channels. For example: "AI that plugs into Shopify Flow for mid-market DTC brands."
+为分享而设计。能够与同事、客户或社区分享的成果，会自然形成口碑传播。保持透明度（例如提供引用来源、审计日志）能显著提升可信度。
 
-* 选择一个无人竞逐的细分切入点。与其跟风推出大而全的「全民 AI」产品，不如聚焦于垂直领域。例如：「专为中型直接面向消费者品牌（DTC 品牌）设计、可接入 Shopify Flow 的 AI 工具。」
+4 Pick a wedge no one else is chasing. Instead of chasing broad "AI for everyone" launches, pick narrow channels. For example: "AI that plugs into Shopify Flow for mid-market DTC brands."
+
+选择一个无人竞逐的细分切入点。与其跟风推出大而全的「全民 AI」产品，不如聚焦于垂直领域。例如：「专为中型直接面向消费者品牌（DTC 品牌）设计、可接入 Shopify Flow 的 AI 工具。」
 
 #### Why scaling without distribution alignment fails
 
+为何缺乏市场匹配的扩张会失败
+
 I've seen AI founders hit early traction, then pour money into paid acquisition. The result? Lots of signups, weak activation, high churn. Because even if users show up, the product isn't where the job happens. No distribution wedge, no habit, no stickiness. Scaling only amplified the leaks.
 
-为何缺乏市场匹配的扩张会失败我见过不少 AI 初创公司的创始人，在取得初步市场反响后，便大举投入资金进行付费获客。结果如何？注册量暴涨，但用户激活率很低，流失率却很高。因为即使用户被吸引来了，产品也并未融入他们实际需要完成任务的场景。没有独特的市场切入点，无法形成用户习惯，也就没有产品粘性。一味追求扩张，只会让用户流失的漏洞变得更大。
+我见过不少 AI 初创公司的创始人，在取得初步市场反响后，便大举投入资金进行付费获客。结果如何？注册量暴涨，但用户激活率很低，流失率却很高。因为即使用户被吸引来了，产品也并未融入他们实际需要完成任务的场景。没有独特的市场切入点，无法形成用户习惯，也就没有产品粘性。一味追求扩张，只会让用户流失的漏洞变得更大。
 
 The companies that survive flip the equation: they obsess about embedding into workflows and building natural loops first, then scale only once they know every new user is likely to stick.
 
@@ -1484,9 +1494,9 @@ If you answer those questions, your product won't just be tested — it will be 
 
 Distribution isn't the sequel to PMF. In AI, distribution is PMF.
 
-### Step 10. Institutionalize Feedback → Model → Product Loops
-
 分布并非概率质量函数（Probability Mass Function，PMF）的进阶概念。在人工智能（AI）领域，分布指的就是概率质量函数（PMF）。
+
+### Step 10. Institutionalize Feedback → Model → Product Loops
 
 步骤 10. 建立制度化的反馈 → 模型 → 产品迭代循环
 
@@ -1500,69 +1510,65 @@ This creates a unique dynamic: every user interaction isn't just usage, it's tra
 
 Why feedback loops are different in AI
 
+为何 AI 中的反馈循环与众不同
+
 In AI, performance doesn't plateau because of features — it plateaus because models stop improving relative to real-world use. You may think you've built something magical, but if your users are constantly overriding outputs and those corrections never flow back into your system, you're leaving gold on the floor.
 
-为何 AI 中的反馈循环与众不同在人工智能（AI）领域，性能瓶颈往往并非源于功能本身，而是因为模型相对于真实世界应用的改进陷入了停滞。你可能以为自己打造了一个神奇的系统，但如果用户总是在推翻模型的输出结果，而这些修正信息又从未回流到你的系统中，那无异于让宝贵的财富白白流失。
+在人工智能（AI）领域，性能瓶颈往往并非源于功能本身，而是因为模型相对于真实世界应用的改进陷入了停滞。你可能以为自己打造了一个神奇的系统，但如果用户总是在推翻模型的输出结果，而这些修正信息又从未回流到你的系统中，那无异于让宝贵的财富白白流失。
 
 Consider two AI startups solving the same problem:
 
-* Startup A treats feedback as support tickets. Users complain, product managers prioritize, and engineers fix issues in bursts.
-
 设想有两家 AI 初创公司，它们瞄准的是同一个市场问题：
 
-* 初创公司 A 将用户反馈视作支持工单来处理。流程通常是：用户提出投诉，产品经理据此排定优先级，然后工程师们再分批进行突击修复。
+1 Startup A treats feedback as support tickets. Users complain, product managers prioritize, and engineers fix issues in bursts.
 
-* Startup B treats feedback as data. Every rejection, every edit, every approval is automatically captured, structured, and used to fine-tune outputs.
+初创公司 A 将用户反馈视作支持工单来处理。流程通常是：用户提出投诉，产品经理据此排定优先级，然后工程师们再分批进行突击修复。
+
+2 Startup B treats feedback as data. Every rejection, every edit, every approval is automatically captured, structured, and used to fine-tune outputs.
+
+初创公司 B 将用户反馈视为数据。无论是拒绝、修改还是采纳，所有反馈都会被自动收集、结构化，并用来微调其模型的输出结果。
 
 After six months, Startup A is still relying on manual iteration. Startup B has thousands of micro-improvements baked into the product, compounding daily. Guess who has the moat?
-
-* 初创公司 B 将用户反馈视为数据。无论是拒绝、修改还是采纳，所有反馈都会被自动收集、结构化，并用来微调其模型的输出结果。
 
 六个月过去了，初创公司 A 依然依靠人工手动迭代。而初创公司 B 已将成千上万个细微改进深度整合到产品中，并且这种优势每天都在持续累积。你猜，谁的竞争护城河更宽？
 
 #### The compounding feedback → model → product cycle
 
+复利式反馈 → 模型 → 产品循环
+
 The most successful AI companies design for a self-reinforcing loop:
 
-复利式反馈 → 模型 → 产品循环最成功的 AI 公司都围绕一个自我强化的循环进行设计：
+最成功的 AI 公司都围绕一个自我强化的循环进行设计：
 
-1. User interacts with output.Approves, edits, rejects, or escalates.
+1 User interacts with output.
 
-2. Approves, edits, rejects, or escalates.
+Approves, edits, rejects, or escalates.
 
-1. 用户对（系统）输出结果进行交互操作：批准、编辑、拒绝或上报。
-2. （系统根据用户指令）执行批准、编辑、拒绝或上报操作。
+用户对（系统）输出结果进行交互操作：批准、编辑、拒绝或上报。
 
-3. Feedback is captured.Not just "thumbs up/thumbs down," but granular corrections (what changed, why it changed).
+2 Feedback is captured.
 
-4. Not just "thumbs up/thumbs down," but granular corrections (what changed, why it changed).
+Not just "thumbs up/thumbs down," but granular corrections (what changed, why it changed).
 
-3. 系统会捕获详细的反馈。不仅仅是简单的「点赞 / 点踩」，而是具体的修正信息（具体修改了什么，以及修改的原因）。
+系统会捕获详细的反馈。不仅仅是简单的「点赞 / 点踩」，而是具体的修正信息（具体修改了什么，以及修改的原因）。
 
-4. 不仅仅是简单的「点赞 / 点踩」，而是具体的修正信息（具体修改了什么，以及修改的原因）。
+3 Model improves.
 
-5. Model improves.Fine-tuning, prompt optimization, or rule updates informed by that feedback.
+Fine-tuning, prompt optimization, or rule updates informed by that feedback.
 
-6. Fine-tuning, prompt optimization, or rule updates informed by that feedback.
+模型根据反馈进行改进，方法包括微调、提示优化或规则更新。
 
-5. 模型根据反馈进行改进，方法包括微调、提示优化或规则更新。
+4 Product improves.
 
-6. 这些改进具体体现为基于反馈的微调、提示优化或规则更新。
+Outputs get better, trust builds, reliance deepens.
 
-7. Product improves.Outputs get better, trust builds, reliance deepens.
+产品持续改进。其输出质量随之提升，从而建立信任，并让用户依赖逐渐加深。
 
-8. Outputs get better, trust builds, reliance deepens.
+5 Loop restarts, stronger.
 
-7. 产品持续改进。其输出质量随之提升，从而建立信任，并让用户依赖逐渐加深。
+Better product → more usage → more feedback → even better product.
 
-8. 随着输出质量不断提升，信任得以巩固，依赖关系也进一步深化。
-
-9. Loop restarts, stronger.Better product → more usage → more feedback → even better product.
-
-10. Better product → more usage → more feedback → even better product.
-
-9. 循环重启，愈加强大。产品改进 → 使用增加 → 反馈增多 → 产品进一步改进。
-10. 这正是上述的增强循环：产品改进带来更广泛的使用，更广泛的使用产生更丰富的反馈，进而驱动产品实现更大的改进。
+循环重启，愈加强大。产品改进 → 使用增加 → 反馈增多 → 产品进一步改进。
 
 This isn't a nice-to-have. It's the operating system of an AI company. Without it, you're just a thin wrapper on an API. With it, you're building a defensible system that gets smarter every day your users engage.
 
@@ -1570,11 +1576,19 @@ This isn't a nice-to-have. It's the operating system of an AI company. Without i
 
 #### Case example: AI sales coaching
 
-One AI sales coaching platform built their moat not by having the flashiest demo, but by capturing corrections from thousands of sales reps. Every time a rep adjusted a suggested response, the system logged it. Over time, those corrections created a dataset of what "good" sales language looked like in specific industries.
-
 案例：AI 销售辅导（AI Sales Coaching)
 
+One AI sales coaching platform built their moat not by having the flashiest demo, but by capturing corrections from thousands of sales reps. Every time a rep adjusted a suggested response, the system logged it. Over time, those corrections created a dataset of what "good" sales language looked like in specific industries.
+
 一个 AI 销售辅导平台构筑其竞争壁垒的方式，并不在于做出最炫目的演示，而在于持续收集数千名销售代表的反馈修正。每当有销售代表修改了系统建议的回复，这个行为都会被系统记录下来。长此以往，这些修正数据便汇聚成一个数据集，清晰地勾勒出在特定行业里，何为「优秀」的销售话术。
+
+
+
+
+
+
+
+
 
 Fast forward two years: competitors could copy the idea, but they couldn't copy the millions of nuanced feedback datapoints that had shaped the model. That feedback loop became the company's moat and their adoption deepened because reps noticed the AI "learning" from their corrections.
 
