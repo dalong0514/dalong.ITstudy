@@ -1582,68 +1582,63 @@ One AI sales coaching platform built their moat not by having the flashiest demo
 
 一个 AI 销售辅导平台构筑其竞争壁垒的方式，并不在于做出最炫目的演示，而在于持续收集数千名销售代表的反馈修正。每当有销售代表修改了系统建议的回复，这个行为都会被系统记录下来。长此以往，这些修正数据便汇聚成一个数据集，清晰地勾勒出在特定行业里，何为「优秀」的销售话术。
 
-
-
-
-
-
-
-
-
 Fast forward two years: competitors could copy the idea, but they couldn't copy the millions of nuanced feedback datapoints that had shaped the model. That feedback loop became the company's moat and their adoption deepened because reps noticed the AI "learning" from their corrections.
 
 两年后：竞争对手可以复制这个创意，却无法复制那数百万个用于打磨模型的、细致入微的反馈数据点。这个反馈循环（Feedback Loop）成为了公司的护城河，其产品的采用也变得更加深入，因为销售代表们发现 AI 正在从他们的纠正中「学习」。
 
 #### How to institutionalize feedback
 
-1. Design UI for corrections. Don't hide feedback behind obscure buttons. Make it effortless for users to accept, reject, or edit outputs.Example: Approve/reject toggles, inline editing, or one-click escalation.
-
 如何将反馈制度化
 
-1. **设计用于修正的用户界面**。不要将反馈功能隐藏在难以发现的按钮后面。要让用户能够轻松地接受、拒绝或编辑输出结果。例如：提供批准 / 拒绝开关、支持内联编辑，或实现一键问题上报功能。
+1 Design UI for corrections. Don't hide feedback behind obscure buttons. Make it effortless for users to accept, reject, or edit outputs.
 
-2. Example: Approve/reject toggles, inline editing, or one-click escalation.
+设计用于修正的用户界面。不要将反馈功能隐藏在难以发现的按钮后面。要让用户能够轻松地接受、拒绝或编辑输出结果。
 
-3. Capture structured data. Don't just log that feedback happened. Log what changed. Was a number corrected? A clause rewritten? A tone adjusted? Structure creates trainable signals.
+Example: Approve/reject toggles, inline editing, or one-click escalation.
 
-2. 示例：批准 / 拒绝切换按钮、行内编辑或一键上报功能。
+例如：提供批准 / 拒绝开关、支持内联编辑，或实现一键问题上报功能。
 
-3. 捕获结构化数据。不仅要记录「收到了反馈」这一事实，更要记录具体「更改了什么」。是数字被修正了？条款被改写了？还是语气被调整了？这种结构化的记录方式，能生成可用于模型训练的有效信号。
+2 Capture structured data. Don't just log that feedback happened. Log what changed. Was a number corrected? A clause rewritten? A tone adjusted? Structure creates trainable signals.
 
-4. Close the loop visibly. Show users that their feedback makes the system better.Example: "Thanks for correcting this. Future outputs in this scenario will adapt accordingly."
+捕获结构化数据。不仅要记录「收到了反馈」这一事实，更要记录具体「更改了什么」。是数字被修正了？条款被改写了？还是语气被调整了？这种结构化的记录方式，能生成可用于模型训练的有效信号。
 
-4. 清晰完成反馈闭环。向用户展示他们的反馈正在优化系统。
-示例："感谢您的纠正。未来在类似场景下的输出将会据此进行调整。"
+3 Close the loop visibly. Show users that their feedback makes the system better.
 
-5. Example: "Thanks for correcting this. Future outputs in this scenario will adapt accordingly."
+清晰完成反馈闭环。向用户展示他们的反馈正在优化系统。
 
-6. Prioritize critical feedback. Not all feedback is equal. Prioritize corrections in high-risk or high-value jobs (compliance, contracts, finance) over low-stakes tweaks.
+Example: "Thanks for correcting this. Future outputs in this scenario will adapt accordingly."
 
-5. 示例："感谢您的纠正。在此场景下，后续输出将相应调整。"
+示例：「感谢您的纠正。未来在类似场景下的输出将会据此进行调整。」
 
-6. 优先处理关键反馈。反馈的价值有高低之分。应优先在高风险或高价值领域（如合规、合同、财务）进行修正，而非低风险的微调。
+4 Prioritize critical feedback. Not all feedback is equal. Prioritize corrections in high-risk or high-value jobs (compliance, contracts, finance) over low-stakes tweaks.
 
-7. Automate improvement cycles. Build pipelines that continuously feed structured feedback back into prompts, fine-tuning, or guardrails. Manual cycles are too slow.
+优先处理关键反馈。反馈的价值有高低之分。应优先在高风险或高价值领域（如合规、合同、财务）进行修正，而非低风险的微调。
 
-7. 自动化改进循环。构建能够持续将结构化反馈注入提示（prompts）、模型微调或安全护栏（guardrails）的流水线。手动迭代的周期实在太慢了。
+5 Automate improvement cycles. Build pipelines that continuously feed structured feedback back into prompts, fine-tuning, or guardrails. Manual cycles are too slow.
+
+自动化改进循环。构建能够持续将结构化反馈注入提示（prompts）、模型微调或安全护栏（guardrails）的流水线。手动迭代的周期实在太慢了。
 
 #### Trust grows when feedback matters
 
+当反馈产生效果，信任随之而来
+
 There's another hidden benefit: when users see their corrections lead to visible improvements, trust grows. They stop thinking of your AI as a black box and start seeing it as a partner that learns from them. This transforms the relationship from "I don't trust this tool" to "I'm training this tool for my needs." That psychological shift is the foundation of durable adoption.
 
-当反馈产生效果，信任随之而来这里还有一个隐藏的好处：当用户发现自己的纠正带来了明显的改进时，信任感便会增强。他们不再把你的 AI 看作一个神秘的黑箱，而是开始将其视为一个能从自己这里学习的伙伴。这种转变将用户与工具的关系，从「我不信任这个东西」升级为「我在按自己的需要培养它」。这种心理上的转变，正是用户愿意长期使用该产品的基石。
+这里还有一个隐藏的好处：当用户发现自己的纠正带来了明显的改进时，信任感便会增强。他们不再把你的 AI 看作一个神秘的黑箱，而是开始将其视为一个能从自己这里学习的伙伴。这种转变将用户与工具的关系，从「我不信任这个东西」升级为「我在按自己的需要培养它」。这种心理上的转变，正是用户愿意长期使用该产品的基石。
 
 The risk of ignoring feedback
 
+忽视反馈的风险
+
 I've also seen the opposite. One AI company launched with a flashy demo, gained hype, but never invested in feedback loops. Users encountered errors, corrected them, but nothing changed. Over time, frustration mounted: "I keep teaching this thing, but it never learns." Churn skyrocketed. Within a year, the company was dead.
 
-忽视反馈的风险我也见过相反的例子。有家人工智能（AI）公司凭借一个炫酷的演示高调登场，一时间风头无两，却从未着手构建有效的反馈机制。用户遇到了错误并试图纠正，但系统毫无改进。时间一长，挫败感与日俱增，用户抱怨道："我一直在教它，可它根本学不会。」结果用户流失率急剧飙升。不到一年，这家公司就关门大吉了。
+我也见过相反的例子。有家人工智能（AI）公司凭借一个炫酷的演示高调登场，一时间风头无两，却从未着手构建有效的反馈机制。用户遇到了错误并试图纠正，但系统毫无改进。时间一长，挫败感与日俱增，用户抱怨道：「我一直在教它，可它根本学不会。」结果用户流失率急剧飙升。不到一年，这家公司就关门大吉了。
 
 Ignoring feedback in AI isn't just a missed opportunity. It's a slow death.
 
-At this stage, you may feel pressure to chase more features, more users, more distribution. But ask yourself: "Am I capturing and compounding the most valuable asset I have, my users' feedback?" If the answer is no, you're building a demo, not a product.
-
 在 AI 领域，忽视用户反馈不仅仅是错失良机，更是在慢性自杀。
+
+At this stage, you may feel pressure to chase more features, more users, more distribution. But ask yourself: "Am I capturing and compounding the most valuable asset I have, my users' feedback?" If the answer is no, you're building a demo, not a product.
 
 现阶段，你可能倍感压力，急于追求更多功能、吸引更多用户、拓展更多渠道。但请扪心自问：「我是否正在有效收集并充分利用我最宝贵的资产 —— 用户反馈，让其价值持续增长？」如果答案是否定的，那么你打造的不过是个演示原型，而非真正的产品。
 
