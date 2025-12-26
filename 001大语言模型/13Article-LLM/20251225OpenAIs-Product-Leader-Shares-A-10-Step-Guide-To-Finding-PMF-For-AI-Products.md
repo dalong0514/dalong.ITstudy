@@ -200,32 +200,21 @@ When most founders start building in AI, their instinct is to take something fam
 
 当大多数创始人投身 AI 创业时，他们的第一反应往往是抓住熟悉的东西…… 比如一个现有的产品类别、一个惯用的工作流程，或者一款流行的 SaaS 工具…… 然后简单地给它加上 AI。「要是给笔记软件加上 AI 会怎么样？」「要是给客户关系管理（CRM）系统加上 AI 呢？」「给客服加上 AI 如何？」这想法听起来很诱人，做出来的演示视频也光鲜亮丽，但事实是：「给 X 加上 AI」根本算不上一种战略。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Why not? Because what you've done in that framing is define your product around a technology, not around a job. You've anchored your vision on the presence of AI, not on the presence of pain. And if you've spent any time watching how users actually behave, you'll know they don't adopt technology for technology's sake. They adopt it when it reduces pain so dramatically that not using it feels irrational.
 
 为什么不呢？因为你在那种框架下，是围绕一项技术来定义产品，而不是围绕用户要完成的「任务」。你的愿景着眼于人工智能（AI）的存在，而非用户痛点的存在。只要你观察过用户的实际行为就会知道，他们并非为了技术本身而采用技术。只有当技术能如此显著地解决痛点，以至于不用它反而显得不合理时，他们才会采纳。
 
 The essence of finding PMF in AI starts with asking: What job is the user hiring this product to do? The job-to-be-done framework, long applied in traditional product management, takes on even greater importance in AI because the novelty of the technology can trick you into thinking you're solving something valuable when in reality you're just layering another tool onto a workflow people aren't desperate to change.
 
-在人工智能（AI）领域寻找产品市场契合（Product-Market Fit，PMF），其核心在于提出一个问题：用户究竟想用这个产品来完成什么任务？"待完成工作」（Jobs-to-be-Done）框架在传统产品管理中应用已久，而在 AI 时代，它的重要性有增无减。这是因为 AI 技术的新颖性很容易让人产生错觉，误以为自己正在解决一个高价值问题，但实际上，可能只是给一个用户本就不想改变的工作流程，生硬地堆砌了又一个工具。
+在人工智能（AI）领域寻找产品市场契合（Product-Market Fit，PMF），其核心在于提出一个问题：用户究竟想用这个产品来完成什么任务？「待完成工作」（Jobs-to-be-Done）框架在传统产品管理中应用已久，而在 AI 时代，它的重要性有增无减。这是因为 AI 技术的新颖性很容易让人产生错觉，误以为自己正在解决一个高价值问题，但实际上，可能只是给一个用户本就不想改变的工作流程，生硬地堆砌了又一个工具。
 
 #### Why "AI as a bolt-on" fails
 
+为什么「外挂式 AI（AI as a bolt-on）」会失败
+
 Think of the dozens of "AI note-taking apps" launched in the past year. On the surface, they look impressive: connect your calendar, record meetings, get transcripts and summaries. But ask yourself: what job are they really doing for the user? Are they eliminating something that feels painful and urgent? Or are they just making an already tolerable task slightly more convenient?
 
-为什么「外挂式 AI（AI as a bolt-on）」会失败回想一下过去一年问世的几十款「AI 笔记应用」。表面看来，它们功能强大：能连接你的日历、自动记录会议、提供转录文本和摘要。但请扪心自问：它们究竟为用户解决了什么核心问题？是消除了某种切实存在且令人头疼的痛点，还是仅仅让一件本来就能应付的差事，变得稍微省力了一点点？
+回想一下过去一年问世的几十款「AI 笔记应用」。表面看来，它们功能强大：能连接你的日历、自动记录会议、提供转录文本和摘要。但请扪心自问：它们究竟为用户解决了什么核心问题？是消除了某种切实存在且令人头疼的痛点，还是仅仅让一件本来就能应付的差事，变得稍微省力了一点点？
 
 For most knowledge workers, jotting notes or re-reading highlights is not the bottleneck that determines whether they hit their goals. The bottleneck is often elsewhere: aligning decisions, synthesizing complex inputs, producing compliance-ready documentation, or closing deals faster. So an AI product that frames itself as "AI for note-taking" ends up being a bolt-on convenience, not a must-have. Users try it, enjoy the novelty, and then revert to old habits.
 
@@ -237,39 +226,43 @@ Contrast this with a product designed around a native AI job… a job that is pa
 
 #### Finding where AI is native
 
+探寻 AI 的用武之地
+
 The right question isn't, "How can I add AI to X?"
 
-探寻 AI 的用武之地真正关键的问题并非在于「我该如何将 AI 强加于 X？」。
+真正关键的问题并非在于「我该如何将 AI 强加于 X？」。
 
 The right question is: "What jobs exist in this industry that are structurally broken without AI?"
 
-AI is native in problems where:
-
 真正应该问的问题是：「在这个行业里，哪些工作岗位的结构在缺少人工智能（AI）的情况下，本身就难以为继？」
+
+AI is native in problems where:
 
 AI 原生（AI-native）的应用场景通常具有以下特征：
 
-1. Information overload makes human effort costly (e.g., compliance officers reviewing thousands of transactions).
+1 Information overload makes human effort costly (e.g., compliance officers reviewing thousands of transactions).
 
-2. Pattern recognition across massive datasets outpaces human ability (e.g., fraud detection in payments).
+信息过载导致人力成本高昂（例如，合规官需要审查成千上万笔交易）。
 
-1. 信息过载导致人力成本高昂（例如，合规官需要审查成千上万笔交易）。
-2. 在海量数据中进行模式识别，其速度与规模已非人力所能及（例如，支付欺诈检测）。
+2 Pattern recognition across massive datasets outpaces human ability (e.g., fraud detection in payments).
 
-3. Language or generation tasks are unavoidable bottlenecks (e.g., drafting regulatory filings, summarizing patient histories).
+在海量数据中进行模式识别，其速度与规模已非人力所能及（例如，支付欺诈检测）。
 
-4. Decision support under uncertainty is frequent (e.g., prioritizing leads, predicting equipment failure).
+3 Language or generation tasks are unavoidable bottlenecks (e.g., drafting regulatory filings, summarizing patient histories).
 
-3. 语言处理或内容生成类任务常常成为不可避免的瓶颈，例如起草监管申报文件、总结患者病史等。
-4. 在不确定情况下提供决策支持的需求很常见，例如对销售线索进行优先级排序、预测设备故障等。
+语言处理或内容生成类任务常常成为不可避免的瓶颈，例如起草监管申报文件、总结患者病史等。
+
+4 Decision support under uncertainty is frequent (e.g., prioritizing leads, predicting equipment failure).
+
+在不确定情况下提供决策支持的需求很常见，例如对销售线索进行优先级排序、预测设备故障等。
 
 When you find one of these jobs, AI doesn't feel like an add-on, it feels like the only rational solution.
 
-#### Example: Compliance documentation vs. note-taking
-
 当你接触到这类工作时，你会感觉 AI 并非一个锦上添花的工具，而是唯一合理的解决方案。
 
-#### 示例：合规文档 vs. 笔记记录
+#### Example: Compliance documentation vs. note-taking
+
+示例：合规文档 vs. 笔记记录
 
 Consider two product ideas:
 
