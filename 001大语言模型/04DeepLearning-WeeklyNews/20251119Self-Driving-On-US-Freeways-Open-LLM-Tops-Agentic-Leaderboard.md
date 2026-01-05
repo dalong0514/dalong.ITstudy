@@ -110,71 +110,73 @@ What's new: Kimi K2 Thinking and the faster Kimi K2 Thinking Turbo are trillion-
 
 **新动态：** Kimi K2 Thinking 及其速度更快的版本 Kimi K2 Thinking Turbo，是月之暗面（Moonshot）此前发布的大语言模型 Kimi K2 的升级版，它们具备万亿级参数规模并专注于推理任务。这两个模型采用了 4 比特（INT4）精度的量化微调技术，因此，与参数规模类似的其他大语言模型相比，它们的运行成本更低，对硬件的要求也更低。
 
-* Input/output: Text in (up to 256,000 tokens), text out (size limit undisclosed, Kimi K2 Thinking 14 tokens per second, Kimi K2 Thinking Turbo 86 tokens per second)
+1 Input/output: Text in (up to 256,000 tokens), text out (size limit undisclosed, Kimi K2 Thinking 14 tokens per second, Kimi K2 Thinking Turbo 86 tokens per second)
 
-* 输入 / 输出：支持文本输入（最多 256,000 个 Token），文本输出（大小限制未公开；Kimi K2 Thinking 处理速度为 14 Token / 秒，Kimi K2 Thinking Turbo 处理速度为 86 Token / 秒）
+输入 / 输出：支持文本输入（最多 256,000 个 Token），文本输出（大小限制未公开；Kimi K2 Thinking 处理速度为 14 Token / 秒，Kimi K2 Thinking Turbo 处理速度为 86 Token / 秒）
 
-* Architecture: Mixture-of-experts transformer, 1 trillion parameters total, 32 billion parameters active per token.
+2 Architecture: Mixture-of-experts transformer, 1 trillion parameters total, 32 billion parameters active per token.
 
-* Performance: Outperforms top closed LLMs in the τ²-Bench Telecom agentic benchmark, outperforms other open LLMs generally.
+架构：采用专家混合（Mixture-of-experts）Transformer 架构，总参数量达 1 万亿，每个 Token 的激活参数量为 320 亿。
 
-* 架构：采用专家混合（Mixture-of-experts）Transformer 架构，总参数量达 1 万亿，每个 Token 的激活参数量为 320 亿。
-* 性能：在 τ²-Bench Telecom 智能体基准测试中表现优于顶级的闭源大语言模型，并且在整体性能上超越其他开源大语言模型。
+3 Performance: Outperforms top closed LLMs in the τ²-Bench Telecom agentic benchmark, outperforms other open LLMs generally.
 
-* Availability: Free web user interface with limited tool access, weights freely available for noncommercial and commercial uses up to 100 million monthly active users or monthly revenue of $20,000,000 under modified MIT license.
+性能：在 τ²-Bench Telecom 智能体基准测试中表现优于顶级的闭源大语言模型，并且在整体性能上超越其他开源大语言模型。
 
-*  可用性：提供免费的 Web 用户界面，但工具访问权限有限。其模型权重（weights）基于修改后的 MIT 许可证开源，允许免费用于非商业及商业用途，前提是月活跃用户数不超过 1 亿或月收入不超过 2000 万美元。
+4 Availability: Free web user interface with limited tool access, weights freely available for noncommercial and commercial uses up to 100 million monthly active users or monthly revenue of $20,000,000 under modified MIT license.
 
-* API: Kimi K2 Thinking ($0.60/$0.15/$2.50 per million input/cached/output tokens), Kimi K2 Thinking Turbo ($1.15/$0.15/$8.00 per million input/cached/output tokens) via Moonshot AI and other vendors
+可用性：提供免费的 Web 用户界面，但工具访问权限有限。其模型权重（weights）基于修改后的 MIT 许可证开源，允许免费用于非商业及商业用途，前提是月活跃用户数不超过 1 亿或月收入不超过 2000 万美元。
 
-* API：由 Moonshot AI 及其他供应商提供 Kimi K2 Thinking（输入 / 缓存 / 输出 Token 每百万个 $0.60/$0.15/$2.50）和 Kimi K2 Thinking Turbo（输入 / 缓存 / 输出 Token 每百万个 $1.15/$0.15/$8.00）。
+5 API: Kimi K2 Thinking ($0.60/$0.15/$2.50 per million input/cached/output tokens), Kimi K2 Thinking Turbo ($1.15/$0.15/$8.00 per million input/cached/output tokens) via Moonshot AI and other vendors
 
-* Features: Tool use including search, code interpreter, web browsing, "heavy" reasoning mode
+API：由 Moonshot AI 及其他供应商提供 Kimi K2 Thinking（输入 / 缓存 / 输出 Token 每百万个 $0.60/$0.15/$2.50）和 Kimi K2 Thinking Turbo（输入 / 缓存 / 输出 Token 每百万个 $1.15/$0.15/$8.00）。
 
-* Undisclosed: Specific training methods and datasets, output size limit
+6 Features: Tool use including search, code interpreter, web browsing, "heavy" reasoning mode
 
-* 功能：工具使用能力，包括搜索、代码执行（code interpreter）、网页浏览以及「深度」推理模式。
-* 未公开信息：具体的训练方法、所用数据集以及输出内容的长度限制。
+功能：工具使用能力，包括搜索、代码执行（code interpreter）、网页浏览以及「深度」推理模式。
+
+7 Undisclosed: Specific training methods and datasets, output size limit
+
+未公开信息：具体的训练方法、所用数据集以及输出内容的长度限制。
 
 How it works: Rather than completing all reasoning steps before acting, Kimi K2 Thinking executes cycles of reasoning and tool use. This enables it to adjust continually depending on interim reasoning steps or results of tool calls.
 
 工作原理：Kimi K2 Thinking 并非一次性完成所有推理再行动，而是循环执行推理与工具调用。这使得它能够根据中间推理步骤或工具调用的结果，进行持续的动态调整。
 
-* Given a prompt, Kimi K2 Thinking interleaves reasoning, tool use (up to 300 calls), and planning. First it reasons about the task and then calls tools, interprets the results, plans the next step, and repeats the cycle. This investment at inference yields better results in tasks that require multiple steps. For example, the model correctly solved an advanced mathematical probability problem by alternating between 23 reasoning and tool-use steps.
+1 Given a prompt, Kimi K2 Thinking interleaves reasoning, tool use (up to 300 calls), and planning. First it reasons about the task and then calls tools, interprets the results, plans the next step, and repeats the cycle. This investment at inference yields better results in tasks that require multiple steps. For example, the model correctly solved an advanced mathematical probability problem by alternating between 23 reasoning and tool-use steps.
 
-* 给定一个提示（prompt），Kimi K2 思维（Kimi K2 Thinking）会交替进行推理、工具调用（最多可达 300 次）和规划。它首先对任务进行推理，然后调用工具、解读结果、规划下一步，并如此循环往复。这种在推理阶段进行的多步骤循环，使得它在需要多步处理的任务中能获得更好的结果。例如，该模型通过交替执行总计 23 个推理与工具调用步骤，正确解决了一个高等数学概率问题。
+给定一个提示（prompt），Kimi K2 思维（Kimi K2 Thinking）会交替进行推理、工具调用（最多可达 300 次）和规划。它首先对任务进行推理，然后调用工具、解读结果、规划下一步，并如此循环往复。这种在推理阶段进行的多步骤循环，使得它在需要多步处理的任务中能获得更好的结果。例如，该模型通过交替执行总计 23 个推理与工具调用步骤，正确解决了一个高等数学概率问题。
 
-* A "heavy" mode simultaneously runs 8 independent reasoning paths and combines their outputs to produce final output. This mode can improve accuracy on difficult problems at eight times the usual cost in computation.
+2 A "heavy" mode simultaneously runs 8 independent reasoning paths and combines their outputs to produce final output. This mode can improve accuracy on difficult problems at eight times the usual cost in computation.
 
-*  **「高负载」模式**：该模式会同时运行 8 条独立的推理路径，然后综合这些路径的结果来生成最终输出。这种模式能够提升处理难题的准确性，但其计算成本也会增加到通常的八倍。
+**「高负载」模式**：该模式会同时运行 8 条独立的推理路径，然后综合这些路径的结果来生成最终输出。这种模式能够提升处理难题的准确性，但其计算成本也会增加到通常的八倍。
 
-* Moonshot fine-tuned Kimi K2 Thinking at INT4 precision (using integers encoded in 4 bits instead of 16 or 32 bits), roughly doubling output speed and reducing the model's file size to 594 gigabytes (compared to Kimi K2 Instruct's 1 terabyte). Kimi K2 Thinking used quantization aware training (or QAT), a technique that simulates low-precision arithmetic during fine-tuning. Training steps used low-precision math, but the weights were maintained in full precision, making later quantization more accurate.
+3 Moonshot fine-tuned Kimi K2 Thinking at INT4 precision (using integers encoded in 4 bits instead of 16 or 32 bits), roughly doubling output speed and reducing the model's file size to 594 gigabytes (compared to Kimi K2 Instruct's 1 terabyte). Kimi K2 Thinking used quantization aware training (or QAT), a technique that simulates low-precision arithmetic during fine-tuning. Training steps used low-precision math, but the weights were maintained in full precision, making later quantization more accurate.
 
-* Moonshot 对 Kimi K2 Thinking 模型进行了 INT4 精度（即 4 比特整数）的微调，相比原来的 16 或 32 比特，这使其输出速度大约提升了一倍，并将模型文件大小降至 594 GB（而 Kimi K2 Instruct 模型大小为 1 TB）。Kimi K2 Thinking 采用了量化感知训练（Quantization Aware Training，简称 QAT），这项技术在微调过程中模拟低精度运算。其训练步骤使用低精度计算，但模型权重仍以全精度保存，从而使得后续的量化过程更为精准。
+Moonshot 对 Kimi K2 Thinking 模型进行了 INT4 精度（即 4 比特整数）的微调，相比原来的 16 或 32 比特，这使其输出速度大约提升了一倍，并将模型文件大小降至 594 GB（而 Kimi K2 Instruct 模型大小为 1 TB）。Kimi K2 Thinking 采用了量化感知训练（Quantization Aware Training，简称 QAT），这项技术在微调过程中模拟低精度运算。其训练步骤使用低精度计算，但模型权重仍以全精度保存，从而使得后续的量化过程更为精准。
 
-* Kimi K2 Thinking cost $4.6 million to train, according to CNBC. That's $1 million less than DeepSeek's reported cost to train DeepSeek-V3.
+5 Kimi K2 Thinking cost $4.6 million to train, according to CNBC. That's $1 million less than DeepSeek's reported cost to train DeepSeek-V3.
+
+据 CNBC 报道，Kimi K2 Thinking 的训练成本为 460 万美元。这比 DeepSeek 所公布的训练其模型 DeepSeek-V3 的成本低了 100 万美元。
 
 Results: Kimi K2 Thinking leads open-weights LLMs in several benchmarks and achieves state-of-the-art results on some agentic tasks. However, it generates many more tokens than most competitors to achieve a comparable performance.
 
-* 据 CNBC 报道，Kimi K2 Thinking 的训练成本为 460 万美元。这比 DeepSeek 所公布的训练其模型 DeepSeek-V3 的成本低了 100 万美元。
-
 评测结果显示：Kimi K2 Thinking 在多项基准测试中领先于开源大语言模型（LLM），并在部分 AI 智能体（AI Agent）任务上取得了业界领先（state-of-the-art）的结果。不过，为了达到与之相当的性能水平，它所生成的 Token 数量远多于大多数竞争对手。
 
-* On Artificial Analysis' Agentic Index, which measures multi-step problem-solving with tools, Kimi K2 Thinking ranked third (67 points) among LLMs tested, trailing only GPT-5 set to high reasoning and GPT-5 Codex set to high reasoning (68 points).
+1 On Artificial Analysis' Agentic Index, which measures multi-step problem-solving with tools, Kimi K2 Thinking ranked third (67 points) among LLMs tested, trailing only GPT-5 set to high reasoning and GPT-5 Codex set to high reasoning (68 points).
 
-* 在 Artificial Analysis 的 AI 智能体指数（Agentic Index）（该指数用于衡量使用工具进行多步骤问题解决的能力）上，Kimi K2 Thinking 在参与测试的大语言模型（LLM）中排名第三（67 分），仅次于设置为高推理模式的 GPT-5 和 GPT-5 Codex（两者均为 68 分）。
+在 Artificial Analysis 的 AI 智能体指数（Agentic Index）（该指数用于衡量使用工具进行多步骤问题解决的能力）上，Kimi K2 Thinking 在参与测试的大语言模型（LLM）中排名第三（67 分），仅次于设置为高推理模式的 GPT-5 和 GPT-5 Codex（两者均为 68 分）。
 
-* On τ²-Bench Telecom, a test of agentic tool use, Kimi K2 Thinking achieved 93 percent accuracy, the highest score independently measured by Artificial Analysis and 6 percentage points ahead of the nearest contenders, GPT-5 Codex (87 percent accuracy) set to high reasoning and MiniMax-M2 (87 percent accuracy).
+2 On τ²-Bench Telecom, a test of agentic tool use, Kimi K2 Thinking achieved 93 percent accuracy, the highest score independently measured by Artificial Analysis and 6 percentage points ahead of the nearest contenders, GPT-5 Codex (87 percent accuracy) set to high reasoning and MiniMax-M2 (87 percent accuracy).
 
-* 在 τ²-Bench Telecom（一个测试 AI 智能体（AI Agent）工具使用的基准）上，Kimi K2 Thinking 取得了 93% 的准确率。这是由 Artificial Analysis 独立测量的最高分，比最接近的竞争者 —— 设置为高推理模式的 GPT-5 Codex（87% 准确率）和 MiniMax-M2（87% 准确率)—— 高出 6 个百分点。
+在 τ²-Bench Telecom（一个测试 AI 智能体（AI Agent）工具使用的基准）上，Kimi K2 Thinking 取得了 93% 的准确率。这是由 Artificial Analysis 独立测量的最高分，比最接近的竞争者 —— 设置为高推理模式的 GPT-5 Codex（87% 准确率）和 MiniMax-M2（87% 准确率)—— 高出 6 个百分点。
 
-* On Humanity's Last Exam, a test of multi-domain, graduate-level reasoning, Artificial Analysis measured Kimi K2 Thinking (22.3 percent accuracy without tools) outperformed other open-weights LLMs but trailed GPT-5 set to high reasoning (26.5 percent) and Grok 4 (23.9 percent). With tools enabled, Moonshot reports the model achieved 44.9 percent, a state-of-the-art result higher than that of GPT-5 set to high reasoning (41.7 percent accuracy) and Anthropic Claude Sonnet 4.5 Thinking (32.0 percent accuracy).
+3 On Humanity's Last Exam, a test of multi-domain, graduate-level reasoning, Artificial Analysis measured Kimi K2 Thinking (22.3 percent accuracy without tools) outperformed other open-weights LLMs but trailed GPT-5 set to high reasoning (26.5 percent) and Grok 4 (23.9 percent). With tools enabled, Moonshot reports the model achieved 44.9 percent, a state-of-the-art result higher than that of GPT-5 set to high reasoning (41.7 percent accuracy) and Anthropic Claude Sonnet 4.5 Thinking (32.0 percent accuracy).
 
-* 在一项名为「人类终极考试」（Humanity's Last Exam）的多领域、研究生水平推理测试中，分析机构 Artificial Analysis 的测量结果显示，Kimi K2 Thinking 模型在不使用工具时的准确率为 22.3%，其表现优于其他开源大语言模型，但落后于处于高推理模式下的 GPT-5（准确率 26.5%）和 Grok 4（23.9%）。而在启用工具后，其研发公司 Moonshot 报告称，该模型的准确率提升至 44.9%，这是一个业界领先的顶尖结果，超过了高推理模式下的 GPT-5（41.7% 准确率）以及 Anthropic 公司的 Claude Sonnet 4.5 Thinking 模型（32.0% 准确率）。
+在一项名为「人类终极考试」（Humanity's Last Exam）的多领域、研究生水平推理测试中，分析机构 Artificial Analysis 的测量结果显示，Kimi K2 Thinking 模型在不使用工具时的准确率为 22.3%，其表现优于其他开源大语言模型，但落后于处于高推理模式下的 GPT-5（准确率 26.5%）和 Grok 4（23.9%）。而在启用工具后，其研发公司 Moonshot 报告称，该模型的准确率提升至 44.9%，这是一个业界领先的顶尖结果，超过了高推理模式下的 GPT-5（41.7% 准确率）以及 Anthropic 公司的 Claude Sonnet 4.5 Thinking 模型（32.0% 准确率）。
 
-* On coding benchmarks, Kimi K2 Thinking ranked first or tied for first among open-weights LLMs on Terminal-Bench Hard, SciCode, and LiveCodeBench, but trailed proprietary LLMs. On SWE-bench Verified, a test of software engineering, Moonshot reports Kimi K2 Thinking (71.3 percent accuracy) fell short of Claude Sonnet 4.5 Thinking (77.2 percent) and GPT-5 (high) (74.9 percent).
+5 On coding benchmarks, Kimi K2 Thinking ranked first or tied for first among open-weights LLMs on Terminal-Bench Hard, SciCode, and LiveCodeBench, but trailed proprietary LLMs. On SWE-bench Verified, a test of software engineering, Moonshot reports Kimi K2 Thinking (71.3 percent accuracy) fell short of Claude Sonnet 4.5 Thinking (77.2 percent) and GPT-5 (high) (74.9 percent).
 
-* 在编码基准测试中，Kimi K2 Thinking 在 Terminal-Bench Hard、SciCode 和 LiveCodeBench 这几个测试集上，于开源大语言模型中位列第一或并列第一，但其表现仍落后于闭源模型。在软件工程测试 SWE-bench Verified 上，数据显示 Kimi K2 Thinking（准确率 71.3%）的表现不及 Claude Sonnet 4.5 Thinking（77.2%）和 GPT-5（high）(74.9%）。
+在编码基准测试中，Kimi K2 Thinking 在 Terminal-Bench Hard、SciCode 和 LiveCodeBench 这几个测试集上，于开源大语言模型中位列第一或并列第一，但其表现仍落后于闭源模型。在软件工程测试 SWE-bench Verified 上，数据显示 Kimi K2 Thinking（准确率 71.3%）的表现不及 Claude Sonnet 4.5 Thinking（77.2%）和 GPT-5（high）(74.9%）。
 
 Yes, but: Kimi K2 Thinking used 140 million tokens to complete Artificial Analysis' Intelligence Index evaluations, more than any other LLM tested, roughly 2.5 times the number used by DeepSeek-V3.2 Exp (62 million) and double that of GPT-5 Codex set to high reasoning (77 million). To run the Intelligence Index tests, Kimi K2 Thinking ($356) was around 2.5 times less expensive than GPT-5 set to high reasoning ($913), but roughly 9 times pricier than DeepSeek-V3.2 Exp ($41).
 
