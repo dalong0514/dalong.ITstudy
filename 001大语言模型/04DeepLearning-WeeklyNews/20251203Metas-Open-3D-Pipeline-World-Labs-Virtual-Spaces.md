@@ -3,9 +3,9 @@
 [Meta’s Open 3D Pipeline, World Labs’ Virtual Spaces, Baidu’s Multimodal Models, and more...](https://www.deeplearning.ai/the-batch/issue-330/)
 
 Dear friends,
+
 Separate reports by the publicity firm Edelman and Pew Research show that Americans, and more broadly large parts of Europe and the western world, do not trust AI and are not excited about it. Despite the AI community's optimism about the tremendous benefits AI will bring, we should take this seriously and not dismiss it. The public's concerns about AI can be a significant drag on progress, and we can do a lot to address them.
 
-亲爱的朋友们，
 公关公司爱德曼和皮尤研究中心各自发布的报告显示，美国人，乃至更广泛的欧洲及西方世界的许多民众，并不信任人工智能（AI），也对其缺乏热情。尽管人工智能领域内部对其将带来的巨大益处持乐观态度，我们仍需认真看待公众的态度，而非置之不理。公众对人工智能的担忧可能会严重拖累其发展进程，而我们完全可以采取许多措施来应对这些担忧。
 
 According to Edelman's survey, in the U.S., 49% of people reject the growing use of AI, and 17% embrace it. In China, 10% reject it and 54% embrace it. Pew's data also shows many other nations much more enthusiastic than the U.S. about AI adoption.
@@ -16,17 +16,17 @@ Positive sentiment toward AI is a huge national advantage. On the other hand, wi
 
 对人工智能（AI）的积极看法构成一项巨大的国家优势。反之，若对 AI 存在普遍的不信任，则意味着：
 
-* Individuals will be slow to adopt it. For example, Edelman's data shows that, in the U.S., those who rarely use AI cite Trust (70%) more than lack of Motivation and Access (55%) or Intimidation by the technology (12%) as an issue.
+1 Individuals will be slow to adopt it. For example, Edelman's data shows that, in the U.S., those who rarely use AI cite Trust (70%) more than lack of Motivation and Access (55%) or Intimidation by the technology (12%) as an issue.
 
-* 个人接受人工智能的速度会比较慢。例如，Edelman 的数据显示，在美国，那些很少使用人工智能的人中，将信任问题（70%）视为障碍的比例，要高于缺乏使用动机和条件（55%）或对技术感到畏惧（12%）的比例。
+个人接受人工智能的速度会比较慢。例如，Edelman 的数据显示，在美国，那些很少使用人工智能的人中，将信任问题（70%）视为障碍的比例，要高于缺乏使用动机和条件（55%）或对技术感到畏惧（12%）的比例。
 
-* Valuable projects that need societal support will be stymied. For example, local protests in Indiana brought down Google's plan to build a data center there. Hampering construction of data centers will hurt AI's growth. Communities do have concerns about data centers beyond the general dislike of AI; I will address this in a later letter.
+2 Valuable projects that need societal support will be stymied. For example, local protests in Indiana brought down Google's plan to build a data center there. Hampering construction of data centers will hurt AI's growth. Communities do have concerns about data centers beyond the general dislike of AI; I will address this in a later letter.
 
-* 那些需要社会支持的有价值的项目将会举步维艰。例如，印第安纳州当地的抗议活动，就使得谷歌在当地建设数据中心的计划被迫搁浅。阻碍数据中心的建设，将会损害人工智能（AI）的发展。事实上，社区对数据中心的担忧，并不仅仅源于对人工智能的普遍反感；我将在后续的文章中专门探讨这个问题。
+那些需要社会支持的有价值的项目将会举步维艰。例如，印第安纳州当地的抗议活动，就使得谷歌在当地建设数据中心的计划被迫搁浅。阻碍数据中心的建设，将会损害人工智能（AI）的发展。事实上，社区对数据中心的担忧，并不仅仅源于对人工智能的普遍反感；我将在后续的文章中专门探讨这个问题。
 
-* Populist anger against AI raises the risk that laws will be passed that hamper AI development.
+3 Populist anger against AI raises the risk that laws will be passed that hamper AI development.
 
-* 民粹主义对人工智能（AI）的愤怒，增加了出台阻碍 AI 发展的法律的风险。
+民粹主义对人工智能（AI）的愤怒，增加了出台阻碍 AI 发展的法律的风险。
 
 To be clear, all of us working in AI should look carefully at both the benefits and harmful effects of AI (such as deepfakes polluting social media and biased or inaccurate AI outputs misleading users), speak truthfully about both benefits and harms, and work to ameliorate problems even as we work to grow the benefits. But hype about AI's danger has done real damage to trust in our field. Much of this hype has come from leading AI companies that aim to make their technology seem extraordinarily powerful by, say, comparing it to nuclear weapons. Unfortunately, a significant fraction of the public has taken this seriously and thinks AI could bring about the end of the world. The AI community has to stop self-inflicting these wounds and work to win back society's trust.
 
@@ -58,83 +58,69 @@ I don't know how to solve all of these problems, but I will work hard to solve a
 
 Keep building!
 
-继续前进，持续创造！
-
 Andrew
 
-安德鲁
+### News
 
----
+#### Open 3D Generation Pipeline
 
----
-
-## A MESSAGE FROM DEEPLEARNING.AI
-
-## DeepLearning.AI 寄语
-
-[](https://www.deeplearning.ai/short-courses/building-coding-agents-with-tool-execution)In "Building Coding Agents with Tool Execution," you'll learn how coding agents reason, execute code in isolated sandboxes, manage files, and handle feedback loops, then apply it to hands-on examples like a data-analysis agent and a sandboxed Next.js web app. Enroll today
-
-在课程《利用工具执行构建编码 AI 智能体》中，您将学习编码 AI 智能体如何推理、在隔离沙箱中执行代码、管理文件以及处理反馈循环，并将这些技能应用于实践案例，例如一个数据分析 AI 智能体和一个运行于沙箱环境的 Next.js 网络应用。立即注册，开始学习。
-
-# News
-
-# 新闻
-
-# Open 3D Generation Pipeline
-
-# Open 3D Generation 流程框架
+Open 3D Generation 流程框架
 
 Meta's Segment Anything Model (SAM) image-segmentation model has evolved into an open-weights suite for generating 3D objects. SAM 3 segments images, SAM 3D turns the segments into 3D objects, and SAM 3D Body produces 3D objects of any people among the segments. You can experiment with all three.
 
 Meta 的 Segment Anything Model（SAM）图像分割模型已演进为一个用于生成 3D 对象的开放权重模型套件。其中，SAM 3 负责图像分割，SAM 3D 将分割出的区域转换为 3D 对象，而 SAM 3D Body 则能针对分割结果中识别出的任何人，生成其对应的 3D 模型。这三款模型，您都可以进行尝试。
 
+[Meta AI Demos](https://www.aidemos.meta.com/segment-anything/gallery/?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-9mlTepSha9oKwfmx7xMNnd9kst0ye1GbNlSQJ7n1H9v2L-ERidfCUTVu4MrZ7yIaCU07lR)
+
+[SAM 3: Segment Anything with Concepts](https://arxiv.org/html/2511.16719v1?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-9mlTepSha9oKwfmx7xMNnd9kst0ye1GbNlSQJ7n1H9v2L-ERidfCUTVu4MrZ7yIaCU07lR)
+
 SAM 3: SAM 3 now segments images and videos based on input text. It retains the ability to segment objects based on input geometry (bounding boxes or points that are labeled to include or exclude the objects at those locations), like the previous version.
 
 SAM 3：SAM 3 现在能够根据输入的文本来分割图像和视频。同时，它也保留了与前代版本相同的功能：可以通过输入几何提示（例如，标注为包含或排除特定位置物体的边界框或点）来分割物体。
 
-* Input/output: Images, video, text, geometry in; segmented images or video out
+1 Input/output: Images, video, text, geometry in; segmented images or video out
 
-* 输入 / 输出：输入图像、视频、文本、几何信息；输出分割后的图像或视频。
+输入 / 输出：输入图像、视频、文本、几何信息；输出分割后的图像或视频。
 
-* Performance: In Meta's tests, SAM 3 outperformed almost all competitors on a variety of benchmarks that test image and video segmentation. For instance, on LVIS (segmenting objects from text), SAM 3 (48.5 percent average precision) outperformed DINO-X (38.5 percent average precision). It fell behind APE-D (53.0 percent average precision), which was trained on LVIS' training set.
+2 Performance: In Meta's tests, SAM 3 outperformed almost all competitors on a variety of benchmarks that test image and video segmentation. For instance, on LVIS (segmenting objects from text), SAM 3 (48.5 percent average precision) outperformed DINO-X (38.5 percent average precision). It fell behind APE-D (53.0 percent average precision), which was trained on LVIS' training set.
 
-* 性能：根据 Meta 的测试结果，在多项图像与视频分割的基准测试中，SAM 3 的表现几乎超越了所有竞品。举例来说，在 LVIS 基准（根据文本描述分割物体）上，SAM 3 的平均精度（Average Precision，AP）达到了 48.5%，优于 DINO-X 的 38.5% AP。不过，它略逊于 APE-D（53.0% AP），因为 APE-D 模型专门在 LVIS 的训练集上进行了训练。
+性能：根据 Meta 的测试结果，在多项图像与视频分割的基准测试中，SAM 3 的表现几乎超越了所有竞品。举例来说，在 LVIS 基准（根据文本描述分割物体）上，SAM 3 的平均精度（Average Precision，AP）达到了 48.5%，优于 DINO-X 的 38.5% AP。不过，它略逊于 APE-D（53.0% AP），因为 APE-D 模型专门在 LVIS 的训练集上进行了训练。
 
-* Availability: Weights and fine-tuning code freely available for noncommercial and commercial uses in countries that don't violate U.S., EU, UK, and UN trade restrictions under Meta license
+3 Availability: Weights and fine-tuning code freely available for noncommercial and commercial uses in countries that don't violate U.S., EU, UK, and UN trade restrictions under Meta license
 
-* 可用性：根据 Meta 许可协议，在不违反美国、欧盟、英国及联合国贸易限制的国家中，权重和微调代码均可免费用于非商业及商业用途。
+可用性：根据 Meta 许可协议，在不违反美国、欧盟、英国及联合国贸易限制的国家中，权重和微调代码均可免费用于非商业及商业用途。
 
 SAM 3D: This model generates 3D objects from images based on segmentation masks. By individually predicting each object in an image, it can represent the entire scene. It can also take in point clouds to improve its output.
 
 SAM 3D：这款模型能够根据图像的分割掩码（segmentation masks）来生成 3D 物体。通过对图像中的每个物体进行单独预测，它可以逐步重建出整个场景。此外，模型还能接受点云数据作为输入，以进一步提升生成结果的质量。
 
-* Input/output: Image, mask, point cloud in; 3D object (mesh, Gaussian splat) out
+1 Input/output: Image, mask, point cloud in; 3D object (mesh, Gaussian splat) out
 
-* 输入 / 输出：以图像、掩码（mask）、点云作为输入；输出为 3D 对象（例如网格或高斯溅射（Gaussian splatting）表示）。
+输入 / 输出：以图像、掩码（mask）、点云作为输入；输出为 3D 对象（例如网格或高斯溅射（Gaussian splatting）表示）。
 
-* Performance: Judging both objects and scenes generated from photos, humans preferred SAM 3D's outputs over those by other models. For instance, when generating objects from the LVIS dataset, people preferred SAM 3D nearly 80 percent of the time, Hunyuan3d 2.0 about 12 percent of the time, and other models 8 percent of the time.
+2 Performance: Judging both objects and scenes generated from photos, humans preferred SAM 3D's outputs over those by other models. For instance, when generating objects from the LVIS dataset, people preferred SAM 3D nearly 80 percent of the time, Hunyuan3d 2.0 about 12 percent of the time, and other models 8 percent of the time.
 
-* 性能：在对根据照片生成的对象和场景进行评判时，人类对 SAM 3D 生成结果的偏好超过了其他模型。例如，在基于 LVIS 数据集生成对象的测试中，SAM 3D 获得了近 80% 的偏好率，Hunyuan3d 2.0 约为 12%，而其他模型合计约占 8%。
+性能：在对根据照片生成的对象和场景进行评判时，人类对 SAM 3D 生成结果的偏好超过了其他模型。例如，在基于 LVIS 数据集生成对象的测试中，SAM 3D 获得了近 80% 的偏好率，Hunyuan3d 2.0 约为 12%，而其他模型合计约占 8%。
 
-* Availability: Weights and inference code freely available for noncommercial and commercial uses in countries that don't violate U.S., EU, UK, and UN trade restrictions under Meta license
+3 Availability: Weights and inference code freely available for noncommercial and commercial uses in countries that don't violate U.S., EU, UK, and UN trade restrictions under Meta license
 
-*  **可用性**：模型权重（Weights）和推理代码在 Meta 的许可下免费提供，可用于非商业及商业用途。该许可能够使用的国家 / 地区，需符合美国、欧盟、英国及联合国的贸易规定，未被相关制裁所限制。
+可用性：模型权重（Weights）和推理代码在 Meta 的许可下免费提供，可用于非商业及商业用途。该许可能够使用的国家 / 地区，需符合美国、欧盟、英国及联合国的贸易规定，未被相关制裁所限制。
 
 SAM 3D Body: Meta released an additional model that produces 3D human figures from images. Input bounding boxes or masks can also determine which figures to produce, and an optional transformer decoder can refine the positions and shapes of human hands.
 
 SAM 3D Body：Meta 发布了一个附加模型，能够根据图像生成 3D 人体模型。通过输入边界框或掩码，也能指定要生成哪些人体。此外，一个可选的 Transformer 解码器可用于精细化调整人手的位置和形状。
 
-* Input/output: Image, bounding boxes, masks in; 3D objects (mesh, Gaussian splat) out
+2 Input/output: Image, bounding boxes, masks in; 3D objects (mesh, Gaussian splat) out
 
-* 输入 / 输出：输入为图像、边界框、掩码；输出为 3D 对象（网格、高斯溅射 / Gaussian Splatting）。
+输入 / 输出：输入为图像、边界框、掩码；输出为 3D 对象（网格、高斯溅射 / Gaussian Splatting）。
 
-* Performance: In Meta's tests, SAM 3D Body achieved the best performance across a number of datasets compared to other models that take images or videos and generate 3D human figures. For example, on the EMDB dataset of people in the wild, SAM 3D Body achieved 62.9 Mean Per Joint Position Error (MPJPE, a measure of how different the predicted joint positions are from the ground truth, lower is better) compared to next best Neural Localizer Fields, which achieved 68.4 MPJPE. On Freihand (a test of hand correctness), SAM 3D Body achieved similar or slightly worse performance than models that specialize in estimating hand poses. (The authors claim the other models were trained on Freihand's training set.)
+2 Performance: In Meta's tests, SAM 3D Body achieved the best performance across a number of datasets compared to other models that take images or videos and generate 3D human figures. For example, on the EMDB dataset of people in the wild, SAM 3D Body achieved 62.9 Mean Per Joint Position Error (MPJPE, a measure of how different the predicted joint positions are from the ground truth, lower is better) compared to next best Neural Localizer Fields, which achieved 68.4 MPJPE. On Freihand (a test of hand correctness), SAM 3D Body achieved similar or slightly worse performance than models that specialize in estimating hand poses. (The authors claim the other models were trained on Freihand's training set.)
 
-* 性能：在 Meta 的测试中，与那些以图像或视频为输入来生成 3D 人体模型的模型相比，SAM 3D Body 在多个数据集上都表现最佳。例如，在 EMDB 野外人物数据集上，SAM 3D Body 的平均每关节位置误差（MPJPE）为 62.9（该指标衡量预测关节位置与真实位置的差异，数值越低越好），而表现次佳的 Neural Localizer Fields 模型为 68.4 MPJPE。在专门测试手部姿态正确性的 Freihand 数据集上，SAM 3D Body 的性能与专精于手部姿态估计的模型相当或略逊一筹。（作者指出，其他模型曾在 Freihand 的训练集上进行过训练，这可能是原因之一。）
+性能：在 Meta 的测试中，与那些以图像或视频为输入来生成 3D 人体模型的模型相比，SAM 3D Body 在多个数据集上都表现最佳。例如，在 EMDB 野外人物数据集上，SAM 3D Body 的平均每关节位置误差（MPJPE）为 62.9（该指标衡量预测关节位置与真实位置的差异，数值越低越好），而表现次佳的 Neural Localizer Fields 模型为 68.4 MPJPE。在专门测试手部姿态正确性的 Freihand 数据集上，SAM 3D Body 的性能与专精于手部姿态估计的模型相当或略逊一筹。（作者指出，其他模型曾在 Freihand 的训练集上进行过训练，这可能是原因之一。）
 
-* Availability: Weights, inference code, and training data freely available in countries that don't violate U.S., EU, UK, and UN trade restrictions under Meta license
+3 Availability: Weights, inference code, and training data freely available in countries that don't violate U.S., EU, UK, and UN trade restrictions under Meta license
 
-* 可用性：权重、推理代码和训练数据，在未违反美国、欧盟、英国及联合国贸易限制的国家，依据 Meta license 免费提供。
+可用性：权重、推理代码和训练数据，在未违反美国、欧盟、英国及联合国贸易限制的国家，依据 Meta license 免费提供。
 
 Why it matters: This SAM series offers a unified pipeline for making 3D models from images. Each model advances the state of the art, enabling more-accurate image segmentations from text, 3D objects that human judges preferred, and 3D human figures that also appealed to human judges. These models are already driving innovations in Meta's user experience. For instance, SAM 3 and SAM 3D enable users of Facebook marketplace to see what furniture or other home decor looks like in a particular space.
 
@@ -144,13 +130,9 @@ We're thinking:  At the highest level, all three models learned from a similar d
 
 我们的思路是：从最高层面来看，所有三个模型都遵循了一个相似的数据流水线：找出模型当前表现较差的示例，由人工对这些示例进行标注，然后基于这些标注数据来训练模型。根据 Meta 公司公开的报告，这一流程极大地降低了为高质量数据集进行标注所需的时间和资金成本。
 
----
+#### Generated, Editable Virtual Spaces
 
----
-
-# Generated, Editable Virtual Spaces
-
-# 可生成与编辑的虚拟空间
+可生成与编辑的虚拟空间
 
 Models that generate 3D spaces typically generate them as users move through them without generating a persistent world to be explored later. A new model produces 3D worlds that can be exported and modified.
 
@@ -220,13 +202,9 @@ We're thinking: Virtual spaces produced by Marble are geometrically consistent, 
 
 我们的想法是：Marble 生成的虚拟空间具有几何一致性，这对于游戏、机器人学和虚拟现实领域可能很有价值。不过，这些空间中的物体目前是静止的。未来，如果虚拟世界能够包含运动，那么人工智能（AI）在理解物理规律方面将会更进一步。
 
----
+#### Baidu's Multimodal Bids
 
----
-
-# Baidu's Multimodal Bids
-
-# 百度的多模态广告竞价
+百度的多模态广告竞价
 
 Baidu debuted two models: a lightweight, open-weights, vision-language model and a giant, proprietary, multimodal model built to take on U.S. competitors.
 
@@ -304,13 +282,9 @@ We're thinking: Ernie-5.0 may outperform Gemini 2.5 and GPT-5, but Google and Op
 
 我们的看法是：Ernie-5.0 或许能超越 Gemini 2.5 和 GPT-5，但谷歌和 OpenAI 早已将目光投向了下一代 ——Gemini 3 和 GPT-5.1！
 
----
+#### Coordinating Robot Teams
 
----
-
-# Coordinating Robot Teams
-
-# 机器人团队的协同之道
+机器人团队的协同之道
 
 In factories, where teams of robotic arms work in tight spaces, their motions are programmed by hand to keep them from interfering with one another. Researchers automated this programming using graph neural networks trained via reinforcement learning.
 
