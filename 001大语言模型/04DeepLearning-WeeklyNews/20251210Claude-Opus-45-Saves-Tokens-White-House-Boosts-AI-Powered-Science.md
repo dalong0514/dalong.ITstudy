@@ -64,11 +64,9 @@ Andrew
 
 ### News
 
-### 新闻
-
 #### Claude Does More With Fewer Tokens
 
-#### Claude：事半功倍，效率非凡
+Claude：事半功倍，效率非凡
 
 Claude Opus 4.5, the latest version of Anthropic's flagship model, extends the earlier version's strengths in coding, computer use, and agentic workflows while generating fewer tokens.
 
