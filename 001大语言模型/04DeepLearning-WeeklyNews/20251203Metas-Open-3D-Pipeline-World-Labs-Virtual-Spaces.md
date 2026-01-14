@@ -134,6 +134,8 @@ We're thinking:  At the highest level, all three models learned from a similar d
 
 可生成与编辑的虚拟空间
 
+[World Labs](https://www.worldlabs.ai/?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-9mlTepSha9oKwfmx7xMNnd9kst0ye1GbNlSQJ7n1H9v2L-ERidfCUTVu4MrZ7yIaCU07lR)
+
 Models that generate 3D spaces typically generate them as users move through them without generating a persistent world to be explored later. A new model produces 3D worlds that can be exported and modified.
 
 传统的三维空间生成模型，通常只在用户穿行时实时构建场景，而不会创建一个可供日后反复探索的持久性世界。一种新型模型则能生成可以导出并进行修改的三维世界。
@@ -142,53 +144,57 @@ What's new: World Labs launched Marble, which generates persistent, editable, re
 
 最新动态：World Labs 发布了 Marble，该工具能够根据文本、图像及其他输入内容，生成持久、可编辑且可重复使用的 3D 空间。该公司还同步推出了集成编辑器 Chisel，用户可通过文本指令来修改 Marble 生成的结果，也能直接从零开始搭建空间环境。
 
-* Input/output: Text, images, panoramas, videos, 3D layouts of boxes and planes in; Gaussian splats, meshes, or videos out.
+1 Input/output: Text, images, panoramas, videos, 3D layouts of boxes and planes in; Gaussian splats, meshes, or videos out.
 
-* 输入 / 输出：支持文本、图像、全景图、视频、三维（3D）盒子与平面布局作为输入；可输出高斯溅射（Gaussian Splatting）、网格模型或视频。
+输入 / 输出：支持文本、图像、全景图、视频、三维（3D）盒子与平面布局作为输入；可输出高斯溅射（Gaussian Splatting）、网格模型或视频。
 
-* Features: Expand spaces, combine spaces, alter visual style, edit spaces via text prompts or visual inputs, download generated spaces
+2 Features: Expand spaces, combine spaces, alter visual style, edit spaces via text prompts or visual inputs, download generated spaces
 
-* 功能：扩展空间，合并空间，调整视觉风格，通过文本提示或视觉输入进行空间编辑，下载已创建的空间
+功能：扩展空间，合并空间，调整视觉风格，通过文本提示或视觉输入进行空间编辑，下载已创建的空间
 
-* Availability: Subscription tiers include Free (4 outputs based on text, images, or panoramas), $20 per month (12 outputs based on multiple images, videos, or 3D layouts), $35 per month (25 outputs with expansion and commercial rights), and $95 per month (75 outputs, all features)
+3 Availability: Subscription tiers include Free (4 outputs based on text, images, or panoramas), $20 per month (12 outputs based on multiple images, videos, or 3D layouts), $35 per month (25 outputs with expansion and commercial rights), and $95 per month (75 outputs, all features)
 
-* **服务方案**：提供以下订阅方案：免费版（支持文本、图像或全景输入，可生成 4 个结果）、每月 20 美元（支持多图、视频或 3D 布局输入，可生成 12 个结果）、每月 35 美元（可生成 25 个结果，包含内容拓展功能及商用许可）以及每月 95 美元（可生成 75 个结果，包含全部功能）。
+服务方案：提供以下订阅方案：免费版（支持文本、图像或全景输入，可生成 4 个结果）、每月 20 美元（支持多图、视频或 3D 布局输入，可生成 12 个结果）、每月 35 美元（可生成 25 个结果，包含内容拓展功能及商用许可）以及每月 95 美元（可生成 75 个结果，包含全部功能）。
 
 How it works: Marble accepts several media types and exports 3D spaces in a variety of formats.
 
 运作方式：Marble 支持多种媒体类型，并能将 3D 空间导出为多种格式。
 
-* The model can generate a 3D space from a single text prompt or image. For more control, it accepts multiple images with text prompts (like front, back, left, or right) that specify which image should map to what areas. Users can also input short videos, 360-degree panoramas, or 3D models and connect outputs to build complex spaces.
+1 The model can generate a 3D space from a single text prompt or image. For more control, it accepts multiple images with text prompts (like front, back, left, or right) that specify which image should map to what areas. Users can also input short videos, 360-degree panoramas, or 3D models and connect outputs to build complex spaces.
 
-* 该模型能够仅凭一个文本提示词或单张图像就生成一个 3D 空间。若想进行更精细的控制，用户可以输入多张图像并搭配文本提示词（例如「前」、「后」、「左」、「右」），来指定每张图像对应生成空间的哪个部分。此外，用户也能输入短视频、360 度全景图或 3D 模型，并将这些输出结果组合起来，以构建出更复杂的空间。
+该模型能够仅凭一个文本提示词或单张图像就生成一个 3D 空间。若想进行更精细的控制，用户可以输入多张图像并搭配文本提示词（例如「前」、「后」、「左」、「右」），来指定每张图像对应生成空间的哪个部分。此外，用户也能输入短视频、360 度全景图或 3D 模型，并将这些输出结果组合起来，以构建出更复杂的空间。
 
-* The Chisel editor can create and edit 3D spaces directly. Geometric shapes like planes or blocks can be used to build structural elements like walls or furniture and styled via text prompts or images.
+2 The Chisel editor can create and edit 3D spaces directly. Geometric shapes like planes or blocks can be used to build structural elements like walls or furniture and styled via text prompts or images.
 
-* Chisel 编辑器（Chisel editor）能够直接创建和编辑 3D 空间。你可以利用平面、方块这类基础几何形状，搭建出墙壁、家具等结构，并通过输入文字描述或上传图片来为它们设定风格。
+Chisel 编辑器（Chisel editor）能够直接创建和编辑 3D 空间。你可以利用平面、方块这类基础几何形状，搭建出墙壁、家具等结构，并通过输入文字描述或上传图片来为它们设定风格。
 
-* Generated spaces can be extended by clicking on an area to be extended or connected.
+3 Generated spaces can be extended by clicking on an area to be extended or connected.
 
-* 要扩展生成的空间，只需点击需要被扩展或连接的区域即可。
+要扩展生成的空间，只需点击需要被扩展或连接的区域即可。
 
-* Model outputs can be Gaussian splats (high-quality representations composed of semi-transparent particles that can be rendered in web browsers), collider meshes (simplified 3D geometries that define object boundaries for physics simulations), and high-quality meshes (detailed geometries suitable for editing). Video output can include controllable camera paths and effects like smoke or flowing water.
+4 Model outputs can be Gaussian splats (high-quality representations composed of semi-transparent particles that can be rendered in web browsers), collider meshes (simplified 3D geometries that define object boundaries for physics simulations), and high-quality meshes (detailed geometries suitable for editing). Video output can include controllable camera paths and effects like smoke or flowing water.
 
-*  模型输出可以包括以下几种形式：
-  *  **高斯溅射（Gaussian splats)**：一种由许多半透明粒子构成的高质量场景表示，可以直接在网页浏览器中高效渲染。
-  *  **碰撞体网格（Collider meshes)**：一种简化后的 3D 几何模型，主要用于在物理模拟中定义物体的碰撞边界。
-  *  **高质量网格（High-quality meshes)**：包含丰富细节的几何模型，适合进一步的编辑和加工。
-*  视频输出则可以包含可自由控制的摄像机运动路径，以及诸如烟雾、流水等动态特效。
+模型输出可以包括以下几种形式：
+
+高斯溅射（Gaussian splats）：一种由许多半透明粒子构成的高质量场景表示，可以直接在网页浏览器中高效渲染。
+
+碰撞体网格（Collider meshes）：一种简化后的 3D 几何模型，主要用于在物理模拟中定义物体的碰撞边界。
+
+高质量网格（High-quality meshes）：包含丰富细节的几何模型，适合进一步的编辑和加工。
+
+视频输出则可以包含可自由控制的摄像机运动路径，以及诸如烟雾、流水等动态特效。
 
 Performance: Early users report generating game-like environments and photorealistic recreations of real-world locations.
 
 表现：早期用户反馈称，他们能够生成类似游戏的环境，并对真实世界地点进行照片级真实感的再现。
 
-* Marble generates more complete 3D structures than depth maps or point clouds, which represent surfaces but not object geometries, World Labs said.
+1 Marble generates more complete 3D structures than depth maps or point clouds, which represent surfaces but not object geometries, World Labs said.
 
-* World Labs 称，与仅能表示表面、无法完整呈现物体几何结构的深度图或点云相比，Marble 能够生成更完整的三维结构。
+World Labs 称，与仅能表示表面、无法完整呈现物体几何结构的深度图或点云相比，Marble 能够生成更完整的三维结构。
 
-* Its mesh outputs integrate with tools commonly used in game development, visual effects, and 3D modeling.
+2 Its mesh outputs integrate with tools commonly used in game development, visual effects, and 3D modeling.
 
-* 其输出的网格能够与游戏开发、特效制作和 3D 建模领域的常用工具无缝集成。
+其输出的网格能够与游戏开发、特效制作和 3D 建模领域的常用工具无缝集成。
 
 Behind the news: Earlier generative models can produce 3D spaces on the fly, but typically such spaces can't be saved or revisited interactively. Marble stands out by generating spaces that can be saved and edited. For instance, in October, World Labs introduced RTFM, which generates spaces in real time as users navigate through them. Competing startups like Decart and Odyssey are available as demos, and Google's Genie 3 remains a research preview.
 
