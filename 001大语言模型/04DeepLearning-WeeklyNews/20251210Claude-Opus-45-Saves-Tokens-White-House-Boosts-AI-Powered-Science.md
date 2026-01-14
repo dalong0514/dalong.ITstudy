@@ -76,56 +76,59 @@ What's new:Claude Opus 4.5outperforms its immediate predecessor at one-third the
 
 新动态：Claude Opus 4.5 的性能超越了前代模型，而每个 Token 的价格仅为前代的三分之一。
 
-* Input/output:Text and images in (up to 200,000 tokens), text out (up to 64,000 tokens)
+1 Input/output:Text and images in (up to 200,000 tokens), text out (up to 64,000 tokens)
 
-* 输入 / 输出：支持文本和图像输入（最多 200,000 个 Token），支持文本输出（最多 64,000 个 Token）。
+输入 / 输出：支持文本和图像输入（最多 200,000 个 Token），支持文本输出（最多 64,000 个 Token）。
 
-* Features:Adjustableeffort(low, medium, high)that governs token generation across responses, tool calls, and reasoning;extended thinkingthat raises the budget for reasoning tokens; tool use including web search andcomputer use
+2 Features:Adjustableeffort(low, medium, high)that governs token generation across responses, tool calls, and reasoning;extended thinkingthat raises the budget for reasoning tokens; tool use including web search andcomputer use
 
-* 功能：
- * **可调节的努力程度（Adjustable effort)**：提供低、中、高三个级别，用于调控在生成回复、调用工具以及进行推理时所产生的 Token 数量。
- * **扩展思考（Extended thinking)**：增加分配给推理过程的 Token 预算，允许模型进行更深入的思考。
- * **工具使用（Tool use)**：支持包括网络搜索和计算机操作在内的多种工具调用。
+功能：
 
-* Availability/price:Comes with Claudeapps(Pro, Max, Team, Enterprise subscriptions); API $5.00/$0.50/$25.00 per million input/cached/output tokens (plus cache storage costs) via Anthropic, Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry
+可调节的努力程度（Adjustable effort）：提供低、中、高三个级别，用于调控在生成回复、调用工具以及进行推理时所产生的 Token 数量。
 
-* 可用性与价格：随 Claude 应用（Pro、Max、Team、Enterprise 订阅版）提供；通过 Anthropic、Amazon Bedrock、Google Cloud Vertex AI 或 Microsoft Foundry 的 API 调用时，价格为每百万个输入 / 已缓存 / 输出 Token 5.00/0.50/25.00 美元（另需支付缓存存储费用）。
+扩展思考（Extended thinking）：增加分配给推理过程的 Token 预算，允许模型进行更深入的思考。
 
-* Undisclosed:Parameter count, architecture, training details
+工具使用（Tool use）：支持包括网络搜索和计算机操作在内的多种工具调用。
 
-* 未披露：参数数量、架构、训练细节
+3 Availability/price:Comes with Claudeapps(Pro, Max, Team, Enterprise subscriptions); API $5.00/$0.50/$25.00 per million input/cached/output tokens (plus cache storage costs) via Anthropic, Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry
+
+可用性与价格：随 Claude 应用（Pro、Max、Team、Enterprise 订阅版）提供；通过 Anthropic、Amazon Bedrock、Google Cloud Vertex AI 或 Microsoft Foundry 的 API 调用时，价格为每百万个输入 / 已缓存 / 输出 Token 5.00/0.50/25.00 美元（另需支付缓存存储费用）。
+
+4 Undisclosed:Parameter count, architecture, training details
+
+未披露：参数数量、架构、训练细节
 
 How it works:Anthropic describes Claude Opus 4.5 as a hybrid reasoning model. Like Claude models since Claude Sonnet 3.7, it responds rapidly in its default mode or takes time to process reasoning tokens when extended thinking is enabled.
 
 它是如何工作的：Anthropic 将 Claude Opus 4.5 描述为一个混合推理模型。与 Claude Sonnet 3.7 及后续的 Claude 模型类似，它在默认模式下会快速给出回应；而当启用深度思考功能时，它则需要额外的时间来生成推理内容。
 
-* Anthropic trained the model on public data scraped from the web and non-public data from third parties, paid contractors, Anthropic users who didn't opt out, and Anthropic's internal operations. The team fine-tuned the model to be helpful using reinforcement learning from human and AI feedback.
+1 Anthropic trained the model on public data scraped from the web and non-public data from third parties, paid contractors, Anthropic users who didn't opt out, and Anthropic's internal operations. The team fine-tuned the model to be helpful using reinforcement learning from human and AI feedback.
 
-* Anthropic 用于训练该模型的数据包括两部分：一部分是从网络上抓取的公开数据，另一部分是非公开数据，这些非公开数据来源于第三方、付费承包商、未选择退出的 Anthropic 用户以及 Anthropic 公司自身的内部运营。团队随后采用了基于人类和 AI 反馈的强化学习方法对模型进行微调，以提升其帮助能力。
+Anthropic 用于训练该模型的数据包括两部分：一部分是从网络上抓取的公开数据，另一部分是非公开数据，这些非公开数据来源于第三方、付费承包商、未选择退出的 Anthropic 用户以及 Anthropic 公司自身的内部运营。团队随后采用了基于人类和 AI 反馈的强化学习方法对模型进行微调，以提升其帮助能力。
 
-* Claude's consumer apps now automatically summarize earlier portions of conversations, enabling arbitrarilylong interactions.
+2 Claude's consumer apps now automatically summarize earlier portions of conversations, enabling arbitrarilylong interactions.
 
-* Claude 的消费级应用现在能自动总结对话的前期内容，从而支持任意长度的对话交互。
+Claude 的消费级应用现在能自动总结对话的前期内容，从而支持任意长度的对话交互。
 
 Performance:In independenttestsperformed by Artificial Analysis, Claude Opus 4.5 excelled at coding tasks and performed near the top in other areas. In Anthropic's tests, it attained high performance while using tokens efficiently.
 
 性能：在 Artificial Analysis 的独立测试中，Claude Opus 4.5 在编程任务上表现卓越，在其他领域也接近顶尖水平。在 Anthropic 自家的测试中，该模型在高效使用 Token 的同时，也实现了很高的性能。
 
-* On the Artificial Analysis Intelligence Index, a weighted average of 10 benchmarks, Claude Opus 4.5 (70) achieved a second-place score, matching OpenAI GPT-5.1 and trailing Google Gemini 3 Pro (73). In non-reasoning mode, it scored 60, highest among non-reasoning models tested. On theAA-Omniscience Index, which measures factual knowledge and tendency to fabricate information (higher is better), Claude Opus 4.5 (10) outperformed GPT-5.1 (2) but lagged behind Gemini 3 Pro Preview (13).
+1 On the Artificial Analysis Intelligence Index, a weighted average of 10 benchmarks, Claude Opus 4.5 (70) achieved a second-place score, matching OpenAI GPT-5.1 and trailing Google Gemini 3 Pro (73). In non-reasoning mode, it scored 60, highest among non-reasoning models tested. On theAA-Omniscience Index, which measures factual knowledge and tendency to fabricate information (higher is better), Claude Opus 4.5 (10) outperformed GPT-5.1 (2) but lagged behind Gemini 3 Pro Preview (13).
 
-* 在人工智能分析指数（Artificial Analysis Intelligence Index）上，这是一个基于 10 项基准测试的加权平均分，Claude Opus 4.5 以 70 分位列第二，与 OpenAI GPT-5.1 分数相同，但落后于 Google Gemini 3 Pro（73 分）。在非推理模式下，其得分为 60 分，在所有测试的非推理模型中排名最高。在 AA 全知指数（AA-Omniscience Index）上，该指数用于衡量模型的事实知识掌握程度和捏造信息的倾向（分数越高越好），Claude Opus 4.5 得 10 分，表现优于 GPT-5.1（2 分），但不及 Gemini 3 Pro Preview（13 分）。
+在人工智能分析指数（Artificial Analysis Intelligence Index）上，这是一个基于 10 项基准测试的加权平均分，Claude Opus 4.5 以 70 分位列第二，与 OpenAI GPT-5.1 分数相同，但落后于 Google Gemini 3 Pro（73 分）。在非推理模式下，其得分为 60 分，在所有测试的非推理模型中排名最高。在 AA 全知指数（AA-Omniscience Index）上，该指数用于衡量模型的事实知识掌握程度和捏造信息的倾向（分数越高越好），Claude Opus 4.5 得 10 分，表现优于 GPT-5.1（2 分），但不及 Gemini 3 Pro Preview（13 分）。
 
-* On Terminal-Bench Hard (command-line tasks), Claude Opus 4.5 (44 percent) outperformed all other models tested by Artificial Analysis.
+2 On Terminal-Bench Hard (command-line tasks), Claude Opus 4.5 (44 percent) outperformed all other models tested by Artificial Analysis.
 
-* 在终端基准测试 Terminal-Bench Hard（命令行任务）上，Claude Opus 4.5 以 44% 的得分，表现超过了 Artificial Analysis 所测试的所有其他模型。
+在终端基准测试 Terminal-Bench Hard（命令行任务）上，Claude Opus 4.5 以 44% 的得分，表现超过了 Artificial Analysis 所测试的所有其他模型。
 
-* According to Anthropic, set to medium effort, Claude Opus 4.5 matched Sonnet 4.5's SWE-bench Verified performance while using 76 percent fewer output tokens. At high effort, it exceeded Sonnet 4.5 by 4.3 percentage points while using 48 percent fewer tokens.
+3 According to Anthropic, set to medium effort, Claude Opus 4.5 matched Sonnet 4.5's SWE-bench Verified performance while using 76 percent fewer output tokens. At high effort, it exceeded Sonnet 4.5 by 4.3 percentage points while using 48 percent fewer tokens.
 
-* 根据 Anthropic 的数据，在中等资源模式下，Claude Opus 4.5 在 SWE-bench Verified 基准测试中的表现与 Sonnet 4.5 持平，但输出的 Token 数量减少了 76%。在高资源模式下，其表现更是超出 Sonnet 4.5 达 4.3 个百分点，同时 Token 使用量减少了 48%。
+根据 Anthropic 的数据，在中等资源模式下，Claude Opus 4.5 在 SWE-bench Verified 基准测试中的表现与 Sonnet 4.5 持平，但输出的 Token 数量减少了 76%。在高资源模式下，其表现更是超出 Sonnet 4.5 达 4.3 个百分点，同时 Token 使用量减少了 48%。
 
-* Using "parallel test-time compute" that included a 64,000-token thinking budget and high effort, Claude Opus 4.5 outperformed all people who have taken a two-hour engineering exam that Anthropic uses to test candidates.
+4 Using "parallel test-time compute" that included a 64,000-token thinking budget and high effort, Claude Opus 4.5 outperformed all people who have taken a two-hour engineering exam that Anthropic uses to test candidates.
 
-* 通过采用「并行测试时计算」（parallel test-time compute）技术，并分配了高达 64,000 个 Token 的思考资源以及进行深度计算，Claude Opus 4.5 在 Anthropic 用于招聘甄选的两小时工程考试中，其表现超过了所有参加过该考试的人类应试者。
+通过采用「并行测试时计算」（parallel test-time compute）技术，并分配了高达 64,000 个 Token 的思考资源以及进行深度计算，Claude Opus 4.5 在 Anthropic 用于招聘甄选的两小时工程考试中，其表现超过了所有参加过该考试的人类应试者。
 
 Behind the news:Generally, Claude Opus 4.5 generates fewer output tokens than competitors to achieve comparable results. To run the tests in the Artificial Analysis Intelligence Index, Claude Opus 4.5 (48 million tokens) used roughly half as many as Gemini 3 Pro set to high reasoning (92 million tokens) and GPT-5.1 set to high reasoning (81 million tokens). However, its higher per-token price amounts to higher overall costs than these competitors. Testing Claude Opus 4.5 cost $1,498, Gemini 3 Pro $1,201, and GPT-5.1 $859.
 
@@ -141,7 +144,7 @@ We're thinking:The difference in performance between various frontier models is 
 
 #### White House Orders AI for Science
 
-#### 白宫推动人工智能赋能科学研究
+白宫推动人工智能赋能科学研究
 
 President Trump launched a United States effort to use AI to speed up scientific breakthroughs.
 
@@ -155,49 +158,49 @@ How it works:The Energy Department will create an AI platform that provides acce
 
 运作方式：能源部将创建一个 AI 平台（AI platform），用于提供政府数据访问权限，并支持联邦机构、研究实验室与企业协同构建科学基础模型和 AI 智能体。此外，该平台还将通过组织有奖竞赛、设立研究基金、建立合作伙伴关系以及提供资金支持等方式，汇聚上述各界力量，协调在和平时期通常各自为政的政府、学术界和私营部门资源。白宫科技政策办公室主任迈克尔·克拉齐奥斯（Michael Kratsios）向彭博社表示，该项目是「自阿波罗计划以来，联邦科学资源最大规模的一次动员」。
 
-* Automation:The goal is to train AI models to conceive and conduct scientific research using robotic labs that allow for varying degrees of human involvement.
+1 Automation:The goal is to train AI models to conceive and conduct scientific research using robotic labs that allow for varying degrees of human involvement.
 
-* 自动化：其目标是训练 AI 模型，使其能够构想科学研究方案，并利用机器人实验室来执行这些研究，整个过程中人类可以参与其中，但参与程度可以灵活调整。
+自动化：其目标是训练 AI 模型，使其能够构想科学研究方案，并利用机器人实验室来执行这些研究，整个过程中人类可以参与其中，但参与程度可以灵活调整。
 
-* Focus:The mission identifies six areas of research focus: biotechnology, manufacturing, materials, nuclear fission, quantum information science, and semiconductors.
+2 Focus:The mission identifies six areas of research focus: biotechnology, manufacturing, materials, nuclear fission, quantum information science, and semiconductors.
 
-* 重点领域：该使命明确了六个重点研究方向：生物技术、制造、材料、核裂变、量子信息科学和半导体。
+重点领域：该使命明确了六个重点研究方向：生物技术、制造、材料、核裂变、量子信息科学和半导体。
 
-* Goals:The project aims to (i) boost the pace of scientific discovery, (ii) protect national security, (iii) find paths to lower-cost energy, and (iv) increase the return on government investment for taxpayers.
+3 Goals:The project aims to (i) boost the pace of scientific discovery, (ii) protect national security, (iii) find paths to lower-cost energy, and (iv) increase the return on government investment for taxpayers.
 
-* 目标：该项目旨在（i）加快科学发现进程，(ii）保障国家安全，(iii）探寻低成本能源路径，以及（iv）提高政府投资对纳税人的回报。
+目标：该项目旨在（i）加快科学发现进程，(ii）保障国家安全，(iii）探寻低成本能源路径，以及（iv）提高政府投资对纳税人的回报。
 
-* Funding:No new funding has been allocated so far, as is standard with U.S. executive orders. Agencies will start with existing resources, and Congress may approve additional spending.
+4 Funding:No new funding has been allocated so far, as is standard with U.S. executive orders. Agencies will start with existing resources, and Congress may approve additional spending.
 
-* 资金：目前尚未拨付新的专项资金，这符合美国行政命令的惯例。相关机构将先利用现有资源开展工作，国会后续或可批准追加拨款。
+资金：目前尚未拨付新的专项资金，这符合美国行政命令的惯例。相关机构将先利用现有资源开展工作，国会后续或可批准追加拨款。
 
-* Nvidia will build 7 new supercomputers for the government labs, CEO Jensen Huangsaid, and AMD, Dell, and Nvidia have agreed to build new facilities within the government labs,The New York Timesreported.
+5 Nvidia will build 7 new supercomputers for the government labs, CEO Jensen Huangsaid, and AMD, Dell, and Nvidia have agreed to build new facilities within the government labs,The New York Timesreported.
 
-* 据《纽约时报》报道，英伟达（Nvidia）首席执行官黄仁勋（Jensen Huang）表示，该公司将为政府实验室建造 7 台新的超级计算机。此外，AMD、戴尔（Dell）和英伟达也已同意在政府实验室内建造新的设施。
+据《纽约时报》报道，英伟达（Nvidia）首席执行官黄仁勋（Jensen Huang）表示，该公司将为政府实验室建造 7 台新的超级计算机。此外，AMD、戴尔（Dell）和英伟达也已同意在政府实验室内建造新的设施。
 
 Behind the news:In scientific research, AI is evolving from a passive tool into an active collaborator that can manage the cycle of scientific discovery from hypothesis to results.
 
 新闻背后：在科学研究领域，人工智能（AI）正在从一种被动的工具，演变为能主动协作的伙伴，它能够驾驭从提出假设到得出结果的完整科学发现周期。
 
-* Google'sAI co-scientist, a multi-agent system designed to generate in-depth research proposals, has demonstrated its capability to generate novel proposals for biomedical research. It identified drug candidates to repurpose for leukemia and liver fibrosis that were subsequently validated in labs.
+1 Google'sAI co-scientist, a multi-agent system designed to generate in-depth research proposals, has demonstrated its capability to generate novel proposals for biomedical research. It identified drug candidates to repurpose for leukemia and liver fibrosis that were subsequently validated in labs.
 
-* Google 的 AI 科研助手（一个多智能体系统）能够生成深入的研究提案，并已证明其可为生物医学领域提出创新方案。该系统识别出一些可用于白血病和肝纤维化治疗的候选药物（即老药新用），这些药物的疗效随后在实验室中获得了验证。
+Google 的 AI 科研助手（一个多智能体系统）能够生成深入的研究提案，并已证明其可为生物医学领域提出创新方案。该系统识别出一些可用于白血病和肝纤维化治疗的候选药物（即老药新用），这些药物的疗效随后在实验室中获得了验证。
 
-* AI Scientist, an agentic workflow that directs large language models to generate ideas for AI research, produce code to test them, and document the enquiry, showcased the ability of LLMs to produce AI research papers by ideating, testing, and documenting experimental results.
+2 AI Scientist, an agentic workflow that directs large language models to generate ideas for AI research, produce code to test them, and document the enquiry, showcased the ability of LLMs to produce AI research papers by ideating, testing, and documenting experimental results.
 
-* AI Scientist 是一种智能体工作流，它引导大语言模型（LLMs）生成人工智能研究想法、编写测试代码并记录研究过程。该工作流展示了 LLMs 能够通过构思想法、进行实验测试和记录结果，最终完成 AI 研究论文的撰写。
+AI Scientist 是一种智能体工作流，它引导大语言模型（LLMs）生成人工智能研究想法、编写测试代码并记录研究过程。该工作流展示了 LLMs 能够通过构思想法、进行实验测试和记录结果，最终完成 AI 研究论文的撰写。
 
-* RoboChem, an integrated robotic lab developed by the University of Amsterdam, outperformed human chemists in optimizing chemical synthesis, boosting yield and throughput in experimental runs. In earlier work, researchers at the University of Liverpool trained amobile robot armto navigate a lab, operate equipment, handle samples, and obtain results far faster than a human scientist.
+3 RoboChem, an integrated robotic lab developed by the University of Amsterdam, outperformed human chemists in optimizing chemical synthesis, boosting yield and throughput in experimental runs. In earlier work, researchers at the University of Liverpool trained amobile robot armto navigate a lab, operate equipment, handle samples, and obtain results far faster than a human scientist.
 
-* RoboChem，一个由阿姆斯特丹大学开发的一体化机器人实验室，在优化化学合成方面的表现优于人类化学家，显著提高了实验运行的产量和通量（throughput）。在更早的研究中，利物浦大学的研究人员训练了一个移动机器人手臂在实验室内自主移动、操作设备、处理样品，其获取结果的速度远超人类科学家。
+RoboChem，一个由阿姆斯特丹大学开发的一体化机器人实验室，在优化化学合成方面的表现优于人类化学家，显著提高了实验运行的产量和通量（throughput）。在更早的研究中，利物浦大学的研究人员训练了一个移动机器人手臂在实验室内自主移动、操作设备、处理样品，其获取结果的速度远超人类科学家。
 
-* AI-powered search engines like Consensus and Scitestreamlinethe ability to find and summarize scientific literature by synthesizing vast amounts of peer-reviewed research.
+4 AI-powered search engines like Consensus and Scitestreamlinethe ability to find and summarize scientific literature by synthesizing vast amounts of peer-reviewed research.
 
-* 由人工智能（AI）驱动的搜索引擎，例如 Consensus 和 Scitestreamline，能够通过综合分析海量的同行评审研究，来提升用户查找和总结科学文献的效率。
+由人工智能（AI）驱动的搜索引擎，例如 Consensus 和 Scitestreamline，能够通过综合分析海量的同行评审研究，来提升用户查找和总结科学文献的效率。
 
 Yes, but:The Genesis Mission depends on data, yet the federal government has systematically degraded its capacity to collect it. The White House has cut funding for weather data collection by the National Oceanic and Atmospheric Administration, suspended collection of health data by the Centers for Disease Control and Prevention, and shut down several facilities responsible for gathering and curating government data,Politicoreported. Lack of large, current datasets could blunt both AI and humanity's ability to understand the world.
 
-话虽如此："起源计划」（Genesis Mission）的成功依赖于数据，但联邦政府却在系统性地削弱自身的数据收集能力。据 Politico 报道，白宫削减了国家海洋和大气管理局（NOAA）用于气象数据收集的预算，暂停了疾病控制与预防中心（CDC）的卫生健康数据收集工作，并关停了数个负责政府数据收集与管理的机构。缺乏大规模、时效性强的数据集，不仅会制约人工智能的发展，也会妨碍人类对世界的认知。
+话虽如此：「起源计划」（Genesis Mission）的成功依赖于数据，但联邦政府却在系统性地削弱自身的数据收集能力。据 Politico 报道，白宫削减了国家海洋和大气管理局（NOAA）用于气象数据收集的预算，暂停了疾病控制与预防中心（CDC）的卫生健康数据收集工作，并关停了数个负责政府数据收集与管理的机构。缺乏大规模、时效性强的数据集，不仅会制约人工智能的发展，也会妨碍人类对世界的认知。
 
 Why it matters:The U.S. push to apply AI to scientific research and coordinate federal, academic, and private resources is a direct response to the investment and advances China has been making in AI, officials said. China is making strides in many areas of science and technology including quantum computing and battery technology, according to the Center for Strategic and International Studies, a nonpartisan think tank. For the AI industry, the Genesis Mission's plan to launch competitions and other financial incentives to participate in new research efforts related to strategic goals and security is encouraging.
 
@@ -209,7 +212,7 @@ We're thinking:Autonomous systems that produce, vet, and execute research ideas 
 
 #### Amazon Steps Forward
 
-#### 亚马逊迈出新步伐
+亚马逊迈出新步伐
 
 Amazon raised the competitive profile of its foundation models and added services for custom model training and an agent platform for browser automation.
 
@@ -217,7 +220,7 @@ Amazon raised the competitive profile of its foundation models and added service
 
 What's new:TheNova 2family of models covers multimodal reasoning, multimodal generation, and speech to speech. Early access to top-of-the-line Nova 2 Pro Preview (multimodal in, text out) and Nova 2 Omni Preview (multimodal in and out) are available via newNova Forge($100,000 annually), a new service that offers pre-trained, mid-trained, and post-trained Nova checkpoints, enabling customers to mix proprietary data with Amazon's datasets. In addition, Amazon launchedNova Act, a service for building browser-automation agents that can navigate websites, fill out forms, extract data, and interact with the web via natural language or Python code. (Disclosure: Andrew Ng serves on Amazon's board of directors.)
 
-**新动态：**Nova 2 模型系列涵盖了多模态推理、多模态生成以及语音到语音转换。现在，通过全新的**Nova Forge**服务（年费 10 万美元），即可抢先体验其旗舰型号：支持多模态输入、文本输出的 Nova 2 Pro Preview，以及支持多模态输入与输出的 Nova 2 Omni Preview。Nova Forge 提供预训练、中期训练及后期训练阶段的 Nova 模型检查点（checkpoints），客户可借此将自己的专有数据与亚马逊的数据集结合使用。此外，亚马逊还发布了**Nova Act**服务，用于构建能自动操作浏览器的 AI 智能体。这些智能体可以导航网站、填写表单、提取数据，并通过自然语言或 Python 代码与网页进行交互。（披露：吴恩达（Andrew Ng）在亚马逊董事会任职。）
+新动态：Nova 2 模型系列涵盖了多模态推理、多模态生成以及语音到语音转换。现在，通过全新的 **Nova Forge** 服务（年费 10 万美元），即可抢先体验其旗舰型号：支持多模态输入、文本输出的 Nova 2 Pro Preview，以及支持多模态输入与输出的 Nova 2 Omni Preview。Nova Forge 提供预训练、中期训练及后期训练阶段的 Nova 模型检查点（checkpoints），客户可借此将自己的专有数据与亚马逊的数据集结合使用。此外，亚马逊还发布了**Nova Act**服务，用于构建能自动操作浏览器的 AI 智能体。这些智能体可以导航网站、填写表单、提取数据，并通过自然语言或 Python 代码与网页进行交互。（披露：吴恩达（Andrew Ng）在亚马逊董事会任职。）
 
 Nova 2 Pro Preview:The latest flagship Nova model,Nova 2 Pro Previewrivals models from Anthropic, Google, and OpenAI on selected benchmarks.
 
@@ -264,7 +267,8 @@ We're thinking:Amazon's foundation models have lagged behind those of competitor
 
 #### Small Models Solve Hard Puzzles
 
-#### 小模型破解复杂谜题
+小模型破解复杂谜题
+
 Large language models often fail at puzzles like Sudoku, for which a solution includes multiple elements and a single mistake invalidates all of them. Researchers showed that a tiny network, by repeatedly refining its solution, can solve this sort of puzzle well.
 
 大语言模型（Large Language Model）在处理诸如数独这类谜题时常常表现不佳。这类谜题的解答包含多个步骤，任何一个步骤出错都会导致整个解答失败。研究人员发现，一个微型网络通过不断迭代、修正其解答，能够很好地解决此类谜题。
@@ -272,11 +276,12 @@ Large language models often fail at puzzles like Sudoku, for which a solution in
 What's new:Alexia Jolicoeur-Martineau at Samsung developedTiny Recursive Model(TRM). This approach outperforms large, pretrained LLMs, including DeepSeek-R1 and Gemini 2.5 Pro, on visual puzzles that require filling in a grid by inferring an abstract rule based on limited information, specifically Sudoku, Maze, and current ARC-AGI benchmarks.
 
 新进展：三星公司的研究员 Alexia Jolicoeur-Martineau 开发了一种名为 Tiny Recursive Model（TRM）的模型。在解决一类特定的视觉推理谜题时，TRM 的表现超越了包括 DeepSeek-R1 和 Gemini 2.5 Pro 在内的大型预训练大语言模型。这类谜题要求根据有限信息推断出抽象规则，并据此填充网格，例如数独、迷宫以及当前用于评估通用人工智能（AGI）的 ARC-AGI 基准测试。
+
 Key insight:Training a neural network to refine a solution iteratively can take place in 3 steps: (i) Give it a random solution and tell it to compute a solution, (ii) feed back the output, compute a new solution, and so on, and (iii) backpropagate through this recursive process so the network learns to produce a more accurate solution through iteration. However, this approach has a key flaw: The network doesn't keep track of the changes it has made, so during inference, from iteration to iteration, it may undo changes that improved the solution. To counteract this problem, the network can produce a separate context embedding that also feeds back with each iteration. This tactic enables it to learn to store any information that helps to improve performance, such as changes it has made, without needing an explicit loss function that's designed to accomplish this.
 
 核心思路：训练神经网络进行迭代优化可以分三步走：(i）输入一个随机初始解，让网络计算出一个解决方案；(ii）将这个输出作为反馈，再计算新的解决方案，如此循环往复；(iii）对此递归过程进行反向传播，从而使网络学会通过迭代生成更精确的解决方案。然而，这种方法存在一个关键缺陷：网络不会记录自己所做的修改，因此在推理时，迭代过程中可能会无意间撤销那些原本能提升解决方案的有效改动。为了解决这个问题，网络可以生成一个独立的上下文嵌入（context embedding），并让这个嵌入也参与到每次迭代的反馈中。这一策略使得网络能够学会存储任何有助于提升性能的信息（例如它已做出的修改），而无需专门设计一个用于实现此目标的显式损失函数。
 
-How it works:A TRM is a 2-layer network whose architecture depends on the type of puzzle to be solved. The authors used a 5 million-parameter vanilla neural network to learnSudoku-Extreme, whose solutions are 9x9 matrices, and 7 million-parameter transformers to learnMaze-Hard,ARC-AGI-1andARC-AGI-2, which involve 30x30 matrices. Solving these puzzles requires logic, pathfinding, and visual reasoning at 2 levels of difficulty respectively.
+How it works: A TRM is a 2-layer network whose architecture depends on the type of puzzle to be solved. The authors used a 5 million-parameter vanilla neural network to learnSudoku-Extreme, whose solutions are 9x9 matrices, and 7 million-parameter transformers to learnMaze-Hard,ARC-AGI-1andARC-AGI-2, which involve 30x30 matrices. Solving these puzzles requires logic, pathfinding, and visual reasoning at 2 levels of difficulty respectively.
 
 工作原理：TRM（Token Reduction Module）是一个双层网络，其具体架构取决于所需解决的谜题类型。作者使用了一个拥有 500 万参数的标准神经网络（vanilla neural network）来学习 Sudoku-Extreme，该谜题的答案是一个 9x9 矩阵；同时，他们使用了 700 万参数的 Transformer 模型来学习 Maze-Hard、ARC-AGI-1 和 ARC-AGI-2，这些谜题则涉及 30x30 矩阵。解决这些谜题分别需要两种不同难度级别的能力：逻辑能力、路径寻找能力以及视觉推理能力。
 
@@ -317,6 +322,5 @@ Why it matters:A tiny model excels at solving puzzles that requiremultifaceted s
 其重要性在于：一个微型模型，却擅长解决那些需要综合性方案才能完美答对的难题。这表明，训练一个简单但高度专门化的模型架构，其效率和效果可能优于一味追求扩大模型规模。
 
 We're thinking:LLMs reason by generating a chain of thought, one model executionat a time, before the final output. On the other hand, TRM reasons by recursively updating its context embedding, one model execution at a time, before the final output.
-
 
 我们的思路是这样的：大语言模型（Large Language Model，LLM）的推理方式是生成一个思维链（Chain of Thought），这个过程需要多次执行模型（每次执行一步推理），最终才得出结果。而 TRM 模型的推理方式，则是通过递归地更新其上下文嵌入（Context Embedding）来实现，同样需要多次执行模型（每次执行一次更新），最终得出输出。
