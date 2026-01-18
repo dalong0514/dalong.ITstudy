@@ -6,6 +6,15 @@ Chrome 浏览器里要自己加载插件。
 
 /Users/Daglas/dalong.tools/deeplearning-ai-video-downloader/extension
 
+2026-01-18
+
+项目里跑 docker：
+
+docker compose up --build -d
+
+本项目成功部署 docker 后，同时 Chrome 中已经成功加载了插件，在deeplearning-ai网站下载视频时报错：`Failed to download video`。请先分析原因并给出解决方案。
+
+解决方案：已经通过 codex 修改项目解决了。
 
 2025-02-17
 
