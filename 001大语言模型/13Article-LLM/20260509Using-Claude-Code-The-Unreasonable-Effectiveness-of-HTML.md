@@ -182,10 +182,6 @@ Example Prompts:
 
 I'm not sure what direction to take the onboarding screen. Generate 6 distinctly different approaches — vary layout, tone, and density — and lay them out as a single HTML file in a grid so I can compare them side by side. Label each with the tradeoff it's making.
 
-I'm not sure what direction to take the onboarding screen. Generate 6 distinctly different approaches — vary layout, tone, and density — and lay them out as a single HTML file in a grid so I can compare them side by side. Label each with the tradeoff it's making.
-
-Create a thorough implementation plan in a HTML file, be sure to make some mockups, show data flow and add important code snippets I might want to review. Make it easy to read and digest.
-
 Create a thorough implementation plan in a HTML file, be sure to make some mockups, show data flow and add important code snippets I might want to review. Make it easy to read and digest.
 
 Use Cases:
@@ -250,8 +246,6 @@ Example prompt:
 
 I want to prototype a new checkout button, when clicked it does a play animation and then turns purple quickly. Create a HTML file with several sliders and options for me to try different options on this animation, give me a copy button to copy the parameters that worked well.
 
-I want to prototype a new checkout button, when clicked it does a play animation and then turns purple quickly. Create a HTML file with several sliders and options for me to try different options on this animation, give me a copy button to copy the parameters that worked well.
-
 Use this for:
 
 适用场景：
@@ -291,8 +285,6 @@ For example, for my posts on prompt caching, I asked Claude to prepare an in-dep
 Example prompt:
 
 示例 Prompt：
-
-I don't understand how our rate limiter actually works. Read the relevant code and produce a single HTML explainer page: a diagram of the token-bucket flow, the 3–4 key code snippets annotated, and a "gotchas" section at the bottom. Optimize it for someone reading it once.
 
 I don't understand how our rate limiter actually works. Read the relevant code and produce a single HTML explainer page: a diagram of the token-bucket flow, the 3–4 key code snippets annotated, and a "gotchas" section at the bottom. Optimize it for someone reading it once.
 
@@ -338,13 +330,7 @@ Example prompts:
 
 I need to reprioritize these 30 Linear tickets. Make me an HTML file with each ticket as a draggable card across Now / Next / Later / Cut columns. Pre-sort them by your best guess. Add a "copy as markdown" button that exports the final ordering with a one-line rationale per bucket.
 
-I need to reprioritize these 30 Linear tickets. Make me an HTML file with each ticket as a draggable card across Now / Next / Later / Cut columns. Pre-sort them by your best guess. Add a "copy as markdown" button that exports the final ordering with a one-line rationale per bucket.
-
 Here's our feature flag config. Build a form-based editor for it, group flags by area, show dependencies between them, warn me if I enable a flag whose prerequisite is off. Add a "copy diff" button that gives me just the changed keys.
-
-Here's our feature flag config. Build a form-based editor for it, group flags by area, show dependencies between them, warn me if I enable a flag whose prerequisite is off. Add a "copy diff" button that gives me just the changed keys.
-
-I'm tuning this system prompt. Make a side-by-side editor: editable prompt on the left with the variable slots highlighted, three sample inputs on the right that re-render the filled template live. Add a character/token counter and a copy button.
 
 I'm tuning this system prompt. Make a side-by-side editor: editable prompt on the left with the variable slots highlighted, three sample inputs on the right that re-render the filled template live. Add a character/token counter and a copy button.
 
@@ -376,7 +362,7 @@ Picking values that are painful to express in text: colors, easing curves, crop 
 
 挑选那些很难用文字描述的值：颜色、缓动曲线、裁剪区域、cron 表达式、正则表达式
 
-Frequently Asked Questions
+### Frequently Asked Questions
 
 常见问题
 
@@ -422,7 +408,7 @@ What about version control?
 
 This is honestly one of the biggest downsides of HTML, HTML diffs are noisy and hard to review compared to Markdown.
 
-版本控制确实是 HTML 最大的劣势之一 ——HTML 的 diff 又乱又难看，跟 Markdown 比起来审查起来费劲多了。
+版本控制确实是 HTML 最大的劣势之一 —— HTML 的 diff 又乱又难看，跟 Markdown 比起来审查起来费劲多了。
 
 How do I get Claude to match my taste / not make it ugly?
 
