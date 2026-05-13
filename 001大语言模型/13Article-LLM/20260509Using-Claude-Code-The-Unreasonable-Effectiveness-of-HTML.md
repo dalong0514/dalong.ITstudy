@@ -80,8 +80,6 @@ I’ve found that in the absence of being able to do this, the model may do more
 
 Claude Code trying to show color in markdown
 
-Claude Code trying to show color in markdown
-
 Visual Clarity & Ease of Reading
 
 视觉清晰度与易读性
@@ -158,7 +156,7 @@ The trick is knowing what you want the artifact to do and how you might use it. 
 
 关键在于你要清楚自己想让这个制品做什么、以及你打算怎么使用它。用久了你可能会把常用的模式沉淀成一个技能，但现在我建议先从零开始写 prompt，在各种场景中摸索出感觉。
 
-Use Cases
+### Use Cases
 
 使用场景
 
