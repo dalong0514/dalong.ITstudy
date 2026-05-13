@@ -1,12 +1,8 @@
 ## 20260509Using-Claude-Code-The-Unreasonable-Effectiveness-of-HTML
 
-## 使用 Claude Code：HTML 的不可思议的有效性
+使用 Claude Code：HTML 的不可思议的有效性
 
 [X 上的 Thariq："Using Claude Code: The Unreasonable Effectiveness of HTML" / X](https://x.com/trq212/status/2052809885763747935)
-
-[X 上的 Thariq："Using Claude Code: The Unreasonable Effectiveness of HTML" / X](https://x.com/trq212/status/2052809885763747935)
-
-[The unreasonable effectiveness of HTML — examples](https://thariqs.github.io/html-effectiveness/)
 
 [The unreasonable effectiveness of HTML — examples](https://thariqs.github.io/html-effectiveness/)
 
