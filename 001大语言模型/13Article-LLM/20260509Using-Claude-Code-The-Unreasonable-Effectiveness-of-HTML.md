@@ -26,7 +26,7 @@ I’ve started preferring HTML as an output format instead of Markdown and incre
 
 （如果你想先看看实际效果，这里有一堆示例：https://thariqs.github.io/html-effectiveness —— 不过记得看完了回来继续往下读。）
 
-Why HTML?
+### Why HTML?
 
 为什么选 HTML？
 
